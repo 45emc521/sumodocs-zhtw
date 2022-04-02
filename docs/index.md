@@ -11,7 +11,8 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
     如果你需要引用 SUMO，請參考我們目前的出版格式：["Microscopic Traffic Simulation using SUMO"](https://elib.dlr.de/127994/); Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.
 
 這份文件的內容可以自由修改。要修改特定頁面，請點選位在網頁右上角的 "Edit on GitHub" 按鈕，並在修改完後提出 pull 要求。
-這裡有份有關[編輯文章](Editing_Articles.md)的教學頁面。如你需要，你也可以在自己的電腦上[建置 (Build)](Developer/Documentation_Build.md) 這份文件，也可以[下載](https://sumo.dlr.de/sumo_documentation.zip)一份副本到你的電腦中。
+這裡有份有關[編輯文章](Editing_Articles.md)的教學頁面。
+如有需要，你也可以在自己的電腦上[建置 (Build)](Developer/Documentation_Build.md) 這份文件，也可以[下載](https://sumo.dlr.de/sumo_documentation.zip)一份副本到你的電腦中。
 
 This Documentation is continuously updated and always refers to the latest development version. Documentation for a specific release version of SUMO is included in the download of that version and can be viewed by opening {{SUMO}}/docs/userdoc/index.html.
 
