@@ -1,37 +1,28 @@
 ---
-title: SUMO at a Glance
+title: SUMO 概觀
 ---
 
-## About
+## 關於 SUMO
 
-"**S**imulation of **U**rban **MO**bility", or "SUMO" for short, is an
-open source, microscopic, multi-modal traffic simulation. It allows to
-simulate how a given traffic demand which consists of single vehicles
-moves through a given road network. The simulation allows to address a
-large set of traffic management topics. It is purely microscopic: each
-vehicle is modelled explicitly, has an own route, and moves individually
-through the network. Simulations are deterministic by default but there
-are various options for [introducing randomness](Simulation/Randomness.md).
+"**S**imulation of **U**rban **MO**bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多樣態的車流模擬軟體。SUMO 可以在一個給定的路網及車流需求之下，使用車輛進行車流模擬，該模擬可與許多交通管理上的主題相關。
 
-If you download the SUMO package, you will note that it contains further
-applications besides SUMO. These applications are used to import/prepare
-road networks and demand data for being used in SUMO, see [Included Applications](#included_applications) for a more verbose
-list.
+這是一個微觀 (microscopic) 模擬軟體——每一步車都有詳細的參數與模型、有自身的路徑 (route)，且各自在路網中移動。模擬不完全是隨機的，但是 SUMO 的[隨機概觀文件](Simulation/Randomness.md)內有說明有關於隨機性的選項設定。
 
-## Features
+下載了 SUMO 套件後，你會發現 SUMO 套件包含了很多小應用程式。這些應用程式是為了提供既有路網的匯入和準備。你可以在 [SUMO 包含的程式](#included_applications) 頁面中找到這些應用程式的詳細列表。
 
-- Includes all applications needed to prepare and perform a traffic
-simulation (network and routes import, DUA, simulation)
-- Simulation
-  - Space-continuous and time-discrete vehicle movement
-  - Different vehicle types
-  - Multi-lane streets with lane changing
-  - Different right-of-way rules, traffic lights
-  - A fast openGL graphical user interface
+## 功能
+
+- 包含所有用來準備和執行車流模擬的應用程式（路網和路徑匯入、DUA 以及模擬）。
+- 模擬
+  - 空間連續及時間離散的車流移動。
+  - 不同的車輛種類。
+  - 多車道的變換車道模擬。
+  - 多種優先路權的規則、建置交通號誌。
+  - 簡捷的 OpenGL 圖形化使用者介面。
   - Manages networks with several 10.000 edges (streets)
   - Fast execution speed (up to 100.000 vehicle updates/s on a 1GHz
     machine)
-  - Interoperability with other application at run-time
+  - 在執行時間與其他應用程式互動。
   - Network-wide, edge-based, vehicle-based, and detector-based
     outputs
   - Supports person-based inter-modal trips
@@ -43,7 +34,7 @@ simulation (network and routes import, DUA, simulation)
   - Microscopic routes - each vehicle has an own one
   - Different Dynamic User Assignment algorithms
 - High portability
-  - Only standard C++ and portable libraries are used
+  - 使用標準 C++ 和跨平台的資源庫來做開發。
   - Packages for Windows main Linux distributions exist
 - High interoperability through usage of XML-data only
 - Open source ([EPL 2.0](https://eclipse.org/legal/epl-v20.html))

@@ -10,17 +10,17 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 !!! note
     如果你需要引用 SUMO，請參考我們目前的出版格式：["Microscopic Traffic Simulation using SUMO"](https://elib.dlr.de/127994/); Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.
 
-這份文件的內容可以自由修改。要修改特定頁面，請點選位在網頁右上角的 "Edit on GitHub" 按鈕，並在修改完後提出 pull 要求。
-這裡有份有關[編輯文章](Editing_Articles.md)的教學頁面。
-如有需要，你也可以在自己的電腦上[建置 (Build)](Developer/Documentation_Build.md) 這份文件，也可以[下載](https://sumo.dlr.de/sumo_documentation.zip)一份副本到你的電腦中。
+這份文件的內容可以自由修改。要修改特定頁面，請點選位在網頁右上角的 "Edit on GitHub" 按鈕，並在修改完後提出 pull 要求。這裡有份有關[編輯文章](Editing_Articles.md)的教學頁面。如有需要，你也可以在自己的電腦上[建置 (Build)](Developer/Documentation_Build.md) 這份文件，也可以[下載](https://sumo.dlr.de/sumo_documentation.zip)一份副本到你的電腦中。
 
-This Documentation is continuously updated and always refers to the latest development version. Documentation for a specific release version of SUMO is included in the download of that version and can be viewed by opening {{SUMO}}/docs/userdoc/index.html.
+這份文件會隨著 SUMO 的版本迭代而隨時更新。特定 SUMO 版本的說明文件會隨著你下載的 SUMO 版本一起提供。請到 {{SUMO}}/docs/userdoc/index.html 查看該 SUMO 版本的說明文件。
 
-# Introduction
+本份文件是 SUMO Documentation 於 2022/04/01 版本的快取，旨在將 SUMO Documentation 翻譯成正體中文。如果需要最新的說明文件，歡迎造訪 [SUMO Documentation](https://sumo.dlr.de/docs/) 的官方網站。本說明文件目前由 [Yu-Hsuan Liao](https://emc521.tw) 進行翻譯與維護。
 
-- [The traffic simulation SUMO](SUMO_at_a_Glance.md)
+# 簡介
 
-# Basic Usage
+- [SUMO 交通模擬](SUMO_at_a_Glance.md)
+
+# 基本使用
 
 - [Notation in this Documentation](Basics/Notation.md)
 - [Needed, basic Computer
@@ -30,7 +30,7 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Tutorials](Tutorials/index.md)
 - [Validating application inputs](XMLValidation.md)
 
-# Network Building
+# 建立路網
 
 - Introduction to [SUMO Road Networks](Networks/SUMO_Road_Networks.md)
 - [Abstract networks generation](Networks/Abstract_Network_Generation.md)
@@ -55,7 +55,7 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Including elevation data](Networks/Elevation.md)
 - [Geo-Coordinates](Geo-Coordinates.md)
 
-# Demand Modelling
+# 需求模型
 
 - [Introduction to SUMO Demand Modelling](Demand/Introduction_to_demand_modelling_in_SUMO.md)
 - [Definition of Vehicles, Vehicle Types, and Routes](Definition_of_Vehicles,_Vehicle_Types,_and_Routes.md)
@@ -82,19 +82,19 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Multi-modal random traffic](Tools/Import/OSM.md#osmwebwizardpy)
 - [GTFS data](Tools/Import/GTFS.md)
 
-# Simulation
+# 模擬
 
 - [Basic Definition](Simulation/Basic_Definition.md)
 - [Saving and Loading Simulation State](Simulation/SaveAndLoad.md)
 
-## Output
+## 輸出
 - [Simulation output overview](Simulation/Output/index.md)
 
 ## TraCI (On-line Interaction)
 - [TraCI overview](TraCI.md) - The **Tra**ffic **C**ontrol **I**nterface
 - [Libsumo](Libsumo.md) - Using sumo as a library
 
-## Traffic Management and Other Structures
+## 交通管理與設施
 
 - [Traffic Lights](Simulation/Traffic_Lights.md)
 - [Public Transport](Simulation/Public_Transport.md)
@@ -105,14 +105,14 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Parking areas](Simulation/ParkingArea.md)
 - [Turnarounds](Simulation/Turnarounds.md)
 
-## Traffic Modes
+## 交通模式
 
 - [Pedestrian simulation](Simulation/Pedestrians.md)
 - [Bicycle simulation](Simulation/Bicycles.md)
 - [Railway simulation](Simulation/Railways.md)
 - [Waterway simulation](Simulation/Waterways.md)
 
-## Additional Features
+## 其他功能
 
 - [Emissions](Models/Emissions.md)
 - [Electric Vehicles](Models/Electric.md)
@@ -126,7 +126,7 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Demand Responsive Transport (DRT) / Taxis](Simulation/Taxi.md)
 - [Green Light Optimal Speed Advisory (GLOSA)](Simulation/GLOSA.md)
 
-## Model details
+## 模型細節
 
 - [Vehicle speed](Simulation/VehicleSpeed.md)
 - [Vehicle insertion](Simulation/VehicleInsertion.md)
@@ -141,7 +141,7 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Mesoscopic model](Simulation/Meso.md)
 - [Lengths and Distances](Simulation/Distances.md)
 
-## Common Problems
+## 常見問題
 
 - [Why Vehicles are teleporting](Simulation/Why_Vehicles_are_teleporting.md)
 - [Unexpected jamming](FAQ.md#the_simulation_has_lots_of_jamsdeadlocks_what_can_i_do)
@@ -149,21 +149,15 @@ This Documentation is continuously updated and always refers to the latest devel
 - [Unexpected lane-changing maneuvers?](FAQ.md#why_do_the_vehicles_perform_unexpected_lane-changing_maneuvers)
 - [How to get high flows?](FAQ.md#how_do_i_get_high_flowsvehicle_densities)
 
-# Additional Tools
+# 其他工具
 
-In addition to the [main applications (sumo, sumo-gui, netedit, netconvert, etc.)](SUMO_at_a_Glance.md#included_applications), there are
-over 150 additional tools. They cover topics from traffic network
-analysis, demand generation, demand modification to output analysis.
-Most of them are written in [python](https://www.python.org/). All tools
-can be found in the SUMO-distribution under {{SUMO}}/tools.
+除了 SUMO 套件的[主要程式（包括 sumo, sumo-gui, netedit, netconvert 等）](SUMO_at_a_Glance.md#included_applications)外，SUMO 套件尚有 150 多個小應用程式。他們多半與交通路網分析、需求生成、修改需求以輸出分析有關。多數的小程式以 [python](https://www.python.org/) 撰寫而成。這些小程式都可以在 {{SUMO}}/tools 資料夾裡找到。
 
-For an index of all tools see:
+要查看這些小程式的清單，請參見：
+- [工具索引](Tools/index.md)
 
-- [Tool index](Tools/index.md)
-
-Below are links to some of the most important/used tools:
-
-- [osmWebWizard](Tools/Import/OSM.md#osmwebwizardpy) - create a simple scenario, in just a few clicks and using your web browser
+以下的連結是一些好用（或重要）的小程式：
+- [osmWebWizard](Tools/Import/OSM.md#osmwebwizardpy) - 可以使用瀏覽器在極短的時間內，以真實世界的地圖生成路網配置。
 - [Interfacing TraCI from Python](TraCI/Interfacing_TraCI_from_Python.md) - access a running SUMO simulation using Python
 - [sumolib](Tools/Sumolib.md) - Python modules for working with SUMO networks and sumo xml files in general
 - [Xml Tools](Tools/Xml.md) - tools for converting SUMO outputs to CSV/Spreadsheet, and vice versa
@@ -171,11 +165,11 @@ Below are links to some of the most important/used tools:
 - [netdiff.py](Tools/Net.md#netdiffpy) - determine the differences between two networks
 - [Visualization Tools](Tools/Visualization.md) - visualize a wide range of simulation outputs in a graphical and friendly way
 
-# Theory
+# 理論
 
 - [Traffic simulations in general](Theory/Traffic_Simulations.md)
 
-# Application Manuals
+# 程式操作手冊
 
 - [sumo](sumo.md)
 - [sumo-gui](sumo-gui.md)
@@ -192,8 +186,8 @@ Below are links to some of the most important/used tools:
 - [emissionsMap](Tools/Emissions.md#emissionsmap)
 - [emissionsDrivingCycle](Tools/Emissions.md#emissionsdrivingcycle)
 
-# Software Contributions
-Some people extended SUMO or built tools to make it more usable. Not all of these extensions are part of the "SUMO core".
+# 軟體分發
+為了讓 SUMO 變得更好用，許多人延伸了 SUMO 的功能或為 SUMO 增加了許多小工具。不是所有在這裡提及的程式的是 SUMO 核心的一部分。
 
 - [Included in the distribution](Contributed/index.md#included_in_the_distribution)
 - [External](Contributed/index.md#external_extensions)
