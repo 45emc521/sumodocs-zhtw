@@ -22,58 +22,57 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 
 # 基本使用
 
-- [Notation in this Documentation](Basics/Notation.md)
-- [Needed, basic Computer
-  Skills](Basics/Basic_Computer_Skills.md)
-- [Installing SUMO](Installing/index.md)
-- [Using SUMO Command Line Applications](Basics/Using_the_Command_Line_Applications.md)
-- [Tutorials](Tutorials/index.md)
-- [Validating application inputs](XMLValidation.md)
+- [這份文件的一些表示方式](Basics/Notation.md)
+- [必須要會的基礎電腦技能](Basics/Basic_Computer_Skills.md)
+- [安裝 SUMO](Installing/index.md)
+- [使用 SUMO 命令列程式](Basics/Using_the_Command_Line_Applications.md)
+- [教學](Tutorials/index.md)
+- [驗證 XML 輸入](XMLValidation.md)
 
 # 建立路網
 
-- Introduction to [SUMO Road Networks](Networks/SUMO_Road_Networks.md)
-- [Abstract networks generation](Networks/Abstract_Network_Generation.md)
-- Importing networks with [netconvert](netconvert.md)
-  - [Defining own networks using XML](Networks/PlainXML.md)
-  - [Importing non-SUMO networks](Networks/Import.md)
-    - [from OpenStreetMap](Networks/Import/OpenStreetMap.md)
-      - [3-Click Scenario Generator](Networks/Import/OpenStreetMap.md#3-click_scenario_generation)
-    - [from VISUM](Networks/Import/VISUM.md)
-    - [from Vissim](Networks/Import/Vissim.md)
-    - [from OpenDRIVE](Networks/Import/OpenDRIVE.md)
-    - [from MATsim](Networks/Import/MATsim.md)
-    - [from ArcView (shapefiles)](Networks/Import/ArcView.md)
-    - [from DlrNavTeq](Networks/Import/DlrNavteq.md)
-    - [from Robocup Simulation League](Networks/Import/RoboCup.md)
-  - [Importing SUMO networks](Networks/Import/SUMO_Road_Networks.md)
-  - [Building networks for motorway simulation](Simulation/Motorways.md#building_a_network_for_motorway_simulation)
-  - [Building networks for pedestrian simulation](Simulation/Pedestrians.md#building_a_network_for_pedestrian_simulation)
-  - [Further netconvert options](Networks/Further_Options.md)
-  - [Additional output](Networks/Further_Outputs.md)
-- [Creating and modifying networks with netedit](Netedit/index.md)
-- [Including elevation data](Networks/Elevation.md)
-- [Geo-Coordinates](Geo-Coordinates.md)
+- 關於 [SUMO 路網](Networks/SUMO_Road_Networks.md)的簡要介紹
+- [抽象網路生成](Networks/Abstract_Network_Generation.md)
+- 以 [netconvert](netconvert.md) 來匯入路網
+  - [用 XML 自定義路網](Networks/PlainXML.md)
+  - [匯入非 SUMO 的路網](Networks/Import.md)
+    - [從 OpenStreetMap](Networks/Import/OpenStreetMap.md)
+      - [三步驟路網生成器](Networks/Import/OpenStreetMap.md#3-click_scenario_generation)
+    - [從 VISUM](Networks/Import/VISUM.md)
+    - [從 Vissim](Networks/Import/Vissim.md)
+    - [從 OpenDRIVE](Networks/Import/OpenDRIVE.md)
+    - [從 MATsim](Networks/Import/MATsim.md)
+    - [從 ArcView (shapefiles)](Networks/Import/ArcView.md)
+    - [從 DlrNavTeq](Networks/Import/DlrNavteq.md)
+    - [從 Robocup Simulation League](Networks/Import/RoboCup.md)
+  - [匯入 SUMO 路網](Networks/Import/SUMO_Road_Networks.md)
+  - [針對高速公路模擬建立路網](Simulation/Motorways.md#building_a_network_for_motorway_simulation)
+  - [針對行人模擬建立路網](Simulation/Pedestrians.md#building_a_network_for_pedestrian_simulation)
+  - [更多 netconvert 的選項](Networks/Further_Options.md)
+  - [更多輸出選項](Networks/Further_Outputs.md)
+- [以 netedit 建立與修改路網](Netedit/index.md)
+- [納入高度資料](Networks/Elevation.md)
+- [地理座標資料](Geo-Coordinates.md)
 
 # 需求模型
 
-- [Introduction to SUMO Demand Modelling](Demand/Introduction_to_demand_modelling_in_SUMO.md)
-- [Definition of Vehicles, Vehicle Types, and Routes](Definition_of_Vehicles,_Vehicle_Types,_and_Routes.md)
-- [Defining Traffic Demand with netedit](Netedit/elementsDemand.md)
-- [Simulation of public transport](Simulation/Public_Transport.md)
-- [Simulation of individual persons and trip chains](Specification/Persons.md)
-- [Simulation of logistics](Specification/Logistics.md)
-- [Shortest or Optimal Path Routing](Demand/Shortest_or_Optimal_Path_Routing.md)
-- [Intermodal Routing](IntermodalRouting.md)
-- [Routing in the Simulation](Demand/Automatic_Routing.md)
-- [Computing Dynamic User Assignment](Demand/Dynamic_User_Assignment.md)
-- [Generating pedestrian traffic demand](Simulation/Pedestrians.md#generating_pedestrian_demand)
-- [Generate a vehicle type distribution to model the fleet](Tools/Misc.md#createvehtypedistributionspy)
+- [SUMO 需求模型的介紹](Demand/Introduction_to_demand_modelling_in_SUMO.md)
+- [車輛、車種及路徑 (routes) 的定義](Definition_of_Vehicles,_Vehicle_Types,_and_Routes.md)
+- [以 netedit 定義需求](Netedit/elementsDemand.md)
+- [公共運輸的模擬](Simulation/Public_Transport.md)
+- [個人與旅次鏈的模擬](Specification/Persons.md)
+- [物流的模擬](Specification/Logistics.md)
+- [最短或最佳化路徑](Demand/Shortest_or_Optimal_Path_Routing.md)
+- [多車種聯運路徑](IntermodalRouting.md)
+- [模擬中的路徑](Demand/Automatic_Routing.md)
+- [運算多使用者指派](Demand/Dynamic_User_Assignment.md)
+- [建立行人交通需求](Simulation/Pedestrians.md#generating_pedestrian_demand)
+- [建立車種分佈並對車隊進行建模](Tools/Misc.md#createvehtypedistributionspy)
 
 ### Data sources for demand generation
 
-- [Importing O/D Matrices](Demand/Importing_O/D_Matrices.md)
-  - [Other VISUM Demand Importers](Demand/Further_Ways_to_import_VISUM_Demand_Definitions.md)
+- [匯入 O/D 矩陣](Demand/Importing_O/D_Matrices.md)
+  - [其他 VISUM 需求的匯入器](Demand/Further_Ways_to_import_VISUM_Demand_Definitions.md)
   - [Other Vissim Demand Importers](Demand/Further_Ways_to_import_Vissim_Demand_Definitions.md)
 - [Routes from Counting Data (road counts, turn counts)](Demand/Routes_from_Observation_Points.md)
 - [Routing by Turn Probabilities](Demand/Routing_by_Turn_Probabilities.md)
@@ -157,17 +156,17 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 - [工具索引](Tools/index.md)
 
 以下的連結是一些好用（或重要）的小程式：
-- [osmWebWizard](Tools/Import/OSM.md#osmwebwizardpy) - 可以使用瀏覽器在極短的時間內，以真實世界的地圖生成路網配置。
-- [Interfacing TraCI from Python](TraCI/Interfacing_TraCI_from_Python.md) - access a running SUMO simulation using Python
-- [sumolib](Tools/Sumolib.md) - Python modules for working with SUMO networks and sumo xml files in general
-- [Xml Tools](Tools/Xml.md) - tools for converting SUMO outputs to CSV/Spreadsheet, and vice versa
-- [traceExporter.py](Tools/TraceExporter.md) - export mobility traces (FCD output) into different "trace file" formats
-- [netdiff.py](Tools/Net.md#netdiffpy) - determine the differences between two networks
-- [Visualization Tools](Tools/Visualization.md) - visualize a wide range of simulation outputs in a graphical and friendly way
+- [osmWebWizard](Tools/Import/OSM.md#osmwebwizardpy)：可以使用瀏覽器在極短的時間內，以真實世界的地圖生成路網配置。
+- [Interfacing TraCI from Python](TraCI/Interfacing_TraCI_from_Python.md)：用 Python 存取正在進行的 SUMO 模擬。
+- [sumolib](Tools/Sumolib.md)：用來與 SUMO 路網和 sumo XML 檔案一同運作的 Python 模組。
+- [Xml Tools](Tools/Xml.md)：將 SUMO 模擬結果與 CSV／試算表相互交換的小工具。
+- [traceExporter.py](Tools/TraceExporter.md)：輸出移動軌跡到不同的「軌跡檔案」格式。
+- [netdiff.py](Tools/Net.md#netdiffpy)：比較兩個路網檔案的不同處。
+- [Visualization Tools](Tools/Visualization.md)：將一部分的模擬輸出結果以圖形及友善的形式視覺化。
 
 # 理論
 
-- [Traffic simulations in general](Theory/Traffic_Simulations.md)
+- [常規的交通模擬](Theory/Traffic_Simulations.md)
 
 # 程式操作手冊
 
@@ -186,16 +185,17 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 - [emissionsMap](Tools/Emissions.md#emissionsmap)
 - [emissionsDrivingCycle](Tools/Emissions.md#emissionsdrivingcycle)
 
-# 軟體分發
-為了讓 SUMO 變得更好用，許多人延伸了 SUMO 的功能或為 SUMO 增加了許多小工具。不是所有在這裡提及的程式的是 SUMO 核心的一部分。
+# 軟體散布
 
-- [Included in the distribution](Contributed/index.md#included_in_the_distribution)
-- [External](Contributed/index.md#external_extensions)
+為了讓 SUMO 變得更好用，許多人延伸了 SUMO 的功能或為 SUMO 增加了許多小工具。儘管他們隨著 SUMO 的發行版本一同散布，但並非所有小工具都是 SUMO 核心的一部分。
 
-# Appendices
+- [發行版中的套件](Contributed/index.md#included_in_the_distribution)
+- [外部套件](Contributed/index.md#external_extensions)
 
-- [ChangeLog](ChangeLog.md)
-- [Glossary](Other/Glossary.md)
-- [FAQ](FAQ.md)
-- [Known File Extensions](Other/File_Extensions.md)
+# 附錄
+
+- [版本更新歷程](ChangeLog.md)
+- [名詞解釋](Other/Glossary.md)
+- [常見問題](FAQ.md)
+- [已知的檔案副檔名](Other/File_Extensions.md)
 

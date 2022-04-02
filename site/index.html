@@ -142,44 +142,44 @@
             <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
             <li class="nav-item main"><a href="#_1">簡介</a></li>
             <li class="nav-item main"><a href="#_2">基本使用</a></li>
-            <li class="nav-item main"><a href="#network_building">Network Building</a></li>
-            <li class="nav-item main"><a href="#demand_modelling">Demand Modelling</a></li>
+            <li class="nav-item main"><a href="#_3">建立路網</a></li>
+            <li class="nav-item main"><a href="#_4">需求模型</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#data_sources_for_demand_generation" class="nav-link">• Data sources for demand generation</a>
                 </li>
-            <li class="nav-item main"><a href="#simulation">Simulation</a></li>
+            <li class="nav-item main"><a href="#_5">模擬</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#output" class="nav-link">• Output</a>
+                    <a href="#_6" class="nav-link">• 輸出</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#traci_on-line_interaction" class="nav-link">• TraCI (On-line Interaction)</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#traffic_management_and_other_structures" class="nav-link">• Traffic Management and Other Structures</a>
+                    <a href="#_7" class="nav-link">• 交通管理與設施</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#traffic_modes" class="nav-link">• Traffic Modes</a>
+                    <a href="#_8" class="nav-link">• 交通模式</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#additional_features" class="nav-link">• Additional Features</a>
+                    <a href="#_9" class="nav-link">• 其他功能</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#model_details" class="nav-link">• Model details</a>
+                    <a href="#_10" class="nav-link">• 模型細節</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#common_problems" class="nav-link">• Common Problems</a>
+                    <a href="#_11" class="nav-link">• 常見問題</a>
                 </li>
-            <li class="nav-item main"><a href="#additional_tools">Additional Tools</a></li>
-            <li class="nav-item main"><a href="#theory">Theory</a></li>
-            <li class="nav-item main"><a href="#application_manuals">Application Manuals</a></li>
-            <li class="nav-item main"><a href="#software_contributions">Software Contributions</a></li>
-            <li class="nav-item main"><a href="#appendices">Appendices</a></li>
+            <li class="nav-item main"><a href="#_12">其他工具</a></li>
+            <li class="nav-item main"><a href="#_13">理論</a></li>
+            <li class="nav-item main"><a href="#_14">程式操作手冊</a></li>
+            <li class="nav-item main"><a href="#_15">軟體散布</a></li>
+            <li class="nav-item main"><a href="#_16">附錄</a></li>
         </ul>
     </div>
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 的快取所翻譯的。<strong>鑑於文件為自由編輯，且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</strong></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 的快取所翻譯的。鑑於文件為自由編輯，且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -198,9 +198,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <p class="admonition-title">Note</p>
 <p>如果你需要引用 SUMO，請參考我們目前的出版格式：<a href="https://elib.dlr.de/127994/">"Microscopic Traffic Simulation using SUMO"</a>; Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.</p>
 </div>
-<p>這份文件的內容可以自由修改。要修改特定頁面，請點選位在網頁右上角的 "Edit on GitHub" 按鈕，並在修改完後提出 pull 要求。
-這裡有份有關<a href="Editing_Articles.html">編輯文章</a>的教學頁面。
-如有需要，你也可以在自己的電腦上<a href="Developer/Documentation_Build.html">建置 (Build)</a> 這份文件，也可以<a href="https://sumo.dlr.de/sumo_documentation.zip">下載</a>一份副本到你的電腦中。</p>
+<p>這份文件的內容可以自由修改。要修改特定頁面，請點選位在網頁右上角的 "Edit on GitHub" 按鈕，並在修改完後提出 pull 要求。這裡有份有關<a href="Editing_Articles.html">編輯文章</a>的教學頁面。如有需要，你也可以在自己的電腦上<a href="Developer/Documentation_Build.html">建置 (Build)</a> 這份文件，也可以<a href="https://sumo.dlr.de/sumo_documentation.zip">下載</a>一份副本到你的電腦中。</p>
 <p>這份文件會隨著 SUMO 的版本迭代而隨時更新。特定 SUMO 版本的說明文件會隨著你下載的 SUMO 版本一起提供。請到 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/docs/userdoc/index.html 查看該 SUMO 版本的說明文件。</p>
 <p>本份文件是 SUMO Documentation 於 2022/04/01 版本的快取，旨在將 SUMO Documentation 翻譯成正體中文。如果需要最新的說明文件，歡迎造訪 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 的官方網站。本說明文件目前由 <a href="https://emc521.tw">Yu-Hsuan Liao</a> 進行翻譯與維護。</p>
 <h1 id="_1">簡介<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
@@ -209,19 +207,18 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 </ul>
 <h1 id="_2">基本使用<a class="headerlink" href="#_2" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
-<li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer
-  Skills</a></li>
-<li><a href="Installing/index.html">Installing SUMO</a></li>
-<li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
-<li><a href="Tutorials/index.html">Tutorials</a></li>
-<li><a href="XMLValidation.html">Validating application inputs</a></li>
+<li><a href="Basics/Notation.html">這份文件的一些表示方式</a></li>
+<li><a href="Basics/Basic_Computer_Skills.html">必須要會的基礎電腦技能</a></li>
+<li><a href="Installing/index.html">安裝 SUMO</a></li>
+<li><a href="Basics/Using_the_Command_Line_Applications.html">使用 SUMO 命令列程式</a></li>
+<li><a href="Tutorials/index.html">教學</a></li>
+<li><a href="XMLValidation.html">驗證 XML 輸入</a></li>
 </ul>
-<h1 id="network_building">Network Building<a class="headerlink" href="#network_building" title="Permanent link">#</a></h1>
+<h1 id="_3">建立路網<a class="headerlink" href="#_3" title="Permanent link">#</a></h1>
 <ul>
-<li>Introduction to <a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
-<li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
-<li>Importing networks with <a href="netconvert.html">netconvert</a><ul>
+<li>關於 <a href="Networks/SUMO_Road_Networks.html">SUMO 路網</a>的簡要介紹</li>
+<li><a href="Networks/Abstract_Network_Generation.html">抽象網路生成</a></li>
+<li>以 <a href="netconvert.html">netconvert</a> 來匯入路網<ul>
 <li><a href="Networks/PlainXML.html">Defining own networks using XML</a></li>
 <li><a href="Networks/Import.html">Importing non-SUMO networks</a><ul>
 <li><a href="Networks/Import/OpenStreetMap.html">from OpenStreetMap</a><ul>
@@ -248,7 +245,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Networks/Elevation.html">Including elevation data</a></li>
 <li><a href="Geo-Coordinates.html">Geo-Coordinates</a></li>
 </ul>
-<h1 id="demand_modelling">Demand Modelling<a class="headerlink" href="#demand_modelling" title="Permanent link">#</a></h1>
+<h1 id="_4">需求模型<a class="headerlink" href="#_4" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
 <li><a href="Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
@@ -277,12 +274,12 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Tools/Import/OSM.html#osmwebwizardpy">Multi-modal random traffic</a></li>
 <li><a href="Tools/Import/GTFS.html">GTFS data</a></li>
 </ul>
-<h1 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">#</a></h1>
+<h1 id="_5">模擬<a class="headerlink" href="#_5" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
 <li><a href="Simulation/SaveAndLoad.html">Saving and Loading Simulation State</a></li>
 </ul>
-<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">#</a></h2>
+<h2 id="_6">輸出<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Simulation/Output/index.html">Simulation output overview</a></li>
 </ul>
@@ -291,7 +288,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="TraCI.html">TraCI overview</a> - The <strong>Tra</strong>ffic <strong>C</strong>ontrol <strong>I</strong>nterface</li>
 <li><a href="Libsumo.html">Libsumo</a> - Using sumo as a library</li>
 </ul>
-<h2 id="traffic_management_and_other_structures">Traffic Management and Other Structures<a class="headerlink" href="#traffic_management_and_other_structures" title="Permanent link">#</a></h2>
+<h2 id="_7">交通管理與設施<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
 <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
@@ -302,14 +299,14 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Simulation/ParkingArea.html">Parking areas</a></li>
 <li><a href="Simulation/Turnarounds.html">Turnarounds</a></li>
 </ul>
-<h2 id="traffic_modes">Traffic Modes<a class="headerlink" href="#traffic_modes" title="Permanent link">#</a></h2>
+<h2 id="_8">交通模式<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
 <li><a href="Simulation/Bicycles.html">Bicycle simulation</a></li>
 <li><a href="Simulation/Railways.html">Railway simulation</a></li>
 <li><a href="Simulation/Waterways.html">Waterway simulation</a></li>
 </ul>
-<h2 id="additional_features">Additional Features<a class="headerlink" href="#additional_features" title="Permanent link">#</a></h2>
+<h2 id="_9">其他功能<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Models/Emissions.html">Emissions</a></li>
 <li><a href="Models/Electric.html">Electric Vehicles</a></li>
@@ -323,7 +320,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Simulation/Taxi.html">Demand Responsive Transport (DRT) / Taxis</a></li>
 <li><a href="Simulation/GLOSA.html">Green Light Optimal Speed Advisory (GLOSA)</a></li>
 </ul>
-<h2 id="model_details">Model details<a class="headerlink" href="#model_details" title="Permanent link">#</a></h2>
+<h2 id="_10">模型細節<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
 <li><a href="Simulation/VehicleInsertion.html">Vehicle insertion</a></li>
@@ -338,7 +335,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Simulation/Meso.html">Mesoscopic model</a></li>
 <li><a href="Simulation/Distances.html">Lengths and Distances</a></li>
 </ul>
-<h2 id="common_problems">Common Problems<a class="headerlink" href="#common_problems" title="Permanent link">#</a></h2>
+<h2 id="_11">常見問題<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
 <li><a href="FAQ.html#the_simulation_has_lots_of_jamsdeadlocks_what_can_i_do">Unexpected jamming</a></li>
@@ -346,31 +343,23 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="FAQ.html#why_do_the_vehicles_perform_unexpected_lane-changing_maneuvers">Unexpected lane-changing maneuvers?</a></li>
 <li><a href="FAQ.html#how_do_i_get_high_flowsvehicle_densities">How to get high flows?</a></li>
 </ul>
-<h1 id="additional_tools">Additional Tools<a class="headerlink" href="#additional_tools" title="Permanent link">#</a></h1>
-<p>In addition to the <a href="SUMO_at_a_Glance.html#included_applications">main applications (sumo, sumo-gui, netedit, netconvert, etc.)</a>, there are
-over 150 additional tools. They cover topics from traffic network
-analysis, demand generation, demand modification to output analysis.
-Most of them are written in <a href="https://www.python.org/">python</a>. All tools
-can be found in the SUMO-distribution under <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools.</p>
-<p>For an index of all tools see:</p>
+<h1 id="_12">其他工具<a class="headerlink" href="#_12" title="Permanent link">#</a></h1>
+<p>除了 SUMO 套件的<a href="SUMO_at_a_Glance.html#included_applications">主要程式（包括 sumo, sumo-gui, netedit, netconvert 等）</a>外，SUMO 套件尚有 150 多個小應用程式。他們多半與交通路網分析、需求生成、修改需求以輸出分析有關。多數的小程式以 <a href="https://www.python.org/">python</a> 撰寫而成。這些小程式都可以在 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools 資料夾裡找到。</p>
+<p>要查看這些小程式的清單，請參見：
+- <a href="Tools/index.html">工具索引</a></p>
+<p>以下的連結是一些好用（或重要）的小程式：
+- <a href="Tools/Import/OSM.html#osmwebwizardpy">osmWebWizard</a>：可以使用瀏覽器在極短的時間內，以真實世界的地圖生成路網配置。
+- <a href="TraCI/Interfacing_TraCI_from_Python.html">Interfacing TraCI from Python</a>：用 Python 存取正在進行的 SUMO 模擬。
+- <a href="Tools/Sumolib.html">sumolib</a>：用來與 SUMO 路網和 sumo XML 檔案一同運作的 Python 模組。
+- <a href="Tools/Xml.html">Xml Tools</a>：將 SUMO 模擬結果與 CSV／試算表相互交換的小工具。
+- <a href="Tools/TraceExporter.html">traceExporter.py</a>：輸出移動軌跡到不同的「軌跡檔案」格式。
+- <a href="Tools/Net.html#netdiffpy">netdiff.py</a>：比較兩個路網檔案的不同處。
+- <a href="Tools/Visualization.html">Visualization Tools</a>：將一部分的模擬輸出結果以圖形及友善的形式視覺化。</p>
+<h1 id="_13">理論<a class="headerlink" href="#_13" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="Tools/index.html">Tool index</a></li>
+<li><a href="Theory/Traffic_Simulations.html">常規的交通模擬</a></li>
 </ul>
-<p>Below are links to some of the most important/used tools:</p>
-<ul>
-<li><a href="Tools/Import/OSM.html#osmwebwizardpy">osmWebWizard</a> - create a simple scenario, in just a few clicks and using your web browser</li>
-<li><a href="TraCI/Interfacing_TraCI_from_Python.html">Interfacing TraCI from Python</a> - access a running SUMO simulation using Python</li>
-<li><a href="Tools/Sumolib.html">sumolib</a> - Python modules for working with SUMO networks and sumo xml files in general</li>
-<li><a href="Tools/Xml.html">Xml Tools</a> - tools for converting SUMO outputs to CSV/Spreadsheet, and vice versa</li>
-<li><a href="Tools/TraceExporter.html">traceExporter.py</a> - export mobility traces (FCD output) into different "trace file" formats</li>
-<li><a href="Tools/Net.html#netdiffpy">netdiff.py</a> - determine the differences between two networks</li>
-<li><a href="Tools/Visualization.html">Visualization Tools</a> - visualize a wide range of simulation outputs in a graphical and friendly way</li>
-</ul>
-<h1 id="theory">Theory<a class="headerlink" href="#theory" title="Permanent link">#</a></h1>
-<ul>
-<li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
-</ul>
-<h1 id="application_manuals">Application Manuals<a class="headerlink" href="#application_manuals" title="Permanent link">#</a></h1>
+<h1 id="_14">程式操作手冊<a class="headerlink" href="#_14" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="sumo.html">sumo</a></li>
 <li><a href="sumo-gui.html">sumo-gui</a></li>
@@ -387,18 +376,18 @@ can be found in the SUMO-distribution under <strong><em>&lt;SUMO_HOME&gt;</em></
 <li><a href="Tools/Emissions.html#emissionsmap">emissionsMap</a></li>
 <li><a href="Tools/Emissions.html#emissionsdrivingcycle">emissionsDrivingCycle</a></li>
 </ul>
-<h1 id="software_contributions">Software Contributions<a class="headerlink" href="#software_contributions" title="Permanent link">#</a></h1>
-<p>Some people extended SUMO or built tools to make it more usable. Not all of these extensions are part of the "SUMO core".</p>
+<h1 id="_15">軟體散布<a class="headerlink" href="#_15" title="Permanent link">#</a></h1>
+<p>為了讓 SUMO 變得更好用，許多人延伸了 SUMO 的功能或為 SUMO 增加了許多小工具。儘管他們隨著 SUMO 的發行版本一同散布，但並非所有小工具都是 SUMO 核心的一部分。</p>
 <ul>
-<li><a href="Contributed/index.html#included_in_the_distribution">Included in the distribution</a></li>
-<li><a href="Contributed/index.html#external_extensions">External</a></li>
+<li><a href="Contributed/index.html#included_in_the_distribution">發行版中的套件</a></li>
+<li><a href="Contributed/index.html#external_extensions">外部套件</a></li>
 </ul>
-<h1 id="appendices">Appendices<a class="headerlink" href="#appendices" title="Permanent link">#</a></h1>
+<h1 id="_16">附錄<a class="headerlink" href="#_16" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="ChangeLog.html">ChangeLog</a></li>
-<li><a href="Other/Glossary.html">Glossary</a></li>
-<li><a href="FAQ.html">FAQ</a></li>
-<li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+<li><a href="ChangeLog.html">版本更新歷程</a></li>
+<li><a href="Other/Glossary.html">名詞解釋</a></li>
+<li><a href="FAQ.html">常見問題</a></li>
+<li><a href="Other/File_Extensions.html">已知的檔案副檔名</a></li>
 </ul>
                 </div>
           </div>
@@ -512,5 +501,5 @@ can be found in the SUMO-distribution under <strong><em>&lt;SUMO_HOME&gt;</em></
 
 <!--
 MkDocs version : 1.3.0
-Build Date UTC : 2022-04-02 02:59:40.633136+00:00
+Build Date UTC : 2022-04-02 13:10:45.990442+00:00
 -->

@@ -14,7 +14,7 @@
         
         <link rel="canonical" href="https://sumo.dlr.de/docs/SUMO_at_a_Glance.html">
         <link rel="shortcut icon" href="images/favicon.ico">
-        <title>快速預覽 SUMO - SUMO 使用者文件（正體中文）－SUMO Documentation (Chinese Tradditional)</title>
+        <title>SUMO 概觀 - SUMO 使用者文件（正體中文）－SUMO Documentation (Chinese Tradditional)</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
@@ -140,8 +140,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary toc-scroll toc">
         <ul class="nav flex-column bs-sidenav">
             <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
-            <li class="nav-item main"><a href="#about">About</a></li>
-            <li class="nav-item main"><a href="#features">Features</a></li>
+            <li class="nav-item main"><a href="#sumo">關於 SUMO</a></li>
+            <li class="nav-item main"><a href="#_1">功能</a></li>
             <li class="nav-item main"><a href="#usage_examples">Usage Examples</a></li>
             <li class="nav-item main"><a href="#included_applications">Included Applications</a></li>
             <li class="nav-item main"><a href="#history">History</a></li>
@@ -152,7 +152,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 的快取所翻譯的。<strong>鑑於文件為自由編輯，且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</strong></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 的快取所翻譯的。鑑於文件為自由編輯，且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -179,39 +179,29 @@
             document.write("<li class=\"breadcrumb-item\"><a class=\"no-arrow-link\" href=\"" + dirLink[i] + "\">" + splitUrl[i] + "</a></li>");
         }
     </script>
-    <li class="breadcrumb-item active">快速預覽 SUMO</li>
+    <li class="breadcrumb-item active">SUMO 概觀</li>
 </ul>
-                  <hTitles>快速預覽 SUMO<hr style="border: 0.5px solid #338033; margin-top: 5px !important;"></hTitles>
+                  <hTitles>SUMO 概觀<hr style="border: 0.5px solid #338033; margin-top: 5px !important;"></hTitles>
                   
                   
 
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">#</a></h2>
-<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility", or "SUMO" for short, is an
-open source, microscopic, multi-modal traffic simulation. It allows to
-simulate how a given traffic demand which consists of single vehicles
-moves through a given road network. The simulation allows to address a
-large set of traffic management topics. It is purely microscopic: each
-vehicle is modelled explicitly, has an own route, and moves individually
-through the network. Simulations are deterministic by default but there
-are various options for <a href="Simulation/Randomness.html">introducing randomness</a>.</p>
-<p>If you download the SUMO package, you will note that it contains further
-applications besides SUMO. These applications are used to import/prepare
-road networks and demand data for being used in SUMO, see <a href="#included_applications">Included Applications</a> for a more verbose
-list.</p>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h2>
+<h2 id="sumo">關於 SUMO<a class="headerlink" href="#sumo" title="Permanent link">#</a></h2>
+<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多樣態的車流模擬軟體。SUMO 可以在一個給定的路網及車流需求之下，使用車輛進行車流模擬，該模擬可與許多交通管理上的主題相關。</p>
+<p>這是一個微觀 (microscopic) 模擬軟體——每一步車都有詳細的參數與模型、有自身的路徑 (route)，且各自在路網中移動。模擬不完全是隨機的，但是 SUMO 的<a href="Simulation/Randomness.html">隨機概觀文件</a>內有說明有關於隨機性的選項設定。</p>
+<p>下載了 SUMO 套件後，你會發現 SUMO 套件包含了很多小應用程式。這些應用程式是為了提供既有路網的匯入和準備。你可以在 <a href="#included_applications">SUMO 包含的程式</a> 頁面中找到這些應用程式的詳細列表。</p>
+<h2 id="_1">功能<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
-<li>Includes all applications needed to prepare and perform a traffic
-simulation (network and routes import, DUA, simulation)</li>
-<li>Simulation<ul>
-<li>Space-continuous and time-discrete vehicle movement</li>
-<li>Different vehicle types</li>
-<li>Multi-lane streets with lane changing</li>
-<li>Different right-of-way rules, traffic lights</li>
-<li>A fast openGL graphical user interface</li>
+<li>包含所有用來準備和執行車流模擬的應用程式（路網和路徑匯入、DUA 以及模擬）。</li>
+<li>模擬<ul>
+<li>空間連續及時間離散的車流移動。</li>
+<li>不同的車輛種類。</li>
+<li>多車道的變換車道模擬。</li>
+<li>多種優先路權的規則、建置交通號誌。</li>
+<li>簡捷的 OpenGL 圖形化使用者介面。</li>
 <li>Manages networks with several 10.000 edges (streets)</li>
 <li>Fast execution speed (up to 100.000 vehicle updates/s on a 1GHz
   machine)</li>
-<li>Interoperability with other application at run-time</li>
+<li>在執行時間與其他應用程式互動。</li>
 <li>Network-wide, edge-based, vehicle-based, and detector-based
   outputs</li>
 <li>Supports person-based inter-modal trips</li>
@@ -229,7 +219,7 @@ simulation (network and routes import, DUA, simulation)</li>
 </ul>
 </li>
 <li>High portability<ul>
-<li>Only standard C++ and portable libraries are used</li>
+<li>使用標準 C++ 和跨平台的資源庫來做開發。</li>
 <li>Packages for Windows main Linux distributions exist</li>
 </ul>
 </li>
