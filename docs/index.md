@@ -1,12 +1,14 @@
-<hTitles >SUMO User Documentation<hr style="border: 0.5px solid #338033;"></hTitles>
+<hTitles >SUMO 使用者文件<hr style="border: 0.5px solid #338033;"></hTitles>
 
-"**S**imulation of **U**rban **MO**bility" (SUMO) is an open source, highly portable, microscopic and continuous traffic simulation package designed to handle large networks. It allows for intermodal simulation including pedestrians and comes with a large set of tools for scenario creation. It is mainly developed by employees of the [Institute of Transportation Systems](https://www.dlr.de/ts) at the [German Aerospace Center](https://www.dlr.de). SUMO is licensed under the [EPL 2.0](https://eclipse.org/legal/epl-v20.html). The source code may also be made available under the following Secondary
+"**S**imulation of **U**rban **MO**bility" (SUMO) 是一個開放原始碼、微觀車流與持續性的交通模擬套件，旨在支援大型的路網。本軟體可對包括行人與各種不同情境下構成的場景進行綜合模擬。本軟體主要是由[德國太空中心](https://www.dlr.de)內的[運輸系統研究所](https://www.dlr.de/ts)進行開發。SUMO 的授權條款為 [EPL 2.0](https://eclipse.org/legal/epl-v20.html)。The source code may also be made available under the following Secondary
 Licenses when the conditions for such availability set forth in the EPL 2.0 are satisfied: [GPL2 or later](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
 
 Please use the [mailing lists](Contact.md) for sharing your results or for asking questions. Answers to some common questions may also be found in the [FAQ](FAQ.md).
 
-If You use SUMO, please tell us about your
-[Publications](Publications.md).
+如果你使用 SUMO，你可以在
+[出版品](Publications.md)這一頁中告訴我們。
+
+本文件之繁體中文版本由 Yu-Hsuan Liao 提供翻譯。
 
 !!! note
     When citing SUMO in general please use our current reference publication: ["Microscopic Traffic Simulation using SUMO"](https://elib.dlr.de/127994/); Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.
