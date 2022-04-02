@@ -1,8 +1,8 @@
-site_name: SUMO Documentation
+site_name: SUMO 使用者文件
 site_url: https://sumo.dlr.de/docs/
 repo_url: https://github.com/eclipse/sumo/
 edit_uri: edit/main/docs/web/docs/
-site_description: SUMO Documentation
+site_description: SUMO 使用者文件
 use_directory_urls: false
 dev_addr: 127.0.0.1:8000
 #docs_dir: docs
