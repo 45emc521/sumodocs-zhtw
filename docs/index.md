@@ -89,7 +89,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 ## 輸出
 - [模擬輸出概觀](Simulation/Output/index.md)
 
-## TraCI (On-line Interaction)
+## TraCI（即時模擬路網互動）
 - [TraCI 概觀](TraCI.md) - The **Tra**ffic **C**ontrol **I**nterface
 - [Libsumo](Libsumo.md) - 將 sumo 作為資源庫使用
 
