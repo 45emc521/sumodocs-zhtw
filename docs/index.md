@@ -5,7 +5,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 
 敬請使用[聯絡我們頁面](Contact.md)來分享你使用 SUMO 的結果及詢問問題。針對某些常見問題的答案，或許你可以在[常見問題頁面](FAQ.md)中得到一些幫助。
 
-如果你使用 SUMO，你可以在[出版品](Publications.md)這一頁中告訴我們。
+如果你使用 SUMO 進行車流模擬，你可以在[出版品](Publications.md)這一頁中和我們分享。
 
 !!! note
     如果你需要引用 SUMO，請參考我們目前的出版格式：["Microscopic Traffic Simulation using SUMO"](https://elib.dlr.de/127994/); Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.
@@ -63,99 +63,101 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 - [個人與旅次鏈的模擬](Specification/Persons.md)
 - [物流的模擬](Specification/Logistics.md)
 - [最短或最佳化路徑](Demand/Shortest_or_Optimal_Path_Routing.md)
-- [多車種聯運路徑](IntermodalRouting.md)
+- [多運具聯運路徑](IntermodalRouting.md)
 - [模擬中的路徑](Demand/Automatic_Routing.md)
 - [運算多使用者指派](Demand/Dynamic_User_Assignment.md)
 - [建立行人交通需求](Simulation/Pedestrians.md#generating_pedestrian_demand)
 - [建立車種分佈並對車隊進行建模](Tools/Misc.md#createvehtypedistributionspy)
 
-### Data sources for demand generation
+### 由資料產生需求
 
 - [匯入 O/D 矩陣](Demand/Importing_O/D_Matrices.md)
   - [其他 VISUM 需求的匯入器](Demand/Further_Ways_to_import_VISUM_Demand_Definitions.md)
-  - [Other Vissim Demand Importers](Demand/Further_Ways_to_import_Vissim_Demand_Definitions.md)
+  - [其他 Vissim 需求的匯入器](Demand/Further_Ways_to_import_Vissim_Demand_Definitions.md)
 - [Routes from Counting Data (road counts, turn counts)](Demand/Routes_from_Observation_Points.md)
-- [Routing by Turn Probabilities](Demand/Routing_by_Turn_Probabilities.md)
-- [Activity-based Demand Generation](Demand/Activity-based_Demand_Generation.md)
-- [Random Trips](Tools/Trip.md#randomtripspy)
-- [Multi-modal random traffic](Tools/Import/OSM.md#osmwebwizardpy)
-- [GTFS data](Tools/Import/GTFS.md)
+- [由轉向比推算路徑](Demand/Routing_by_Turn_Probabilities.md)
+- [以活動為基底的需求產生](Demand/Activity-based_Demand_Generation.md)
+- [隨機旅次](Tools/Trip.md#randomtripspy)
+- [多模型隨機交通](Tools/Import/OSM.md#osmwebwizardpy)
+- [GTFS 資料](Tools/Import/GTFS.md)
 
 # 模擬
 
-- [Basic Definition](Simulation/Basic_Definition.md)
-- [Saving and Loading Simulation State](Simulation/SaveAndLoad.md)
+- [基本定義](Simulation/Basic_Definition.md)
+- [載入或儲存模擬狀態](Simulation/SaveAndLoad.md)
 
 ## 輸出
-- [Simulation output overview](Simulation/Output/index.md)
+- [模擬輸出概觀](Simulation/Output/index.md)
 
 ## TraCI (On-line Interaction)
-- [TraCI overview](TraCI.md) - The **Tra**ffic **C**ontrol **I**nterface
-- [Libsumo](Libsumo.md) - Using sumo as a library
+- [TraCI 概觀](TraCI.md) - The **Tra**ffic **C**ontrol **I**nterface
+- [Libsumo](Libsumo.md) - 將 sumo 作為資源庫使用
 
-## 交通管理與設施
+## 交通控制設施
 
-- [Traffic Lights](Simulation/Traffic_Lights.md)
-- [Public Transport](Simulation/Public_Transport.md)
-- [Variable Speed Signs](Simulation/Variable_Speed_Signs.md)
-- [Rerouter / Alternative Route Signage](Simulation/Rerouter.md)
-- [Vaporizer](Simulation/Vaporizer.md) (deprecated, use Calibrator instead)
-- [Dynamic calibration of flow and speed and type](Simulation/Calibrator.md)
-- [Parking areas](Simulation/ParkingArea.md)
-- [Turnarounds](Simulation/Turnarounds.md)
+- [交通號誌](Simulation/Traffic_Lights.md)
+- [公共運輸](Simulation/Public_Transport.md)
+- [速限可變標誌](Simulation/Variable_Speed_Signs.md)
+- [Rerouter／替代道路標誌](Simulation/Rerouter.md)
+- [Vaporizer](Simulation/Vaporizer.md)（已被棄用，請改用 Calibrator）
+- [車流、速度與類別的動態校準](Simulation/Calibrator.md)
+- [停車區域](Simulation/ParkingArea.md)
+- [迴轉](Simulation/Turnarounds.md)
 
 ## 交通模式
 
-- [Pedestrian simulation](Simulation/Pedestrians.md)
-- [Bicycle simulation](Simulation/Bicycles.md)
-- [Railway simulation](Simulation/Railways.md)
-- [Waterway simulation](Simulation/Waterways.md)
+- [行人模擬](Simulation/Pedestrians.md)
+- [自行車模擬](Simulation/Bicycles.md)
+- [鐵道模擬](Simulation/Railways.md)
+- [水路模擬](Simulation/Waterways.md)
 
 ## 其他功能
 
-- [Emissions](Models/Emissions.md)
-- [Electric Vehicles](Models/Electric.md)
-- [Electric Hybrid Vehicles, overhead lines, power substations](Models/ElectricHybrid.md)
-- [Logistics](Specification/Logistics.md)
-- [Generic Parameters](Simulation/GenericParameters.md)
-- [Shape Visualization](Simulation/Shapes.md)
-- [Wireless Device Detection](Simulation/Bluetooth.md)
-- [Emergency Vehicles](Simulation/Emergency.md)
-- [Simple Platooning (Simpla)](Simpla.md)
-- [Demand Responsive Transport (DRT) / Taxis](Simulation/Taxi.md)
-- [Green Light Optimal Speed Advisory (GLOSA)](Simulation/GLOSA.md)
+- [排放](Models/Emissions.md)
+- [電力車輛](Models/Electric.md)
+- [混合動力車輛、高架橋及變電站](Models/ElectricHybrid.md)
+- [物流](Specification/Logistics.md)
+- [基礎參數](Simulation/GenericParameters.md)
+- [型態視覺化](Simulation/Shapes.md)
+- [無線設備偵測](Simulation/Bluetooth.md)
+- [緊急車輛](Simulation/Emergency.md)
+- [簡易自動駕駛車隊](Simpla.md)
+- [需求反應式運輸 (DRT)／計程車](Simulation/Taxi.md)
+- [綠燈最佳化速度建議 (GLOSA)](Simulation/GLOSA.md)
 
 ## 模型細節
 
-- [Vehicle speed](Simulation/VehicleSpeed.md)
-- [Vehicle insertion](Simulation/VehicleInsertion.md)
-- [Vehicle permissions (access restrictions)](Simulation/VehiclePermissions.md)
-- [Road capacity](Simulation/RoadCapacity.md)
-- [Intersection dynamics](Simulation/Intersections.md)
-- [Randomness](Simulation/Randomness.md)
-- [Routing and Re-routing](Simulation/Routing.md)
-- [Sublane Model](Simulation/SublaneModel.md)
-- [Opposite Direction Driving](Simulation/OppositeDirectionDriving.md)
-- [Safety](Simulation/Safety.md)
-- [Mesoscopic model](Simulation/Meso.md)
-- [Lengths and Distances](Simulation/Distances.md)
+- [車輛速度](Simulation/VehicleSpeed.md)
+- [車輛進入](Simulation/VehicleInsertion.md)
+- [車輛權限（進入限制）](Simulation/VehiclePermissions.md)
+- [道路容量](Simulation/RoadCapacity.md)
+- [路口動態](Simulation/Intersections.md)
+- [隨機](Simulation/Randomness.md)
+- [路徑和重構路徑](Simulation/Routing.md)
+- [子車道模型](Simulation/SublaneModel.md)
+- [對向（逆向）行駛](Simulation/OppositeDirectionDriving.md)
+- [安全](Simulation/Safety.md)
+- [中觀模型](Simulation/Meso.md)
+- [長度與距離](Simulation/Distances.md)
 
 ## 常見問題
 
-- [Why Vehicles are teleporting](Simulation/Why_Vehicles_are_teleporting.md)
-- [Unexpected jamming](FAQ.md#the_simulation_has_lots_of_jamsdeadlocks_what_can_i_do)
-- [Too many turn-arounds](Simulation/Turnarounds.md)
-- [Unexpected lane-changing maneuvers?](FAQ.md#why_do_the_vehicles_perform_unexpected_lane-changing_maneuvers)
-- [How to get high flows?](FAQ.md#how_do_i_get_high_flowsvehicle_densities)
+- [為什麼車輛會瞬間移動？](Simulation/Why_Vehicles_are_teleporting.md)
+- [未預期的塞車](FAQ.md#the_simulation_has_lots_of_jamsdeadlocks_what_can_i_do)
+- [太多次迴轉](Simulation/Turnarounds.md)
+- [未預期的變換車道行為？](FAQ.md#why_do_the_vehicles_perform_unexpected_lane-changing_maneuvers)
+- [如何提高車流量？](FAQ.md#how_do_i_get_high_flowsvehicle_densities)
 
 # 其他工具
 
 除了 SUMO 套件的[主要程式（包括 sumo, sumo-gui, netedit, netconvert 等）](SUMO_at_a_Glance.md#included_applications)外，SUMO 套件尚有 150 多個小應用程式。他們多半與交通路網分析、需求生成、修改需求以輸出分析有關。多數的小程式以 [python](https://www.python.org/) 撰寫而成。這些小程式都可以在 {{SUMO}}/tools 資料夾裡找到。
 
 要查看這些小程式的清單，請參見：
+
 - [工具索引](Tools/index.md)
 
 以下的連結是一些好用（或重要）的小程式：
+
 - [osmWebWizard](Tools/Import/OSM.md#osmwebwizardpy)：可以使用瀏覽器在極短的時間內，以真實世界的地圖生成路網配置。
 - [Interfacing TraCI from Python](TraCI/Interfacing_TraCI_from_Python.md)：用 Python 存取正在進行的 SUMO 模擬。
 - [sumolib](Tools/Sumolib.md)：用來與 SUMO 路網和 sumo XML 檔案一同運作的 Python 模組。

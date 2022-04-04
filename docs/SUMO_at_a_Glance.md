@@ -6,7 +6,7 @@ title: SUMO 概觀
 
 "**S**imulation of **U**rban **MO**bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多模式的車流模擬軟體。SUMO 可以在一個給定的路網及車流需求之下，使用車輛進行車流模擬，該模擬可與許多交通管理上的主題相關。
 
-這是一個微觀 (microscopic) 模擬軟體——每一步車都有詳細的參數與模型、有自身的路徑 (route)，且各自在路網中移動。模擬不完全是隨機的，但是 SUMO 的[隨機概觀文件](Simulation/Randomness.md)內有說明有關於隨機性的選項設定。
+這是一個微觀 (microscopic) 模擬軟體——每一步車都有詳細的參數與模型、有自身的路徑 (route)，且各自在路網中移動。模擬不完全是隨機的；SUMO 的[隨機概觀文件](Simulation/Randomness.md)內有說明有關於隨機性的選項設定。
 
 下載了 SUMO 套件後，你會發現 SUMO 套件包含了很多小應用程式。這些應用程式是為了提供既有路網的匯入和準備。你可以在 [SUMO 包含的程式](#included_applications) 頁面中找到這些應用程式的詳細列表。
 
