@@ -4,90 +4,82 @@ title: SUMO 概觀
 
 ## 關於 SUMO
 
-"**S**imulation of **U**rban **MO**bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多模式的車流模擬軟體。SUMO 可以在一個給定的路網及車流需求之下，使用車輛進行車流模擬，該模擬可與許多交通管理上的主題相關。
+"**S**imulation of **U**rban **MO**bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多種模式的車流模擬軟體。SUMO 可以在給定的路網及車流需求之下，進行車流模擬，並可將模擬應用在交通管理方面。
 
-這是一個微觀 (microscopic) 模擬軟體——每一步車都有詳細的參數與模型、有自身的路徑 (route)，且各自在路網中移動。模擬不完全是隨機的；SUMO 的[隨機概觀文件](Simulation/Randomness.md)內有說明有關於隨機性的選項設定。
+這是一個微觀 (microscopic) 模擬軟體——每部車都有詳細的參數、車流模型、屬於該車輛的路徑 (route)，且在路網中各自移動；模擬不完全是隨機的，如需更詳細的隨機資訊與設定，請到 SUMO 的[隨機性概觀文件](Simulation/Randomness.md)閱覽。
 
-下載了 SUMO 套件後，你會發現 SUMO 套件包含了很多小應用程式。這些應用程式是為了提供既有路網的匯入和準備。你可以在 [SUMO 包含的程式](#included_applications) 頁面中找到這些應用程式的詳細列表。
+下載 SUMO 套件後，你會發現裡頭包含了很多小程式；這些小程式多半是為了提供既有路網的匯入和準備，你可以在 [SUMO 包含的程式](#included_applications)頁面中找到這些應用程式的列表與詳細資訊。
 
 ## 功能
 
 - 包含所有用來準備和執行車流模擬的應用程式（路網和路徑匯入、DUA 以及模擬）。
 - 模擬
-  - 空間連續及時間離散的車流移動。
-  - 不同的車輛種類。
-  - 多車道的變換車道模擬。
-  - 多種優先路權的規則、建置交通號誌。
-  - 簡捷的 OpenGL 圖形化使用者介面。
-  - Manages networks with several 10.000 edges (streets)
-  - Fast execution speed (up to 100.000 vehicle updates/s on a 1GHz
-    machine)
-  - 在執行時間與其他應用程式互動。
-  - Network-wide, edge-based, vehicle-based, and detector-based
-    outputs
-  - Supports person-based inter-modal trips
-- Network Import
-  - Imports VISUM, Vissim, Shapefiles, OSM, RoboCup, MATsim,
-    OpenDRIVE, and XML-Descriptions
-  - Missing values are determined via heuristics
-- Routing
-  - Microscopic routes - each vehicle has an own one
-  - Different Dynamic User Assignment algorithms
-- High portability
-  - 使用標準 C++ 和跨平台的資源庫來做開發。
-  - Packages for Windows main Linux distributions exist
-- High interoperability through usage of XML-data only
-- Open source ([EPL 2.0](https://eclipse.org/legal/epl-v20.html))
+  - 連續空間及離散時間的車流移動。
+  - 不同車種模擬。
+  - 多車道下，變換車道模擬。
+  - 多種優先路權規則、建立交通號誌。
+  - 易於使用且快速的 OpenGL 圖形化使用者介面。
+  - 可管理內含諸多路段 (edge) 的巨大路網。
+  - 極高的執行速度 （在 CPU 時脈為 1GHz 的電腦上，每秒可更新達 100.000 輛車）
+  - 在 SUMO 執行時，讓 SUMO 與其他應用程式互動。
+  - 以路網為基礎、路段為基礎、車輛為基礎，或以偵測器為基礎的模擬結果輸出。
+  - 支援以個人為主體的複合運輸（多運具）旅次。
+- 路網匯入
+  - 匯入來自 VISUM, Vissim, Shapefiles, OSM, RoboCup, MATsim,
+    OpenDRIVE 和 XML 格式的文件。
+  - 遺失參數嗎？沒關係，系統將透過演算法嘗試補正。
+- 路徑
+  - 微觀路徑——每一輛車皆有獨一無二的路徑。
+  - 不同的動態使用者指派演算法。
+- 跨平台可執行
+  - SUMO 使用標準 C++ 和跨平台的函式庫來開發。
+  - 多數套件可在 Windows 和主要的 Linux 發行版執行。
+- 只有 XML 資料的情況下仍有高度互操作性 (interoperability)。
+- 開放原始碼 ([EPL 2.0](https://eclipse.org/legal/epl-v20.html))。
 
-## Usage Examples
+## 使用範例
 
-Since 2001, the SUMO package has been used in the context of several
-national and international research
-[projects](Other/Projects.md). The applications included:
+自 2001 年以來，SUMO 套件已經被許多國內外的[研究計畫](Other/Projects.md)採用。這些應用包括：
 
-- traffic lights evaluation
-- route choice and re-routing
-- evaluation of traffic surveillance methods
-- [simulation of vehicular communications](Topics/V2X.md)
-- traffic forecast
+- 交通號誌評估
+- 路徑選擇與重新規劃路徑
+- 交通監督方式評估
+- [車輛通訊模擬](Topics/V2X.md)
+- 交通預測
 
-## Included Applications
+## 包含在 SUMO 中的應用程式
 
-The package includes:
+SUMO 套件包含了以下應用程式：
 
-| Application Name                                    | Short Description                                         |
-| --------------------------------------------------- | --------------------------------------------------------- |
-| [sumo](sumo.md)                             | The microscopic simulation with no visualization; command line application                                         |
-| [sumo-gui](sumo-gui.md)                     | The microscopic simulation with a graphical user interface                                                        |
-| [netconvert](netconvert.md)                 | Network importer and generator; reads road networks from different formats and converts them into the SUMO-format   |
-| [netedit](Netedit/index.md)                       | A graphical network editor.                                                                                  |
-| [netgenerate](netgenerate.md)               | Generates abstract networks for the SUMO-simulation                    |
-| [duarouter](duarouter.md)                   | Computes the fastest routes through the network, importing different types of demand description. Performs the DUA      |
-| [jtrrouter](jtrrouter.md)                   | Computes routes using junction turning percentages                                                               |
-| [dfrouter](dfrouter.md)                     | Computes routes from induction loop measurements                                                     |
-| [marouter](marouter.md)                     | Performs macroscopic assignment                                                            |
-| [od2trips](od2trips.md)                     | Decomposes O/D-matrices into single vehicle trips                                       |
-| [polyconvert](polyconvert.md)               | Imports points of interest and polygons from different formats and translates them into a description that may be visualized by [sumo-gui](sumo-gui.md) |
-| [activitygen](activitygen.md)               | Generates a demand based on mobility wishes of a modeled population                                |
-| [emissionsMap](Tools/Emissions.md#emissionsmap)          | Generates an emission map                                                                   |
-| [emissionsDrivingCycle](Tools/Emissions.md#emissionsdrivingcycle) | Calculates emission values based on a given driving cycle                           |
-| [Additional Tools](Tools/index.md)           | There are some tasks for which writing a large application is not necessary. Several solutions for different problems may be covered by these tools.            |
+| 應用程式名稱                                                            | 簡要介紹                                                                                                                                                    |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [sumo](sumo.md)                                                   | The microscopic simulation with no visualization; command line application                                                                              |
+| [sumo-gui](sumo-gui.md)                                           | The microscopic simulation with a graphical user interface                                                                                              |
+| [netconvert](netconvert.md)                                       | Network importer and generator; reads road networks from different formats and converts them into the SUMO-format                                       |
+| [netedit](Netedit/index.md)                                       | A graphical network editor.                                                                                                                             |
+| [netgenerate](netgenerate.md)                                     | Generates abstract networks for the SUMO-simulation                                                                                                     |
+| [duarouter](duarouter.md)                                         | Computes the fastest routes through the network, importing different types of demand description. Performs the DUA                                      |
+| [jtrrouter](jtrrouter.md)                                         | Computes routes using junction turning percentages                                                                                                      |
+| [dfrouter](dfrouter.md)                                           | Computes routes from induction loop measurements                                                                                                        |
+| [marouter](marouter.md)                                           | Performs macroscopic assignment                                                                                                                         |
+| [od2trips](od2trips.md)                                           | Decomposes O/D-matrices into single vehicle trips                                                                                                       |
+| [polyconvert](polyconvert.md)                                     | Imports points of interest and polygons from different formats and translates them into a description that may be visualized by [sumo-gui](sumo-gui.md) |
+| [activitygen](activitygen.md)                                     | Generates a demand based on mobility wishes of a modeled population                                                                                     |
+| [emissionsMap](Tools/Emissions.md#emissionsmap)                   | Generates an emission map                                                                                                                               |
+| [emissionsDrivingCycle](Tools/Emissions.md#emissionsdrivingcycle) | Calculates emission values based on a given driving cycle                                                                                               |
+| [Additional Tools](Tools/index.md)                                | There are some tasks for which writing a large application is not necessary. Several solutions for different problems may be covered by these tools.    |
 
-Several parties have extended the SUMO package during their work and
-submitted their code. These contributions are usually not tested and may be outdated. Find a list of all Contributions [here](Contributed/index.md).
+某些有志之士一同貢獻了他們的作品給 SUMO，並讓 SUMO 套件的功能更上層樓。這些由志願者延伸的功能也許未經測試、也有可能已經過時。如要參閱 SUMO 有哪些由志願者延伸的功能，請[按這裡](Contributed/index.md)了解詳細資訊。
 
-## History
+## SUMO 的歷史
 
-The development of SUMO started in the year 2000. The major reason for
-the development of an open source, microscopic road traffic simulation
-was to support the traffic research community with a tool with the
-ability to implement and evaluate own algorithms. The tool has no need
-for regarding all the needed things for obtaining a complete traffic
-simulation such as implementing and/or setting up methods for dealing
-with road networks, demand, and traffic controls. By supplying such a
-tool, the DLR wanted to i) make the implemented algorithms more
-comparable by using a common architecture and model base, and ii) gain
-additional help from other contributors.
+在公元 2000 年時，SUMO 誕生並開始發展。SUMO 的發展，主要是為了幫助交通研究社群評估他們自己設計的演算法，而製作一個開放原始碼的微觀車流模擬軟體。
+
+SUMO 不需要取得所有需要用在交通模擬的資料，如引入或設定處理道路路網、車流需求及交通控制的方法。藉由 SUMO 這個工具，DLR（德國航空太空中心）想要達成以下目標：
+
+1. 讓應用於 SUMO 的演算法，在使用共同架構與模型下更具可比較性。
+
+2. 向來自世界各地的貢獻者中取得協助。
 
 ## Software design criteria
 
@@ -141,7 +133,7 @@ integrated approach by now.
 </tr>
 <tr class="even">
 <td><p>Julia Ringel</p></td>
-<td><p>Traffic Light &amp; WAUT Algorithms</p></td>
+<td><p>Traffic Light & WAUT Algorithms</p></td>
 </tr>
 <tr class="odd">
 <td><p>Eric Nicolay</p></td>
