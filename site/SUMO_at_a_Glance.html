@@ -12,9 +12,9 @@
 
         
         
-        <link rel="canonical" href="https://sumo.dlr.de/docs/SUMO_at_a_Glance.html">
+        <link rel="canonical" href="https://sumodocs-zhtw.emc521.tw/SUMO_at_a_Glance.html">
         <link rel="shortcut icon" href="images/favicon.ico">
-        <title>SUMO 概觀 - SUMO 使用者文件（正體中文）－SUMO Documentation (Chinese Tradditional)</title>
+        <title>SUMO 概觀 - SUMO 說明文件－SUMO Documentation (Chinese Tradditional)</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
@@ -72,7 +72,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="index.html" class="nav-link">文件首頁</a>
+                                <a href="index.html" class="nav-link">說明文件首頁</a>
                             </li>
                             <li class="navitem">
                                 <a href="Tutorials/index.html" class="nav-link">教學</a>
@@ -81,7 +81,7 @@
                                 <a href="FAQ.html" class="nav-link">常見問題</a>
                             </li>
                             <li class="navitem">
-                                <a href="Downloads.html" class="nav-link">下載</a>
+                                <a href="Downloads.html" class="nav-link">下載 SUMO</a>
                             </li>
                             <li class="navitem">
                                 <a href="Publications.html" class="nav-link">出版品</a>
@@ -104,7 +104,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/SUMO_at_a_Glance.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/SUMO_at_a_Glance.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -142,9 +142,9 @@
             <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
             <li class="nav-item main"><a href="#sumo">關於 SUMO</a></li>
             <li class="nav-item main"><a href="#_1">功能</a></li>
-            <li class="nav-item main"><a href="#usage_examples">Usage Examples</a></li>
-            <li class="nav-item main"><a href="#included_applications">Included Applications</a></li>
-            <li class="nav-item main"><a href="#history">History</a></li>
+            <li class="nav-item main"><a href="#_2">使用範例</a></li>
+            <li class="nav-item main"><a href="#sumo_1">包含在 SUMO 中的應用程式</a></li>
+            <li class="nav-item main"><a href="#sumo_2">SUMO 的歷史</a></li>
             <li class="nav-item main"><a href="#software_design_criteria">Software design criteria</a></li>
             <li class="nav-item main"><a href="#contributors_and_participants">Contributors and Participants</a></li>
         </ul>
@@ -162,7 +162,7 @@
                    <!-- page.is_homepage seems to be broken in Mkdocs > 1.1.0 -->
                   <ul class="breadcrumbs">
     <script>
-        var pagePath = "/docs/SUMO_at_a_Glance.html";
+        var pagePath = "/SUMO_at_a_Glance.html";
         var splitUrl = pagePath.split("/");
         splitUrl.pop();
         splitUrl.shift();
@@ -186,64 +186,60 @@
                   
 
 <h2 id="sumo">關於 SUMO<a class="headerlink" href="#sumo" title="Permanent link">#</a></h2>
-<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多模式的車流模擬軟體。SUMO 可以在一個給定的路網及車流需求之下，使用車輛進行車流模擬，該模擬可與許多交通管理上的主題相關。</p>
-<p>這是一個微觀 (microscopic) 模擬軟體——每一步車都有詳細的參數與模型、有自身的路徑 (route)，且各自在路網中移動。模擬不完全是隨機的；SUMO 的<a href="Simulation/Randomness.html">隨機概觀文件</a>內有說明有關於隨機性的選項設定。</p>
-<p>下載了 SUMO 套件後，你會發現 SUMO 套件包含了很多小應用程式。這些應用程式是為了提供既有路網的匯入和準備。你可以在 <a href="#included_applications">SUMO 包含的程式</a> 頁面中找到這些應用程式的詳細列表。</p>
+<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility"，或簡稱 SUMO，是一個開放原始碼、微觀、多種模式的車流模擬軟體。SUMO 可以在給定的路網及車流需求之下，進行車流模擬，並可將模擬應用在交通管理方面。</p>
+<p>這是一個微觀 (microscopic) 模擬軟體——每部車都有詳細的參數、車流模型、屬於該車輛的路徑 (route)，且在路網中各自移動；模擬不完全是隨機的，如需更詳細的隨機資訊與設定，請到 SUMO 的<a href="Simulation/Randomness.html">隨機性概觀文件</a>閱覽。</p>
+<p>下載 SUMO 套件後，你會發現裡頭包含了很多小程式；這些小程式多半是為了提供既有路網的匯入和準備，你可以在 <a href="#included_applications">SUMO 包含的程式</a>頁面中找到這些應用程式的列表與詳細資訊。</p>
 <h2 id="_1">功能<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li>包含所有用來準備和執行車流模擬的應用程式（路網和路徑匯入、DUA 以及模擬）。</li>
 <li>模擬<ul>
-<li>空間連續及時間離散的車流移動。</li>
-<li>不同的車輛種類。</li>
-<li>多車道的變換車道模擬。</li>
-<li>多種優先路權的規則、建置交通號誌。</li>
-<li>簡捷的 OpenGL 圖形化使用者介面。</li>
-<li>Manages networks with several 10.000 edges (streets)</li>
-<li>Fast execution speed (up to 100.000 vehicle updates/s on a 1GHz
-  machine)</li>
-<li>在執行時間與其他應用程式互動。</li>
-<li>Network-wide, edge-based, vehicle-based, and detector-based
-  outputs</li>
-<li>Supports person-based inter-modal trips</li>
+<li>連續空間及離散時間的車流移動。</li>
+<li>不同車種模擬。</li>
+<li>多車道下，變換車道模擬。</li>
+<li>多種優先路權規則、建立交通號誌。</li>
+<li>易於使用且快速的 OpenGL 圖形化使用者介面。</li>
+<li>可管理內含諸多路段 (edge) 的巨大路網。</li>
+<li>極高的執行速度 （在 CPU 時脈為 1GHz 的電腦上，每秒可更新達 100.000 輛車）</li>
+<li>在 SUMO 執行時，讓 SUMO 與其他應用程式互動。</li>
+<li>以路網為基礎、路段為基礎、車輛為基礎，或以偵測器為基礎的模擬結果輸出。</li>
+<li>支援以個人為主體的複合運輸（多運具）旅次。</li>
 </ul>
 </li>
-<li>Network Import<ul>
-<li>Imports VISUM, Vissim, Shapefiles, OSM, RoboCup, MATsim,
-  OpenDRIVE, and XML-Descriptions</li>
-<li>Missing values are determined via heuristics</li>
+<li>路網匯入<ul>
+<li>匯入來自 VISUM, Vissim, Shapefiles, OSM, RoboCup, MATsim,
+  OpenDRIVE 和 XML 格式的文件。</li>
+<li>遺失參數嗎？沒關係，系統將透過演算法嘗試補正。</li>
 </ul>
 </li>
-<li>Routing<ul>
-<li>Microscopic routes - each vehicle has an own one</li>
-<li>Different Dynamic User Assignment algorithms</li>
+<li>路徑<ul>
+<li>微觀路徑——每一輛車皆有獨一無二的路徑。</li>
+<li>不同的動態使用者指派演算法。</li>
 </ul>
 </li>
-<li>High portability<ul>
-<li>使用標準 C++ 和跨平台的資源庫來做開發。</li>
-<li>Packages for Windows main Linux distributions exist</li>
+<li>跨平台可執行<ul>
+<li>SUMO 使用標準 C++ 和跨平台的函式庫來開發。</li>
+<li>多數套件可在 Windows 和主要的 Linux 發行版執行。</li>
 </ul>
 </li>
-<li>High interoperability through usage of XML-data only</li>
-<li>Open source (<a href="https://eclipse.org/legal/epl-v20.html">EPL 2.0</a>)</li>
+<li>只有 XML 資料的情況下仍有高度互操作性 (interoperability)。</li>
+<li>開放原始碼 (<a href="https://eclipse.org/legal/epl-v20.html">EPL 2.0</a>)。</li>
 </ul>
-<h2 id="usage_examples">Usage Examples<a class="headerlink" href="#usage_examples" title="Permanent link">#</a></h2>
-<p>Since 2001, the SUMO package has been used in the context of several
-national and international research
-<a href="Other/Projects.html">projects</a>. The applications included:</p>
+<h2 id="_2">使用範例<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>自 2001 年以來，SUMO 套件已經被許多國內外的<a href="Other/Projects.html">研究計畫</a>採用。這些應用包括：</p>
 <ul>
-<li>traffic lights evaluation</li>
-<li>route choice and re-routing</li>
-<li>evaluation of traffic surveillance methods</li>
-<li><a href="Topics/V2X.html">simulation of vehicular communications</a></li>
-<li>traffic forecast</li>
+<li>交通號誌評估</li>
+<li>路徑選擇與重新規劃路徑</li>
+<li>交通監督方式評估</li>
+<li><a href="Topics/V2X.html">車輛通訊模擬</a></li>
+<li>交通預測</li>
 </ul>
-<h2 id="included_applications">Included Applications<a class="headerlink" href="#included_applications" title="Permanent link">#</a></h2>
-<p>The package includes:</p>
+<h2 id="sumo_1">包含在 SUMO 中的應用程式<a class="headerlink" href="#sumo_1" title="Permanent link">#</a></h2>
+<p>SUMO 套件包含了以下應用程式：</p>
 <table>
 <thead>
 <tr>
-<th>Application Name</th>
-<th>Short Description</th>
+<th>應用程式名稱</th>
+<th>簡要介紹</th>
 </tr>
 </thead>
 <tbody>
@@ -309,19 +305,18 @@ national and international research
 </tr>
 </tbody>
 </table>
-<p>Several parties have extended the SUMO package during their work and
-submitted their code. These contributions are usually not tested and may be outdated. Find a list of all Contributions <a href="Contributed/index.html">here</a>.</p>
-<h2 id="history">History<a class="headerlink" href="#history" title="Permanent link">#</a></h2>
-<p>The development of SUMO started in the year 2000. The major reason for
-the development of an open source, microscopic road traffic simulation
-was to support the traffic research community with a tool with the
-ability to implement and evaluate own algorithms. The tool has no need
-for regarding all the needed things for obtaining a complete traffic
-simulation such as implementing and/or setting up methods for dealing
-with road networks, demand, and traffic controls. By supplying such a
-tool, the DLR wanted to i) make the implemented algorithms more
-comparable by using a common architecture and model base, and ii) gain
-additional help from other contributors.</p>
+<p>某些有志之士一同貢獻了他們的作品給 SUMO，並讓 SUMO 套件的功能更上層樓。這些由志願者延伸的功能也許未經測試、也有可能已經過時。如要參閱 SUMO 有哪些由志願者延伸的功能，請<a href="Contributed/index.html">按這裡</a>了解詳細資訊。</p>
+<h2 id="sumo_2">SUMO 的歷史<a class="headerlink" href="#sumo_2" title="Permanent link">#</a></h2>
+<p>在公元 2000 年時，SUMO 誕生並開始發展。SUMO 的發展，主要是為了幫助交通研究社群評估他們自己設計的演算法，而製作一個開放原始碼的微觀車流模擬軟體。</p>
+<p>SUMO 不需要取得所有需要用在交通模擬的資料，如引入或設定處理道路路網、車流需求及交通控制的方法。藉由 SUMO 這個工具，DLR（德國航空太空中心）想要達成以下目標：</p>
+<ol>
+<li>
+<p>讓應用於 SUMO 的演算法，在使用共同架構與模型下更具可比較性。</p>
+</li>
+<li>
+<p>向來自世界各地的貢獻者中取得協助。</p>
+</li>
+</ol>
 <h2 id="software_design_criteria">Software design criteria<a class="headerlink" href="#software_design_criteria" title="Permanent link">#</a></h2>
 <p>Two major design goals are approached: the software shall be fast and it
 shall be portable. Due to this, the very first versions were developed
@@ -371,7 +366,7 @@ integrated approach by now.</p>
 </tr>
 <tr class="even">
 <td><p>Julia Ringel</p></td>
-<td><p>Traffic Light &amp; WAUT Algorithms</p></td>
+<td><p>Traffic Light & WAUT Algorithms</p></td>
 </tr>
 <tr class="odd">
 <td><p>Eric Nicolay</p></td>
@@ -515,10 +510,10 @@ integrated approach by now.</p>
 
         <footer class="col-md-12">
           
-            <br><small><i>This page was last edited on: 04 April 2022</i></small>
+            <br><small><i>This page was last edited on: 07 April 2022</i></small>
           
           <hr>
-            <p>Copyright &copy; 2001-2022 German Aerospace Center (DLR) and others.</p>
+            <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>
           <p>Follow us on <a class="no-arrow-link" href="https://www.twitter.com/eclipsesumo/"><i class="fa fa-twitter"></i></a> <a class="no-arrow-link" href="https://www.facebook.com/simulationofurbanmobility/"><i class="fa fa-facebook-square"></i></a> <a class="no-arrow-link" href="https://www.instagram.com/eclipse.sumo/"><i class="fa fa-instagram"></i></a>
           | Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a></p>
         </footer>
