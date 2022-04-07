@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Output.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Output.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -167,7 +167,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -235,7 +235,7 @@ option to get details about usage and available options.</p>
 <p>Script for generating <a href="../Simulation/Output/Induction_Loops_Detectors_%28E1%29.html">E1 detectors (induction loops)</a>
 for each junction in the supplied network file.</p>
 <p>Example usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span>\<span class="n">output</span>\<span class="n">generateTLSE1Detectors</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">o</span> <span class="n">detectors</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span>\<span class="n">output</span>\<span class="n">generateTLSE1Detectors</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <p>Execute the <em>generateTLSE1Detectors.py</em>script with <em>--help</em> option to
@@ -244,7 +244,7 @@ get details about additional options.</p>
 <p>Script for generating <a href="../Simulation/Output/Lanearea_Detectors_%28E2%29.html">E2 detectors (lanearea detectors)</a> for
 each junction in the supplied network file.</p>
 <p>Example usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span>\<span class="n">output</span>\<span class="n">generateTLSE2Detectors</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">o</span> <span class="n">detectors</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span>\<span class="n">output</span>\<span class="n">generateTLSE2Detectors</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <p>Execute the <em>generateTLSE2Detectors.py</em> script with <em>--help</em> option to
@@ -257,7 +257,7 @@ detector. When setting option <strong>--joined</strong> there will be one detect
 instead. When setting option <strong>--interior</strong>, delays within the intersection will be
 included as well.</p>
 <p>Example usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span>\<span class="n">output</span>\<span class="n">generateTLSE3Detectors</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">o</span> <span class="n">detectors</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span>\<span class="n">output</span>\<span class="n">generateTLSE3Detectors</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <p>Execute the <em>generateTLSE3Detectors.py</em> script with <em>--help</em> option to
@@ -339,7 +339,7 @@ option <strong>--output</strong> is set.</p>
 document. (eg. attribute <em>timeLoss</em> for element <em>tripinfo</em> in
 <a href="../Simulation/Output/TripInfo.html">tripinfo-output</a>) and writes the
 results to standard output. When the attribute contains time data in HH:MM:SS format, the values will automatically be converted to seconds.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">attributeStats</span> <span class="o">--</span><span class="n">element</span> <span class="n">tripinfo</span> <span class="o">--</span><span class="n">attribute</span> <span class="n">timeLoss</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">attributeStats</span><span class="w"> </span><span class="o">--</span><span class="n">element</span><span class="w"> </span><span class="n">tripinfo</span><span class="w"> </span><span class="o">--</span><span class="n">attribute</span><span class="w"> </span><span class="n">timeLoss</span><span class="w"></span>
 </code></pre></div>
 
 <p>With option <strong>--hist-output</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;FILE&gt;</em></a> a histogram data file (e.g. for plotting with gnuplot) is
@@ -347,7 +347,7 @@ generated.</p>
 <h2 id="computecoordinationpy">computeCoordination.py<a class="headerlink" href="#computecoordinationpy" title="Permanent link">#</a></h2>
 <p>This tool reads fcd-output and a corridor definition. It computes the fraction of vehicles that passed the corridor without significant slow-down.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">computeCoordination</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">fcd</span><span class="o">-</span><span class="n">file</span> <span class="n">fcd</span><span class="o">.</span><span class="n">xml</span> <span class="o">--</span><span class="n">filter</span><span class="o">-</span><span class="n">route</span> <span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">E</span> <span class="o">--</span><span class="n">entry</span> <span class="n">C</span> <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">speed</span> <span class="mi">5</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">computeCoordination</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">fcd</span><span class="o">-</span><span class="n">file</span><span class="w"> </span><span class="n">fcd</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">filter</span><span class="o">-</span><span class="n">route</span><span class="w"> </span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">E</span><span class="w"> </span><span class="o">--</span><span class="n">entry</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">speed</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 </code></pre></div>
 
 <p>This computes the fraction of vehicles that passed the edges <em>B,C,D,E</em> in order (possibly with gaps) and were delayed after passing edge <em>C</em> to less then 5m/s.</p>
@@ -377,26 +377,26 @@ performance measures, t values, H values as well as functions for
 outputs are defined. The chi-square table and the t table are defined in
 the tables.py.</p>
 <p>An exemplary command is shown below.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">tripStatistics</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">tripinfo</span> <span class="n">files</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">output</span> <span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">e</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">tripStatistics</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tripinfo</span><span class="w"> </span><span class="n">files</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="o">&lt;</span><span class="n">output</span><span class="w"> </span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"></span>
 
-<span class="n">where</span> <span class="o">-</span><span class="n">t</span><span class="p">:</span> <span class="n">name</span> <span class="n">of</span> <span class="n">output</span> <span class="n">files</span> <span class="n">containing</span> <span class="n">vehicle</span> <span class="n">information</span><span class="p">,</span> <span class="n">generated</span> <span class="n">by</span> <span class="n">SUMO</span>
-      <span class="o">-</span><span class="n">o</span><span class="p">:</span> <span class="n">define</span> <span class="n">the</span> <span class="n">output</span> <span class="n">file</span> <span class="n">name</span>
-      <span class="o">-</span><span class="n">e</span><span class="p">:</span> <span class="n">set</span> <span class="bp">true</span> <span class="k">for</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">t</span> <span class="n">test</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="bp">false</span><span class="p">)</span>
-      <span class="o">-</span><span class="n">k</span><span class="p">:</span> <span class="n">set</span> <span class="bp">true</span> <span class="k">for</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">Kruskal</span><span class="o">-</span><span class="n">Wallis</span> <span class="n">test</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="bp">false</span><span class="p">)</span>
+<span class="n">where</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="p">:</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">vehicle</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">generated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">SUMO</span><span class="w"></span>
+<span class="w">      </span><span class="o">-</span><span class="n">o</span><span class="p">:</span><span class="w"> </span><span class="n">define</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<span class="w">      </span><span class="o">-</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="bp">true</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">applying</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="o">-</span><span class="n">k</span><span class="p">:</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="bp">true</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">applying</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Kruskal</span><span class="o">-</span><span class="n">Wallis</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="computestoppingplaceusagepy">computeStoppingPlaceUsage.py<a class="headerlink" href="#computestoppingplaceusagepy" title="Permanent link">#</a></h2>
 <p>This tool reads stop-output and generates occupancy-over-time for stopping places (i.e. parkingArea).
 A distinct output file will be created for each stopping place.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">computeStoppingPlaceUsage</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="n">stopinfos</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">computeStoppingPlaceUsage</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">stopinfos</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="computepassengercountspy">computePassengerCounts.py<a class="headerlink" href="#computepassengercountspy" title="Permanent link">#</a></h2>
 <p>This tool reads stop-output and generates occupancy-over-time for vehicles
 A distinct output file will be created for each vehicle.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">computePassengerCounts</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="n">stopinfos</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">computePassengerCounts</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">stopinfos</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="parkingsearchtrafficpy">parkingSearchTraffic.py<a class="headerlink" href="#parkingsearchtrafficpy" title="Permanent link">#</a></h2>
@@ -405,7 +405,7 @@ spent on searching parking locations as well as the length of the walking way ba
 It evaluates the time and distance between the first reroute and the arrival at the final stop.
 It currently outputs only basic statistics (mean, avg, quartiles etc.).</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">parkingSearchTraffic</span><span class="o">.</span><span class="n">py</span> <span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="n">vehroutes</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">parkingSearchTraffic</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="n">vehroutes</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
                 </div>
           </div>

@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Downloads.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Downloads.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -189,7 +189,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -251,9 +251,9 @@ launchpad project as well as an archlinux package:</p>
 </ul>
 <p>There is also a <a href="https://flathub.org/apps/details/org.eclipse.sumo">flatpak</a> available for SUMO.</p>
 <p>To add the most recent sumo to your ubuntu you will need to do:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">sumo</span><span class="o">/</span><span class="n">stable</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">sumo</span> <span class="n">sumo</span><span class="o">-</span><span class="n">tools</span> <span class="n">sumo</span><span class="o">-</span><span class="n">doc</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span><span class="w"> </span><span class="n">ppa</span><span class="p">:</span><span class="n">sumo</span><span class="o">/</span><span class="n">stable</span><span class="w"></span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">update</span><span class="w"></span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">sumo</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">tools</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">doc</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="repositories">Repositories<a class="headerlink" href="#repositories" title="Permanent link">#</a></h3>
@@ -283,14 +283,14 @@ repositories include a nightly build as well (called <strong><em>sumo-git</em></
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/CentOS_8/">CentOS 8 repository</a></li>
 </ul>
 <p>Adding the repository and installing (the quick and dirty way without checking GPG keys!) looks like this, for yum on CentOS 7:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span> <span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">repo</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="n">CentOS_7</span><span class="o">/</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">--</span><span class="n">nogpgcheck</span> <span class="n">epel</span><span class="o">-</span><span class="n">release</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">--</span><span class="n">nogpgcheck</span> <span class="n">sumo</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span><code><span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span><span class="w"> </span><span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">repo</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="n">CentOS_7</span><span class="o">/</span><span class="w"></span>
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w"> </span><span class="n">epel</span><span class="o">-</span><span class="n">release</span><span class="w"></span>
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
 
 <p>and like this, for zypper on openSUSE Leap 15.3:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">zypper</span> <span class="n">ar</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="mf">15.3</span><span class="o">/</span> <span class="n">science</span><span class="p">:</span><span class="n">dlr</span>
-<span class="n">zypper</span> <span class="ow">in</span> <span class="n">sumo</span><span class="o">=</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span><code><span class="n">zypper</span><span class="w"> </span><span class="n">ar</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="mf">15.3</span><span class="o">/</span><span class="w"> </span><span class="n">science</span><span class="p">:</span><span class="n">dlr</span><span class="w"></span>
+<span class="n">zypper</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">sumo</span><span class="o">=</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
 
 <p>I you leave out the version number it will install the latest nightly build.</p>

@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Developer/Github_Actions_CI_Test.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Developer/Github_Actions_CI_Test.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -149,7 +149,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -190,95 +190,95 @@ Since we cannot possibly test integration with all projects out there that depen
 <p>One popular way to perform CI tests is to create a <a href="https://docs.github.com/en/actions">GitHub Actions</a> workflow.
 A GitHub Actions workflow is defined by a <a href="https://yaml.org/">YAML</a> file in your GitHub <code>master/main</code> branch, under directory <code>.github/workflows</code>.
 In the following, we will go through an example workflow (from the <a href="https://github.com/sommer/veins">Veins project</a>), commenting on the code (for a complete GitHub Actions guide, see the <a href="https://docs.github.com/en/actions/learn-github-actions">official documentation</a>):</p>
-<div class="codehilite"><pre><span></span><code><span class="n">name</span><span class="p">:</span> <span class="n">linux</span><span class="o">-</span><span class="n">build</span>  <span class="c1"># workflow name as stated under your project&#39;s GitHub &#39;Actions&#39; tab</span>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">linux</span><span class="o">-</span><span class="n">build</span><span class="w">  </span><span class="c1"># workflow name as stated under your project&#39;s GitHub &#39;Actions&#39; tab</span><span class="w"></span>
 
-<span class="n">on</span><span class="p">:</span>  <span class="c1"># define triggers on which to run this workflow</span>
-  <span class="n">push</span><span class="p">:</span>
-  <span class="n">pull_request</span><span class="p">:</span>
-  <span class="n">schedule</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">cron</span><span class="p">:</span>  <span class="s1">&#39;42 0 * * *&#39;</span>
+<span class="n">on</span><span class="p">:</span><span class="w">  </span><span class="c1"># define triggers on which to run this workflow</span><span class="w"></span>
+<span class="w">  </span><span class="n">push</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">pull_request</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">schedule</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">cron</span><span class="p">:</span><span class="w">  </span><span class="s1">&#39;42 0 * * *&#39;</span><span class="w"></span>
 
-<span class="n">jobs</span><span class="p">:</span>  <span class="c1"># define individual jobs to run</span>
-  <span class="n">build</span><span class="p">:</span>  <span class="c1"># ID of this job</span>
-    <span class="n">runs</span><span class="o">-</span><span class="n">on</span><span class="p">:</span> <span class="n">ubuntu</span><span class="o">-</span><span class="n">latest</span>  <span class="c1"># VM type to run this job on</span>
-    <span class="n">env</span><span class="p">:</span>  <span class="c1"># define environment variables for this job</span>
-      <span class="n">OMNET_VERSION</span><span class="p">:</span> <span class="mf">5.6</span><span class="o">.</span><span class="mi">2</span>
-    <span class="n">strategy</span><span class="p">:</span>  <span class="c1"># define job variations</span>
-      <span class="n">fail</span><span class="o">-</span><span class="n">fast</span><span class="p">:</span> <span class="bp">false</span>  <span class="c1"># do not cancel all in-progress jobs if any job variation fails</span>
-      <span class="n">matrix</span><span class="p">:</span>  <span class="c1"># define variation parameters and their values</span>
-        <span class="n">sumo_build</span><span class="p">:</span> <span class="p">[</span><span class="n">ubuntu</span><span class="p">,</span> <span class="n">ppa</span><span class="p">,</span> <span class="n">nightly</span><span class="p">]</span>
+<span class="n">jobs</span><span class="p">:</span><span class="w">  </span><span class="c1"># define individual jobs to run</span><span class="w"></span>
+<span class="w">  </span><span class="n">build</span><span class="p">:</span><span class="w">  </span><span class="c1"># ID of this job</span><span class="w"></span>
+<span class="w">    </span><span class="n">runs</span><span class="o">-</span><span class="n">on</span><span class="p">:</span><span class="w"> </span><span class="n">ubuntu</span><span class="o">-</span><span class="n">latest</span><span class="w">  </span><span class="c1"># VM type to run this job on</span><span class="w"></span>
+<span class="w">    </span><span class="n">env</span><span class="p">:</span><span class="w">  </span><span class="c1"># define environment variables for this job</span><span class="w"></span>
+<span class="w">      </span><span class="n">OMNET_VERSION</span><span class="p">:</span><span class="w"> </span><span class="mf">5.6</span><span class="o">.</span><span class="mi">2</span><span class="w"></span>
+<span class="w">    </span><span class="n">strategy</span><span class="p">:</span><span class="w">  </span><span class="c1"># define job variations</span><span class="w"></span>
+<span class="w">      </span><span class="n">fail</span><span class="o">-</span><span class="n">fast</span><span class="p">:</span><span class="w"> </span><span class="bp">false</span><span class="w">  </span><span class="c1"># do not cancel all in-progress jobs if any job variation fails</span><span class="w"></span>
+<span class="w">      </span><span class="n">matrix</span><span class="p">:</span><span class="w">  </span><span class="c1"># define variation parameters and their values</span><span class="w"></span>
+<span class="w">        </span><span class="n">sumo_build</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">ubuntu</span><span class="p">,</span><span class="w"> </span><span class="n">ppa</span><span class="p">,</span><span class="w"> </span><span class="n">nightly</span><span class="p">]</span><span class="w"></span>
 
-    <span class="n">steps</span><span class="p">:</span>  <span class="c1"># define this job&#39;s individual steps</span>
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Cloning</span> <span class="n">Veins</span>  <span class="c1"># this step&#39;s name</span>
-      <span class="n">uses</span><span class="p">:</span> <span class="n">actions</span><span class="o">/</span><span class="n">checkout</span><span class="err">@</span><span class="n">v2</span>  <span class="c1"># predefined and reusable action for this step (see https://github.com/actions/checkout)</span>
-      <span class="n">with</span><span class="p">:</span>  <span class="c1"># set values for the predefined action&#39;s parameters</span>
-        <span class="n">path</span><span class="p">:</span> <span class="n">src</span><span class="o">/</span><span class="n">veins</span>
+<span class="w">    </span><span class="n">steps</span><span class="p">:</span><span class="w">  </span><span class="c1"># define this job&#39;s individual steps</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Cloning</span><span class="w"> </span><span class="n">Veins</span><span class="w">  </span><span class="c1"># this step&#39;s name</span><span class="w"></span>
+<span class="w">      </span><span class="n">uses</span><span class="p">:</span><span class="w"> </span><span class="n">actions</span><span class="o">/</span><span class="n">checkout</span><span class="err">@</span><span class="n">v2</span><span class="w">  </span><span class="c1"># predefined and reusable action for this step (see https://github.com/actions/checkout)</span><span class="w"></span>
+<span class="w">      </span><span class="n">with</span><span class="p">:</span><span class="w">  </span><span class="c1"># set values for the predefined action&#39;s parameters</span><span class="w"></span>
+<span class="w">        </span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="n">src</span><span class="o">/</span><span class="n">veins</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Cloning</span> <span class="n">OMNeT</span><span class="o">++</span>
-      <span class="n">uses</span><span class="p">:</span> <span class="n">actions</span><span class="o">/</span><span class="n">checkout</span><span class="err">@</span><span class="n">v2</span>
-      <span class="n">with</span><span class="p">:</span>
-        <span class="n">repository</span><span class="p">:</span> <span class="n">omnetpp</span><span class="o">/</span><span class="n">omnetpp</span>
-        <span class="n">ref</span><span class="p">:</span> <span class="n">omnetpp</span><span class="o">-$</span><span class="p">{{</span> <span class="n">env</span><span class="o">.</span><span class="n">OMNET_VERSION</span> <span class="p">}}</span>  <span class="c1"># evaluate the environment variable OMNET_VERSION defined above</span>
-        <span class="n">path</span><span class="p">:</span> <span class="n">src</span><span class="o">/</span><span class="n">omnetpp</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Cloning</span><span class="w"> </span><span class="n">OMNeT</span><span class="o">++</span><span class="w"></span>
+<span class="w">      </span><span class="n">uses</span><span class="p">:</span><span class="w"> </span><span class="n">actions</span><span class="o">/</span><span class="n">checkout</span><span class="err">@</span><span class="n">v2</span><span class="w"></span>
+<span class="w">      </span><span class="n">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">repository</span><span class="p">:</span><span class="w"> </span><span class="n">omnetpp</span><span class="o">/</span><span class="n">omnetpp</span><span class="w"></span>
+<span class="w">        </span><span class="n">ref</span><span class="p">:</span><span class="w"> </span><span class="n">omnetpp</span><span class="o">-$</span><span class="p">{{</span><span class="w"> </span><span class="n">env</span><span class="o">.</span><span class="n">OMNET_VERSION</span><span class="w"> </span><span class="p">}}</span><span class="w">  </span><span class="c1"># evaluate the environment variable OMNET_VERSION defined above</span><span class="w"></span>
+<span class="w">        </span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="n">src</span><span class="o">/</span><span class="n">omnetpp</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Preparing</span> <span class="n">Build</span> <span class="n">System</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>  <span class="c1"># define a custom multi-line command (instead of a reusable action) for this step</span>
-        <span class="k">if</span> <span class="p">[[</span> <span class="s2">&quot;${{ matrix.sumo_build }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;ppa&quot;</span> <span class="p">]];</span> <span class="n">then</span> <span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">sumo</span><span class="o">/</span><span class="n">stable</span><span class="p">;</span> <span class="n">fi</span>
-        <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-        <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">gcc</span> <span class="n">g</span><span class="o">++</span> <span class="n">bison</span> <span class="n">flex</span> <span class="n">perl</span> <span class="n">python3</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">default</span><span class="o">-</span><span class="n">jre</span> <span class="n">doxygen</span> <span class="n">graphviz</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Preparing</span><span class="w"> </span><span class="n">Build</span><span class="w"> </span><span class="n">System</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="c1"># define a custom multi-line command (instead of a reusable action) for this step</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">[[</span><span class="w"> </span><span class="s2">&quot;${{ matrix.sumo_build }}&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;ppa&quot;</span><span class="w"> </span><span class="p">]];</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span><span class="w"> </span><span class="n">ppa</span><span class="p">:</span><span class="n">sumo</span><span class="o">/</span><span class="n">stable</span><span class="p">;</span><span class="w"> </span><span class="n">fi</span><span class="w"></span>
+<span class="w">        </span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">update</span><span class="w"></span>
+<span class="w">        </span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">gcc</span><span class="w"> </span><span class="n">g</span><span class="o">++</span><span class="w"> </span><span class="n">bison</span><span class="w"> </span><span class="n">flex</span><span class="w"> </span><span class="n">perl</span><span class="w"> </span><span class="n">python3</span><span class="w"> </span><span class="n">libxml2</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">default</span><span class="o">-</span><span class="n">jre</span><span class="w"> </span><span class="n">doxygen</span><span class="w"> </span><span class="n">graphviz</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Installing</span> <span class="n">SUMO</span> <span class="n">from</span> <span class="n">repo</span>
-      <span class="k">if</span><span class="p">:</span> <span class="n">matrix</span><span class="o">.</span><span class="n">sumo_build</span> <span class="o">!=</span> <span class="s1">&#39;nightly&#39;</span>  <span class="c1"># only run this step if the condition is true</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-        <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">sumo</span> <span class="n">sumo</span><span class="o">-</span><span class="n">tools</span>
-        <span class="n">echo</span> <span class="s2">&quot;SUMO_HOME=/usr/share/sumo&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">$</span><span class="n">GITHUB_ENV</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Installing</span><span class="w"> </span><span class="n">SUMO</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">repo</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">:</span><span class="w"> </span><span class="n">matrix</span><span class="o">.</span><span class="n">sumo_build</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;nightly&#39;</span><span class="w">  </span><span class="c1"># only run this step if the condition is true</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">        </span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">sumo</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">tools</span><span class="w"></span>
+<span class="w">        </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;SUMO_HOME=/usr/share/sumo&quot;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">$</span><span class="n">GITHUB_ENV</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Installing</span> <span class="n">SUMO</span> <span class="n">from</span> <span class="n">PyPI</span>
-      <span class="k">if</span><span class="p">:</span> <span class="n">matrix</span><span class="o">.</span><span class="n">sumo_build</span> <span class="o">==</span> <span class="s1">&#39;nightly&#39;</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-        <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">test</span><span class="o">.</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span> <span class="n">eclipse</span><span class="o">-</span><span class="n">sumo</span>
-        <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import sumo; print(&#39;SUMO_HOME=&#39; + sumo.SUMO_HOME)&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">$</span><span class="n">GITHUB_ENV</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Installing</span><span class="w"> </span><span class="n">SUMO</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">PyPI</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">:</span><span class="w"> </span><span class="n">matrix</span><span class="o">.</span><span class="n">sumo_build</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;nightly&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">        </span><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">index</span><span class="o">-</span><span class="n">url</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">test</span><span class="o">.</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span><span class="w"> </span><span class="n">eclipse</span><span class="o">-</span><span class="n">sumo</span><span class="w"></span>
+<span class="w">        </span><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="s2">&quot;import sumo; print(&#39;SUMO_HOME=&#39; + sumo.SUMO_HOME)&quot;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">$</span><span class="n">GITHUB_ENV</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Adapting</span> <span class="n">PATH</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-        <span class="n">echo</span> <span class="s2">&quot;PATH=$PWD/src/omnetpp/bin:$SUMO_HOME/bin:$PATH&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">$</span><span class="n">GITHUB_ENV</span>
-        <span class="n">cat</span> <span class="o">$</span><span class="n">GITHUB_ENV</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Adapting</span><span class="w"> </span><span class="n">PATH</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">        </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;PATH=$PWD/src/omnetpp/bin:$SUMO_HOME/bin:$PATH&quot;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">$</span><span class="n">GITHUB_ENV</span><span class="w"></span>
+<span class="w">        </span><span class="n">cat</span><span class="w"> </span><span class="o">$</span><span class="n">GITHUB_ENV</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Building</span> <span class="n">OMNeT</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-        <span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">omnetpp</span>
-        <span class="n">cp</span> <span class="n">configure</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">dist</span> <span class="n">configure</span><span class="o">.</span><span class="n">user</span>
-        <span class="o">./</span><span class="n">configure</span> <span class="n">WITH_TKENV</span><span class="o">=</span><span class="n">no</span> <span class="n">WITH_QTENV</span><span class="o">=</span><span class="n">no</span> <span class="n">WITH_OSG</span><span class="o">=</span><span class="n">no</span> <span class="n">WITH_OSGEARTH</span><span class="o">=</span><span class="n">no</span>
-        <span class="n">make</span> <span class="o">-</span><span class="n">j4</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Building</span><span class="w"> </span><span class="n">OMNeT</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">        </span><span class="n">cd</span><span class="w"> </span><span class="n">src</span><span class="o">/</span><span class="n">omnetpp</span><span class="w"></span>
+<span class="w">        </span><span class="n">cp</span><span class="w"> </span><span class="n">configure</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">dist</span><span class="w"> </span><span class="n">configure</span><span class="o">.</span><span class="n">user</span><span class="w"></span>
+<span class="w">        </span><span class="o">./</span><span class="n">configure</span><span class="w"> </span><span class="n">WITH_TKENV</span><span class="o">=</span><span class="n">no</span><span class="w"> </span><span class="n">WITH_QTENV</span><span class="o">=</span><span class="n">no</span><span class="w"> </span><span class="n">WITH_OSG</span><span class="o">=</span><span class="n">no</span><span class="w"> </span><span class="n">WITH_OSGEARTH</span><span class="o">=</span><span class="n">no</span><span class="w"></span>
+<span class="w">        </span><span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">j4</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Building</span> <span class="n">Veins</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-        <span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">veins</span>
-        <span class="o">./</span><span class="n">configure</span>
-        <span class="n">make</span> <span class="o">-</span><span class="n">j4</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Building</span><span class="w"> </span><span class="n">Veins</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">        </span><span class="n">cd</span><span class="w"> </span><span class="n">src</span><span class="o">/</span><span class="n">veins</span><span class="w"></span>
+<span class="w">        </span><span class="o">./</span><span class="n">configure</span><span class="w"></span>
+<span class="w">        </span><span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">j4</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Running</span> <span class="n">Veins</span> <span class="n">Test</span>
-      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-        <span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">veins</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">veins</span>
-        <span class="n">echo</span> <span class="o">$</span><span class="n">SUMO_HOME</span><span class="p">;</span> <span class="n">sumo</span>
-        <span class="o">../../</span><span class="n">bin</span><span class="o">/</span><span class="n">veins_launchd</span> <span class="o">-</span><span class="n">vv</span> <span class="o">--</span><span class="n">daemon</span> <span class="o">-</span><span class="n">L</span> <span class="n">veins_launchd</span><span class="o">.</span><span class="n">log</span>
-        <span class="o">./</span><span class="n">run</span> <span class="o">-</span><span class="n">u</span> <span class="n">Cmdenv</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Running</span><span class="w"> </span><span class="n">Veins</span><span class="w"> </span><span class="n">Test</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">        </span><span class="n">cd</span><span class="w"> </span><span class="n">src</span><span class="o">/</span><span class="n">veins</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">veins</span><span class="w"></span>
+<span class="w">        </span><span class="n">echo</span><span class="w"> </span><span class="o">$</span><span class="n">SUMO_HOME</span><span class="p">;</span><span class="w"> </span><span class="n">sumo</span><span class="w"></span>
+<span class="w">        </span><span class="o">../../</span><span class="n">bin</span><span class="o">/</span><span class="n">veins_launchd</span><span class="w"> </span><span class="o">-</span><span class="n">vv</span><span class="w"> </span><span class="o">--</span><span class="n">daemon</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="n">veins_launchd</span><span class="o">.</span><span class="n">log</span><span class="w"></span>
+<span class="w">        </span><span class="o">./</span><span class="n">run</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">Cmdenv</span><span class="w"></span>
 
-    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Upload</span> <span class="n">Test</span> <span class="nb">log</span>
-      <span class="k">if</span><span class="p">:</span> <span class="o">$</span><span class="p">{{</span> <span class="n">always</span><span class="p">()</span> <span class="p">}}</span>
-      <span class="n">uses</span><span class="p">:</span> <span class="n">actions</span><span class="o">/</span><span class="n">upload</span><span class="o">-</span><span class="n">artifact</span><span class="err">@</span><span class="n">v2</span>  <span class="c1"># see https://github.com/actions/upload-artifact</span>
-      <span class="n">with</span><span class="p">:</span>
-          <span class="n">name</span><span class="p">:</span> <span class="n">veins</span><span class="o">-$</span><span class="p">{{</span> <span class="n">matrix</span><span class="o">.</span><span class="n">sumo_build</span> <span class="p">}}</span><span class="o">.</span><span class="n">log</span>
-          <span class="n">path</span><span class="p">:</span> <span class="o">|</span>
-            <span class="n">src</span><span class="o">/</span><span class="n">veins</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">veins</span><span class="o">/</span><span class="n">veins_launchd</span><span class="o">.</span><span class="n">log</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Upload</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="nb">log</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{{</span><span class="w"> </span><span class="n">always</span><span class="p">()</span><span class="w"> </span><span class="p">}}</span><span class="w"></span>
+<span class="w">      </span><span class="n">uses</span><span class="p">:</span><span class="w"> </span><span class="n">actions</span><span class="o">/</span><span class="n">upload</span><span class="o">-</span><span class="n">artifact</span><span class="err">@</span><span class="n">v2</span><span class="w">  </span><span class="c1"># see https://github.com/actions/upload-artifact</span><span class="w"></span>
+<span class="w">      </span><span class="n">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">veins</span><span class="o">-$</span><span class="p">{{</span><span class="w"> </span><span class="n">matrix</span><span class="o">.</span><span class="n">sumo_build</span><span class="w"> </span><span class="p">}}</span><span class="o">.</span><span class="n">log</span><span class="w"></span>
+<span class="w">          </span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">            </span><span class="n">src</span><span class="o">/</span><span class="n">veins</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">veins</span><span class="o">/</span><span class="n">veins_launchd</span><span class="o">.</span><span class="n">log</span><span class="w"></span>
 </code></pre></div>
 
 <p>To summarize, the basic structure of the workflow consists of the top-level code blocks <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#name"><code>name</code></a>, <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#on"><code>on</code></a>, and <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs"><code>jobs</code></a>, defining the workflow's name, trigger(s), and job(s), respectively.
 A CI test job for your project should then typically follow these steps:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1.</span> <span class="n">Clone</span> <span class="n">required</span> <span class="n">git</span> <span class="n">repositories</span>
-<span class="mf">2.</span> <span class="n">Set</span> <span class="n">up</span> <span class="n">build</span> <span class="n">environment</span>
-<span class="mf">3.</span> <span class="n">Build</span><span class="o">/</span><span class="n">Install</span>
-<span class="mf">4.</span> <span class="kr">Run</span> <span class="n">test</span> <span class="n">script</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Clone</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">repositories</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Set</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Build</span><span class="o">/</span><span class="n">Install</span><span class="w"></span>
+<span class="mf">4.</span><span class="w"> </span><span class="kr">Run</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">script</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>While there are common steps useful for most (if not all) projects' CI test workflows in the example above, note that it includes some Veins-specific steps, which need to be adapted to your project's needs.</p>

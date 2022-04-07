@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/TraCI/C++TraCIAPI.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/TraCI/C++TraCIAPI.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -170,7 +170,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -254,15 +254,15 @@ simstep2 200
 building a control program that mixes TraCI calls with custom code.</p>
 <h3 id="testing_the_traciapi_client_library">Testing the TraCIAPI client library<a class="headerlink" href="#testing_the_traciapi_client_library" title="Permanent link">#</a></h3>
 <p>In this mode the client library itself is used. Example code looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">SUMOTime</span> <span class="nt">t</span> <span class="o">=</span> <span class="nt">simulation</span><span class="p">.</span><span class="nc">getCurrentTime</span><span class="o">();</span>
-<span class="nt">std</span><span class="p">::</span><span class="nd">vector</span><span class="o">&lt;</span><span class="nt">std</span><span class="p">::</span><span class="nd">string</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nt">edge</span><span class="p">.</span><span class="nc">getIDList</span><span class="o">();</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">SUMOTime</span><span class="w"> </span><span class="nt">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">simulation</span><span class="p">.</span><span class="nc">getCurrentTime</span><span class="o">();</span><span class="w"></span>
+<span class="nt">std</span><span class="p">::</span><span class="nd">vector</span><span class="o">&lt;</span><span class="nt">std</span><span class="p">::</span><span class="nd">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">edge</span><span class="p">.</span><span class="nc">getIDList</span><span class="o">();</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="example_code">Example Code<a class="headerlink" href="#example_code" title="Permanent link">#</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;utils/traci/TraCIAPI.h&gt;</span><span class="cp"></span>
 
-<span class="kr">class</span> <span class="nf">Client</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kr">public</span><span class="w"> </span><span class="n">TraCIAPI</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kr">class</span><span class="w"> </span><span class="nf">Client</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kr">public</span><span class="w"> </span><span class="n">TraCIAPI</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="kr">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">    </span><span class="nf">Client</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 <span class="w">    </span><span class="o">~</span><span class="nf">Client</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>

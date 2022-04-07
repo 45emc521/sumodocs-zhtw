@@ -3,6 +3,7 @@ title: GLOSA
 ---
 
 # Introduction
+
 Since version 1.9.1 SUMO supports simulation of Green Light Optimal Speed
 Advisory (GLOSA) via the glosa device. This allows vehicles to avoid stops at
 traffic lights when the phase is about to change.
@@ -11,6 +12,7 @@ traffic lights when the phase is about to change.
     While the glosa capabilities are under development, their status can be checked via Issue #7721.
 
 # Equipping vehicles
+
 To attach a glosa device to a vehicle, the [standard device-equipment
 procedures](../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.md#devices) can
 be applied using `<device name>=glosa`.
@@ -26,6 +28,7 @@ For instance, a single vehicle can be equipped with glosa as in the following mi
 # GLOSA functions
 
 ## Slowing Down
+
 When a vehicle is approaching a red light the time until reaching the stop line
 is compared with the time until the signal (for the intended movement) changes to green.
 If the vehicle would reach the stop line before the switch, a slow-down maneuver
@@ -55,7 +58,7 @@ attribute of their phases.
 !!! caution
     This may cause invalid maneuvers with traffic-actuated traffic lights that
     may vary their phase duration.
-    
+
 The communication range may be customized by setting param "device.glosa.range" on the tlLogic. This may also be used to disable glosa functions for specific intersections.
 To update the parameter for a program that is embedded in the .net.xml file the following element can be loaded via **--additional-files**:
 

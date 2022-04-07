@@ -26,7 +26,7 @@ title: FAQ
 
   To allow for the efficient simulation of very large scenarios, it is
   also possible to run SUMO as a [**mesoscopic** simulation](Simulation/Meso.md).
-  
+
   SUMO also supports **macroscopic** traffic assignment using the
   [marouter](marouter.md) application.
 
@@ -203,18 +203,18 @@ always use the latest version of SUMO.
 - describe what you are trying to accomplish
 - describe how what you see differs from your expectations
 - Phrase your question using familiar terms (not everyone is an expert
-in your domain).
+  in your domain).
 - Don't ask for too many things in a single post / issue.
 - Do some research on your own before you post the question (otherwise
-you may appear to be lazy).
+  you may appear to be lazy).
   - read the FAQ
   - read the documentation
   - check out the [Tutorials](Tutorials/index.md)
   - do a web search (past questions and answers from the mailing list can be found by google)
   - describe which documentation you used, especially when [your experience doesn't match the documentation](#why_does_sumo_not_behave_as_documented_in_this_wiki)
 - Do not ask the same thing twice in a short span of time. If you are
-in a hurry and cannot get an answer, try to change your question
-according to the above suggestions.
+  in a hurry and cannot get an answer, try to change your question
+  according to the above suggestions.
 - if you put your question into an issue an the issue was closed, put your follow-up questions into the closed issue rather than open an new issue
 - Be polite
 - Good Example questions:
@@ -251,11 +251,12 @@ according to the above suggestions.
 ### My [TraCI](TraCI.md)-program is to slow. What can I do?
 
   TraCI communicates over sockets and this communication is slow. You can often reduce the number of TraCI commands via the following strategies.
-  
-  - store results that do not change (i.e. vehicle length) rather than retrieving them again repeatedly
-  - use [subscriptions](TraCI/Object_Variable_Subscription.md) or [context subscriptions](TraCI/Object_Context_Subscription.md) to reduce the number of 'get' commmands for things that you need in every step
 
-   Even larger gains can be hand by switching to [libsumo](Libsumo.md). This can be done with a single line of code and completely eliminates the slow socket communication. 
+- store results that do not change (i.e. vehicle length) rather than retrieving them again repeatedly
+
+- use [subscriptions](TraCI/Object_Variable_Subscription.md) or [context subscriptions](TraCI/Object_Context_Subscription.md) to reduce the number of 'get' commmands for things that you need in every step
+  
+  Even larger gains can be hand by switching to [libsumo](Libsumo.md). This can be done with a single line of code and completely eliminates the slow socket communication. 
 
 ### My [TraCI](TraCI.md)-program is not working as intended. Can you help me debug it?
 
@@ -273,18 +274,18 @@ the TraCI script being run. Here are some guidelines for figuring out
 what is happening:
 
 - The SUMO error *connection reset by peer* indicates a problem in the
-script. The python strack trace should point to the problem (in the
-simplest case, the script ends without calling *traci.close()*)
+  script. The python strack trace should point to the problem (in the
+  simplest case, the script ends without calling *traci.close()*)
 - The error **TraCIFatalError** *connection closed by SUMO* indicates
-a problem with SUMO
+  a problem with SUMO
 - The error **TraCIException** indicates a minor problem with the
-script. (e.g. asking for a vehicle that does not exist). This type
-of error can be safely handled by the script with *try/except*
+  script. (e.g. asking for a vehicle that does not exist). This type
+  of error can be safely handled by the script with *try/except*
 - It is a good idea to run [sumo](sumo.md) with the option **--log** {{DT_FILE}} to
-figure out what went wrong in a simulation run or why the simulation
-aborted.
+  figure out what went wrong in a simulation run or why the simulation
+  aborted.
 - If SUMO crashes (just stops instead of quitting with an error
-message) here is how to debug it:
+  message) here is how to debug it:
   - in the options to *traci.start()* add *\['--save-configuration',
     'debug.sumocfg'\]*
   - run your script (sumo will not start and the script will try to
@@ -316,13 +317,15 @@ client version and SUMO version match. When using SUMO version 1.0.0 or larger y
 
   Yes. It is supported since version 0.24.0. To create a new network for
   lefthand traffic, the option **--lefthand** must be set.
-  
+
   To convert an existing network to lefthand driving, there are two options. Abstract networks (no geo-reference, coordinates do not matter much) can be processed with netconvert:
+
 ```
     netconvert -s righthand.net.xml --flip-y-axis -o lefthand.net.xml
 ```
 
    To convert an existing network and preserve coordinates, the network must first be disaggregated into nodes and edges and then re-assembled:
+
 ```
     netconvert -s righthand.net.xml --plain-output-prefix righthand
     netconvert -e righthand.edg.xml -n righthand.nod.xml --lefthand -o lefthand.net.xml
@@ -357,17 +360,17 @@ client version and SUMO version match. When using SUMO version 1.0.0 or larger y
   in [sumo](sumo.md) or [duarouter](duarouter.md) can
   be parallelized by setting the option **--device.rerouting.threads** {{DT_INT}} and **--routing-threads** {{DT_INT}} respectively.
   When these options are used, multiple cores on the machine are used.
-  
+
   There is no support for multi-node parallelization.
-  
+
   When running [sumo-gui](sumo-gui.md), an additional thread is used for visualization.
-  
+
   The python TraCI library allows controlling multiple simulations
   from a single script either by calling *traci.connect* and storing
   the returned connection object or by calling
   *traci.start(label=...)* and retrieving the connection object with
   *traci.getConnection(label)*.
-  
+
   The work to make the core (microscopic) simulation run in parallel is ongoing (Issue #4767). 
   Some parts of the simulation can already be run in parallel when setting option **--threads** but this does not lead to meaningful speedup yet.
 
@@ -528,8 +531,9 @@ At line/column 10/46
   Files\\foo.xml* even when adding quotation marks. Since 1.0.0 the ',' (comma) is used so these paths should work.
   Additionally, SUMO may fail to load files if the name contains characters outside
   the basic [ASCII set](https://en.wikipedia.org/wiki/Ascii).
-  
+
 ### Windows 10 is blocking the execution of sumo-gui and netedit. How come?
+
   Executable files downloaded from the internet may trigger the windows 10 security warning. You can work around this by clicking on the 'More Info' Text and then selecting 'Run Anyway' in the subsequent dialog.
 
 ## netconvert
@@ -551,22 +555,22 @@ At line/column 10/46
 
 If you need to modify a network there are several possibilities:
 
-1.  Edit the network with [netedit](Netedit/index.md)
-2.  Modify the original input files and then rebuild the net with
-    [netconvert](netconvert.md).
-3.  Patch the network with [netconvert](netconvert.md). You can
-    [load a *.net.xml* file](Networks/Import/SUMO_Road_Networks.md) together with
-    [small XML-files](Networks/PlainXML.md)
-    to patch individual edges, nodes and connections. Additional
-    possibilities are described
-    [here](Tutorials/ScenarioGuide.md#modifying_the_network).
-    For changing traffic light plans or timings see
-    [Simulation/Traffic_Lights](Simulation/Traffic_Lights.md).
-    If you cannot figure out how to accomplish the desired changes this
-    way, [contact us\!](Contact.md).
-4.  Use [netconvert](netconvert.md)-option **--plain-output-prefix** to convert the
-    network into [it's plain XML representation](Networks/PlainXML.md).
-    Then modify these files and rebuild the network
+1. Edit the network with [netedit](Netedit/index.md)
+2. Modify the original input files and then rebuild the net with
+   [netconvert](netconvert.md).
+3. Patch the network with [netconvert](netconvert.md). You can
+   [load a *.net.xml* file](Networks/Import/SUMO_Road_Networks.md) together with
+   [small XML-files](Networks/PlainXML.md)
+   to patch individual edges, nodes and connections. Additional
+   possibilities are described
+   [here](Tutorials/ScenarioGuide.md#modifying_the_network).
+   For changing traffic light plans or timings see
+   [Simulation/Traffic_Lights](Simulation/Traffic_Lights.md).
+   If you cannot figure out how to accomplish the desired changes this
+   way, [contact us\!](Contact.md).
+4. Use [netconvert](netconvert.md)-option **--plain-output-prefix** to convert the
+   network into [it's plain XML representation](Networks/PlainXML.md).
+   Then modify these files and rebuild the network
 
 If you need to build a network from custom input data it is recommended
 to generate
@@ -634,13 +638,12 @@ The default windows release is currently provided without GDAL support
 due to EPL2 Licensing issues. If you need to import shapefiles, either
 use the Linux version or download the [nightly-extra version](https://sumo.dlr.de/daily/sumo-win64extra-git.zip)
 
-
 ## netedit
 
 ### How can I edit lane attributes?
 
 see [inspecting lanes](Netedit/editModesCommon.md#inspecting_lanes)
-  
+
 ### How can I edit connection attributes?
 
 see [inspecting connections](Netedit/editModesCommon.md#inspecting_connections)
@@ -674,6 +677,7 @@ see [inspecting connections](Netedit/editModesCommon.md#inspecting_connections)
   the options below. If the network contains disconnected parts, not
   all random trips will be viable. In this case, simply generate more
   trips and delete superfluous vehicles from the output route file.
+  
   - **--begin** <your desired begin time\>
   - **--end** <begin + time in which vehicles shall be inserted to then network\>
   - **--period** <(end - begin) / number of vehicles desired\>
@@ -693,11 +697,12 @@ see [inspecting connections](Netedit/editModesCommon.md#inspecting_connections)
   whole simulation is much larger the specified value because some
   vehicles leave the simulation and new vehicles with distinct IDs are
   inserted to replace them.
-  
+
 - You can use [rerouters](Simulation/Rerouter.md) in the
   simulation. Rerouters, assign a new route for vehicles driving
   across them and thus prevent them from leaving the network. For an
   example with a simple circle see [{{SUMO}}/tests/sumo/cf_model/drive_in_circles]({{Source}}tests/sumo/cf_model/drive_in_circles)
+  
   - The tool [generateContinuousRerouters.py](Tools/Misc.md#generatecontinuousrerouterspy) can be used to generate
     rerouters for continuous operation with configurable turning ratios.
   - If the network is not circular to begin with (i.e a single
@@ -707,7 +712,6 @@ see [inspecting connections](Netedit/editModesCommon.md#inspecting_connections)
 
 !!! caution
     Up to version 0.24.0, option **--max-num-vehicles** terminates the simulation when exceeding the specified number
-
 
 ### A vehicle cannot reach its target or takes a circuitous route. Why?
 
@@ -738,20 +742,21 @@ see [inspecting connections](Netedit/editModesCommon.md#inspecting_connections)
   street. This mapping can be done using the python sumolib coming
   with sumo, see
   [Tools/Sumolib\#locate_nearby_edges_based_on_the_geo-coordinate](Tools/Sumolib.md#locate_nearby_edges_based_on_the_geo-coordinate)
-  
+
   Duarouter supports mapping of x,y and lon,lat coordinates
   using the attributes [fromXY, fromLonLat and their relatives](Demand/Shortest_or_Optimal_Path_Routing.md).
   For high-quality GPS data it is sufficient to define
-  ```
-    <trip id="myVeh" viaLonLat="Lon0,Lat0  Lon1,Lat1  Lon2,Lat2 ..." depart="0"/>
-  ```
+
+```
+  <trip id="myVeh" viaLonLat="Lon0,Lat0  Lon1,Lat1  Lon2,Lat2 ..." depart="0"/>
+```
 
   This will fail when there is an edge in the route which did not get
   hit by a data point or if you have a mismatch (for instance matching
   an edge which goes in the "wrong" direction). In the former case you
   can easily repair the route using [duarouter](duarouter.md)
   with **--repair** (happens automatically when using via-coordinates). 
-  
+
   Another small script which helps here is
   [Tools/Routes\#tracemapper.py](Tools/Routes.md#tracemapperpy).
   You can also use the map matching plugin from
@@ -779,19 +784,19 @@ itself. Without using [TraCI](TraCI.md) the following approaches
 may be useful:
 
 1. Let a vehicle halt on the lane for some time (see [Definition of Vehicles, Vehicle Types, and Routes\#Stops](Definition_of_Vehicles,_Vehicle_Types,_and_Routes.md#stops)).
-This works quite nice for simulating accidents.
+   This works quite nice for simulating accidents.
 2. Put a variable speed sign of the lane where the accident is meant to
-be and let it reduce the speed (see [Simulation/Variable Speed Signs](Simulation/Variable_Speed_Signs.md)). This method will
-reduce the throughput on the lane, but further dynamics will rather not
-fit to what one would expect from an accident situation.
+   be and let it reduce the speed (see [Simulation/Variable Speed Signs](Simulation/Variable_Speed_Signs.md)). This method will
+   reduce the throughput on the lane, but further dynamics will rather not
+   fit to what one would expect from an accident situation.
 3. You may of course combine both approaches. Within a project we
-simulated traffic incidents by letting vehicles stop on one lane and
-reducing the speed on the other lanes.
+   simulated traffic incidents by letting vehicles stop on one lane and
+   reducing the speed on the other lanes.
 4. Alternatively, you may [close one or more of the lanes on an edge](Simulation/Rerouter.md#closing_a_lane)
 5. If you [close the whole edge, rerouting may be triggered as well](Simulation/Rerouter.md#closing_a_street)
 6. By setting the option **--collision.stoptime**, traffic jams may be created after a
-registered
-[collision](Simulation/Safety.md#deliberately_causing_collisions).
+   registered
+   [collision](Simulation/Safety.md#deliberately_causing_collisions).
 
 ### I have changed my network and now SUMO does not load it.
 
@@ -820,7 +825,6 @@ registered
 - You did not [define any vehicles](Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.md)
 - All your vehicles are set to depart before the simulation **--begin** time
 - Your vehicles are set to depart much later than the simulation **--begin** time
-
 
 ### Different departure times with different time step size
 
@@ -867,20 +871,20 @@ registered
 
 Deadlocks in a scenario can have many causes:
 
-1.  invalid network
-  - invalid lane numbers
-  - missing turning lanes
-  - invalid connections
-  - invalid junctions [(big clusters of small junctions should be joined)](Networks/PlainXML.md#joining_nodes)
-2.  invalid traffic lights (see [Improving generated traffic lights](Simulation/Traffic_Lights.md#improving_generated_programs_with_knowledge_about_traffic_demand))
-3.  invalid demand (too many vehicles overall, too many vehicles
-    starting on the same edge).
-4.  invalid routing
-  - only shortest path were used instead of [a user assignment algorithm](Demand/Dynamic_User_Assignment.md)
-  - to many vehicles start/end their route with a [turn-around](Simulation/Turnarounds.md). Can be fixed by computing [routes between junctions](Demand/Shortest_or_Optimal_Path_Routing.md#routing_between_junctions) instead of between edges.
-5.  invalid insertion (vehicles being inserted on the wrong lane close
-    to the end of an edge where they need to change to another turn
-    lane). This can be fixed by setting the vehicle attribute `departLane="best"`
+1. invalid network
+   - invalid lane numbers
+   - missing turning lanes
+   - invalid connections
+   - invalid junctions [(big clusters of small junctions should be joined)](Networks/PlainXML.md#joining_nodes)
+2. invalid traffic lights (see [Improving generated traffic lights](Simulation/Traffic_Lights.md#improving_generated_programs_with_knowledge_about_traffic_demand))
+3. invalid demand (too many vehicles overall, too many vehicles
+   starting on the same edge).
+4. invalid routing
+   - only shortest path were used instead of [a user assignment algorithm](Demand/Dynamic_User_Assignment.md)
+   - to many vehicles start/end their route with a [turn-around](Simulation/Turnarounds.md). Can be fixed by computing [routes between junctions](Demand/Shortest_or_Optimal_Path_Routing.md#routing_between_junctions) instead of between edges.
+5. invalid insertion (vehicles being inserted on the wrong lane close
+   to the end of an edge where they need to change to another turn
+   lane). This can be fixed by setting the vehicle attribute `departLane="best"`
 
 If the network was imported from OpenStreetMap, it is highly recommended
 to use the [recommended import options](Networks/Import/OpenStreetMap.md#recommended_netconvert_options).
@@ -896,7 +900,6 @@ There are several reasons why a counter-lane-change-deadlock can happen:
 - Vehicles are unable to enter the desired lane because the connection layout at preceeding junctions prevents it. This can be fixed by closely examining the connections ahead of the deadlock.
 - Vehicles are inserted on the wrong lane close to an intersection where they need to change lanes. To fix this, set the vehicle attribute `departLane="best"`
 - Vehicle streams must perform at weaving maneuver where they are forced to change lanes with limited space to do so. This often occurs at motorway ramps that compbine an on-ramp with an off-ramp with little distance in between. The danger of deadlocks can be removed by adding an additional network connection [as explained here](Simulation/Motorways.md#combined_on-off-ramps). Similar deadlocks may also occur at multi-lane roundabouts and the same solution of adding an extra connection (from the inside lane to the outside) applies.
-
 
 ### Why do the vehicles perform unexpected lane-changing maneuvers?
 
@@ -1186,9 +1189,11 @@ SSL certificates try: `pip install certifi`.
 ### How do I combine SUMO with a network simulator?
 
   Check out [veins](http://veins.car2x.org/).
-  
+
 ## Validity
+
 ### What are publications on SUMO's validity?
+
 - https://elib.dlr.de/120856/
 - https://elib.dlr.de/112657/
 - https://elib.dlr.de/6657/

@@ -100,6 +100,7 @@ found by following its link.
   calculation of the actual tailback in front of a junction
 
 ## values for junctions
+
 There is no dedicated output format for traffic at junctions. Instead junction related traffic can be measured by placing detectors that measure traffic at the intersection.
 
 - [Tools/Output\#generateTLSE1Detectors.py](../../Tools/Output.md#generatetlse1detectorspy)
@@ -159,13 +160,13 @@ Alternatively, the [values for edges or lanes](#values_for_edges_or_lanes) can b
 ## Additional Debugging Outputs
 
 - The option **--link-output** {{DT_FILE}} saves debugging data for the intersection model. This
-data reveals how long each vehicle intends to occupy an upcoming
-intersection.
+  data reveals how long each vehicle intends to occupy an upcoming
+  intersection.
 - The option **--movereminder-output** {{DT_FILE}} saves debugging data for the interaction between vehicle
-devices, lanes and output facilities. It is only available when
-compiling [sumo](../../sumo.md) with debug flags.
+  devices, lanes and output facilities. It is only available when
+  compiling [sumo](../../sumo.md) with debug flags.
 - The option **--railsignal-block-output** {{DT_FILE}} saves information about rail signal blocks. For each
-controlled railSignal link the following information is generated:
+  controlled railSignal link the following information is generated:
   - **forwardBlock**: all lanes that are reached from the signalized
     link in forward direction up to the next rail signal
   - **bidiBlock**: all lanes that make up the reverse-direction
@@ -202,17 +203,17 @@ will be printed (unless explicitly disabled with option **--duration-log false**
 
 - Inserted: number vehicles that entered the simulation network
 - Loaded: number of vehicles that were loaded from route files. This
-may differ from emitted for two reason:
+  may differ from emitted for two reason:
   - Running with option **--scale** with a value less than 1.0
   - Having a congested network where not all vehicles could be
     inserted before the simulation time ended
 - Running: number of vehicles currently active in the network at
-simulation end
+  simulation end
 - Waiting: number of vehicles which could not yet be inserted into the
-network due to congestion
+  network due to congestion
 - Teleports: number of of times that vehicles were teleported for any
-of the following reasons (These reasons are given whenever a
-teleport warning is issued)
+  of the following reasons (These reasons are given whenever a
+  teleport warning is issued)
   - [Collision](../Why_Vehicles_are_teleporting.md#collisions):
     a vehicle violated its minGap requirement in relation to its
     leader vehicle
@@ -261,17 +262,23 @@ When setting the option **--duration-log.statistics**, (shortcut **-t**) verbose
 vehicle trips will be printed:
 
 - RouteLength: average route length
+
 - Speed: average trip speed
+
 - Duration: average trip duration
+
 - WaitingTime: average time spent standing (involuntarily)
+
 - TimeLoss: average time lost due to driving slower than desired
   (includes WaitingTime). The desired speed takes the vehicles
   [speedFactor](../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.md#speed_distributions)
   into account.
+
 - DepartDelay: average time vehicle departures were [delayed due to
   lack of road space](../VehicleInsertion.md)
-
+  
   !!! note
+  
       By default, only vehicles that have arrived are included in these statistics. If the option **--tripinfo-output.write-unfinished** is set, running vehicles will be included as well.
 
 - DepartDelayWaiting: average waiting time of vehicles which could not

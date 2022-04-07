@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Installing/Linux_Build.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Installing/Linux_Build.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -169,7 +169,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -213,12 +213,12 @@ packages</a> instead.</p>
 <li>Build the SUMO binaries</li>
 </ol>
 <p>For ubuntu this boils down to</p>
-<div class="codehilite"><pre><span></span><code> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span> <span class="n">cmake</span> <span class="n">python3</span> <span class="n">g</span><span class="o">++</span> <span class="n">libxerces</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="n">dev</span> <span class="n">libfox</span><span class="o">-</span><span class="mf">1.6</span><span class="o">-</span><span class="n">dev</span> <span class="n">libgdal</span><span class="o">-</span><span class="n">dev</span> <span class="n">libproj</span><span class="o">-</span><span class="n">dev</span> <span class="n">libgl2ps</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">swig</span> <span class="n">default</span><span class="o">-</span><span class="n">jdk</span> <span class="n">maven</span> <span class="n">libeigen3</span><span class="o">-</span><span class="n">dev</span>
- <span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">eclipse</span><span class="o">/</span><span class="n">sumo</span>
- <span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;$PWD/sumo&quot;</span>
- <span class="n">mkdir</span> <span class="n">sumo</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">cmake</span><span class="o">-</span><span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">sumo</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">cmake</span><span class="o">-</span><span class="n">build</span>
- <span class="n">cmake</span> <span class="o">../..</span>
- <span class="n">make</span> <span class="o">-</span><span class="n">j</span><span class="o">$</span><span class="p">(</span><span class="n">nproc</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">cmake</span><span class="w"> </span><span class="n">python3</span><span class="w"> </span><span class="n">g</span><span class="o">++</span><span class="w"> </span><span class="n">libxerces</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libfox</span><span class="o">-</span><span class="mf">1.6</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libgdal</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libproj</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libgl2ps</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">swig</span><span class="w"> </span><span class="n">default</span><span class="o">-</span><span class="n">jdk</span><span class="w"> </span><span class="n">maven</span><span class="w"> </span><span class="n">libeigen3</span><span class="o">-</span><span class="n">dev</span><span class="w"></span>
+<span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="o">--</span><span class="n">recursive</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">eclipse</span><span class="o">/</span><span class="n">sumo</span><span class="w"></span>
+<span class="w"> </span><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;$PWD/sumo&quot;</span><span class="w"></span>
+<span class="w"> </span><span class="n">mkdir</span><span class="w"> </span><span class="n">sumo</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">cmake</span><span class="o">-</span><span class="n">build</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">sumo</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">cmake</span><span class="o">-</span><span class="n">build</span><span class="w"></span>
+<span class="w"> </span><span class="n">cmake</span><span class="w"> </span><span class="o">../..</span><span class="w"></span>
+<span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">j</span><span class="o">$</span><span class="p">(</span><span class="n">nproc</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>Each of these steps is described in more detail and with possible
@@ -282,7 +282,7 @@ define the environment variable SUMO_HOME. SUMO_HOME must be set to
 the SUMO build path from the previous step. Assuming that you placed
 SUMO in the folder "<em>/home/&lt;user>/sumo-&lt;version></em>", if you want to
 define only for the current session, type in the console</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/home/&lt;user&gt;/sumo-&lt;version&gt;&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/home/&lt;user&gt;/sumo-&lt;version&gt;&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <p>If you want to define for all sessions (i.e. for every time that you run
@@ -376,7 +376,7 @@ SUMO from the bin subfolder (bin/sumo-gui and bin/sumo).</p>
 
 <p>You have to adjust your SUMO_HOME variable to the install dir (usually
 /usr/local/share/sumo)</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">sumo</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">sumo</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">#</a></h2>
@@ -410,10 +410,10 @@ improve build speed.</p>
 <a href="http://lists.danga.com/pipermail/memcached/2005-September/001611.html">http://lists.danga.com/pipermail/memcached/2005-September/001611.html</a></p>
 <h3 id="ld_cannot_find_an_existing_library_fedora-23">ld cannot find an existing library (Fedora-23)<a class="headerlink" href="#ld_cannot_find_an_existing_library_fedora-23" title="Permanent link">#</a></h3>
 <p>Problem:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">ld</span><span class="o">:</span> <span class="n">cannot</span> <span class="n">find</span> <span class="o">-</span><span class="n">lfreetype</span>
-<span class="n">ls</span> <span class="o">-</span><span class="n">lah</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libfreetype</span><span class="o">*</span>
- <span class="n">lrwxrwxrwx</span><span class="p">.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">21</span> <span class="n">Jul</span> <span class="mi">28</span> <span class="mi">15</span><span class="o">:</span><span class="mi">54</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libfreetype</span><span class="p">.</span><span class="n">so</span><span class="mf">.6</span> <span class="o">-&gt;</span> <span class="n">libfreetype</span><span class="p">.</span><span class="n">so</span><span class="mf">.6.12.0</span>
- <span class="n">lrwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="p">.</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">689</span><span class="n">K</span> <span class="n">Jul</span> <span class="mi">28</span> <span class="mi">15</span><span class="o">:</span><span class="mi">54</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libfreetype</span><span class="p">.</span><span class="n">so</span><span class="mf">.6.12.0</span>
+<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">ld</span><span class="o">:</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="o">-</span><span class="n">lfreetype</span><span class="w"></span>
+<span class="n">ls</span><span class="w"> </span><span class="o">-</span><span class="n">lah</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libfreetype</span><span class="o">*</span><span class="w"></span>
+<span class="w"> </span><span class="n">lrwxrwxrwx</span><span class="p">.</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">root</span><span class="w">   </span><span class="mi">21</span><span class="w"> </span><span class="n">Jul</span><span class="w"> </span><span class="mi">28</span><span class="w"> </span><span class="mi">15</span><span class="o">:</span><span class="mi">54</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libfreetype</span><span class="p">.</span><span class="n">so</span><span class="mf">.6</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">libfreetype</span><span class="p">.</span><span class="n">so</span><span class="mf">.6.12.0</span><span class="w"></span>
+<span class="w"> </span><span class="n">lrwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="p">.</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="mi">689</span><span class="n">K</span><span class="w"> </span><span class="n">Jul</span><span class="w"> </span><span class="mi">28</span><span class="w"> </span><span class="mi">15</span><span class="o">:</span><span class="mi">54</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libfreetype</span><span class="p">.</span><span class="n">so</span><span class="mf">.6.12.0</span><span class="w"></span>
 </code></pre></div>
 
 <p>Solution: Install the dev package; for fedora:</p>

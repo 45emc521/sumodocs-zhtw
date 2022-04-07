@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/TraCI/Interfacing_TraCI_from_Python.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/TraCI/Interfacing_TraCI_from_Python.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -182,7 +182,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -225,19 +225,19 @@ can be found at
 <h2 id="importing_traci_in_a_script">importing <strong>traci</strong> in a script<a class="headerlink" href="#importing_traci_in_a_script" title="Permanent link">#</a></h2>
 <p>To use the library, the <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools directory must be on the python load
 path. This is typically done with a stanza like this:</p>
-<div class="codehilite"><pre><span></span><code> <span class="n">import</span> <span class="n">os</span><span class="p">,</span> <span class="n">sys</span>
- <span class="k">if</span> <span class="s1">&#39;SUMO_HOME&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-     <span class="n">tools</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SUMO_HOME&#39;</span><span class="p">],</span> <span class="s1">&#39;tools&#39;</span><span class="p">)</span>
-     <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tools</span><span class="p">)</span>
- <span class="k">else</span><span class="p">:</span>
-     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;please declare environment variable &#39;SUMO_HOME&#39;&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="n">sys</span><span class="w"></span>
+<span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="s1">&#39;SUMO_HOME&#39;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="n">tools</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SUMO_HOME&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;tools&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tools</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="k">else</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;please declare environment variable &#39;SUMO_HOME&#39;&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>This assumes that the <a href="../Basics/Basic_Computer_Skills.html#additional_environment_variables">environment variable
 <strong>SUMO_HOME</strong></a>
 is set before running the script. Alternatively, you can declare the
 path to <em>sumo/tools</em> directly as in the line</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;c:&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span> <span class="s1">&#39;whatever&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39;sumo&#39;</span><span class="p">,</span> <span class="s1">&#39;tools&#39;</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;c:&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;whatever&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;path&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sumo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tools&#39;</span><span class="p">))</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="first_steps">First Steps<a class="headerlink" href="#first_steps" title="Permanent link">#</a></h2>
@@ -280,17 +280,17 @@ can ask the module for the result of all current subscriptions after
 each time step. In order to subscribe for variables you need to know
 their variable ids which can be looked up in the traci/constants.py
 file.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">import</span> <span class="n">traci</span>
-<span class="n">import</span> <span class="n">traci</span><span class="o">.</span><span class="n">constants</span> <span class="k">as</span> <span class="n">tc</span>
+<div class="codehilite"><pre><span></span><code><span class="n">import</span><span class="w"> </span><span class="n">traci</span><span class="w"></span>
+<span class="n">import</span><span class="w"> </span><span class="n">traci</span><span class="o">.</span><span class="n">constants</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">tc</span><span class="w"></span>
 
-<span class="n">traci</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="s2">&quot;sumo&quot;</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="s2">&quot;my.sumocfg&quot;</span><span class="p">])</span>
-<span class="n">traci</span><span class="o">.</span><span class="n">vehicle</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">vehID</span><span class="p">,</span> <span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">VAR_ROAD_ID</span><span class="p">,</span> <span class="n">tc</span><span class="o">.</span><span class="n">VAR_LANEPOSITION</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">vehicle</span><span class="o">.</span><span class="n">getSubscriptionResults</span><span class="p">(</span><span class="n">vehID</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
-   <span class="n">traci</span><span class="o">.</span><span class="n">simulationStep</span><span class="p">()</span>
-   <span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">vehicle</span><span class="o">.</span><span class="n">getSubscriptionResults</span><span class="p">(</span><span class="n">vehID</span><span class="p">))</span>
-<span class="n">traci</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">traci</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="s2">&quot;sumo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;my.sumocfg&quot;</span><span class="p">])</span><span class="w"></span>
+<span class="n">traci</span><span class="o">.</span><span class="n">vehicle</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">vehID</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">VAR_ROAD_ID</span><span class="p">,</span><span class="w"> </span><span class="n">tc</span><span class="o">.</span><span class="n">VAR_LANEPOSITION</span><span class="p">))</span><span class="w"></span>
+<span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">vehicle</span><span class="o">.</span><span class="n">getSubscriptionResults</span><span class="p">(</span><span class="n">vehID</span><span class="p">))</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span><span class="w"></span>
+<span class="w">   </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">traci</span><span class="o">.</span><span class="n">simulationStep</span><span class="p">()</span><span class="w"></span>
+<span class="w">   </span><span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">vehicle</span><span class="o">.</span><span class="n">getSubscriptionResults</span><span class="p">(</span><span class="n">vehID</span><span class="p">))</span><span class="w"></span>
+<span class="n">traci</span><span class="o">.</span><span class="n">close</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 
 <p>The values retrieved are always the ones from the last time step, it is
@@ -309,17 +309,17 @@ which can be looked up in the traci/constants.py file. The domain id
 always has the form CMD_GET_&lt;DOMAIN>_VARIABLE. The following code
 retrieves all vehicle speeds and waiting times within range (42m) of a
 junction (the vehicle ids are retrieved implicitly).</p>
-<div class="codehilite"><pre><span></span><code><span class="n">import</span> <span class="n">traci</span>
-<span class="n">import</span> <span class="n">traci</span><span class="o">.</span><span class="n">constants</span> <span class="k">as</span> <span class="n">tc</span>
+<div class="codehilite"><pre><span></span><code><span class="n">import</span><span class="w"> </span><span class="n">traci</span><span class="w"></span>
+<span class="n">import</span><span class="w"> </span><span class="n">traci</span><span class="o">.</span><span class="n">constants</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">tc</span><span class="w"></span>
 
-<span class="n">traci</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="s2">&quot;sumo&quot;</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="s2">&quot;my.sumocfg&quot;</span><span class="p">])</span>
-<span class="n">traci</span><span class="o">.</span><span class="n">junction</span><span class="o">.</span><span class="n">subscribeContext</span><span class="p">(</span><span class="n">junctionID</span><span class="p">,</span> <span class="n">tc</span><span class="o">.</span><span class="n">CMD_GET_VEHICLE_VARIABLE</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="p">[</span><span class="n">tc</span><span class="o">.</span><span class="n">VAR_SPEED</span><span class="p">,</span> <span class="n">tc</span><span class="o">.</span><span class="n">VAR_WAITING_TIME</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">junction</span><span class="o">.</span><span class="n">getContextSubscriptionResults</span><span class="p">(</span><span class="n">junctionID</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
-   <span class="n">traci</span><span class="o">.</span><span class="n">simulationStep</span><span class="p">()</span>
-   <span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">junction</span><span class="o">.</span><span class="n">getContextSubscriptionResults</span><span class="p">(</span><span class="n">junctionID</span><span class="p">))</span>
-<span class="n">traci</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">traci</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="s2">&quot;sumo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;my.sumocfg&quot;</span><span class="p">])</span><span class="w"></span>
+<span class="n">traci</span><span class="o">.</span><span class="n">junction</span><span class="o">.</span><span class="n">subscribeContext</span><span class="p">(</span><span class="n">junctionID</span><span class="p">,</span><span class="w"> </span><span class="n">tc</span><span class="o">.</span><span class="n">CMD_GET_VEHICLE_VARIABLE</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">tc</span><span class="o">.</span><span class="n">VAR_SPEED</span><span class="p">,</span><span class="w"> </span><span class="n">tc</span><span class="o">.</span><span class="n">VAR_WAITING_TIME</span><span class="p">])</span><span class="w"></span>
+<span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">junction</span><span class="o">.</span><span class="n">getContextSubscriptionResults</span><span class="p">(</span><span class="n">junctionID</span><span class="p">))</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span><span class="w"></span>
+<span class="w">   </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">traci</span><span class="o">.</span><span class="n">simulationStep</span><span class="p">()</span><span class="w"></span>
+<span class="w">   </span><span class="nb">print</span><span class="p">(</span><span class="n">traci</span><span class="o">.</span><span class="n">junction</span><span class="o">.</span><span class="n">getContextSubscriptionResults</span><span class="p">(</span><span class="n">junctionID</span><span class="p">))</span><span class="w"></span>
+<span class="n">traci</span><span class="o">.</span><span class="n">close</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 
 <p>The values retrieved are always the ones from the last time step, it is
@@ -564,10 +564,10 @@ while traci.simulation.getMinExpectedNumber() > 0:</p>
 <h3 id="handling_exceptions">Handling Exceptions<a class="headerlink" href="#handling_exceptions" title="Permanent link">#</a></h3>
 <p>Sometimes commands raise an (recoverable) exception to indicate an error (unknown id, route not found etc.). These exceptions
 can be handled by your code as follows:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">try</span><span class="o">:</span>
-    <span class="n">pos</span> <span class="o">=</span> <span class="n">traci</span><span class="o">.</span><span class="na">vehicle</span><span class="o">.</span><span class="na">getPosition</span><span class="o">(</span><span class="n">vehID</span><span class="o">)</span>
-<span class="n">except</span> <span class="n">traci</span><span class="o">.</span><span class="na">TraCIException</span><span class="o">:</span>
-    <span class="n">pass</span> <span class="err">#</span> <span class="n">or</span> <span class="k">do</span> <span class="n">something</span> <span class="n">smarter</span>
+<div class="codehilite"><pre><span></span><code><span class="k">try</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">traci</span><span class="o">.</span><span class="na">vehicle</span><span class="o">.</span><span class="na">getPosition</span><span class="o">(</span><span class="n">vehID</span><span class="o">)</span><span class="w"></span>
+<span class="n">except</span><span class="w"> </span><span class="n">traci</span><span class="o">.</span><span class="na">TraCIException</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">pass</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="n">smarter</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="further_resources">Further Resources<a class="headerlink" href="#further_resources" title="Permanent link">#</a></h2>

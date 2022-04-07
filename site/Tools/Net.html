@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Net.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Net.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -158,7 +158,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -193,7 +193,7 @@
 
 <h1 id="netdiffpy">netdiff.py<a class="headerlink" href="#netdiffpy" title="Permanent link">#</a></h1>
 <p>This script compares two <em>.net.xml</em> files. The call</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">netdiff</span><span class="o">.</span><span class="n">py</span> <span class="n">A</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="n">B</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="n">diff</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">netdiff</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">A</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="n">B</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="n">diff</span><span class="w"></span>
 </code></pre></div>
 
 <p>will produce 4 <a href="../Networks/PlainXML.html">plain-XML network</a> files:</p>
@@ -241,7 +241,7 @@ is accomplished by setting <strong>-i</strong> (<strong>--patch-on-import</stron
 <p>Sometimes it may be useful to apply the difference between networks <em>A</em> and <em>B</em> to another network <em>C</em> than differs slightly from <em>A</em>.
 In this case it may be useful to only consider some of the changes (i.e. only created elements).</p>
 <p>If only the newly created elements in <em>B</em> (relative to <em>A</em>) shall be considered, open each of the difference files (ie. diff.edg.xml, diff.nod.xml, diff.con.xml, diff.tll.xml) and keep only the elements below the heading</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;!--</span> <span class="n">Created</span> <span class="n">Elements</span> <span class="o">--&gt;</span><span class="s">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Created</span><span class="w"> </span><span class="n">Elements</span><span class="w"> </span><span class="o">--&gt;</span><span class="s">&quot;</span>
 </code></pre></div>
 
 <p>This way the patch should be applicable to network <em>C</em> regardless of how it differs from the original <em>A</em>.</p>
@@ -257,7 +257,7 @@ given network. The following connections are added:</p>
   lane if there are enough outgoing lanes.</li>
 </ul>
 <p>Usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">createRoundaboutConnections</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">createRoundaboutConnections</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
 
 <p>This creates the output file <code>roundabout-connection.con.xml</code>, where the input network is <strong><em>&lt;net-file></em></strong>.</p>
@@ -268,7 +268,7 @@ regardless of edge direction) and prints the connected components if
 not.</p>
 <p>Additionally, you may run this script to discover which edges are
 reachable from a particular edge.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">netcheck</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">source</span> <span class="o">&lt;</span><span class="n">edge_id</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">selection</span><span class="o">-</span><span class="n">output</span> <span class="n">selection</span><span class="o">.</span><span class="n">txt</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">netcheck</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="n">source</span><span class="w"> </span><span class="o">&lt;</span><span class="n">edge_id</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="n">selection</span><span class="o">-</span><span class="n">output</span><span class="w"> </span><span class="n">selection</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
 </code></pre></div>
 
 <p>This will create a file called <code>selection.txt</code> which can be loaded in
@@ -294,8 +294,8 @@ component edge count distribution to the specified file.</p>
 <p>Both tools apply the given offset to the geometrical information of
 edges or nodes given in the input file. The results are written into
 &lt;XMLEDGES>.mod.xml or &lt;XMLNODES>.mod.xml, respectively.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">xmledges_applyOffset</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">XMLEDGES</span><span class="o">-</span><span class="n">FILE</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">X</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Y</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span>
-<span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">xmlnodes_applyOffset</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">XMLNODES</span><span class="o">-</span><span class="n">FILE</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">X</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Y</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">xmledges_applyOffset</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">&lt;</span><span class="n">XMLEDGES</span><span class="o">-</span><span class="n">FILE</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">X</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Y</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">xmlnodes_applyOffset</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">&lt;</span><span class="n">XMLNODES</span><span class="o">-</span><span class="n">FILE</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">X</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Y</span><span class="o">-</span><span class="n">OFFSET</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
@@ -307,12 +307,12 @@ edges or nodes given in the input file. The results are written into
 <h1 id="xmlconnections_mapedgespy">xmlconnections_mapEdges.py<a class="headerlink" href="#xmlconnections_mapedgespy" title="Permanent link">#</a></h1>
 <p>Reads edge id replacements from "edgemap.txt"; the format of this file
 is:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">OLD_EDGE_ID</span><span class="o">&gt;-&gt;&lt;</span><span class="n">NEW_EDGE_ID</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">OLD_EDGE_ID</span><span class="o">&gt;-&gt;&lt;</span><span class="n">NEW_EDGE_ID</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
 
 <p>Reads the given connections file &lt;CONNECTIONS-FILE> and replaces old edge
 names by the new ones. The result is written to &lt;CONNECTIONS-FILE>.mod.xml</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">xmlconnections_mapEdges</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">CONNECTIONS</span><span class="o">-</span><span class="n">FILE</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">xmlconnections_mapEdges</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">&lt;</span><span class="n">CONNECTIONS</span><span class="o">-</span><span class="n">FILE</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
@@ -322,7 +322,7 @@ names by the new ones. The result is written to &lt;CONNECTIONS-FILE>.mod.xml</p
 </ul>
 <h1 id="net2kmlpy">net2kml.py<a class="headerlink" href="#net2kmlpy" title="Permanent link">#</a></h1>
 <p>converts '.net.xml' road geometries to <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> format.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">net2kml</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span><span class="o">.</span><span class="n">kml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">net2kml</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">output</span><span class="o">.</span><span class="n">kml</span><span class="w"></span>
 </code></pre></div>
 
 <p>By default, normal edge geometries will be exported. This can be changed with options</p>
@@ -332,7 +332,7 @@ names by the new ones. The result is written to &lt;CONNECTIONS-FILE>.mod.xml</p
 </ul>
 <h1 id="net2geojsonpy">net2geojson.py<a class="headerlink" href="#net2geojsonpy" title="Permanent link">#</a></h1>
 <p>converts '.net.xml' road geometries to <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a> format.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">net2geojson</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span><span class="o">.</span><span class="n">geojson</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">net2geojson</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">output</span><span class="o">.</span><span class="n">geojson</span><span class="w"></span>
 </code></pre></div>
 
 <p>By default, normal edge geometries will be exported. This can be changed with options</p>

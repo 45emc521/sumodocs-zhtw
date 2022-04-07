@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Simulation/Output/index.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Simulation/Output/index.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -188,7 +188,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -369,13 +369,13 @@ found by following its link.</p>
 <h2 id="additional_debugging_outputs">Additional Debugging Outputs<a class="headerlink" href="#additional_debugging_outputs" title="Permanent link">#</a></h2>
 <ul>
 <li>The option <strong>--link-output</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;FILE&gt;</em></a> saves debugging data for the intersection model. This
-data reveals how long each vehicle intends to occupy an upcoming
-intersection.</li>
+  data reveals how long each vehicle intends to occupy an upcoming
+  intersection.</li>
 <li>The option <strong>--movereminder-output</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;FILE&gt;</em></a> saves debugging data for the interaction between vehicle
-devices, lanes and output facilities. It is only available when
-compiling <a href="../../sumo.html">sumo</a> with debug flags.</li>
+  devices, lanes and output facilities. It is only available when
+  compiling <a href="../../sumo.html">sumo</a> with debug flags.</li>
 <li>The option <strong>--railsignal-block-output</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;FILE&gt;</em></a> saves information about rail signal blocks. For each
-controlled railSignal link the following information is generated:<ul>
+  controlled railSignal link the following information is generated:<ul>
 <li><strong>forwardBlock</strong>: all lanes that are reached from the signalized
   link in forward direction up to the next rail signal</li>
 <li><strong>bidiBlock</strong>: all lanes that make up the reverse-direction
@@ -410,19 +410,19 @@ will be printed (unless explicitly disabled with option <strong>--duration-log f
 <ul>
 <li>Inserted: number vehicles that entered the simulation network</li>
 <li>Loaded: number of vehicles that were loaded from route files. This
-may differ from emitted for two reason:<ul>
+  may differ from emitted for two reason:<ul>
 <li>Running with option <strong>--scale</strong> with a value less than 1.0</li>
 <li>Having a congested network where not all vehicles could be
   inserted before the simulation time ended</li>
 </ul>
 </li>
 <li>Running: number of vehicles currently active in the network at
-simulation end</li>
+  simulation end</li>
 <li>Waiting: number of vehicles which could not yet be inserted into the
-network due to congestion</li>
+  network due to congestion</li>
 <li>Teleports: number of of times that vehicles were teleported for any
-of the following reasons (These reasons are given whenever a
-teleport warning is issued)<ul>
+  of the following reasons (These reasons are given whenever a
+  teleport warning is issued)<ul>
 <li><a href="../Why_Vehicles_are_teleporting.html#collisions">Collision</a>:
   a vehicle violated its minGap requirement in relation to its
   leader vehicle</li>
@@ -474,13 +474,23 @@ will report</p>
 vehicle trips will be printed:</p>
 <ul>
 <li>RouteLength: average route length</li>
+</ul>
+<ul>
 <li>Speed: average trip speed</li>
+</ul>
+<ul>
 <li>Duration: average trip duration</li>
+</ul>
+<ul>
 <li>WaitingTime: average time spent standing (involuntarily)</li>
+</ul>
+<ul>
 <li>TimeLoss: average time lost due to driving slower than desired
   (includes WaitingTime). The desired speed takes the vehicles
   <a href="../../Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#speed_distributions">speedFactor</a>
   into account.</li>
+</ul>
+<ul>
 <li>
 <p>DepartDelay: average time vehicle departures were <a href="../VehicleInsertion.html">delayed due to
   lack of road space</a></p>

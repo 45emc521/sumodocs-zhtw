@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Basics/Basic_Computer_Skills.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Basics/Basic_Computer_Skills.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -174,7 +174,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -215,7 +215,7 @@ MS-Windows):</p>
 <p>SUMO requires configuration files and data files for proper execution.
 These files can be created and edited with a text editor.</p>
 <p>On Windows you can open a basic text editor in the following way:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Start</span><span class="o">-&gt;</span><span class="n">Windows</span> <span class="n">Accessories</span><span class="o">-&gt;</span><span class="n">Notepad</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Start</span><span class="o">-&gt;</span><span class="n">Windows</span><span class="w"> </span><span class="n">Accessories</span><span class="o">-&gt;</span><span class="n">Notepad</span><span class="w"></span>
 </code></pre></div>
 
 <p>Or by pressing the <code>Win</code> + <code>R</code> keys and entering <code>notepad</code></p>
@@ -325,7 +325,7 @@ your <code>PATH</code> variable and the <code>SUMO_HOME</code> variable.</p>
 <h4 id="temporary_solution">Temporary Solution<a class="headerlink" href="#temporary_solution" title="Permanent link">#</a></h4>
 <p>To set an environment variable temporarily, you can use the following
 command in your terminal:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/your/path/to/sumo/&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/your/path/to/sumo/&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <p>This sets the environment variable to be used by any program or script
@@ -367,7 +367,7 @@ folder. On Ubuntu this is</p>
 </code></pre></div>
 
 <p>This will open the <em>.zshrc</em> file in TextEdit. Add the following line to that document:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/your/path/to/sumo&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/your/path/to/sumo&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <p>Make sure to replace <code>/your/path/to/sumo</code> with your <strong><em>actual</em></strong> path to sumo. <br />
@@ -386,7 +386,7 @@ Save that document in TextEdit. Now you need to apply the changes by entering:</
 </code></pre></div>
 
 <p>This will open the <em>.bash_profile</em> file in TextEdit. Add the following line to that document:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/your/path/to/sumo&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=</span><span class="s2">&quot;/your/path/to/sumo&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <p>Make sure to replace <code>/your/path/to/sumo</code> with your <strong><em>actual</em></strong> path to sumo. <br />

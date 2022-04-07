@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/index.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/index.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -179,7 +179,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -189,28 +189,32 @@
                   
                   
 
-<p><hTitles >SUMO 使用者文件<hr style="border: 0.5px solid #338033;"></hTitles></p>
-<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility" (SUMO) 是一個開放原始碼、微觀車流與持續性的交通模擬套件，旨在支援大型的路網模擬。本軟體可對包括行人與各種不同情境下構成的場景進行綜合模擬。本軟體主要是由<a href="https://www.dlr.de">德國太空中心</a>內的<a href="https://www.dlr.de/ts">運輸系統研究所</a>進行開發。SUMO 的授權條款為 <a href="https://eclipse.org/legal/epl-v20.html">EPL 2.0</a>。The source code may also be made available under the following Secondary
+<p><hTitles >SUMO 使用者文件 (SUMO User Documentation)<hr style="border: 0.5px solid #338033;"></hTitles></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本份文件是 SUMO Documentation 於 2022/04/01 版本的快取，旨在將 SUMO Documentation 翻譯成正體中文。如果需要最新的說明文件，歡迎造訪 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 的官方網站。</p>
+</div>
+<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility (SUMO)" 是一個開放原始碼、微觀車流與持續性的交通模擬套件，旨在支援大型的路網模擬。本軟體可對包括行人或多重情境下進行綜合模擬。</p>
+<p>本軟體主要是由<a href="https://www.dlr.de">德國航空太空中心 (<strong>D</strong>eutsches Zentrum für <strong>L</strong>uft- und <strong>R</strong>aumfahrt e.V.)</a> 內的<a href="https://www.dlr.de/ts">運輸系統研究所</a>開發。SUMO 的授權條款為 <a href="https://eclipse.org/legal/epl-v20.html">EPL 2.0</a>。The source code may also be made available under the following Secondary
 Licenses when the conditions for such availability set forth in the EPL 2.0 are satisfied: <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html">GPL2 or later</a>.</p>
-<p>敬請使用<a href="Contact.html">聯絡我們頁面</a>來分享你使用 SUMO 的結果及詢問問題。針對某些常見問題的答案，或許你可以在<a href="FAQ.html">常見問題頁面</a>中得到一些幫助。</p>
+<p>歡迎使用<a href="Contact.html">聯絡我們頁面</a>來分享你使用 SUMO 的結果及詢問問題；針對某些常見問題的答案，或許你可以在<a href="FAQ.html">常見問題頁面</a>中得到一些幫助。</p>
 <p>如果你使用 SUMO 進行車流模擬，你可以在<a href="Publications.html">出版品</a>這一頁中和我們分享。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>如果你需要引用 SUMO，請參考我們目前的出版格式：<a href="https://elib.dlr.de/127994/">"Microscopic Traffic Simulation using SUMO"</a>; Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.</p>
 </div>
-<p>這份文件的內容可以自由修改。要修改特定頁面，請點選位在網頁右上角的 "Edit on GitHub" 按鈕，並在修改完後提出 pull 要求。這裡有份有關<a href="Editing_Articles.html">編輯文章</a>的教學頁面。如有需要，你也可以在自己的電腦上<a href="Developer/Documentation_Build.html">建置 (Build)</a> 這份文件，也可以<a href="https://sumo.dlr.de/sumo_documentation.zip">下載</a>一份副本到你的電腦中。</p>
-<p>這份文件會隨著 SUMO 的版本迭代而隨時更新。特定 SUMO 版本的說明文件會隨著你下載的 SUMO 版本一起提供。請到 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/docs/userdoc/index.html 查看該 SUMO 版本的說明文件。</p>
-<p>本份文件是 SUMO Documentation 於 2022/04/01 版本的快取，旨在將 SUMO Documentation 翻譯成正體中文。如果需要最新的說明文件，歡迎造訪 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 的官方網站。本說明文件目前由 <a href="https://emc521.tw">Yu-Hsuan Liao</a> 進行翻譯與維護。</p>
+<p>你可以自由修改 SUMO 使用者文件；要修改特定頁面，請點選位在網頁右上角的「在 GitHub 上編輯中文版」按鈕，並在修改完後提出 pull 要求。這裡有份關於<a href="Editing_Articles.html">編輯文章</a>的教學頁面。如有需要，你也可以在自己的電腦上<a href="Developer/Documentation_Build.html">建置 (Build)</a> 這份文件，也可以<a href="https://sumo.dlr.de/sumo_documentation.zip">下載</a>一份副本到你的電腦中。如果你要修改原文版本，請到 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解更多資訊。</p>
+<p>SUMO Documentation 會隨著 SUMO 的版本迭代而隨時更新。特定 SUMO 版本的說明文件會隨著你下載的 SUMO 版本一起提供。請到 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/docs/userdoc/index.html 查看該對應該 SUMO 版本的說明文件。</p>
 <h1 id="_1">簡介<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="SUMO_at_a_Glance.html">SUMO 交通模擬</a></li>
+<li><a href="SUMO_at_a_Glance.html">SUMO 模擬軟體概觀</a></li>
 </ul>
 <h1 id="_2">基本使用<a class="headerlink" href="#_2" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="Basics/Notation.html">這份文件的一些表示方式</a></li>
 <li><a href="Basics/Basic_Computer_Skills.html">必須要會的基礎電腦技能</a></li>
 <li><a href="Installing/index.html">安裝 SUMO</a></li>
-<li><a href="Basics/Using_the_Command_Line_Applications.html">使用 SUMO 命令列程式</a></li>
+<li><a href="Basics/Using_the_Command_Line_Applications.html">使用 SUMO 命令列程式 (CLI)</a></li>
 <li><a href="Tutorials/index.html">教學</a></li>
 <li><a href="XMLValidation.html">驗證 XML 輸入</a></li>
 </ul>
@@ -235,9 +239,9 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 </ul>
 </li>
 <li><a href="Networks/Import/SUMO_Road_Networks.html">匯入 SUMO 路網</a></li>
-<li><a href="Simulation/Motorways.html#building_a_network_for_motorway_simulation">針對高速公路模擬建立路網</a></li>
-<li><a href="Simulation/Pedestrians.html#building_a_network_for_pedestrian_simulation">針對行人模擬建立路網</a></li>
-<li><a href="Networks/Further_Options.html">更多 netconvert 的選項</a></li>
+<li><a href="Simulation/Motorways.html#building_a_network_for_motorway_simulation">建立高速公路模擬路網</a></li>
+<li><a href="Simulation/Pedestrians.html#building_a_network_for_pedestrian_simulation">建立行人模擬路網</a></li>
+<li><a href="Networks/Further_Options.html">更多 netconvert 的設定</a></li>
 <li><a href="Networks/Further_Outputs.html">更多輸出選項</a></li>
 </ul>
 </li>
@@ -250,28 +254,28 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">SUMO 需求模型的介紹</a></li>
 <li><a href="Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html">車輛、車種及路徑 (routes) 的定義</a></li>
 <li><a href="Netedit/elementsDemand.html">以 netedit 定義需求</a></li>
-<li><a href="Simulation/Public_Transport.html">公共運輸的模擬</a></li>
-<li><a href="Specification/Persons.html">個人與旅次鏈的模擬</a></li>
-<li><a href="Specification/Logistics.html">物流的模擬</a></li>
+<li><a href="Simulation/Public_Transport.html">公共運輸模擬</a></li>
+<li><a href="Specification/Persons.html">個人與旅次鏈模擬</a></li>
+<li><a href="Specification/Logistics.html">物流 (Logistics) 模擬</a></li>
 <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">最短或最佳化路徑</a></li>
-<li><a href="IntermodalRouting.html">多運具聯運路徑</a></li>
+<li><a href="IntermodalRouting.html">多運具聯運（複合運輸）路徑</a></li>
 <li><a href="Demand/Automatic_Routing.html">模擬中的路徑</a></li>
 <li><a href="Demand/Dynamic_User_Assignment.html">運算多使用者指派</a></li>
 <li><a href="Simulation/Pedestrians.html#generating_pedestrian_demand">建立行人交通需求</a></li>
-<li><a href="Tools/Misc.html#createvehtypedistributionspy">建立車種分佈並對車隊進行建模</a></li>
+<li><a href="Tools/Misc.html#createvehtypedistributionspy">建立車種分佈並對車隊建立模擬</a></li>
 </ul>
 <h3 id="_5">由資料產生需求<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="Demand/Importing_O/D_Matrices.html">匯入 O/D 矩陣</a><ul>
-<li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">其他 VISUM 需求的匯入器</a></li>
-<li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">其他 Vissim 需求的匯入器</a></li>
+<li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">匯入 VISUM 需求的其他方式</a></li>
+<li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">匯入 Vissim 需求的其他方式</a></li>
 </ul>
 </li>
 <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Counting Data (road counts, turn counts)</a></li>
 <li><a href="Demand/Routing_by_Turn_Probabilities.html">由轉向比推算路徑</a></li>
-<li><a href="Demand/Activity-based_Demand_Generation.html">以活動為基底的需求產生</a></li>
+<li><a href="Demand/Activity-based_Demand_Generation.html">以活動為基礎的需求產生</a></li>
 <li><a href="Tools/Trip.html#randomtripspy">隨機旅次</a></li>
-<li><a href="Tools/Import/OSM.html#osmwebwizardpy">多模型隨機交通</a></li>
+<li><a href="Tools/Import/OSM.html#osmwebwizardpy">Open Street Map 工具</a></li>
 <li><a href="Tools/Import/GTFS.html">GTFS 資料</a></li>
 </ul>
 <h1 id="_6">模擬<a class="headerlink" href="#_6" title="Permanent link">#</a></h1>
@@ -295,7 +299,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Simulation/Variable_Speed_Signs.html">速限可變標誌</a></li>
 <li><a href="Simulation/Rerouter.html">Rerouter／替代道路標誌</a></li>
 <li><a href="Simulation/Vaporizer.html">Vaporizer</a>（已被棄用，請改用 Calibrator）</li>
-<li><a href="Simulation/Calibrator.html">車流、速度與類別的動態校準</a></li>
+<li><a href="Simulation/Calibrator.html">車流、速度與車種的動態校準</a></li>
 <li><a href="Simulation/ParkingArea.html">停車區域</a></li>
 <li><a href="Simulation/Turnarounds.html">迴轉</a></li>
 </ul>
@@ -308,7 +312,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 </ul>
 <h2 id="_10">其他功能<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="Models/Emissions.html">排放</a></li>
+<li><a href="Models/Emissions.html">（污染物）排放</a></li>
 <li><a href="Models/Electric.html">電力車輛</a></li>
 <li><a href="Models/ElectricHybrid.html">混合動力車輛、高架橋及變電站</a></li>
 <li><a href="Specification/Logistics.html">物流</a></li>
@@ -318,7 +322,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="Simulation/Emergency.html">緊急車輛</a></li>
 <li><a href="Simpla.html">簡易自動駕駛車隊</a></li>
 <li><a href="Simulation/Taxi.html">需求反應式運輸 (DRT)／計程車</a></li>
-<li><a href="Simulation/GLOSA.html">綠燈最佳化速度建議 (GLOSA)</a></li>
+<li><a href="Simulation/GLOSA.html">綠燈最佳化速度顧問 (GLOSA)</a></li>
 </ul>
 <h2 id="_11">模型細節<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
 <ul>
@@ -337,14 +341,14 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 </ul>
 <h2 id="_12">常見問題<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="Simulation/Why_Vehicles_are_teleporting.html">為什麼車輛會瞬間移動？</a></li>
+<li><a href="Simulation/Why_Vehicles_are_teleporting.html">為什麼車輛會瞬間消失或出現？</a></li>
 <li><a href="FAQ.html#the_simulation_has_lots_of_jamsdeadlocks_what_can_i_do">未預期的塞車</a></li>
-<li><a href="Simulation/Turnarounds.html">太多次迴轉</a></li>
+<li><a href="Simulation/Turnarounds.html">迴轉太多次</a></li>
 <li><a href="FAQ.html#why_do_the_vehicles_perform_unexpected_lane-changing_maneuvers">未預期的變換車道行為？</a></li>
 <li><a href="FAQ.html#how_do_i_get_high_flowsvehicle_densities">如何提高車流量？</a></li>
 </ul>
 <h1 id="_13">其他工具<a class="headerlink" href="#_13" title="Permanent link">#</a></h1>
-<p>除了 SUMO 套件的<a href="SUMO_at_a_Glance.html#included_applications">主要程式（包括 sumo, sumo-gui, netedit, netconvert 等）</a>外，SUMO 套件尚有 150 多個小應用程式。他們多半與交通路網分析、需求生成、修改需求以輸出分析有關。多數的小程式以 <a href="https://www.python.org/">python</a> 撰寫而成。這些小程式都可以在 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools 資料夾裡找到。</p>
+<p>除了 SUMO 套件的<a href="SUMO_at_a_Glance.html#included_applications">主要程式（包括 sumo, sumo-gui, netedit, netconvert 等）</a>外，SUMO 套件尚有 150 多個小應用程式。他們多半與交通路網分析、需求生成、修改需求以輸出分析有關，多數的小程式以 <a href="https://www.python.org/">python</a> 撰寫而成。這些小程式都可以在 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools 資料夾裡找到。</p>
 <p>要查看這些小程式的清單，請參見：</p>
 <ul>
 <li><a href="Tools/index.html">工具索引</a></li>
@@ -391,7 +395,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 <li><a href="ChangeLog.html">版本更新歷程</a></li>
 <li><a href="Other/Glossary.html">名詞解釋</a></li>
 <li><a href="FAQ.html">常見問題</a></li>
-<li><a href="Other/File_Extensions.html">已知的檔案副檔名</a></li>
+<li><a href="Other/File_Extensions.html">已知檔案的副檔名</a></li>
 </ul>
                 </div>
           </div>
@@ -505,5 +509,5 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 
 <!--
 MkDocs version : 1.3.0
-Build Date UTC : 2022-04-04 02:36:21.373831+00:00
+Build Date UTC : 2022-04-07 11:42:52.552439+00:00
 -->

@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Contributed/SUMOPy/Installation/Linux.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Contributed/SUMOPy/Installation/Linux.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../../../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -163,12 +163,12 @@
 <p>Python 2.7 comes with most Linux operating systems. Python 3.x is not
 yet supported. All required additional packages are available in
 repositories:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="o">-</span><span class="n">numpy</span>
-<span class="n">python</span><span class="o">-</span><span class="n">wxgtk2</span><span class="o">.</span><span class="mi">8</span>
-<span class="n">python</span><span class="o">-</span><span class="n">opengl</span>
-<span class="n">python</span><span class="o">-</span><span class="n">imaging</span>
-<span class="n">python</span><span class="o">-</span><span class="n">matplotlib</span>
-<span class="n">python</span><span class="o">-</span><span class="n">mpltoolkits</span><span class="o">.</span><span class="n">basemap</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="o">-</span><span class="n">numpy</span><span class="w"></span>
+<span class="n">python</span><span class="o">-</span><span class="n">wxgtk2</span><span class="o">.</span><span class="mi">8</span><span class="w"></span>
+<span class="n">python</span><span class="o">-</span><span class="n">opengl</span><span class="w"></span>
+<span class="n">python</span><span class="o">-</span><span class="n">imaging</span><span class="w"></span>
+<span class="n">python</span><span class="o">-</span><span class="n">matplotlib</span><span class="w"></span>
+<span class="n">python</span><span class="o">-</span><span class="n">mpltoolkits</span><span class="o">.</span><span class="n">basemap</span><span class="w"></span>
 </code></pre></div>
 
 <p>However, often Python 3.x is installed along the older version and may
@@ -188,9 +188,9 @@ sudo apt update
 </code></pre></div>
 
 <p>SUMOPy now supports wxWidgets 3.0. Here are the steps I needed to do with openSUSE 15.3:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span> <span class="n">zypper</span> <span class="n">addrepo</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Application</span><span class="p">:</span><span class="o">/</span><span class="n">Geo</span><span class="o">/</span><span class="n">openSUSE_Leap_15</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span> <span class="n">Application</span><span class="p">:</span><span class="n">Geo</span>
-<span class="n">sudo</span> <span class="n">zypper</span> <span class="ow">in</span> <span class="n">python</span><span class="o">-</span><span class="n">wxWidgets</span><span class="o">-</span><span class="mi">3</span><span class="n">_0</span> <span class="n">python2</span><span class="o">-</span><span class="n">opengl</span> <span class="n">python</span><span class="o">-</span><span class="n">basemap</span> <span class="n">python2</span><span class="o">-</span><span class="n">matplotlib</span> <span class="n">python2</span><span class="o">-</span><span class="n">numpy</span> <span class="n">python2</span><span class="o">-</span><span class="n">Pillow</span>
-<span class="n">sudo</span> <span class="n">pip2</span> <span class="n">install</span> <span class="n">pyproj</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">zypper</span><span class="w"> </span><span class="n">addrepo</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Application</span><span class="p">:</span><span class="o">/</span><span class="n">Geo</span><span class="o">/</span><span class="n">openSUSE_Leap_15</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="w"> </span><span class="n">Application</span><span class="p">:</span><span class="n">Geo</span><span class="w"></span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">zypper</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">wxWidgets</span><span class="o">-</span><span class="mi">3</span><span class="n">_0</span><span class="w"> </span><span class="n">python2</span><span class="o">-</span><span class="n">opengl</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">basemap</span><span class="w"> </span><span class="n">python2</span><span class="o">-</span><span class="n">matplotlib</span><span class="w"> </span><span class="n">python2</span><span class="o">-</span><span class="n">numpy</span><span class="w"> </span><span class="n">python2</span><span class="o">-</span><span class="n">Pillow</span><span class="w"></span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">pip2</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pyproj</span><span class="w"></span>
 </code></pre></div>
 
 <p>Unfortunately pyproj is only available via pypi while python-wxWidgets-3_0 and python-basemap are not available via pypi so you need to use both sources.</p>

@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/FAQ.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/FAQ.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -470,7 +470,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -679,10 +679,10 @@ always use the latest version of SUMO.</p>
 <li>describe what you are trying to accomplish</li>
 <li>describe how what you see differs from your expectations</li>
 <li>Phrase your question using familiar terms (not everyone is an expert
-in your domain).</li>
+  in your domain).</li>
 <li>Don't ask for too many things in a single post / issue.</li>
 <li>Do some research on your own before you post the question (otherwise
-you may appear to be lazy).<ul>
+  you may appear to be lazy).<ul>
 <li>read the FAQ</li>
 <li>read the documentation</li>
 <li>check out the <a href="Tutorials/index.html">Tutorials</a></li>
@@ -691,8 +691,8 @@ you may appear to be lazy).<ul>
 </ul>
 </li>
 <li>Do not ask the same thing twice in a short span of time. If you are
-in a hurry and cannot get an answer, try to change your question
-according to the above suggestions.</li>
+  in a hurry and cannot get an answer, try to change your question
+  according to the above suggestions.</li>
 <li>if you put your question into an issue an the issue was closed, put your follow-up questions into the closed issue rather than open an new issue</li>
 <li>Be polite</li>
 <li>Good Example questions:<ul>
@@ -725,9 +725,15 @@ according to the above suggestions.</li>
 <h2 id="traci">TraCI<a class="headerlink" href="#traci" title="Permanent link">#</a></h2>
 <h3 id="my_traci-program_is_to_slow_what_can_i_do">My <a href="TraCI.html">TraCI</a>-program is to slow. What can I do?<a class="headerlink" href="#my_traci-program_is_to_slow_what_can_i_do" title="Permanent link">#</a></h3>
 <p>TraCI communicates over sockets and this communication is slow. You can often reduce the number of TraCI commands via the following strategies.</p>
-<p>- store results that do not change (i.e. vehicle length) rather than retrieving them again repeatedly
-  - use <a href="TraCI/Object_Variable_Subscription.html">subscriptions</a> or <a href="TraCI/Object_Context_Subscription.html">context subscriptions</a> to reduce the number of 'get' commmands for things that you need in every step</p>
+<ul>
+<li>store results that do not change (i.e. vehicle length) rather than retrieving them again repeatedly</li>
+</ul>
+<ul>
+<li>
+<p>use <a href="TraCI/Object_Variable_Subscription.html">subscriptions</a> or <a href="TraCI/Object_Context_Subscription.html">context subscriptions</a> to reduce the number of 'get' commmands for things that you need in every step</p>
 <p>Even larger gains can be hand by switching to <a href="Libsumo.html">libsumo</a>. This can be done with a single line of code and completely eliminates the slow socket communication. </p>
+</li>
+</ul>
 <h3 id="my_traci-program_is_not_working_as_intended_can_you_help_me_debug_it">My <a href="TraCI.html">TraCI</a>-program is not working as intended. Can you help me debug it?<a class="headerlink" href="#my_traci-program_is_not_working_as_intended_can_you_help_me_debug_it" title="Permanent link">#</a></h3>
 <p>Unfortunately, we do not have the resources to debug other peoples
   code. If you suspect a bug in TraCI itself, the <a href="FAQ.html#how_do_i_report_erroneous_behavior_of_a_sumo_application">general rules of bug-reporting</a>
@@ -741,18 +747,18 @@ the TraCI script being run. Here are some guidelines for figuring out
 what is happening:</p>
 <ul>
 <li>The SUMO error <em>connection reset by peer</em> indicates a problem in the
-script. The python strack trace should point to the problem (in the
-simplest case, the script ends without calling <em>traci.close()</em>)</li>
+  script. The python strack trace should point to the problem (in the
+  simplest case, the script ends without calling <em>traci.close()</em>)</li>
 <li>The error <strong>TraCIFatalError</strong> <em>connection closed by SUMO</em> indicates
-a problem with SUMO</li>
+  a problem with SUMO</li>
 <li>The error <strong>TraCIException</strong> indicates a minor problem with the
-script. (e.g. asking for a vehicle that does not exist). This type
-of error can be safely handled by the script with <em>try/except</em></li>
+  script. (e.g. asking for a vehicle that does not exist). This type
+  of error can be safely handled by the script with <em>try/except</em></li>
 <li>It is a good idea to run <a href="sumo.html">sumo</a> with the option <strong>--log</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;FILE&gt;</em></a> to
-figure out what went wrong in a simulation run or why the simulation
-aborted.</li>
+  figure out what went wrong in a simulation run or why the simulation
+  aborted.</li>
 <li>If SUMO crashes (just stops instead of quitting with an error
-message) here is how to debug it:<ul>
+  message) here is how to debug it:<ul>
 <li>in the options to <em>traci.start()</em> add <em>['--save-configuration',
   'debug.sumocfg']</em></li>
 <li>run your script (sumo will not start and the script will try to
@@ -917,8 +923,8 @@ and simply type <code>git pull</code>.</p>
 </ul>
 <h3 id="why_can_my_input-xml_files_not_be_read_even_though_they_look_ok_to_me">Why can my input-XML files not be read even though they look OK to me?<a class="headerlink" href="#why_can_my_input-xml_files_not_be_read_even_though_they_look_ok_to_me" title="Permanent link">#</a></h3>
 <p>Errors such as</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Error</span><span class="o">:</span> <span class="n">attribute</span> <span class="n">name</span> <span class="n">expected</span> <span class="n">at</span>
-<span class="n">At</span> <span class="n">line</span><span class="sr">/column 10/</span><span class="mi">46</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Error</span><span class="o">:</span><span class="w"> </span><span class="n">attribute</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="n">at</span><span class="w"></span>
+<span class="n">At</span><span class="w"> </span><span class="n">line</span><span class="sr">/column 10/</span><span class="mi">46</span><span class="w"></span>
 </code></pre></div>
 
 <p>can be caused by non-printing characters in the XML-file. Open your
@@ -951,20 +957,20 @@ and simply type <code>git pull</code>.</p>
 <ol>
 <li>Edit the network with <a href="Netedit/index.html">netedit</a></li>
 <li>Modify the original input files and then rebuild the net with
-    <a href="netconvert.html">netconvert</a>.</li>
+   <a href="netconvert.html">netconvert</a>.</li>
 <li>Patch the network with <a href="netconvert.html">netconvert</a>. You can
-    <a href="Networks/Import/SUMO_Road_Networks.html">load a <em>.net.xml</em> file</a> together with
-    <a href="Networks/PlainXML.html">small XML-files</a>
-    to patch individual edges, nodes and connections. Additional
-    possibilities are described
-    <a href="Tutorials/ScenarioGuide.html#modifying_the_network">here</a>.
-    For changing traffic light plans or timings see
-    <a href="Simulation/Traffic_Lights.html">Simulation/Traffic_Lights</a>.
-    If you cannot figure out how to accomplish the desired changes this
-    way, <a href="Contact.html">contact us!</a>.</li>
+   <a href="Networks/Import/SUMO_Road_Networks.html">load a <em>.net.xml</em> file</a> together with
+   <a href="Networks/PlainXML.html">small XML-files</a>
+   to patch individual edges, nodes and connections. Additional
+   possibilities are described
+   <a href="Tutorials/ScenarioGuide.html#modifying_the_network">here</a>.
+   For changing traffic light plans or timings see
+   <a href="Simulation/Traffic_Lights.html">Simulation/Traffic_Lights</a>.
+   If you cannot figure out how to accomplish the desired changes this
+   way, <a href="Contact.html">contact us!</a>.</li>
 <li>Use <a href="netconvert.html">netconvert</a>-option <strong>--plain-output-prefix</strong> to convert the
-    network into <a href="Networks/PlainXML.html">it's plain XML representation</a>.
-    Then modify these files and rebuild the network</li>
+   network into <a href="Networks/PlainXML.html">it's plain XML representation</a>.
+   Then modify these files and rebuild the network</li>
 </ol>
 <p>If you need to build a network from custom input data it is recommended
 to generate
@@ -1040,12 +1046,14 @@ use the Linux version or download the <a href="https://sumo.dlr.de/daily/sumo-wi
 <p>There are different methods for accomplishing this. In either case
   the simulation itself should be constraint using options <strong>--begin</strong>, <strong>--end</strong>.</p>
 <ul>
-<li>You can generate long trips going around the network with lots of
+<li>
+<p>You can generate long trips going around the network with lots of
   detours. This can be accomplished using
   <a href="Tools/Trip.html#randomtripspy">randomTrips.py</a> by setting
   the options below. If the network contains disconnected parts, not
   all random trips will be viable. In this case, simply generate more
-  trips and delete superfluous vehicles from the output route file.<ul>
+  trips and delete superfluous vehicles from the output route file.</p>
+<ul>
 <li><strong>--begin</strong> &lt;your desired begin time></li>
 <li><strong>--end</strong> &lt;begin + time in which vehicles shall be inserted to then network></li>
 <li><strong>--period</strong> &lt;(end - begin) / number of vehicles desired></li>
@@ -1072,10 +1080,12 @@ use the Linux version or download the <a href="https://sumo.dlr.de/daily/sumo-wi
   inserted to replace them.</li>
 </ul>
 <ul>
-<li>You can use <a href="Simulation/Rerouter.html">rerouters</a> in the
+<li>
+<p>You can use <a href="Simulation/Rerouter.html">rerouters</a> in the
   simulation. Rerouters, assign a new route for vehicles driving
   across them and thus prevent them from leaving the network. For an
-  example with a simple circle see <a href="https://github.com/eclipse/sumo/blob/main/tests/sumo/cf_model/drive_in_circles"><strong><em>&lt;SUMO_HOME&gt;</em></strong>/tests/sumo/cf_model/drive_in_circles</a><ul>
+  example with a simple circle see <a href="https://github.com/eclipse/sumo/blob/main/tests/sumo/cf_model/drive_in_circles"><strong><em>&lt;SUMO_HOME&gt;</em></strong>/tests/sumo/cf_model/drive_in_circles</a></p>
+<ul>
 <li>The tool <a href="Tools/Misc.html#generatecontinuousrerouterspy">generateContinuousRerouters.py</a> can be used to generate
   rerouters for continuous operation with configurable turning ratios.</li>
 <li>If the network is not circular to begin with (i.e a single
@@ -1116,8 +1126,10 @@ use the Linux version or download the <a href="https://sumo.dlr.de/daily/sumo-wi
   <a href="Tools/Sumolib.html#locate_nearby_edges_based_on_the_geo-coordinate">Tools/Sumolib#locate_nearby_edges_based_on_the_geo-coordinate</a></p>
 <p>Duarouter supports mapping of x,y and lon,lat coordinates
   using the attributes <a href="Demand/Shortest_or_Optimal_Path_Routing.html">fromXY, fromLonLat and their relatives</a>.
-  For high-quality GPS data it is sufficient to define
-  <code>&lt;trip id="myVeh" viaLonLat="Lon0,Lat0  Lon1,Lat1  Lon2,Lat2 ..." depart="0"/&gt;</code></p>
+  For high-quality GPS data it is sufficient to define</p>
+<div class="codehilite"><pre><span></span><code>  &lt;trip id=&quot;myVeh&quot; viaLonLat=&quot;Lon0,Lat0  Lon1,Lat1  Lon2,Lat2 ...&quot; depart=&quot;0&quot;/&gt;
+</code></pre></div>
+
 <p>This will fail when there is an edge in the route which did not get
   hit by a data point or if you have a mismatch (for instance matching
   an edge which goes in the "wrong" direction). In the former case you
@@ -1144,19 +1156,19 @@ itself. Without using <a href="TraCI.html">TraCI</a> the following approaches
 may be useful:</p>
 <ol>
 <li>Let a vehicle halt on the lane for some time (see <a href="Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#stops">Definition of Vehicles, Vehicle Types, and Routes#Stops</a>).
-This works quite nice for simulating accidents.</li>
+   This works quite nice for simulating accidents.</li>
 <li>Put a variable speed sign of the lane where the accident is meant to
-be and let it reduce the speed (see <a href="Simulation/Variable_Speed_Signs.html">Simulation/Variable Speed Signs</a>). This method will
-reduce the throughput on the lane, but further dynamics will rather not
-fit to what one would expect from an accident situation.</li>
+   be and let it reduce the speed (see <a href="Simulation/Variable_Speed_Signs.html">Simulation/Variable Speed Signs</a>). This method will
+   reduce the throughput on the lane, but further dynamics will rather not
+   fit to what one would expect from an accident situation.</li>
 <li>You may of course combine both approaches. Within a project we
-simulated traffic incidents by letting vehicles stop on one lane and
-reducing the speed on the other lanes.</li>
+   simulated traffic incidents by letting vehicles stop on one lane and
+   reducing the speed on the other lanes.</li>
 <li>Alternatively, you may <a href="Simulation/Rerouter.html#closing_a_lane">close one or more of the lanes on an edge</a></li>
 <li>If you <a href="Simulation/Rerouter.html#closing_a_street">close the whole edge, rerouting may be triggered as well</a></li>
 <li>By setting the option <strong>--collision.stoptime</strong>, traffic jams may be created after a
-registered
-<a href="Simulation/Safety.html#deliberately_causing_collisions">collision</a>.</li>
+   registered
+   <a href="Simulation/Safety.html#deliberately_causing_collisions">collision</a>.</li>
 </ol>
 <h3 id="i_have_changed_my_network_and_now_sumo_does_not_load_it">I have changed my network and now SUMO does not load it.<a class="headerlink" href="#i_have_changed_my_network_and_now_sumo_does_not_load_it" title="Permanent link">#</a></h3>
 <p>Actually, SUMO-networks are not meant to be edited by hand. You have
@@ -1226,15 +1238,15 @@ registered
 </li>
 <li>invalid traffic lights (see <a href="Simulation/Traffic_Lights.html#improving_generated_programs_with_knowledge_about_traffic_demand">Improving generated traffic lights</a>)</li>
 <li>invalid demand (too many vehicles overall, too many vehicles
-    starting on the same edge).</li>
+   starting on the same edge).</li>
 <li>invalid routing<ul>
 <li>only shortest path were used instead of <a href="Demand/Dynamic_User_Assignment.html">a user assignment algorithm</a></li>
 <li>to many vehicles start/end their route with a <a href="Simulation/Turnarounds.html">turn-around</a>. Can be fixed by computing <a href="Demand/Shortest_or_Optimal_Path_Routing.html#routing_between_junctions">routes between junctions</a> instead of between edges.</li>
 </ul>
 </li>
 <li>invalid insertion (vehicles being inserted on the wrong lane close
-    to the end of an edge where they need to change to another turn
-    lane). This can be fixed by setting the vehicle attribute <code>departLane="best"</code></li>
+   to the end of an edge where they need to change to another turn
+   lane). This can be fixed by setting the vehicle attribute <code>departLane="best"</code></li>
 </ol>
 <p>If the network was imported from OpenStreetMap, it is highly recommended
 to use the <a href="Networks/Import/OpenStreetMap.html#recommended_netconvert_options">recommended import options</a>.
@@ -1443,10 +1455,10 @@ This can be accomplished by modifying the python variable <strong>sys.path</stro
 as explained <a href="TraCI/Interfacing_TraCI_from_Python.html">here</a> and
 <a href="Tools/Sumolib.html">here</a>. Alternatively you can hard-code the
 path to your SUMO-installation into your script:</p>
-<div class="codehilite"><pre><span></span><code> <span class="n">import</span> <span class="n">sys</span>
- <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/your/path/to/sumo/tools&#39;</span><span class="p">)</span>
- <span class="n">import</span> <span class="n">traci</span>
- <span class="n">import</span> <span class="n">sumolib</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">sys</span><span class="w"></span>
+<span class="w"> </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/your/path/to/sumo/tools&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">traci</span><span class="w"></span>
+<span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">sumolib</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="the_python_scripts_do_not_accept_command_line_arguments_windows_only">the python scripts do not accept command line arguments (windows only)<a class="headerlink" href="#the_python_scripts_do_not_accept_command_line_arguments_windows_only" title="Permanent link">#</a></h3>

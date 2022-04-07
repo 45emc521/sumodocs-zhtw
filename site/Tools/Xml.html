@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Xml.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Xml.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -150,7 +150,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -188,7 +188,7 @@
 separated values) representation. CSV-Files are easy to parse and can be
 opened in <a href="http://www.libreoffice.org/">LibreOffice</a> or Microsoft Excel.
 Usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">xml2csv</span><span class="o">.</span><span class="n">py</span> <span class="n">input</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">xml2csv</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">input</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <p>With the option <strong>--separator</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;STRING&gt;</em></a> you can customize the field separator (default is
@@ -212,7 +212,7 @@ limited to only one type of child elements.</p>
 </div>
 <h2 id="csv2xmlpy">csv2xml.py<a class="headerlink" href="#csv2xmlpy" title="Permanent link">#</a></h2>
 <p>This is the inverse tool to xml2csv.py. Usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">csv2xml</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">x</span> <span class="n">schema</span><span class="o">.</span><span class="n">xsd</span> <span class="n">input</span><span class="o">.</span><span class="n">csv</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">csv2xml</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="n">schema</span><span class="o">.</span><span class="n">xsd</span><span class="w"> </span><span class="n">input</span><span class="o">.</span><span class="n">csv</span><span class="w"></span>
 </code></pre></div>
 
 <p>The options have the same meaning as above. For some file types as
@@ -226,7 +226,7 @@ even further using Google's <a href="https://developers.google.com/protocol-buff
 Buffers</a>. This will
 require the protoc compiler as well as the protobuf packages for python
 and your target language to be installed. Usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">xml2protobuf</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">x</span> <span class="n">schema</span><span class="o">.</span><span class="n">xsd</span> <span class="n">input</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">xml2protobuf</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="n">schema</span><span class="o">.</span><span class="n">xsd</span><span class="w"> </span><span class="n">input</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <p>The xsd schema file needs to be given the using <strong>--xsd</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;FILE&gt;</em></a> and the <strong>--validation</strong> option will
@@ -237,7 +237,7 @@ generate the protobuf description from the schema and then write a
 protomsg file containing the binary stream.</p>
 <h2 id="protobuf2xmlpy">protobuf2xml.py<a class="headerlink" href="#protobuf2xmlpy" title="Permanent link">#</a></h2>
 <p>This is the inverse tool to xml2protobuf.py. Usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">protobuf2xml</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">x</span> <span class="n">schema</span><span class="o">.</span><span class="n">xsd</span> <span class="n">input</span><span class="o">.</span><span class="n">protomsg</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">protobuf2xml</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="n">schema</span><span class="o">.</span><span class="n">xsd</span><span class="w"> </span><span class="n">input</span><span class="o">.</span><span class="n">protomsg</span><span class="w"></span>
 </code></pre></div>
 
 <p>The options have the same meaning as above.</p>
@@ -250,7 +250,7 @@ protomsg file containing the binary stream.</p>
 <h2 id="changeattributepy">changeAttribute.py<a class="headerlink" href="#changeattributepy" title="Permanent link">#</a></h2>
 <p>This sets/removes the specified attribute on all tags (elements) in the input file and writes the result to a new file
 If option <strong>--value</strong> (<strong>-v</strong>) is not given, the attribute is removed. Otherwise it is added/modified to the given value.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">changeAttribute</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="n">INPUT_FILE</span> <span class="o">-</span><span class="n">o</span> <span class="n">OUTPUT_FILE</span> <span class="o">-</span><span class="n">t</span> <span class="n">TAG</span> <span class="o">-</span><span class="n">a</span> <span class="n">ATTRIBUTE</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="n">VALUE</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">changeAttribute</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">INPUT_FILE</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">OUTPUT_FILE</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">TAG</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="n">ATTRIBUTE</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="n">VALUE</span><span class="p">]</span><span class="w"></span>
 </code></pre></div>
                 </div>
           </div>

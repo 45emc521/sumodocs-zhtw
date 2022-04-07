@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Developer/Implementation_Notes/Options_Sub_System.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Developer/Implementation_Notes/Options_Sub_System.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -158,7 +158,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -203,7 +203,7 @@ to files, and printing the help screen.</p>
 <p>Each application has exactly one instance of the <strong>OptionsCont</strong>
 (options container) - class. A reference to this class may be obtained
 using</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">static</span> <span class="nt">OptionsCont</span> <span class="o">&amp;</span><span class="nt">OptionsCont</span><span class="p">::</span><span class="nd">getOptions</span><span class="o">();</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">static</span><span class="w"> </span><span class="nt">OptionsCont</span><span class="w"> </span><span class="o">&amp;</span><span class="nt">OptionsCont</span><span class="p">::</span><span class="nd">getOptions</span><span class="o">();</span><span class="w"></span>
 </code></pre></div>
 
 <p>Before an application starts registering its options, it must let
@@ -213,14 +213,14 @@ and because it also generates the help screen which includes the
 application's name, possibly example calls, etc. Due to this, the first
 touch of the options sub system for each application looks similar to
 the following which is borrowed from netconvert_main.cpp:</p>
-<div class="codehilite"><pre><span></span><code>   <span class="nt">OptionsCont</span> <span class="o">&amp;</span><span class="nt">oc</span> <span class="o">=</span> <span class="nt">OptionsCont</span><span class="p">::</span><span class="nd">getOptions</span><span class="o">();</span>
-   <span class="o">//</span> <span class="nt">give</span> <span class="nt">some</span> <span class="nt">application</span> <span class="nt">descriptions</span>
-   <span class="nt">oc</span><span class="p">.</span><span class="nc">setApplicationDescription</span><span class="o">(</span><span class="s2">&quot;Road network importer / builder for the road traffic simulation SUMO.&quot;</span><span class="o">);</span>
-<span class="p">#</span><span class="nn">ifdef</span> <span class="nt">WIN32</span>
-   <span class="nt">oc</span><span class="p">.</span><span class="nc">setApplicationName</span><span class="o">(</span><span class="s2">&quot;netconvert.exe&quot;</span><span class="o">,</span> <span class="s2">&quot;SUMO netconvert Version &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="nt">string</span><span class="o">)</span><span class="nt">VERSION_STRING</span><span class="o">);</span>
-<span class="p">#</span><span class="nn">else</span>
-   <span class="nt">oc</span><span class="p">.</span><span class="nc">setApplicationName</span><span class="o">(</span><span class="s2">&quot;sumo-netconvert&quot;</span><span class="o">,</span> <span class="s2">&quot;SUMO netconvert Version &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="nt">string</span><span class="o">)</span><span class="nt">VERSION_STRING</span><span class="o">);</span>
-<span class="p">#</span><span class="nn">endif</span>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="nt">OptionsCont</span><span class="w"> </span><span class="o">&amp;</span><span class="nt">oc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">OptionsCont</span><span class="p">::</span><span class="nd">getOptions</span><span class="o">();</span><span class="w"></span>
+<span class="w">   </span><span class="o">//</span><span class="w"> </span><span class="nt">give</span><span class="w"> </span><span class="nt">some</span><span class="w"> </span><span class="nt">application</span><span class="w"> </span><span class="nt">descriptions</span><span class="w"></span>
+<span class="w">   </span><span class="nt">oc</span><span class="p">.</span><span class="nc">setApplicationDescription</span><span class="o">(</span><span class="s2">&quot;Road network importer / builder for the road traffic simulation SUMO.&quot;</span><span class="o">);</span><span class="w"></span>
+<span class="p">#</span><span class="nn">ifdef</span><span class="w"> </span><span class="nt">WIN32</span><span class="w"></span>
+<span class="w">   </span><span class="nt">oc</span><span class="p">.</span><span class="nc">setApplicationName</span><span class="o">(</span><span class="s2">&quot;netconvert.exe&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;SUMO netconvert Version &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">string</span><span class="o">)</span><span class="nt">VERSION_STRING</span><span class="o">);</span><span class="w"></span>
+<span class="p">#</span><span class="nn">else</span><span class="w"></span>
+<span class="w">   </span><span class="nt">oc</span><span class="p">.</span><span class="nc">setApplicationName</span><span class="o">(</span><span class="s2">&quot;sumo-netconvert&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;SUMO netconvert Version &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">string</span><span class="o">)</span><span class="nt">VERSION_STRING</span><span class="o">);</span><span class="w"></span>
+<span class="p">#</span><span class="nn">endif</span><span class="w"></span>
 </code></pre></div>
 
 <p>The ifdef-block is used to differ between the supported OSes
@@ -235,17 +235,17 @@ and their default values (if existing) must be inserted into this
 container. This mostly done within a dedicated method or function.</p>
 <p>To insert an application option into the container, use one of the
 following polymorphs:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">void</span> <span class="n">doRegister</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name1</span><span class="p">,</span> <span class="n">Option</span> <span class="o">*</span><span class="n">v</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">doRegister</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name1</span><span class="p">,</span><span class="w"> </span><span class="n">Option</span><span class="w"> </span><span class="o">*</span><span class="n">v</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 
 <p>or</p>
-<div class="codehilite"><pre><span></span><code><span class="n">void</span> <span class="n">doRegister</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name1</span><span class="p">,</span> <span class="nb">char</span> <span class="n">abbr</span><span class="p">,</span> <span class="n">Option</span> <span class="o">*</span><span class="n">v</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">doRegister</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name1</span><span class="p">,</span><span class="w"> </span><span class="nb">char</span><span class="w"> </span><span class="n">abbr</span><span class="p">,</span><span class="w"> </span><span class="n">Option</span><span class="w"> </span><span class="o">*</span><span class="n">v</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 
 <p>The parameter "name1" is the name (or one of the possible names, better
 to say) of the inserted option. The character "abbr" within the second
 call is the possible one-char abbreviation of the name.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Caution</span><span class="o">:</span> <span class="n">The</span> <span class="n">behavior</span> <span class="n">after</span> <span class="n">adding</span> <span class="n">the</span> <span class="n">same</span> <span class="n">abbreviation</span> <span class="k">for</span> <span class="n">two</span> <span class="n">different</span> <span class="n">options</span> <span class="k">is</span> <span class="n">not</span> <span class="n">defined</span><span class="o">.</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Caution</span><span class="o">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">behavior</span><span class="w"> </span><span class="n">after</span><span class="w"> </span><span class="n">adding</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">abbreviation</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">defined</span><span class="o">.</span><span class="w"></span>
 </code></pre></div>
 
 <p>The third parameter is an option that shall be assigned to the name(s).
@@ -296,22 +296,22 @@ options causes exceptions. This may sound hard, but as it's only the
 developer who accesses the options container in fact, it's the best way
 to assure security of the code. One can determine whether an option is
 set using</p>
-<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">bool</span> <span class="n">OptionsCont</span><span class="p">::</span><span class="n">isSet</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">bool</span><span class="w"> </span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">isSet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 
 <p>If one has to know whether an option still stores the default value or
 a value was supplied by the user, he/she may call</p>
-<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">bool</span> <span class="n">OptionsCont</span><span class="p">::</span><span class="n">isDefault</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">bool</span><span class="w"> </span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">isDefault</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 
 <p>Dependent on the type of an option, one can retrieve its value using
 the following methods from OptionsCont:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">int</span> <span class="n">OptionsCont</span><span class="p">::</span><span class="n">getInt</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="n">long</span> <span class="n">OptionsCont</span><span class="p">::</span><span class="n">getLong</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">OptionsCont</span><span class="p">::</span><span class="n">getString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="nb nb-Type">float</span> <span class="n">OptionsCont</span><span class="p">::</span><span class="n">getFloat</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="k">const</span> <span class="n">IntVector</span> <span class="o">&amp;</span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getIntVector</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="k">const</span> <span class="n">StringVector</span> <span class="o">&amp;</span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getStringVector</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getInt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="n">long</span><span class="w"> </span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getLong</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="nb nb-Type">float</span><span class="w"> </span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getFloat</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">IntVector</span><span class="w"> </span><span class="o">&amp;</span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getIntVector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">StringVector</span><span class="w"> </span><span class="o">&amp;</span><span class="n">OptionsCont</span><span class="p">::</span><span class="n">getStringVector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 
 <p>Using an improper method yields an exception.</p>

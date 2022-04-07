@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Developer/Implementation_Notes/Error_Handling.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Developer/Implementation_Notes/Error_Handling.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -170,7 +170,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -264,32 +264,32 @@ located in the main function is reached. As in earlier versions of SUMO,
 a ProcessError could be called with no message (in this case the message
 is set to "Process Error"), we only print the message if the catched
 ProcessError has really one set.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">int</span>
-<span class="nt">main</span><span class="o">(</span><span class="nt">int</span> <span class="nt">argc</span><span class="o">,</span> <span class="nt">char</span> <span class="o">**</span><span class="nt">argv</span><span class="o">)</span>
-<span class="p">{</span>
-    <span class="err">//</span> <span class="err">initialise</span> <span class="err">return</span> <span class="err">code</span>
-    <span class="err">int</span> <span class="err">ret</span> <span class="err">=</span> <span class="err">0</span><span class="p">;</span>
-    <span class="err">...</span> <span class="err">make</span> <span class="err">uncritical</span> <span class="err">initialisation</span> <span class="err">...</span>
-    <span class="err">try</span> <span class="err">{</span>
-       <span class="err">...</span> <span class="err">do</span> <span class="err">some</span> <span class="err">critical</span> <span class="err">stuff</span> <span class="err">...</span>
-    <span class="p">}</span> <span class="nt">catch</span> <span class="o">(</span><span class="nt">ProcessError</span> <span class="o">&amp;</span><span class="nt">e</span><span class="o">)</span> <span class="p">{</span>
-        <span class="err">if(string(e.what())!=string(&quot;Process</span> <span class="err">Error&quot;)</span> <span class="err">&amp;&amp;</span> <span class="err">string(e.what())!=string(&quot;&quot;))</span> <span class="err">{</span>
-            <span class="n">MsgHandler</span><span class="p">:</span><span class="o">:</span><span class="nf">getErrorInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">inform</span><span class="p">(</span><span class="n">e</span><span class="err">.</span><span class="nf">what</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="nt">MsgHandler</span><span class="p">::</span><span class="nd">getErrorInstance</span><span class="o">()</span><span class="nt">-</span><span class="o">&gt;</span><span class="nt">inform</span><span class="o">(</span><span class="s2">&quot;Quitting (on error).&quot;</span><span class="o">,</span> <span class="nt">false</span><span class="o">);</span>
-        <span class="o">//</span> <span class="nt">set</span> <span class="nt">return</span> <span class="nt">code</span> <span class="nt">to</span> <span class="s2">&quot;failure&quot;</span>
-        <span class="nt">ret</span> <span class="o">=</span> <span class="nt">1</span><span class="o">;</span>
-<span class="p">#</span><span class="nn">ifndef</span> <span class="nt">_DEBUG</span>
-    <span class="err">}</span> <span class="nt">catch</span> <span class="o">(...)</span> <span class="p">{</span>
-        <span class="n">MsgHandler</span><span class="p">:</span><span class="o">:</span><span class="nf">getErrorInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">inform</span><span class="p">(</span><span class="s2">&quot;Quitting (on unknown error).&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
-        <span class="err">//</span> <span class="err">set</span> <span class="err">return</span> <span class="err">code</span> <span class="err">to</span> <span class="err">&quot;failure&quot;</span>
-        <span class="err">ret</span> <span class="err">=</span> <span class="err">1</span><span class="p">;</span>
-<span class="err">#endif</span>
-    <span class="p">}</span>
-    <span class="o">...</span> <span class="nt">clean</span> <span class="nt">up</span> <span class="o">...</span>
-    <span class="o">//</span> <span class="nt">return</span> <span class="nt">the</span> <span class="nt">return</span> <span class="nt">code</span>
-    <span class="nt">return</span> <span class="nt">ret</span><span class="o">;</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">int</span><span class="w"></span>
+<span class="nt">main</span><span class="o">(</span><span class="nt">int</span><span class="w"> </span><span class="nt">argc</span><span class="o">,</span><span class="w"> </span><span class="nt">char</span><span class="w"> </span><span class="o">**</span><span class="nt">argv</span><span class="o">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">//</span><span class="w"> </span><span class="err">initialise</span><span class="w"> </span><span class="err">return</span><span class="w"> </span><span class="err">code</span><span class="w"></span>
+<span class="w">    </span><span class="err">int</span><span class="w"> </span><span class="err">ret</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span><span class="w"> </span><span class="err">make</span><span class="w"> </span><span class="err">uncritical</span><span class="w"> </span><span class="err">initialisation</span><span class="w"> </span><span class="err">...</span><span class="w"></span>
+<span class="w">    </span><span class="err">try</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">       </span><span class="err">...</span><span class="w"> </span><span class="err">do</span><span class="w"> </span><span class="err">some</span><span class="w"> </span><span class="err">critical</span><span class="w"> </span><span class="err">stuff</span><span class="w"> </span><span class="err">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="nt">catch</span><span class="w"> </span><span class="o">(</span><span class="nt">ProcessError</span><span class="w"> </span><span class="o">&amp;</span><span class="nt">e</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="err">if(string(e.what())!=string(&quot;Process</span><span class="w"> </span><span class="err">Error&quot;)</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="err">string(e.what())!=string(&quot;&quot;))</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">MsgHandler</span><span class="p">:</span><span class="o">:</span><span class="nf">getErrorInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">inform</span><span class="p">(</span><span class="n">e</span><span class="err">.</span><span class="nf">what</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="nt">MsgHandler</span><span class="p">::</span><span class="nd">getErrorInstance</span><span class="o">()</span><span class="nt">-</span><span class="o">&gt;</span><span class="nt">inform</span><span class="o">(</span><span class="s2">&quot;Quitting (on error).&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">false</span><span class="o">);</span><span class="w"></span>
+<span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nt">set</span><span class="w"> </span><span class="nt">return</span><span class="w"> </span><span class="nt">code</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="s2">&quot;failure&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span><span class="w"></span>
+<span class="p">#</span><span class="nn">ifndef</span><span class="w"> </span><span class="nt">_DEBUG</span><span class="w"></span>
+<span class="w">    </span><span class="err">}</span><span class="w"> </span><span class="nt">catch</span><span class="w"> </span><span class="o">(...)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">MsgHandler</span><span class="p">:</span><span class="o">:</span><span class="nf">getErrorInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">inform</span><span class="p">(</span><span class="s2">&quot;Quitting (on unknown error).&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="err">//</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">return</span><span class="w"> </span><span class="err">code</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">&quot;failure&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="err">ret</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">1</span><span class="p">;</span><span class="w"></span>
+<span class="err">#endif</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"> </span><span class="nt">clean</span><span class="w"> </span><span class="nt">up</span><span class="w"> </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">return</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">return</span><span class="w"> </span><span class="nt">code</span><span class="w"></span>
+<span class="w">    </span><span class="nt">return</span><span class="w"> </span><span class="nt">ret</span><span class="o">;</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
 </code></pre></div>
 
 <p>The second catch-block will be described later.</p>

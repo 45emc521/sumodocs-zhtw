@@ -7,11 +7,13 @@ You can read the Documentation online at: <https://sumo.dlr.de/docs/>
 ## Getting started
 
 ### Prerequisites
+
 - Python > 3.5 (the *mkdocs-macros-plugin* requires it)
 
 ### Installation
 
 Clone this repository (if not already done):
+
 ```
 git clone https://github.com/eclipse/sumo.git
 ```
@@ -19,6 +21,7 @@ git clone https://github.com/eclipse/sumo.git
 Navigate to this path (`sumo/docs/web`).
 
 Install MkDocs and some MkDocs plugins as well as plantuml:
+
 ```
 pip install -r requirements.txt
 ```
@@ -26,6 +29,7 @@ pip install -r requirements.txt
 On Linux, install **plantuml** via `sudo apt-get install plantuml`.
 
 To run the built-in development server, use:
+
 ```
 mkdocs serve
 ```
@@ -35,9 +39,11 @@ mkdocs serve
 **To preview edition you should run the built-in development server and access the Documentation from the localhost address (which by default is 127.0.0.1:8000).**
 
 To generate the final static html files, run:
+
 ```
 mkdocs build
 ```
+
 This should create the *site* directory, containing all the necessary HTML and CSS files.
 
 ## Contributing

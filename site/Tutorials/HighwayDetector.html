@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tutorials/HighwayDetector.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tutorials/HighwayDetector.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -167,7 +167,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -305,7 +305,7 @@ files are needed, i.e. the SUMO network (.net.xml) and two files, which
 specify detectors and flows respectively. The type of the detectors
 (source, sink, in between) can be detected by the script or read from the
 given detector file. As an example the script can be executed as</p>
-<div class="codehilite"><pre><span></span><code><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">d</span> <span class="n">detector</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">f</span> <span class="n">flow</span><span class="o">.</span><span class="n">csv</span><span class="err">`</span>
+<div class="codehilite"><pre><span></span><code><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">detector</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">flow</span><span class="o">.</span><span class="n">csv</span><span class="err">`</span><span class="w"></span>
 </code></pre></div>
 
 <p>Moreover, there are options, which are not available in
@@ -335,7 +335,7 @@ multiple intervals.</p>
 <p>This script is to compare the detected and simulated edge flows. The
 latter one is based on SUMO's aggregated outputs. The script can be
 executed as following:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowFromEdgeData</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">d</span> <span class="n">detectors</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">e</span> <span class="n">edgeData</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">f</span> <span class="n">detector_flows</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">c</span> <span class="n">flow_column</span><span class="err">`</span>
+<div class="codehilite"><pre><span></span><code><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowFromEdgeData</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="n">edgeData</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">detector_flows</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="n">flow_column</span><span class="err">`</span><span class="w"></span>
 </code></pre></div>
 
 <p>, where detectors.det.xml mainly defines the relationship between
@@ -352,7 +352,7 @@ deviation, RMSE and RMSPE are also calculated as outputs.</p>
 <p>This script is to compare the detected flows and the route flows
 according to the pre-defined emitted flows and routes. The basic
 execution call is as following:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowFromRoutes</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">d</span> <span class="n">detectors</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">e</span> <span class="n">emitters</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">f</span> <span class="n">detector_flows</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">r</span> <span class="n">routes</span><span class="o">.</span><span class="n">rou</span><span class="o">.</span><span class="n">xml</span><span class="err">`</span>
+<div class="codehilite"><pre><span></span><code><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowFromRoutes</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="n">emitters</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">detector_flows</span><span class="o">.</span><span class="n">txt</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">routes</span><span class="o">.</span><span class="n">rou</span><span class="o">.</span><span class="n">xml</span><span class="err">`</span><span class="w"></span>
 </code></pre></div>
 
 <p>, where emitters.flows.xml defines the route flows; detector_flows.txt

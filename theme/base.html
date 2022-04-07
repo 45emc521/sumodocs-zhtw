@@ -136,7 +136,7 @@
                       {%- block search_button %}
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                       {%- endblock %}
@@ -146,7 +146,7 @@
                             <li class="nav-item">
                                 <a rel="edit" href="{{ page.edit_url }}" class="nav-link">
                                     {%- if config.repo_name == 'GitHub' -%}
-                                        <i class="fa fa-github"></i> <u>在 {{ config.repo_name }} 上編輯中文版</u>
+                                        <i class="fa fa-github"></i>在 {{ config.repo_name }} 上編輯中文版（建置中）
                                     {%- elif config.repo_name == 'Bitbucket' -%}
                                         <i class="fa fa-bitbucket"></i> <u>E</u>dit on {{ config.repo_name }}
                                     {%- elif config.repo_name == 'GitLab' -%}
@@ -181,7 +181,7 @@
                             <a class="dropdown-item" href="{{ 'Editing_Articles.html'|url }}">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>

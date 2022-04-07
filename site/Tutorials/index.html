@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tutorials/index.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tutorials/index.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -177,7 +177,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -289,8 +289,8 @@
 <h2 id="using_examples_from_the_test_suite">Using Examples from the Test Suite<a class="headerlink" href="#using_examples_from_the_test_suite" title="Permanent link">#</a></h2>
 <p>SUMO comes with a large set of tests, just browse them at <a href="https://github.com/eclipse/sumo/blob/main/tests"><strong><em>&lt;SUMO_HOME&gt;</em></strong>/tests</a>. They are set up to be running by using a testing environment, but it is also possible to extract them and execute using <a href="../sumo.html">sumo</a> and/or the other tools of the package. In order to do so you can either <a href="../Downloads.html#all-inclusive-tarball">download the complete sumo package</a> or use the <a href="https://sumo.dlr.de/extractTest.php">online test extraction</a>. In the online tool you enter the path to the test you like (e.g. <a href="https://github.com/eclipse/sumo/blob/main/tests/sumo/extended/rerouter/use_routing_device"><strong><em>&lt;SUMO_HOME&gt;</em></strong>/tests/sumo/extended/rerouter/use_routing_device</a> into the form and get a zip containing all the files.</p>
 <p>If you have downloaded and unzipped the all inclusive package, you do not need the online form. Just go into the folder and execute the "extractTest.py" script. For example, you may get the same example of using rerouters as following:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">cd</span> <span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tests</span>
-<span class="o">../</span><span class="n">tools</span><span class="o">/</span><span class="n">extractTest</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">test</span> <span class="n">sumo</span><span class="o">/</span><span class="n">extended</span><span class="o">/</span><span class="n">rerouter</span><span class="o">/</span><span class="n">use_routing_device</span>
+<div class="codehilite"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tests</span><span class="w"></span>
+<span class="o">../</span><span class="n">tools</span><span class="o">/</span><span class="n">extractTest</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">test</span><span class="w"> </span><span class="n">sumo</span><span class="o">/</span><span class="n">extended</span><span class="o">/</span><span class="n">rerouter</span><span class="o">/</span><span class="n">use_routing_device</span><span class="w"></span>
 </code></pre></div>
 
 <p>will extract you an example for <a href="../Simulation/Rerouter.html">rerouting vehicles</a> into /tmp/test.</p>

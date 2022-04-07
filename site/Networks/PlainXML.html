@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Networks/PlainXML.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Networks/PlainXML.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -245,7 +245,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -469,21 +469,21 @@ definitions into an opening and a closing "tag". A complete file should
 like the example below, which is the node file "cross3l.nod.xml" for the
 examples "<strong><em>&lt;SUMO_HOME&gt;</em></strong>/data/examples/netbuild/types/cross_usingtypes/" and
 "<strong><em>&lt;SUMO_HOME&gt;</em></strong>/data/examples/netbuild/types/cross_notypes/" example.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;nodes&gt;</span> <span class="c">&lt;!-- The opening tag --&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;nodes&gt;</span> <span class="cm">&lt;!-- The opening tag --&gt;</span>
 
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;0&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;traffic_light&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;0&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;0&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;traffic_light&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;0&quot; --&gt;</span>
 
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span> <span class="na">x=</span><span class="s">&quot;-500.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;1&quot; --&gt;</span>
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span> <span class="na">x=</span><span class="s">&quot;+500.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;2&quot; --&gt;</span>
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;-500.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;3&quot; --&gt;</span>
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;+500.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;4&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span> <span class="na">x=</span><span class="s">&quot;-500.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;1&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span> <span class="na">x=</span><span class="s">&quot;+500.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;2&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;-500.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;3&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;+500.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;4&quot; --&gt;</span>
 
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m1&quot;</span> <span class="na">x=</span><span class="s">&quot;-250.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;m1&quot; --&gt;</span>
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m2&quot;</span> <span class="na">x=</span><span class="s">&quot;+250.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;m2&quot; --&gt;</span>
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m3&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;-250.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;m3&quot; --&gt;</span>
-  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m4&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;+250.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- def. of node &quot;m4&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m1&quot;</span> <span class="na">x=</span><span class="s">&quot;-250.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;m1&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m2&quot;</span> <span class="na">x=</span><span class="s">&quot;+250.0&quot;</span> <span class="na">y=</span><span class="s">&quot;0.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;m2&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m3&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;-250.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;m3&quot; --&gt;</span>
+  <span class="nt">&lt;node</span> <span class="na">id=</span><span class="s">&quot;m4&quot;</span> <span class="na">x=</span><span class="s">&quot;0.0&quot;</span> <span class="na">y=</span><span class="s">&quot;+250.0&quot;</span> <span class="na">type=</span><span class="s">&quot;priority&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- def. of node &quot;m4&quot; --&gt;</span>
 
-<span class="nt">&lt;/nodes&gt;</span> <span class="c">&lt;!-- The closing tag --&gt;</span>
+<span class="nt">&lt;/nodes&gt;</span> <span class="cm">&lt;!-- The closing tag --&gt;</span>
 </code></pre></div>
 
 <p>As you may notice, only the first node named "0", which is the node in
@@ -1184,7 +1184,7 @@ computation and disables turn-arounds for edges entering the roundabout
 from outside. A roundabout is specified within an <em>.edg.xml</em>-file in the
 following way:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;edges&gt;</span>
-  ...   <span class="c">&lt;!--Edge Definitions --&gt;</span>
+  ...   <span class="cm">&lt;!--Edge Definitions --&gt;</span>
 
   <span class="nt">&lt;roundabout</span> <span class="na">edges=</span><span class="s">&quot;&lt;EDGE_ID&gt; &lt;EDGE_ID&gt; [&lt;EDGE_ID&gt;..]&quot;</span><span class="nt">/&gt;</span>
 
@@ -1220,8 +1220,8 @@ declared as adjacent.</p>
 or a preprocessed net one can give the edge id and the optional index in
 the following way:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;edges&gt;</span>
-  <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&quot;a&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- deletes the edge &quot;a&quot; --&gt;</span>
-  <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&quot;a&quot;</span> <span class="na">index=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- deletes the first lane of edge &quot;a&quot; --&gt;</span>
+  <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&quot;a&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- deletes the edge &quot;a&quot; --&gt;</span>
+  <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&quot;a&quot;</span> <span class="na">index=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span> <span class="cm">&lt;!-- deletes the first lane of edge &quot;a&quot; --&gt;</span>
 <span class="nt">&lt;/edges&gt;</span>
 </code></pre></div>
 
@@ -1628,17 +1628,17 @@ between two edges wait for another stream. Let's take another look at
 right-moving vehicles may drive. The following definition within the
 connections file lets vehicles on vertical edges moving right wait for
 those which move straight on horizontal edges:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">connections</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">connections</span><span class="o">&gt;</span><span class="w"></span>
 
-  <span class="o">&lt;!--</span> <span class="n">The</span> <span class="n">next</span> <span class="n">four</span> <span class="n">connection</span> <span class="n">definitions</span> <span class="n">are</span> <span class="n">same</span> <span class="kr">as</span> <span class="kr">in</span>
-      <span class="s">&quot;Network with explicit edge-2-edge connections&quot;</span> <span class="o">--&gt;</span>
-  <span class="o">&lt;</span><span class="n">connection</span> <span class="n">from</span><span class="o">=</span><span class="s">&quot;1si&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s">&quot;3o&quot;</span><span class="o">/&gt;</span>
-  <span class="o">&lt;</span><span class="n">connection</span> <span class="n">from</span><span class="o">=</span><span class="s">&quot;1si&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s">&quot;2o&quot;</span><span class="o">/&gt;</span>
+<span class="w">  </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">four</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="n">definitions</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kr">in</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Network with explicit edge-2-edge connections&quot;</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">connection</span><span class="w"> </span><span class="n">from</span><span class="o">=</span><span class="s">&quot;1si&quot;</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="s">&quot;3o&quot;</span><span class="o">/&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">connection</span><span class="w"> </span><span class="n">from</span><span class="o">=</span><span class="s">&quot;1si&quot;</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="s">&quot;2o&quot;</span><span class="o">/&gt;</span><span class="w"></span>
 
-  <span class="o">&lt;</span><span class="n">connection</span> <span class="n">from</span><span class="o">=</span><span class="s">&quot;2si&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s">&quot;4o&quot;</span><span class="o">/&gt;</span>
-  <span class="o">&lt;</span><span class="n">connection</span> <span class="n">from</span><span class="o">=</span><span class="s">&quot;2si&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s">&quot;1o&quot;</span><span class="o">/&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">connection</span><span class="w"> </span><span class="n">from</span><span class="o">=</span><span class="s">&quot;2si&quot;</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="s">&quot;4o&quot;</span><span class="o">/&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">connection</span><span class="w"> </span><span class="n">from</span><span class="o">=</span><span class="s">&quot;2si&quot;</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="s">&quot;1o&quot;</span><span class="o">/&gt;</span><span class="w"></span>
 
-  <span class="o">&lt;!--</span> <span class="n">now</span><span class="p">,</span> <span class="n">let</span><span class="s">&#39;s prohibit the vertical connections by the horizontal --&gt;</span>
+<span class="w">  </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">now</span><span class="p">,</span><span class="w"> </span><span class="n">let</span><span class="s">&#39;s prohibit the vertical connections by the horizontal --&gt;</span>
 <span class="s">  &lt;!-- prohibit moving right from top to left by straight from right to left --&gt;</span>
 <span class="s">  &lt;prohibition prohibitor=&quot;</span><span class="mi">2</span><span class="n">si</span><span class="o">-&gt;</span><span class="mi">1</span><span class="n">o</span><span class="s">&quot; prohibited=&quot;</span><span class="mi">4</span><span class="n">si</span><span class="o">-&gt;</span><span class="mi">1</span><span class="n">o</span><span class="s">&quot;/&gt;</span>
 <span class="s">  &lt;!-- prohibit moving straight from top to bottom by straight from right to left --&gt;</span>

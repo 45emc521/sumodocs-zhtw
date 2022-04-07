@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Assign.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Assign.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -167,7 +167,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -226,7 +226,7 @@ is read by the <a href="../duarouter.html">duarouter</a> in the next iteration
 steps in order to compute the DUA.</p>
 <p>For further options to the script look either at the source code or
 start it with the "--help" option.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">assign</span><span class="o">/</span><span class="n">duaIterate</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">PATH_TO_SUMO_NET</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">PATH_TO_TRIPS</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">assign</span><span class="o">/</span><span class="n">duaIterate</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="n">PATH_TO_SUMO_NET</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="n">PATH_TO_TRIPS</span><span class="o">&gt;</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="loading_vehicle_types_from_an_additional_file">Loading vehicle types from an additional file<a class="headerlink" href="#loading_vehicle_types_from_an_additional_file" title="Permanent link">#</a></h3>
@@ -241,7 +241,7 @@ start it with the "--help" option.</p>
 <p>To check the evolution of different simulation parameters during the dua
 estimation an additional script is provided which analyses teleport counts
 and how they evolve over the iterations.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">assign</span><span class="o">/</span><span class="n">duaIterate_analysis</span><span class="o">.</span><span class="n">py</span> <span class="n">dualog</span><span class="o">.</span><span class="n">txt</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">assign</span><span class="o">/</span><span class="n">duaIterate_analysis</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">dualog</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="cadytsiteratepy">cadytsIterate.py<a class="headerlink" href="#cadytsiteratepy" title="Permanent link">#</a></h2>
@@ -252,7 +252,7 @@ to given link counts. The validation work of the calibration between
 SUMO and Cadyts is work in progress. You will need to download
 <a href="https://github.com/gunnarfloetteroed/java">Cadyts</a> separately and add a 
 reference to the jar file to the call.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">assign</span><span class="o">/</span><span class="n">cadytsIterate</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="n">input_net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">r</span> <span class="n">routes</span><span class="o">.</span><span class="n">rou</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">d</span> <span class="n">input_measurements</span><span class="o">.</span><span class="n">xml</span> <span class="o">--</span><span class="n">classpath</span> <span class="n">cadyts</span><span class="o">.</span><span class="n">jar</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">assign</span><span class="o">/</span><span class="n">cadytsIterate</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">input_net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">routes</span><span class="o">.</span><span class="n">rou</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">input_measurements</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">classpath</span><span class="w"> </span><span class="n">cadyts</span><span class="o">.</span><span class="n">jar</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="one-shotpy">one-shot.py<a class="headerlink" href="#one-shotpy" title="Permanent link">#</a></h2>
@@ -281,15 +281,15 @@ be found in the script.</p>
 <p>This script is to generate hourly matrices from a VISUM daily matrix.
 The traffic demand of the traffic zones, which have the same connection
 links, will be integrated. The exemplary command is indicated below.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">matrixDailyToHourly</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="o">&lt;</span><span class="n">matrix</span> <span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">z</span> <span class="o">&lt;</span><span class="n">district</span> <span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">flow</span> <span class="kt">time</span><span class="o">-</span><span class="n">series</span> <span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">o</span> 
+<div class="codehilite"><pre><span></span><code><span class="n">matrixDailyToHourly</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="o">&lt;</span><span class="n">matrix</span><span class="w"> </span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;</span><span class="n">district</span><span class="w"> </span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="n">flow</span><span class="w"> </span><span class="kt">time</span><span class="o">-</span><span class="n">series</span><span class="w"> </span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span>
 
-<span class="o">&lt;</span><span class="k">output</span> <span class="n">directory</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="k">output</span><span class="w"> </span><span class="n">directory</span><span class="o">&gt;</span><span class="w"></span>
 
-<span class="n">where</span> <span class="o">-</span><span class="nl">m:</span> <span class="n">matrix</span> <span class="n">file</span> <span class="n">name</span>
-      <span class="o">-</span><span class="nl">z:</span> <span class="n">district</span> <span class="n">file</span> <span class="n">name</span>
-      <span class="o">-</span><span class="nl">t:</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="n">containing</span> <span class="n">traffic</span> <span class="n">flow</span> <span class="kt">time</span> <span class="n">series</span> <span class="p">(</span><span class="n">optional</span><span class="p">);</span> <span class="n">If</span> <span class="k">not</span> <span class="n">specified</span><span class="p">,</span> <span class="n">the</span> <span class="n">defined</span> 
-          <span class="n">daily</span> <span class="n">matrix</span> <span class="n">will</span> <span class="n">be</span> <span class="n">regularly</span> <span class="n">divided</span> <span class="n">into</span> <span class="mh">24</span> <span class="n">hours</span><span class="p">.</span>
-      <span class="o">-</span><span class="nl">o:</span> <span class="k">output</span> <span class="n">directory</span> <span class="n">name</span> <span class="k">and</span> <span class="n">the</span> <span class="n">respective</span> <span class="n">path</span>
+<span class="n">where</span><span class="w"> </span><span class="o">-</span><span class="nl">m:</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<span class="w">      </span><span class="o">-</span><span class="nl">z:</span><span class="w"> </span><span class="n">district</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<span class="w">      </span><span class="o">-</span><span class="nl">t:</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">traffic</span><span class="w"> </span><span class="n">flow</span><span class="w"> </span><span class="kt">time</span><span class="w"> </span><span class="n">series</span><span class="w"> </span><span class="p">(</span><span class="n">optional</span><span class="p">);</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">defined</span><span class="w"> </span>
+<span class="w">          </span><span class="n">daily</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">regularly</span><span class="w"> </span><span class="n">divided</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="mh">24</span><span class="w"> </span><span class="n">hours</span><span class="p">.</span><span class="w"></span>
+<span class="w">      </span><span class="o">-</span><span class="nl">o:</span><span class="w"> </span><span class="k">output</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">respective</span><span class="w"> </span><span class="n">path</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="costfunctioncheckerpy">costFunctionChecker.py<a class="headerlink" href="#costfunctioncheckerpy" title="Permanent link">#</a></h2>

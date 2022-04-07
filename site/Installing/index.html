@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Installing/index.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Installing/index.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -158,7 +158,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -223,7 +223,7 @@ you can download them from the <a href="../Downloads.html">Download</a> page.</p
 <h1 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">#</a></h1>
 <p>If you run debian or ubuntu, SUMO is part of the regular distribution
 and can be installed like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">sumo</span> <span class="n">sumo</span><span class="o">-</span><span class="n">tools</span> <span class="n">sumo</span><span class="o">-</span><span class="n">doc</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">sumo</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">tools</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">doc</span><span class="w"></span>
 </code></pre></div>
 
 <p>If you need a more up-to-date ubuntu version, it may be found in a
@@ -233,7 +233,7 @@ sudo apt-get update
 </code></pre></div>
 
 <p>and then again</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">sumo</span> <span class="n">sumo</span><span class="o">-</span><span class="n">tools</span> <span class="n">sumo</span><span class="o">-</span><span class="n">doc</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">sumo</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">tools</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="n">doc</span><span class="w"></span>
 </code></pre></div>
 
 <p>Precompiled binaries for different distributions like openSUSE and
@@ -275,7 +275,7 @@ To finalize your setup, please make sure to set the <strong>SUMO_HOME</strong> e
 </code></pre></div>
 
 <p>Just insert the following new line at the end of the file: </p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span> <span class="n">SUMO_HOME</span><span class="o">=/</span><span class="n">your</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">sumo</span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">SUMO_HOME</span><span class="o">=/</span><span class="n">your</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">sumo</span><span class="w"></span>
 </code></pre></div>
 
 <p>where <code>/your/path/to/sumo</code> is the path stated in the caveats section of the <code>brew install sumo</code> command. Restart the Terminal (or run <code>source ~/.bashrc</code>) and test the newly added variable:</p>

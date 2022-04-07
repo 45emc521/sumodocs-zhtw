@@ -42,17 +42,17 @@ If no target flow is given, the provided type information will instead be used t
 The following attributes/elements are used within the calibrator
 element:
 
-| Attribute Name | Value Type    | Description                                                                                                     |
-| -------------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| **id**         | id (string)   | The id of the calibrator                                                                                        |
-| edge           | id (string)   | The id of an edge for measuring and calibrating flow. (Either *edge* or *lane* must be specified)               |
-| lane           | id (string)   | The id of a lane for measuring and calibrating flow (Either *edge* or *lane* must be specified)                 |
-| **pos**        | float         | The position of the calibrator on the specified lane (currently ignored, see [\[1\]](https://github.com/eclipse/sumo/issues/1331)   |
-| freq           | float         | The time interval between calibration attempts. default is step-length. Setting a high value limits the maximum achievable flow  |
-| routeProbe     | id (string)   | The id of the [routeProbe](../Simulation/Output/RouteProbe.md) element from which to determine the route distribution for generated vehicles.|
-| jamThreshold    | float | A threshold value to detect and clear unexpected jamming if the mean edge speed drops below FLOAT * speedLimit. Range [0, 1]. Default: 0.5 (0.8 in meso)|
-| output         | file (string) | The output file for writing calibrator information or *NULL*                                                    |
-| vTypes         | string        | space separated list of vehicle type ids to consider (for counting/removal/type-modification), "" means all; default "".          |
+| Attribute Name | Value Type    | Description                                                                                                                                              |
+| -------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**         | id (string)   | The id of the calibrator                                                                                                                                 |
+| edge           | id (string)   | The id of an edge for measuring and calibrating flow. (Either *edge* or *lane* must be specified)                                                        |
+| lane           | id (string)   | The id of a lane for measuring and calibrating flow (Either *edge* or *lane* must be specified)                                                          |
+| **pos**        | float         | The position of the calibrator on the specified lane (currently ignored, see [\[1\]](https://github.com/eclipse/sumo/issues/1331)                        |
+| freq           | float         | The time interval between calibration attempts. default is step-length. Setting a high value limits the maximum achievable flow                          |
+| routeProbe     | id (string)   | The id of the [routeProbe](../Simulation/Output/RouteProbe.md) element from which to determine the route distribution for generated vehicles.            |
+| jamThreshold   | float         | A threshold value to detect and clear unexpected jamming if the mean edge speed drops below FLOAT * speedLimit. Range [0, 1]. Default: 0.5 (0.8 in meso) |
+| output         | file (string) | The output file for writing calibrator information or *NULL*                                                                                             |
+| vTypes         | string        | space separated list of vehicle type ids to consider (for counting/removal/type-modification), "" means all; default "".                                 |
 
 The `flow` elements which are defined as children of the calibrator definition
 follow the general [format of flow
@@ -103,6 +103,7 @@ attribute of the flow is used. Note, that this value may also specify
 the name of a route distribution.
 
 ## Calibrating vehicle types
+
 When a calibrator flow is defined without attribute `vehsPerHour` but with attribute `type`, this defines a type-calibrator.
 This type of calibrator will modify the types of all passing vehicles (or all vehicles that match the `vTypes` attribute of the calibrator).
 The normal behavior is to replace the type of the passing vehicles with the type set in the flow element.
@@ -111,11 +112,13 @@ The normal behavior is to replace the type of the passing vehicles with the type
     When calibrating types, the 'route' attribute can be omitted from the flow definition    
 
 ### Mapping between vTypeDistributions
+
 A special behavior is activated if the following conditions are met:
+
 - the `type` in the flow element references a `vTypeDistribution`
 - the passing vehicle was defined with a type drawn from a `vTypeDistribution`
 - both vTypeDistributions have the same number of member types
-In this case, the new type of the passing vehicle will be mapped to a specific type in the vType distribution:
+  In this case, the new type of the passing vehicle will be mapped to a specific type in the vType distribution:
 - the index of the actual vehicle type in the original vTypeDistribution will be computed
 - the type with that index in the new vTypeDistribution will be used as the new vehicle type
 
@@ -127,8 +130,10 @@ Example route-file input:
         <vType id="truck" maxSpeed="10" probability="30" vClass="truck"/>
     </vTypeDistribution>
 ```
+
 Example additional-file input: 
-```   
+
+```
     <vTypeDistribution id="bad_weather">
         <vType id="car2" speedFactor="0.8" decel="3"/>
         <vType id="truck2" decel="2" tau="1.5" vClass="truck"/>
@@ -138,6 +143,7 @@ Example additional-file input:
         <flow begin="900"    end="1800" route="r1" type="bad_weather"/>
     </calibrator>`      
 ```
+
 In this example, all cars will be mapped to slower cars (type 'car' to 'car2') and all trucks will be mapped to trucks that keep larger distances.
 
 # Building a scenario without knowledge of routes, based on flow measurements

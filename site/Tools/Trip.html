@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Trip.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Trip.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -194,7 +194,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -239,7 +239,7 @@ defined by begin (option <strong>-b</strong>, default 0) and end time (option <s
 3600) in seconds. The number of trips is defined by the repetition rate
 (option <strong>-p</strong>, default 1) in seconds. Every trip has an id consisting of a
 prefix (option <strong>--prefix</strong>, default "") and a running number. Example call:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">e</span> <span class="mi">50</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
 </code></pre></div>
 
 <p>The script does not check whether the chosen destination may be reached
@@ -269,7 +269,7 @@ area.</p>
 <li>direction of travel (option <strong>--angle-factor</strong> and <strong>--angle</strong>)</li>
 </ul>
 <p>For additional ways to influence edge probabilities call</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="traffic_volume_arrival_rate">Traffic Volume / Arrival rate<a class="headerlink" href="#traffic_volume_arrival_rate" title="Permanent link">#</a></h2>
@@ -316,8 +316,8 @@ into trips).</p>
 <h2 id="generating_vehicles_with_additional_parameters">Generating vehicles with additional parameters<a class="headerlink" href="#generating_vehicles_with_additional_parameters" title="Permanent link">#</a></h2>
 <p>With the option <strong>--trip-attributes</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;STRING&gt;</em></a>, additional parameters can be given to the generated
 vehicles (note, usage of the quoting characters).</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> 
-  <span class="o">--</span><span class="n">trip</span><span class="o">-</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;departLane=</span><span class="se">\&quot;</span><span class="s2">best</span><span class="se">\&quot;</span><span class="s2"> departSpeed=</span><span class="se">\&quot;</span><span class="s2">max</span><span class="se">\&quot;</span><span class="s2"> departPos=</span><span class="se">\&quot;</span><span class="s2">random</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span>
+<span class="w">  </span><span class="o">--</span><span class="n">trip</span><span class="o">-</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;departLane=</span><span class="se">\&quot;</span><span class="s2">best</span><span class="se">\&quot;</span><span class="s2"> departSpeed=</span><span class="se">\&quot;</span><span class="s2">max</span><span class="se">\&quot;</span><span class="s2"> departPos=</span><span class="se">\&quot;</span><span class="s2">random</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <p>This would make the random vehicles be distributed randomly on their
@@ -336,8 +336,8 @@ to be prepared:</p>
 
 <p>Then load this file (assume it was saved as <em>type.add.xml</em>) with the
 option --additional-file</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">trip</span><span class="o">-</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;type=</span><span class="se">\&quot;</span><span class="s2">myType</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">--</span><span class="n">additional</span><span class="o">-</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">add</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span>
-   <span class="o">--</span><span class="n">edge</span><span class="o">-</span><span class="n">permission</span> <span class="n">passenger</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="n">net</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="n">trip</span><span class="o">-</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;type=</span><span class="se">\&quot;</span><span class="s2">myType</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">--</span><span class="n">additional</span><span class="o">-</span><span class="n">file</span><span class="w"> </span><span class="o">&lt;</span><span class="n">add</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">   </span><span class="o">--</span><span class="n">edge</span><span class="o">-</span><span class="n">permission</span><span class="w"> </span><span class="n">passenger</span><span class="w"></span>
 </code></pre></div>
 
 <p>Note the use of the option <strong>--edge-permission</strong> (deprecated alias: <strong>--vclass</strong>) which ensures that
@@ -353,7 +353,7 @@ places a standard vType definition in the generated trips file.</p>
 <h3 id="automatically_generating_a_vehicle_type">Automatically generating a vehicle type<a class="headerlink" href="#automatically_generating_a_vehicle_type" title="Permanent link">#</a></h3>
 <p>By setting the option <strong>--vehicle-class</strong> a vehicle type definition that specifies vehicle
 class will be added to the output files. I.e.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">vehicle</span><span class="o">-</span><span class="k">class</span> <span class="n">bus</span> <span class="o">...</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">vehicle</span><span class="o">-</span><span class="k">class</span><span class="w"> </span><span class="n">bus</span><span class="w"> </span><span class="o">...</span><span class="w"></span>
 </code></pre></div>
 
 <p>will add</p>
@@ -362,7 +362,7 @@ class will be added to the output files. I.e.</p>
 
 <p>Any <strong>--trip-attributes</strong> that are applicable to a vehicle type rather than a vehicle will be
 placed in the generated <code>vType</code> definition automatically:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">vehicle</span><span class="o">-</span><span class="k">class</span> <span class="n">bus</span> <span class="o">--</span><span class="n">trip</span><span class="o">-</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;maxSpeed=</span><span class="se">\&quot;</span><span class="s2">27.8</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">vehicle</span><span class="o">-</span><span class="k">class</span><span class="w"> </span><span class="n">bus</span><span class="w"> </span><span class="o">--</span><span class="n">trip</span><span class="o">-</span><span class="n">attributes</span><span class="o">=</span><span class="s2">&quot;maxSpeed=</span><span class="se">\&quot;</span><span class="s2">27.8</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <p>will add</p>
@@ -428,7 +428,7 @@ will use the following defaults if same values are missing:</p>
 <h3 id="usage_example">Usage Example<a class="headerlink" href="#usage_example" title="Permanent link">#</a></h3>
 <p>To obtain trips from two specific locations (edges <em>a</em>, and <em>b</em>) to
 random destinations, use</p>
-<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">weights</span><span class="o">-</span><span class="n">prefix</span> <span class="n">example</span>  <span class="o">...&lt;</span><span class="n">other</span> <span class="n">options</span><span class="o">&gt;...</span>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">randomTrips</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">weights</span><span class="o">-</span><span class="n">prefix</span><span class="w"> </span><span class="n">example</span><span class="w">  </span><span class="o">...&lt;</span><span class="n">other</span><span class="w"> </span><span class="n">options</span><span class="o">&gt;...</span><span class="w"></span>
 </code></pre></div>
 
 <p>and define only the file <em>example.src.xml</em> as follows:</p>

@@ -100,11 +100,11 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> <u>在原文內容中搜尋</u>
+                                <i class="fa fa-search"></i>在原文內容中搜尋
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Detector.md" class="nav-link"><i class="fa fa-github"></i> <u>在 GitHub 上編輯中文版</u></a>
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/web/docs/Tools/Detector.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 上編輯中文版（建置中）</a>
                             </li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -115,7 +115,7 @@
                             <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
                             <a class="dropdown-item" href="https://github.com/eclipse/sumo/commits/main/docs/web">文件更新紀錄</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
-                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
                             <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
                               <input type="checkbox" id="checkbox_theme">
                           </label></span>
@@ -160,7 +160,7 @@
 
     <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
         <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
-        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。鑑於原版文件可自由編輯、且經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
+        <p><i>本份文件是基於原文版的 SUMO Documentation 於 2022/04/01 快取所翻譯的。基於原文文件經常修改，如要閱讀最新的文件內容，請至原文網站 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解詳情。</i></p>
         </div>
 
 </div>
@@ -202,14 +202,14 @@ network (option <strong>-n</strong>).</p>
 assuming the measured flows as capacity. The input data is by default
 aggregated over the whole file but can be split into intervals by
 setting <strong>-i</strong>. Example call for hourly aggregation:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="n">input_net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">d</span> <span class="n">detectors</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">f</span> <span class="n">flows20140520</span><span class="o">.</span><span class="n">csv</span> <span class="o">-</span><span class="n">o</span> <span class="n">routes</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">e</span> <span class="n">flows</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">i</span> <span class="mi">60</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">input_net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">flows20140520</span><span class="o">.</span><span class="n">csv</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">routes</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="n">flows</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="mi">60</span><span class="w"></span>
 </code></pre></div>
 
 <p>Detectors which have no data (in the specified interval) or are
 permanently zero are ignored by default. To include them into the
 calculations use <strong>--respect-zero</strong>.</p>
 <p>For additional parameters call</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w"></span>
 </code></pre></div>
 
 <div class="admonition caution">
@@ -234,7 +234,7 @@ calculations use <strong>--respect-zero</strong>.</p>
 <h2 id="generating_vehicles_with_additional_parameters">Generating vehicles with additional parameters<a class="headerlink" href="#generating_vehicles_with_additional_parameters" title="Permanent link">#</a></h2>
 <p>With the option <strong>--params</strong> <a href="/docs/Basics/Notation.html#referenced_data_types"><em>&lt;STRING&gt;</em></a>, additional parameters can be given to the generated
 vehicles (note, usage of the quoting characters).</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">n</span> <span class="n">input_net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span> <span class="o">--</span><span class="n">params</span><span class="o">=</span><span class="s2">&quot;departLane=</span><span class="se">\&quot;</span><span class="s2">best</span><span class="se">\&quot;</span><span class="s2"> departSpeed=</span><span class="se">\&quot;</span><span class="s2">max</span><span class="se">\&quot;</span><span class="s2"> type=</span><span class="se">\&quot;</span><span class="s2">myType&quot;&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowrouter</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">input_net</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">params</span><span class="o">=</span><span class="s2">&quot;departLane=</span><span class="se">\&quot;</span><span class="s2">best</span><span class="se">\&quot;</span><span class="s2"> departSpeed=</span><span class="se">\&quot;</span><span class="s2">max</span><span class="se">\&quot;</span><span class="s2"> type=</span><span class="se">\&quot;</span><span class="s2">myType&quot;&quot;</span>
 </code></pre></div>
 
 <p>This would insert the vehicle with high speed on a reasonable lane. The
@@ -264,13 +264,13 @@ edges. Alternatively, the flow for a single edge can be restricted with an input
 detectors from a route or flow file. It can also be used to compare the
 input counts with the outputs of flowrouter.py and
 <a href="../dfrouter.html">dfrouter</a>. Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowFromRoutes</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">d</span> <span class="n">detectors</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">r</span> <span class="n">routes</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">e</span> <span class="n">flows</span><span class="o">.</span><span class="n">xml</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">flowFromRoutes</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">detectors</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">routes</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="n">flows</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </code></pre></div>
 
 <h1 id="edgedatafromflowpy">edgeDataFromFlow.py<a class="headerlink" href="#edgedatafromflowpy" title="Permanent link">#</a></h1>
 <p>This script converts detector flow files to into edgeData format (i.e. to be used by <a href="Turns.html#routesamplerpy">routeSampler.py</a>)
 Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">edgeDataFromFlow</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">d</span> <span class="n">input_detectors</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">f</span> <span class="n">input_flows</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">o</span> <span class="n">edgedata</span><span class="o">.</span><span class="n">xml</span> 
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">SUMO_HOME</span><span class="o">&gt;/</span><span class="n">tools</span><span class="o">/</span><span class="n">detector</span><span class="o">/</span><span class="n">edgeDataFromFlow</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">input_detectors</span><span class="o">.</span><span class="n">det</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">input_flows</span><span class="o">.</span><span class="n">txt</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">edgedata</span><span class="o">.</span><span class="n">xml</span><span class="w"> </span>
 </code></pre></div>
                 </div>
           </div>
