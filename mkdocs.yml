@@ -1,19 +1,19 @@
-site_name: SUMO 使用者文件（正體中文）－SUMO Documentation (Chinese Tradditional)
-site_url: https://sumo.dlr.de/docs/
+site_name: SUMO 說明文件－SUMO Documentation (Chinese Tradditional)
+site_url: https://sumodocs-zhtw.emc521.tw
 repo_url: https://github.com/45EMC521/sumodocs-zhtw
-edit_uri: edit/main/docs/web/docs/
-site_description: SUMO 使用者文件正體中文翻譯版
+edit_uri: edit/main/docs/
+site_description: SUMO 說明文件正體中文翻譯版
 use_directory_urls: false
 dev_addr: 127.0.0.1:8000
 #docs_dir: docs
 #site_dir: site
-copyright: "Copyright &copy; 2001-2022 German Aerospace Center (DLR) and others."
+copyright: "Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護"
 
 nav:
-  - 文件首頁: index.md
+  - 說明文件首頁: index.md
   - 教學: Tutorials/index.md
   - 常見問題: FAQ.md
-  - 下載: Downloads.md
+  - 下載 SUMO: Downloads.md
   - 出版品: Publications.md
   - 開發人員: Developer/index.md
   - 版本紀錄: ChangeLog.md
