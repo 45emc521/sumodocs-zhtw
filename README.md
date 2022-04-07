@@ -1,28 +1,28 @@
 # SUMO 說明文件
 
-SUMO 說明文件是以 [MkDocs](https://www.mkdocs.org/) 撰成。
+SUMO 說明文件是以 [MkDocs](https://www.mkdocs.org/) 撰成。本 repository（SUMO 說明文件正體中文版）是非官方維護版本。
 
 你可以在以下網址查看 SUMO 說明文件的中文版本：<https://sumodocs-zhtw.emc521.tw>。
 
 或者，你也可以瀏覽本文件的原文（英文）版本：<https://sumo.dlr.de/docs/>。
 
-## Getting started
+## 入門
 
-### Prerequisites
+### 前置需求
 
-- Python > 3.5 (the *mkdocs-macros-plugin* requires it)
+- Python > 3.5 （*mkdocs-macros-plugin* 需要）
 
-### Installation
+### 安裝到電腦上
 
-Clone this repository (if not already done):
+Clone 這個 repository：
 
 ```
 git clone https://github.com/eclipse/sumo.git
 ```
 
-Navigate to this path (`sumo/docs/web`).
+然後切換到 `sumodocs-zhtw`目錄內。
 
-Install MkDocs and some MkDocs plugins as well as plantuml:
+安裝 MkDocs、MkDocs 的外掛和 plantuml：
 
 ```
 pip install -r requirements.txt
