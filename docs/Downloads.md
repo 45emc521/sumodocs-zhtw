@@ -98,7 +98,7 @@ macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，
 
 這個啟動器可讓你在雙擊 `.sumocfg`時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開`.sumocfg`的應用程式。甚至，你可以把 **sumo-gui**、**netedit** 和 **OSM Web Wizard** 放在 Dock 上。
 
-!!! caution **重要提醒**
+!!! caution "重要提醒"
     要正常使用啟動器，你必須在安裝啟動器前，先把 SUMO 安裝好；並確定你已經設定好 [SUMO_HOME](Basics/Basic_Computer_Skills.md#sumo_home) 環境變數。
 
 ## 原始碼

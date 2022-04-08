@@ -158,13 +158,13 @@
                     <a href="#macos" class="nav-link">• macOS</a>
                 </li>
                 <li class="nav-item" style="text-indent: 25px;">
-                    <a href="#application_launchers" class="nav-link">&rarr; Application launchers</a>
+                    <a href="#_2" class="nav-link">&rarr; 應用程式啟動器</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#sources" class="nav-link">• Sources</a>
+                    <a href="#_3" class="nav-link">• 原始碼</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#python_packages_virtual_environments" class="nav-link">• Python packages / Virtual environments</a>
+                    <a href="#python" class="nav-link">• Python 套件／虛擬環境</a>
                 </li>
             <li class="nav-item main"><a href="#sumo_-_latest_development_version">SUMO - Latest Development Version</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
@@ -253,13 +253,7 @@
 </code></pre></div>
 
 <h3 id="_1">倉儲<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
-<p>If the repositories do
-not contain the libraries (like proj and gdal) they are either part of
-the distribution or you will need them from another repository (you may
-try one of the build service repositories here too, e.g.
-<a href="https://download.opensuse.org/repositories/Application:/Geo/">Application:Geo</a>).
-At the moment there is no documentation included in the packages. The
-repositories include a nightly build as well (called <strong><em>sumo-git</em></strong>).</p>
+<p>如果該倉儲沒有包括某些資源庫（如 proj 和 gdal 等），他們有可能已成為散發套件的一部分；或者你會需要從其他倉儲內取得。你也許可以試試看其中一個建置的服務倉儲，例如 <a href="https://download.opensuse.org/repositories/Application:/Geo/">Application:Geo</a>。目前這些套件內<strong>沒有</strong>包含說明文件。這些倉儲也包括 nightly 的版本分支（叫做 sumo-git）。</p>
 <ul>
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/openSUSE_Leap_42.3/">openSUSE Leap 42.3 repository</a></li>
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/openSUSE_Leap_15.0/">openSUSE Leap 15.0 repository</a></li>
@@ -278,50 +272,48 @@ repositories include a nightly build as well (called <strong><em>sumo-git</em></
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/CentOS_7/">CentOS 7 repository</a></li>
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/CentOS_8/">CentOS 8 repository</a></li>
 </ul>
-<p>Adding the repository and installing (the quick and dirty way without checking GPG keys!) looks like this, for yum on CentOS 7:</p>
+<p>你可以加入這些倉儲並快速安裝他們（即不檢查 GPG 金鑰）。在 CentOS 7 上，使用 yum 來安裝 SUMO：</p>
 <div class="codehilite"><pre><span></span><code><span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span><span class="w"> </span><span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">repo</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="n">CentOS_7</span><span class="o">/</span><span class="w"></span>
 <span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w"> </span><span class="n">epel</span><span class="o">-</span><span class="n">release</span><span class="w"></span>
 <span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
 
-<p>and like this, for zypper on openSUSE Leap 15.3:</p>
+<p>如果在 openSUSE Leap 15.3 上，你可以使用 zypper 安裝：</p>
 <div class="codehilite"><pre><span></span><code><span class="n">zypper</span><span class="w"> </span><span class="n">ar</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="mf">15.3</span><span class="o">/</span><span class="w"> </span><span class="n">science</span><span class="p">:</span><span class="n">dlr</span><span class="w"></span>
 <span class="n">zypper</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">sumo</span><span class="o">=</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
 
-<p>I you leave out the version number it will install the latest nightly build.</p>
-<p>Ubuntu, Debian and Arch users please see the community repositories above.</p>
+<p>如果你沒有輸入版本號碼，將會直接安裝最新的 nightly 版本分支。</p>
+<p>Ubuntu、Debian 和 Arch 使用者請直接參閱上方的社群倉儲。</p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">#</a></h2>
-<p>You can read the Homebrew-based installation guide <a href="Installing/index.html#macos">here</a> or follow the Build instructions <a href="Installing/MacOS_Build.html">here</a>.</p>
-<p>"Bottles" are available for installing with
-<a href="https://brew.sh/">Homebrew</a>. They are built for the two most recent
-major macOS versions (currently Mojave and Catalina) and are built
-from source with minimal requirements (fox, proj, xerces-c). If you need
-optional libraries, you can specify these on the brew command line and
-brew will compile SUMO from source. For details, see the <a href="https://github.com/DLR-TS/homebrew-sumo/blob/main/README.md">Formula's
-README</a>.</p>
-<h3 id="application_launchers">Application launchers<a class="headerlink" href="#application_launchers" title="Permanent link">#</a></h3>
-<p>In order to have a more native feel on macOS, we provide some application launchers (icons / shortcuts). These launchers <strong><em>work with all versions of SUMO and do not need to be updated</em></strong>.</p>
+<p>在 macOS 上，你可以使用 Homebrew 來安裝 SUMO。請參閱<a href="Installing/index.html#macos">這裡</a>來安裝或手動在電腦上編譯、建置。</p>
+<p>"Bottles" 將可和 Homebrew 一起安裝，並且他們已經在最新的兩個 macOS 版本上建置。此外，SUMO 將直接在你的電腦上使用原始碼，在最小的系統需求上 (fox、proj、xerces-c) 建置並安裝。如果要使用其他的資源庫安裝 SUMO，你可以在輸入 brew 指令時指定使用這些資源庫，brew 會使用你指定的資源庫來編譯 SUMO。如要了解詳細資訊，請參閱 <a href="https://github.com/DLR-TS/homebrew-sumo/blob/main/README.md">Formula's
+README</a>。</p>
+<h3 id="_2">應用程式啟動器<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p>macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，無法在啟動台 (LaunchPad) 上找到 SUMO 的套件，而必須先打 X11 才能執行。不過沒關係，我們打造了一個小程式，能讓你在 macOS 上以近乎原生（就是可以在啟動台啟動）的方式開啟 SUMO 套件內的應用程式，我們稱之為<strong>應用程式啟動器</strong>。這個應用程式啟動器和 SUMO 的各版本相同，且安裝好後，未來無需更新。</p>
 <ul>
-<li><a class="no-arrow-link" href="https://sumo.dlr.de/daily/SUMO_launchers.dmg">Download SUMO launchers </a><span class="badge badge-pill badge-secondary"><?php getFileSize("SUMO_launchers.dmg","d");?></span></li>
+<li><a class="no-arrow-link" href="https://sumo.dlr.de/daily/SUMO_launchers.dmg">下載 SUMO 應用程式啟動器</a><span class="badge badge-pill badge-secondary"><?php getFileSize("SUMO_launchers.dmg","d");?></span></li>
 </ul>
 
-<p>These launchers allow you to select <strong>sumo-gui</strong> as the default application to open <code>.sumocfg</code> files on macOS, and even add <strong>sumo-gui</strong>, <strong>netedit</strong> and the <strong>OSM Web Wizard</strong> to the dock.</p>
-<div class="admonition caution">
-<p class="admonition-title">Important notice</p>
-<p>In order to use the launchers, make sure you have installed SUMO beforehand (any version) and have set the <a href="Basics/Basic_Computer_Skills.html#sumo_home">SUMO_HOME</a> environment variable.</p>
-</div>
-<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">#</a></h2>
-<p>Download the sources, examples, and CMake-files for creating Visual Studio
-solutions or Linux Makefiles. This download does not contain tests. Download as:</p>
+<p>這個啟動器可讓你在雙擊 <code>.sumocfg</code>時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開<code>.sumocfg</code>的應用程式。甚至，你可以把 <strong>sumo-gui</strong>、<strong>netedit</strong> 和 <strong>OSM Web Wizard</strong> 放在 Dock 上。</p>
+<p>!!! caution <strong>重要提醒</strong>
+    要正常使用啟動器，你必須在安裝啟動器前，先把 SUMO 安裝好；並確定你已經設定好 <a href="Basics/Basic_Computer_Skills.html#sumo_home">SUMO_HOME</a> 環境變數。</p>
+<h2 id="_3">原始碼<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>下載原始碼、範例檔案、給 Visual Studio 使用的 CMake 檔案及可在 Linux 上使用的 Makefile 檔案。這些下載項目不包含測試。</p>
 <ul>
 <li><a class="no-arrow-link" href="https://sumo.dlr.de/releases/1.12.0/sumo-src-1.12.0.tar.gz">sumo-src-1.12.0.tar.gz </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-src-1.12.0.tar.gz","r");?></span></li>
 <li><a class="no-arrow-link" href="https://sumo.dlr.de/releases/1.12.0/sumo-src-1.12.0.zip">sumo-src-1.12.0.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-src-1.12.0.zip","r");?></span></li>
 </ul>
 
-<h2 id="python_packages_virtual_environments">Python packages / Virtual environments<a class="headerlink" href="#python_packages_virtual_environments" title="Permanent link">#</a></h2>
-<p>Starting with SUMO 1.8.0 (for macOS since 1.12.0) the installation is also possible from the <a href="https://pypi.org/project/eclipse-sumo/">Python packaging index</a>.</p>
-<p>You can install either the applications: <code>pip install eclipse-sumo</code> or only traci (<code>pip install traci</code>), libsumo (<code>pip install libsumo</code>) or sumolib (<code>pip install sumolib</code>).</p>
+<h2 id="python">Python 套件／虛擬環境<a class="headerlink" href="#python" title="Permanent link">#</a></h2>
+<p>自 SUMO 1.8.0（或在 macOS 上自 SUMO 1.12.0 開始），你也可以從 <a href="https://pypi.org/project/eclipse-sumo/">Python packaging index</a> 安裝 SUMO。</p>
+<p>你可以使用以下語法安裝：</p>
+<ul>
+<li>安裝 SUMO 套件：<code>pip install eclipse-sumo</code> </li>
+<li>只安裝 TraCI：<code>pip install traci</code></li>
+<li>只安裝 lib sumo：<code>pip install libsumo</code></li>
+<li>只安裝 sumolib：<code>pip install sumolib</code></li>
+</ul>
 <p>This should work for Windows, macOS and all Linux versions which are more recent than 2014.
 The applications are available for Python 2 and Python 3, libsumo only for Python 3.6 and above. This gives an easy way to test
 a new SUMO version via <a href="https://docs.python.org/3/library/venv.html">virtual environments</a> or a nightly build using the following commands (on Linux):</p>
