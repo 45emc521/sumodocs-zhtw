@@ -1,16 +1,14 @@
 ---
-title: Downloads
+title: 下載 SUMO
 ---
 
-# SUMO - Latest Release (Version {{Version}})
+# 最新的 SUMO (版本為 {{Version}})。
 
-**Release date:** {{ReleaseDate}}
+**發行日期**：{{ReleaseDate}}
 
 ## Windows
 
-Binaries (64 bit), all dlls needed, the examples,
-tools, and documentation in HTML format. For an explanation of the contents and the
-licensing (especially concerning the "extra" build which contains GPL code to support GeoTIFFs, shapefiles and 3D models), see [the notes below](Downloads.md#note_on_licensing).
+每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 [the notes below](Downloads.md#note_on_licensing).
 
 <ul>
 <li>Download 64-bit installer: <a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64-{{Version}}.msi">sumo-win64-{{Version}}.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-{{Version}}.msi","r");?></span></li>
