@@ -11,33 +11,31 @@ title: 下載 SUMO
 每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 [the notes below](Downloads.md#note_on_licensing).
 
 <ul>
-<li>Download 64-bit installer: <a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64-{{Version}}.msi">sumo-win64-{{Version}}.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-{{Version}}.msi","r");?></span></li>
-<li>Download 64-bit zip: <a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64-{{Version}}.zip">sumo-win64-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-{{Version}}.zip","r");?></span></li>
-<li>Download 64-bit installer with all extras (contains GPL code): <a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64extra-{{Version}}.msi">sumo-win64extra-{{Version}}.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64extra-{{Version}}.msi","r");?></span></li>
-<li>Download 64-bit zip with all extras (contains GPL code): <a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64extra-{{Version}}.zip">sumo-win64extra-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64extra-{{Version}}.zip","r");?></span></li>
+<li>下載 64 位元安裝檔：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64-{{Version}}.msi">sumo-win64-{{Version}}.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-{{Version}}.msi","r");?></span></li>
+<li>下載 64 位元 zip：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64-{{Version}}.zip">sumo-win64-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-{{Version}}.zip","r");?></span></li>
+<li>下載 64 位元安裝檔（包含 GPL 代碼的擴充套件）：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64extra-{{Version}}.msi">sumo-win64extra-{{Version}}.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64extra-{{Version}}.msi","r");?></span></li>
+<li>下載 64 位元 zip（包含 GPL 代碼的擴充套件）：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64extra-{{Version}}.zip">sumo-win64extra-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64extra-{{Version}}.zip","r");?></span></li>
 </ul>
+
 
 ### SUMO-Game
 
-<ul><li>Windows binaries: <a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-game-{{Version}}.zip">sumo-game-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-game-{{Version}}.zip","r");?></span></li></ul>
+<ul><li>Windows 執行檔：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-game-{{Version}}.zip">sumo-game-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-game-{{Version}}.zip","r");?></span></li></ul>
 
 
 ## Linux
 
-The community maintains several repositories notably at the 
-[open build service](https://build.opensuse.org/project/show/science:dlr).
-For a detailed list of repositories see below.
+在 [open build service](https://build.opensuse.org/project/show/science:dlr) 上，由社群維護了數個 repository，有關這些 repository 的列表，請見下方。
 
-Furthermore there are a debian and an ubuntu
-launchpad project as well as an archlinux package:
+另外，也有提供給 Debian 和 Ubuntu 的 Launchpad 專案，以及適用於 archlinux 的套件。
 
 - <https://salsa.debian.org/science-team/sumo.git>
 - <https://launchpad.net/~sumo>
 - <https://aur.archlinux.org/packages/sumo/>
 
-There is also a [flatpak](https://flathub.org/apps/details/org.eclipse.sumo) available for SUMO.
+這裡也有一個針對 SUMO 的 [flatpak](https://flathub.org/apps/details/org.eclipse.sumo)。
 
-To add the most recent sumo to your ubuntu you will need to do:
+要把 SUMO 安裝進 Ubuntu，你需要打開終端機並輸入以下指令：
 
 ```
 sudo add-apt-repository ppa:sumo/stable
