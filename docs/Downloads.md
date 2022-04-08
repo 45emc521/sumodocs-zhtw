@@ -25,9 +25,9 @@ title: 下載 SUMO
 
 ## Linux
 
-在 [open build service](https://build.opensuse.org/project/show/science:dlr) 上，由社群維護了數個 repository，有關這些 repository 的列表，請見下方。
+在 [open build service](https://build.opensuse.org/project/show/science:dlr) 上，由社群維護了數個倉儲 (repository)，有關這些倉儲的列表，請見下方。
 
-另外，也有提供給 Debian 和 Ubuntu 的 Launchpad 專案，以及適用於 archlinux 的套件。
+另外，也有提供給 Debian 和 Ubuntu 的 Launchpad 專案，以及適用於 Arch Linux 的套件。
 
 - <https://salsa.debian.org/science-team/sumo.git>
 - <https://launchpad.net/~sumo>
@@ -43,7 +43,7 @@ sudo apt-get update
 sudo apt-get install sumo sumo-tools sumo-doc
 ```
 
-### Repositories
+### 倉儲
 
 If the repositories do
 not contain the libraries (like proj and gdal) they are either part of
