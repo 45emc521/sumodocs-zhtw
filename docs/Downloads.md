@@ -2,7 +2,7 @@
 title: 下載 SUMO
 ---
 
-# 最新的 SUMO (版本為 {{Version}})。
+# 最新的 SUMO（版本 {{Version}}）
 
 **發行日期**：{{ReleaseDate}}
 
