@@ -1,6 +1,6 @@
 <hTitles >SUMO 說明文件 (SUMO User Documentation)<hr style="border: 0.5px solid #338033;"></hTitles>
 
-!!! note
+!!! note "請先看這裡！"
     本份文件是 SUMO Documentation 於 2022/04/01 版本的快取，旨在將 SUMO Documentation 翻譯成正體中文。如果需要最新的說明文件，歡迎造訪 [SUMO Documentation](https://sumo.dlr.de/docs/) 的官方網站。
 
 "**S**imulation of **U**rban **MO**bility (SUMO)" 是一個開放原始碼、微觀車流與持續性的交通模擬套件，旨在支援大型的路網模擬。本軟體可對包括行人或多重情境下進行綜合模擬。
@@ -12,7 +12,7 @@ Licenses when the conditions for such availability set forth in the EPL 2.0 are 
 
 如果你使用 SUMO 進行車流模擬，你可以在[出版品](Publications.md)這一頁中和我們分享。
 
-!!! note
+!!! note "關於引用"
     如果你需要引用 SUMO，請參考我們目前的出版格式：["Microscopic Traffic Simulation using SUMO"](https://elib.dlr.de/127994/); Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.
 
 你可以自由修改 SUMO 使用者文件；要修改特定頁面，請點選位在網頁右上角的「在 GitHub 上編輯中文版」按鈕，並在修改完後提出 pull 要求。這裡有份關於[編輯文章](Editing_Articles.md)的教學頁面。如有需要，你也可以在自己的電腦上[建置 (Build)](Developer/Documentation_Build.md) 這份文件，也可以[下載](https://sumo.dlr.de/sumo_documentation.zip)一份副本到你的電腦中。如果你要修改原文版本，請到 [SUMO Documentation](https://sumo.dlr.de/docs/) 了解更多資訊。
