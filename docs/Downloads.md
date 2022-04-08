@@ -45,13 +45,7 @@ sudo apt-get install sumo sumo-tools sumo-doc
 
 ### 倉儲
 
-If the repositories do
-not contain the libraries (like proj and gdal) they are either part of
-the distribution or you will need them from another repository (you may
-try one of the build service repositories here too, e.g.
-[Application:Geo](https://download.opensuse.org/repositories/Application:/Geo/)).
-At the moment there is no documentation included in the packages. The
-repositories include a nightly build as well (called ***sumo-git***).
+如果該倉儲沒有包括某些資源庫（如 proj 和 gdal 等），他們有可能已成為散發套件的一部分；或者你會需要從其他倉儲內取得。你也許可以試試看其中一個建置的服務倉儲，例如 [Application:Geo](https://download.opensuse.org/repositories/Application:/Geo/)。目前這些套件內**沒有**包含說明文件。這些倉儲也包括 nightly 的版本分支（叫做 sumo-git）。
 
 - [openSUSE Leap 42.3 repository](http://download.opensuse.org/repositories/science:/dlr/openSUSE_Leap_42.3/)
 - [openSUSE Leap 15.0 repository](http://download.opensuse.org/repositories/science:/dlr/openSUSE_Leap_15.0/)
@@ -70,61 +64,62 @@ repositories include a nightly build as well (called ***sumo-git***).
 - [CentOS 7 repository](http://download.opensuse.org/repositories/science:/dlr/CentOS_7/)
 - [CentOS 8 repository](http://download.opensuse.org/repositories/science:/dlr/CentOS_8/)
 
-Adding the repository and installing (the quick and dirty way without checking GPG keys!) looks like this, for yum on CentOS 7:
+你可以加入這些倉儲並快速安裝他們（即不檢查 GPG 金鑰）。在 CentOS 7 上，使用 yum 來安裝 SUMO：
+
 ```
 yum-config-manager --add-repo=https://download.opensuse.org/repositories/science:/dlr/CentOS_7/
 yum install -y --nogpgcheck epel-release
 yum install -y --nogpgcheck sumo-{{Version}}
 ```
-and like this, for zypper on openSUSE Leap 15.3:
+如果在 openSUSE Leap 15.3 上，你可以使用 zypper 安裝：
+
 ```
 zypper ar http://download.opensuse.org/repositories/science:/dlr/15.3/ science:dlr
 zypper in sumo={{Version}}
 ```
-I you leave out the version number it will install the latest nightly build.
+如果你沒有輸入版本號碼，將會直接安裝最新的 nightly 版本分支。
 
-Ubuntu, Debian and Arch users please see the community repositories above.
+Ubuntu、Debian 和 Arch 使用者請直接參閱上方的社群倉儲。
 
 ## macOS
 
-You can read the Homebrew-based installation guide [here](Installing/index.md#macos) or follow the Build instructions [here](Installing/MacOS_Build.md).
+在 macOS 上，你可以使用 Homebrew 來安裝 SUMO。請參閱[這裡](Installing/index.md#macos)來安裝或手動在電腦上編譯、建置。
 
-"Bottles" are available for installing with
-[Homebrew](https://brew.sh/). They are built for the two most recent
-major macOS versions (currently Mojave and Catalina) and are built
-from source with minimal requirements (fox, proj, xerces-c). If you need
-optional libraries, you can specify these on the brew command line and
-brew will compile SUMO from source. For details, see the [Formula's
-README](https://github.com/DLR-TS/homebrew-sumo/blob/main/README.md).
+"Bottles" 將可和 Homebrew 一起安裝，並且他們已經在最新的兩個 macOS 版本上建置。此外，SUMO 將直接在你的電腦上使用原始碼，在最小的系統需求上 (fox、proj、xerces-c) 建置並安裝。如果要使用其他的資源庫安裝 SUMO，你可以在輸入 brew 指令時指定使用這些資源庫，brew 會使用你指定的資源庫來編譯 SUMO。如要了解詳細資訊，請參閱 [Formula's
+README](https://github.com/DLR-TS/homebrew-sumo/blob/main/README.md)。
 
-### Application launchers
+### 應用程式啟動器
 
-In order to have a more native feel on macOS, we provide some application launchers (icons / shortcuts). These launchers ***work with all versions of SUMO and do not need to be updated***.
+macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，無法在啟動台 (LaunchPad) 上找到 SUMO 的套件，而必須先打 X11 才能執行。不過沒關係，我們打造了一個小程式，能讓你在 macOS 上以近乎原生（就是可以在啟動台啟動）的方式開啟 SUMO 套件內的應用程式，我們稱之為**應用程式啟動器**。這個應用程式啟動器和 SUMO 的各版本相同，且安裝好後，未來無需更新。
 
 <ul>
-<li><a class="no-arrow-link" href="https://sumo.dlr.de/daily/SUMO_launchers.dmg">Download SUMO launchers </a><span class="badge badge-pill badge-secondary"><?php getFileSize("SUMO_launchers.dmg","d");?></span></li>
+<li><a class="no-arrow-link" href="https://sumo.dlr.de/daily/SUMO_launchers.dmg">下載 SUMO 應用程式啟動器</a><span class="badge badge-pill badge-secondary"><?php getFileSize("SUMO_launchers.dmg","d");?></span></li>
 </ul>
 
-These launchers allow you to select **sumo-gui** as the default application to open `.sumocfg` files on macOS, and even add **sumo-gui**, **netedit** and the **OSM Web Wizard** to the dock.
+這個啟動器可讓你在雙擊 `.sumocfg`時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開`.sumocfg`的應用程式。甚至，你可以把 **sumo-gui**、**netedit** 和 **OSM Web Wizard** 放在 Dock 上。
 
-!!! caution "Important notice"
-    In order to use the launchers, make sure you have installed SUMO beforehand (any version) and have set the [SUMO_HOME](Basics/Basic_Computer_Skills.md#sumo_home) environment variable.
+!!! caution **重要提醒**
+    要正常使用啟動器，你必須在安裝啟動器前，先把 SUMO 安裝好；並確定你已經設定好 [SUMO_HOME](Basics/Basic_Computer_Skills.md#sumo_home) 環境變數。
 
-## Sources
+## 原始碼
 
-Download the sources, examples, and CMake-files for creating Visual Studio
-solutions or Linux Makefiles. This download does not contain tests. Download as:
+下載原始碼、範例檔案、給 Visual Studio 使用的 CMake 檔案及可在 Linux 上使用的 Makefile 檔案。這些下載項目不包含測試。
 
 <ul>
 <li><a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-src-{{Version}}.tar.gz">sumo-src-{{Version}}.tar.gz </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-src-{{Version}}.tar.gz","r");?></span></li>
 <li><a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-src-{{Version}}.zip">sumo-src-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-src-{{Version}}.zip","r");?></span></li>
 </ul>
 
-## Python packages / Virtual environments
+## Python 套件／虛擬環境
 
-Starting with SUMO 1.8.0 (for macOS since 1.12.0) the installation is also possible from the [Python packaging index](https://pypi.org/project/eclipse-sumo/).
+自 SUMO 1.8.0（或在 macOS 上自 SUMO 1.12.0 開始），你也可以從 [Python packaging index](https://pypi.org/project/eclipse-sumo/) 安裝 SUMO。
 
-You can install either the applications: `pip install eclipse-sumo` or only traci (`pip install traci`), libsumo (`pip install libsumo`) or sumolib (`pip install sumolib`).
+你可以使用以下語法安裝：
+
+- 安裝 SUMO 套件：`pip install eclipse-sumo` 
+- 只安裝 TraCI：`pip install traci`
+- 只安裝 lib sumo：`pip install libsumo`
+- 只安裝 sumolib：`pip install sumolib`
 
 This should work for Windows, macOS and all Linux versions which are more recent than 2014.
 The applications are available for Python 2 and Python 3, libsumo only for Python 3.6 and above. This gives an easy way to test
