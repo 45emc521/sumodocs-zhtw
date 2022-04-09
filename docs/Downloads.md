@@ -2,8 +2,12 @@
 title: 下載 SUMO
 ---
 
-# 最新的 SUMO（版本 {{Version}}）
+!!! caution "注意"
+    因網站限制，無法即時取得 SUMO 的最新版本資訊。如要下載最新版本的 SUMO，請至原文版的 [Downloads](https://sumo.dlr.de/docs/Downloads.php) 了解 SUMO 的最新版本，再依照本頁面進行安裝。安裝方式亦有可能隨著 SUMO 版本迭代而隨時變動。
 
+# 最新的 SUMO 版本
+
+**版本號碼**：{{Version}}
 **發行日期**：{{ReleaseDate}}
 
 ## Windows
@@ -64,7 +68,9 @@ sudo apt-get install sumo sumo-tools sumo-doc
 - [CentOS 7 repository](http://download.opensuse.org/repositories/science:/dlr/CentOS_7/)
 - [CentOS 8 repository](http://download.opensuse.org/repositories/science:/dlr/CentOS_8/)
 
-你可以加入這些倉儲並快速安裝他們（即不檢查 GPG 金鑰）。在 CentOS 7 上，使用 yum 來安裝 SUMO：
+你可以加入這些倉儲並快速安裝他們（即不檢查 GPG 金鑰）。
+
+例如，在 CentOS 7 上，使用 yum 來安裝 SUMO：
 
 ```
 yum-config-manager --add-repo=https://download.opensuse.org/repositories/science:/dlr/CentOS_7/
@@ -90,13 +96,13 @@ README](https://github.com/DLR-TS/homebrew-sumo/blob/main/README.md)。
 
 ### 應用程式啟動器
 
-macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，無法在啟動台 (LaunchPad) 上找到 SUMO 的套件，而必須先打 X11 才能執行。不過沒關係，我們打造了一個小程式，能讓你在 macOS 上以近乎原生（就是可以在啟動台啟動）的方式開啟 SUMO 套件內的應用程式，我們稱之為**應用程式啟動器**。這個應用程式啟動器和 SUMO 的各版本相同，且安裝好後，未來無需更新。
+macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，無法在啟動台 (Launchpad.app) 上找到 SUMO 的套件，而必須先打 X11 才能執行。不過沒關係，我們打造了一個小程式，能讓你在 macOS 上以近乎原生（可以在啟動台啟動）的方式開啟 SUMO 套件內的應用程式，我們稱之為**應用程式啟動器**。這個應用程式啟動器和 SUMO 的各版本相同，且安裝好後，未來無需更新。
 
 <ul>
 <li><a class="no-arrow-link" href="https://sumo.dlr.de/daily/SUMO_launchers.dmg">下載 SUMO 應用程式啟動器</a><span class="badge badge-pill badge-secondary"><?php getFileSize("SUMO_launchers.dmg","d");?></span></li>
 </ul>
 
-這個啟動器可讓你在雙擊 `.sumocfg`時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開`.sumocfg`的應用程式。甚至，你可以把 **sumo-gui**、**netedit** 和 **OSM Web Wizard** 放在 Dock 上。
+這個啟動器可讓你在雙擊`.sumocfg`時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開`.sumocfg`的應用程式。甚至，你可以把 **sumo-gui**、**netedit** 和 **OSM Web Wizard** 放在 Dock 上。
 
 !!! caution "重要提醒"
     要正常使用啟動器，你必須在安裝啟動器前，先把 SUMO 安裝好；並確定你已經設定好 [SUMO_HOME](Basics/Basic_Computer_Skills.md#sumo_home) 環境變數。
