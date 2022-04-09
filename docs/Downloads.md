@@ -127,9 +127,7 @@ macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，
 - 只安裝 lib sumo：`pip install libsumo`
 - 只安裝 sumolib：`pip install sumolib`
 
-This should work for Windows, macOS and all Linux versions which are more recent than 2014.
-The applications are available for Python 2 and Python 3, libsumo only for Python 3.6 and above. This gives an easy way to test
-a new SUMO version via [virtual environments](https://docs.python.org/3/library/venv.html) or a nightly build using the following commands (on Linux):
+這些指令可以在 Windows、macOS 和 2014 年之後的 Linux 版本使用，並適用這些作業系統上的 Python 2 和 3，惟 libsumo 需要 Python 3.6 以上版本。有了 pip，你可以很輕鬆地在電腦上建立[虛擬環境](https://docs.python.org/3/library/venv.html)以測試新的 SUMO 版本或最新的 nightly 組建。在 Linux 上輸入以下指令即可建立虛擬環境上的 SUMO：
 ```
 python -m venv sumo_test
 cd sumo_test
@@ -137,16 +135,12 @@ cd sumo_test
 pip install eclipse-sumo
 ```
 
-!!! caution "macOS dependencies"
-    In order to use the Python wheels on macOS you need to have all the dependencies installed and up to date via brew for instance by following the [standard installation](Installing/index.md#macos) once.
+!!! caution "macOS 依賴元件"
+    為了能在 macOS 上使用 Python 元件，你需要利用 brew 安裝好所有依賴元件並更新至最新。請參閱[標準安裝](Installing/index.md#macos)頁面了解詳情。
 
-# SUMO - Latest Development Version
+# SUMO - 最新開發版本
 
-SUMO is under active development. You can find a continuously updated
-list of bug-fixes and enhancements at our
-[ChangeLog](ChangeLog.md). To make use of the latest features
-[(and to give us pre-release feedback)](Contact.md) we encourage
-you to use the latest version from our [code repository](https://github.com/eclipse/sumo/).
+SUMO 正持續活躍開發中。你可以在[版本紀錄](ChangeLog.md)內找到持續更新的 bug 修復及功能強化列表。歡迎你持續從我們的[倉儲](https://github.com/eclipse/sumo/)取得最新版本及[提供我們意見回饋](Contact.md)。
 
 Every push to our main branch also triggers a build for Windows, Linux and macOS. The results can be found
 by clicking on the [relevant commit here](https://github.com/eclipse/sumo/actions) and downloading the
