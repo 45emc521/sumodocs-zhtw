@@ -141,7 +141,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary toc-scroll toc">
         <ul class="nav flex-column bs-sidenav">
             <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
-            <li class="nav-item main"><a href="#sumo_1120">最新的 SUMO（版本 1.12.0）</a></li>
+            <li class="nav-item main"><a href="#sumo">最新的 SUMO 版本</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#windows" class="nav-link">• Windows</a>
                 </li>
@@ -223,8 +223,13 @@
                   
                   
 
-<h1 id="sumo_1120">最新的 SUMO（版本 1.12.0）<a class="headerlink" href="#sumo_1120" title="Permanent link">#</a></h1>
-<p><strong>發行日期</strong>：25.01.2022</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>因網站限制，無法即時取得 SUMO 的最新版本資訊。如要下載最新版本的 SUMO，請至原文版的 <a href="https://sumo.dlr.de/docs/Downloads.php">Downloads</a> 了解 SUMO 的最新版本，再依照本頁面進行安裝。安裝方式亦有可能隨著 SUMO 版本迭代而隨時變動。</p>
+</div>
+<h1 id="sumo">最新的 SUMO 版本<a class="headerlink" href="#sumo" title="Permanent link">#</a></h1>
+<p><strong>版本號碼</strong>：1.12.0
+<strong>發行日期</strong>：25.01.2022</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">#</a></h2>
 <p>每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 <a href="Downloads.html#note_on_licensing">the notes below</a>.</p>
 <ul>
@@ -272,7 +277,8 @@
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/CentOS_7/">CentOS 7 repository</a></li>
 <li><a href="http://download.opensuse.org/repositories/science:/dlr/CentOS_8/">CentOS 8 repository</a></li>
 </ul>
-<p>你可以加入這些倉儲並快速安裝他們（即不檢查 GPG 金鑰）。在 CentOS 7 上，使用 yum 來安裝 SUMO：</p>
+<p>你可以加入這些倉儲並快速安裝他們（即不檢查 GPG 金鑰）。</p>
+<p>例如，在 CentOS 7 上，使用 yum 來安裝 SUMO：</p>
 <div class="codehilite"><pre><span></span><code><span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span><span class="w"> </span><span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">repo</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">science</span><span class="p">:</span><span class="o">/</span><span class="n">dlr</span><span class="o">/</span><span class="n">CentOS_7</span><span class="o">/</span><span class="w"></span>
 <span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w"> </span><span class="n">epel</span><span class="o">-</span><span class="n">release</span><span class="w"></span>
 <span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">nogpgcheck</span><span class="w"> </span><span class="n">sumo</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="w"></span>
@@ -290,12 +296,12 @@
 <p>"Bottles" 將可和 Homebrew 一起安裝，並且他們已經在最新的兩個 macOS 版本上建置。此外，SUMO 將直接在你的電腦上使用原始碼，在最小的系統需求上 (fox、proj、xerces-c) 建置並安裝。如果要使用其他的資源庫安裝 SUMO，你可以在輸入 brew 指令時指定使用這些資源庫，brew 會使用你指定的資源庫來編譯 SUMO。如要了解詳細資訊，請參閱 <a href="https://github.com/DLR-TS/homebrew-sumo/blob/main/README.md">Formula's
 README</a>。</p>
 <h3 id="_2">應用程式啟動器<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
-<p>macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，無法在啟動台 (LaunchPad) 上找到 SUMO 的套件，而必須先打 X11 才能執行。不過沒關係，我們打造了一個小程式，能讓你在 macOS 上以近乎原生（就是可以在啟動台啟動）的方式開啟 SUMO 套件內的應用程式，我們稱之為<strong>應用程式啟動器</strong>。這個應用程式啟動器和 SUMO 的各版本相同，且安裝好後，未來無需更新。</p>
+<p>macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，無法在啟動台 (Launchpad.app) 上找到 SUMO 的套件，而必須先打 X11 才能執行。不過沒關係，我們打造了一個小程式，能讓你在 macOS 上以近乎原生（可以在啟動台啟動）的方式開啟 SUMO 套件內的應用程式，我們稱之為<strong>應用程式啟動器</strong>。這個應用程式啟動器和 SUMO 的各版本相同，且安裝好後，未來無需更新。</p>
 <ul>
 <li><a class="no-arrow-link" href="https://sumo.dlr.de/daily/SUMO_launchers.dmg">下載 SUMO 應用程式啟動器</a><span class="badge badge-pill badge-secondary"><?php getFileSize("SUMO_launchers.dmg","d");?></span></li>
 </ul>
 
-<p>這個啟動器可讓你在雙擊 <code>.sumocfg</code>時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開<code>.sumocfg</code>的應用程式。甚至，你可以把 <strong>sumo-gui</strong>、<strong>netedit</strong> 和 <strong>OSM Web Wizard</strong> 放在 Dock 上。</p>
+<p>這個啟動器可讓你在雙擊<code>.sumocfg</code>時，直接以 sumo-gui 啟動、並可將 sumo-gui 設為預設打開<code>.sumocfg</code>的應用程式。甚至，你可以把 <strong>sumo-gui</strong>、<strong>netedit</strong> 和 <strong>OSM Web Wizard</strong> 放在 Dock 上。</p>
 <div class="admonition caution">
 <p class="admonition-title">重要提醒</p>
 <p>要正常使用啟動器，你必須在安裝啟動器前，先把 SUMO 安裝好；並確定你已經設定好 <a href="Basics/Basic_Computer_Skills.html#sumo_home">SUMO_HOME</a> 環境變數。</p>
@@ -518,12 +524,12 @@ $zip->close();
 
         <footer class="col-md-12">
           
-            <br><small><i>This page was last edited on: 09 April 2022</i></small>
+            <br><small><i>本頁面最近更新日期：09 April 2022</i></small>
           
           <hr>
             <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>
-          <p>Follow us on <a class="no-arrow-link" href="https://www.twitter.com/eclipsesumo/"><i class="fa fa-twitter"></i></a> <a class="no-arrow-link" href="https://www.facebook.com/simulationofurbanmobility/"><i class="fa fa-facebook-square"></i></a> <a class="no-arrow-link" href="https://www.instagram.com/eclipse.sumo/"><i class="fa fa-instagram"></i></a>
-          | Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a></p>
+          <p>在這些地方追蹤我們：<a class="no-arrow-link" href="https://www.twitter.com/eclipsesumo/"><i class="fa fa-twitter"></i></a> <a class="no-arrow-link" href="https://www.facebook.com/simulationofurbanmobility/"><i class="fa fa-facebook-square"></i></a> <a class="no-arrow-link" href="https://www.instagram.com/eclipse.sumo/"><i class="fa fa-instagram"></i></a>
+          ｜本說明文件由 <a href="https://www.mkdocs.org/">MkDocs</a></p> 提供支援。
         </footer>
 
       <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

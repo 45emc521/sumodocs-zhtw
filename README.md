@@ -7,6 +7,7 @@ SUMO 說明文件是以 [MkDocs](https://www.mkdocs.org/) 撰成，並託管於 
 你可以在以下網址查看 SUMO 說明文件的中文版本：<https://sumodocs-zhtw.emc521.tw>；或者，你也可以瀏覽本文件的原文（英文）版本：<https://sumo.dlr.de/docs/>。
 
 本讀我檔案所提及之內容大多通用於中文版及原文版網站。如有不同之處會特別以英文描述。
+
 The content of README.md can be applied mostly on both Chinese and English Documentation websites. If there are some differences, an English description will be shown in this file.
 
 ## 入門
@@ -62,4 +63,4 @@ If you are reading on (https://sumo.dlr.de/docs), you can click on the "Edit on 
 
 亦歡迎您針對文件的錯誤或錯誤給予建議。如是中文版，請到 [GitHub 的 issue 頁面](https://github.com/45EMC521/sumodocs-zhtw/issues)提出建議。
 
-If you are using (httpd://sumo.dlr.de/docs), you can also report typos and such, opening an issue [here](https://github.com/eclipse/sumo/issues).
+If you are using (https://sumo.dlr.de/docs), you can also report typos and such, opening an issue [here](https://github.com/eclipse/sumo/issues).
