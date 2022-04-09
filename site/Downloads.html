@@ -166,7 +166,7 @@
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#python" class="nav-link">• Python 套件／虛擬環境</a>
                 </li>
-            <li class="nav-item main"><a href="#sumo_-_latest_development_version">SUMO - Latest Development Version</a></li>
+            <li class="nav-item main"><a href="#sumo_-">SUMO - 最新開發版本</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#nightly_snapshots" class="nav-link">• Nightly Snapshots</a>
                 </li>
@@ -322,9 +322,7 @@ README</a>。</p>
 <li>只安裝 lib sumo：<code>pip install libsumo</code></li>
 <li>只安裝 sumolib：<code>pip install sumolib</code></li>
 </ul>
-<p>This should work for Windows, macOS and all Linux versions which are more recent than 2014.
-The applications are available for Python 2 and Python 3, libsumo only for Python 3.6 and above. This gives an easy way to test
-a new SUMO version via <a href="https://docs.python.org/3/library/venv.html">virtual environments</a> or a nightly build using the following commands (on Linux):</p>
+<p>這些指令可以在 Windows、macOS 和 2014 年之後的 Linux 版本使用，並適用這些作業系統上的 Python 2 和 3，惟 libsumo 需要 Python 3.6 以上版本。有了 pip，你可以很輕鬆地在電腦上建立<a href="https://docs.python.org/3/library/venv.html">虛擬環境</a>以測試新的 SUMO 版本或最新的 nightly 組建。在 Linux 上輸入以下指令即可建立虛擬環境上的 SUMO：</p>
 <div class="codehilite"><pre><span></span><code>python -m venv sumo_test
 cd sumo_test
 . bin/activate
@@ -332,15 +330,11 @@ pip install eclipse-sumo
 </code></pre></div>
 
 <div class="admonition caution">
-<p class="admonition-title">macOS dependencies</p>
-<p>In order to use the Python wheels on macOS you need to have all the dependencies installed and up to date via brew for instance by following the <a href="Installing/index.html#macos">standard installation</a> once.</p>
+<p class="admonition-title">macOS 依賴元件</p>
+<p>為了能在 macOS 上使用 Python 元件，你需要利用 brew 安裝好所有依賴元件並更新至最新。請參閱<a href="Installing/index.html#macos">標準安裝</a>頁面了解詳情。</p>
 </div>
-<h1 id="sumo_-_latest_development_version">SUMO - Latest Development Version<a class="headerlink" href="#sumo_-_latest_development_version" title="Permanent link">#</a></h1>
-<p>SUMO is under active development. You can find a continuously updated
-list of bug-fixes and enhancements at our
-<a href="ChangeLog.html">ChangeLog</a>. To make use of the latest features
-<a href="Contact.html">(and to give us pre-release feedback)</a> we encourage
-you to use the latest version from our <a href="https://github.com/eclipse/sumo/">code repository</a>.</p>
+<h1 id="sumo_-">SUMO - 最新開發版本<a class="headerlink" href="#sumo_-" title="Permanent link">#</a></h1>
+<p>SUMO 正持續活躍開發中。你可以在<a href="ChangeLog.html">版本紀錄</a>內找到持續更新的 bug 修復及功能強化列表。歡迎你持續從我們的<a href="https://github.com/eclipse/sumo/">倉儲</a>取得最新版本及<a href="Contact.html">提供我們意見回饋</a>。</p>
 <p>Every push to our main branch also triggers a build for Windows, Linux and macOS. The results can be found
 by clicking on the <a href="https://github.com/eclipse/sumo/actions">relevant commit here</a> and downloading the
 appropriate file for your platform (you may need to sign in to GitHub).</p>
