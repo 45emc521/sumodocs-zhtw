@@ -168,7 +168,7 @@
                 </li>
             <li class="nav-item main"><a href="#sumo_-">SUMO - 最新開發版本</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#nightly_snapshots" class="nav-link">• Nightly Snapshots</a>
+                    <a href="#nightly" class="nav-link">• Nightly 快照</a>
                 </li>
             <li class="nav-item main"><a href="#older_releases_and_alternative_download">Older releases and alternative download</a></li>
             <li class="nav-item main"><a href="#other">Other</a></li>
@@ -228,10 +228,10 @@
 <p>因網站限制，無法即時取得 SUMO 的最新版本資訊。如要下載最新版本的 SUMO，請至原文版的 <a href="https://sumo.dlr.de/docs/Downloads.php">Downloads</a> 了解 SUMO 的最新版本，再依照本頁面進行安裝。安裝方式亦有可能隨著 SUMO 版本迭代而隨時變動。</p>
 </div>
 <h1 id="sumo">最新的 SUMO 版本<a class="headerlink" href="#sumo" title="Permanent link">#</a></h1>
-<p><strong>版本號碼</strong>：1.12.0
-<strong>發行日期</strong>：25.01.2022</p>
+<p><strong>版本號碼</strong>：1.12.0。</p>
+<p><strong>發行日期</strong>：25.01.2022。</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">#</a></h2>
-<p>每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 <a href="Downloads.html#note_on_licensing">the notes below</a>.</p>
+<p>每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 <a href="Downloads.html#note_on_licensing">the notes below</a>。</p>
 <ul>
 <li>下載 64 位元安裝檔：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/1.12.0/sumo-win64-1.12.0.msi">sumo-win64-1.12.0.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-1.12.0.msi","r");?></span></li>
 <li>下載 64 位元 zip：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/1.12.0/sumo-win64-1.12.0.zip">sumo-win64-1.12.0.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-1.12.0.zip","r");?></span></li>
@@ -338,13 +338,11 @@ pip install eclipse-sumo
 <p>Every push to our main branch also triggers a build for Windows, Linux and macOS. The results can be found
 by clicking on the <a href="https://github.com/eclipse/sumo/actions">relevant commit here</a> and downloading the
 appropriate file for your platform (you may need to sign in to GitHub).</p>
-<h2 id="nightly_snapshots">Nightly Snapshots<a class="headerlink" href="#nightly_snapshots" title="Permanent link">#</a></h2>
+<h2 id="nightly">Nightly 快照<a class="headerlink" href="#nightly" title="Permanent link">#</a></h2>
 <div><span class="badge badge-pill badge-dark"><?php getNightlyFreshness("sumo-win64-git.zip");?></span></div>
 
-<p>The code within the repository is <a href="Developer/Nightly_Build.html">compiled each
-night</a>. All Windows builds are for the 64bit platform. For an explanation of the contents and the
-licensing (especially concerning the "extra" build which contains GPL code to support GeoTIFFs, shapefiles and 3D models),
-see <a href="Downloads.html#note_on_licensing">the notes below</a>. The following packages can be obtained:</p>
+<p>在這個倉儲內的代碼為 <a href="Developer/Nightly_Build.html">nightly 編譯版本</a>。所有 Windows 的組件都是 64 位元。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 <a href="Downloads.html#note_on_licensing">the notes below</a>。</p>
+<p>以下的套件可包含：</p>
 <ul>
 <li>Sources: <a class="no-arrow-link" href="https://sumo.dlr.de/daily/sumo-src-git.tar.gz">https://sumo.dlr.de/daily/sumo-src-git.tar.gz </a><span class="badge badge-pill badge-light"><?php getFileDate("sumo-src-git.tar.gz","d");?></span> <span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-src-git.tar.gz","d");?></span></li>
 <li>Sources: <a class="no-arrow-link" href="https://sumo.dlr.de/daily/sumo-src-git.zip">https://sumo.dlr.de/daily/sumo-src-git.zip </a><span class="badge badge-pill badge-light"><?php getFileDate("sumo-src-git.zip","d");?></span> <span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-src-git.zip","d");?></span></li>
@@ -357,7 +355,7 @@ see <a href="Downloads.html#note_on_licensing">the notes below</a>. The followin
 <li>Windows 64-bit debug version: <a class="no-arrow-link" href="https://sumo.dlr.de/daily/sumo-win64Debug-git.zip">https://sumo.dlr.de/daily/sumo-win64Debug-git.zip </a><span class="badge badge-pill badge-light"><?php getFileDate("sumo-win64Debug-git.zip","d");?></span> <span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64Debug-git.zip","d");?></span></li>
 </ul>
 
-<p>The nightly builds are also available from the <a href="https://test.pypi.org/project/eclipse-sumo/">Python packaging index test instance</a>.
+<p>你也可以在 <a href="https://test.pypi.org/project/eclipse-sumo/">Python packaging indgit ex test instance</a> 裡面找到這些 Python 組建。
 To install the latest nightly version (it is strongly encouraged to do this in a virtual environment) use <a href="#python_packages_virtual_environments">the instructions above</a> replacing the install line with:</p>
 <div class="codehilite"><pre><span></span><code>pip install -i https://test.pypi.org/simple/ eclipse-sumo
 </code></pre></div>
