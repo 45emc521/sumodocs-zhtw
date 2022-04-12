@@ -168,32 +168,23 @@ appropriate file for your platform (you may need to sign in to GitHub).
 </ul>
 
 你也可以在 [Python packaging indgit ex test instance](https://test.pypi.org/project/eclipse-sumo/) 裡面找到這些 Python 組建。
-To install the latest nightly version (it is strongly encouraged to do this in a virtual environment) use [the instructions above](#python_packages_virtual_environments) replacing the install line with:
+要安裝最新的 nightly 版本（強烈建議使用虛擬環境安裝）請使用[上方的教學](#python_packages_virtual_environments)，並以下方的安裝命令取代原本指令：
+
 ```
 pip install -i https://test.pypi.org/simple/ eclipse-sumo
 ```
-Although this is a python package, it contains all compiled SUMO binaries and should be fully functional (see the requirements in [the section above](#python_packages_virtual_environments)).
+另外，儘管它是一個 Python 套件，但它包含所有 SUMO 的程式且確保完全可使用。你可以在[這裡](#python_packages_virtual_environments)找到使用 Python 套件的最低系統需求。
 
-The Linux [repositories](#repositories) at the open build service contain a nightly build as well.
-This is unfortunately not the case for the Debian, Ubuntu and Arch versions.
+在 open build 上的 Linux [倉儲](#repositories)也有 nightly 組建。但是，這無法使用在 Debian、Ubuntu 和 Arch 版本的 Linux 上面。
 
-[The corresponding documentation](https://sumo.dlr.de/daily/userdoc) is
-also visible live including [Doxygen
-docs](https://sumo.dlr.de/daily/doxygen). Additional artifacts such as
-[tests results](https://sumo.dlr.de/daily) and [code coverage
-analysis](https://sumo.dlr.de/daily/lcov/html/) are generated every
-night.
+[The corresponding documentation](https://sumo.dlr.de/daily/userdoc) is also visible live including [Doxygen docs](https://sumo.dlr.de/daily/doxygen). Additional artifacts such as [tests results](https://sumo.dlr.de/daily) and [code coverage analysis](https://sumo.dlr.de/daily/lcov/html/) are generated every night.
 
-!!! caution
-    The available Windows binary packages may lag behind the [latest Git revision](https://github.com/eclipse/sumo/commits/main) due to being compiled only once per day (around midnight, Berlin time).
+!!! caution "注意"
+    因為 Windows 版本一天僅編譯一次（在柏林時間的午夜）的關係，適用於 Windows 的 SUMO 套件 nightly 組建可能無法跟隨[最新的 git 修正版本](https://github.com/eclipse/sumo/commits/main)。
 
-# Older releases and alternative download
+# 較舊的版本及替代下載方式
 
-The [release directory](https://sumo.dlr.de/releases/) contains all release files since 1.2.0.
-Those and older releases can also be obtained via the [sourceforge download portal](https://sourceforge.net/projects/sumo/files/sumo/).
-If you want to try out an older version you can also use the virtual environment approach
-([explained above](#python_packages_virtual_environments)) with a fixed version, e.g.
-`pip install eclipse-sumo=1.9.0` (works only for 1.8.0 and later).
+[發行版資料夾](https://sumo.dlr.de/releases/)內有自 SUMO 1.2.0 及更新的版本。你也可以在 [sourceforge download portal](https://sourceforge.net/projects/sumo/files/sumo/) 內 SUMO 1.2.0 以後或更舊的版本。你也可以在虛擬環境內測試這些舊版本，方式[如同上方所述](#python_packages_virtual_environments)，只要在使用 pip 安裝時指定要安裝的版本即可，如`pip install eclipse-sumo=1.9.0`（適用於 SUMO 1.8.0 以後版本）。
 
 If you need a complete zipped snapshot of the repository (including tests) for an older version have a look at the tags in your
 local repository or at [GitHub tags](https://github.com/eclipse/sumo/tags).
