@@ -22,11 +22,9 @@ title: 下載 SUMO
 <li>下載 64 位元 zip（包含 GPL 代碼的擴充套件）：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64extra-{{Version}}.zip">sumo-win64extra-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64extra-{{Version}}.zip","r");?></span></li>
 </ul>
 
-
 ### SUMO-Game
 
 <ul><li>Windows 執行檔：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-game-{{Version}}.zip">sumo-game-{{Version}}.zip </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-game-{{Version}}.zip","r");?></span></li></ul>
-
 
 ## Linux
 
@@ -78,12 +76,14 @@ yum-config-manager --add-repo=https://download.opensuse.org/repositories/science
 yum install -y --nogpgcheck epel-release
 yum install -y --nogpgcheck sumo-{{Version}}
 ```
+
 如果在 openSUSE Leap 15.3 上，你可以使用 zypper 安裝：
 
 ```
 zypper ar http://download.opensuse.org/repositories/science:/dlr/15.3/ science:dlr
 zypper in sumo={{Version}}
 ```
+
 如果你沒有輸入版本號碼，將會直接安裝最新的 nightly 版本分支。
 
 Ubuntu、Debian 和 Arch 使用者請直接參閱上方的社群倉儲。
@@ -129,6 +129,7 @@ macOS 上的 SUMO 是以 X11 為基礎執行的，這導致你安裝好之後，
 - 只安裝 sumolib：`pip install sumolib`
 
 這些指令可以在 Windows、macOS 和 2014 年之後的 Linux 版本使用，並適用這些作業系統上的 Python 2 和 3，惟 libsumo 需要 Python 3.6 以上版本。有了 pip，你可以很輕鬆地在電腦上建立[虛擬環境](https://docs.python.org/3/library/venv.html)以測試新的 SUMO 版本或最新的 nightly 組建。在 Linux 上輸入以下指令即可建立虛擬環境上的 SUMO：
+
 ```
 python -m venv sumo_test
 cd sumo_test
@@ -173,6 +174,7 @@ appropriate file for your platform (you may need to sign in to GitHub).
 ```
 pip install -i https://test.pypi.org/simple/ eclipse-sumo
 ```
+
 另外，儘管它是一個 Python 套件，但它包含所有 SUMO 的程式且確保完全可使用。你可以在[這裡](#python_packages_virtual_environments)找到使用 Python 套件的最低系統需求。
 
 在 open build 上的 Linux [倉儲](#repositories)也有 nightly 組建。但是，這無法使用在 Debian、Ubuntu 和 Arch 版本的 Linux 上面。
@@ -184,57 +186,50 @@ pip install -i https://test.pypi.org/simple/ eclipse-sumo
 
 # 較舊的版本及替代下載方式
 
-[發行版資料夾](https://sumo.dlr.de/releases/)內有自 SUMO 1.2.0 及更新的版本。你也可以在 [sourceforge download portal](https://sourceforge.net/projects/sumo/files/sumo/) 內 SUMO 1.2.0 以後或更舊的版本。你也可以在虛擬環境內測試這些舊版本，方式[如同上方所述](#python_packages_virtual_environments)，只要在使用 pip 安裝時指定要安裝的版本即可，如`pip install eclipse-sumo=1.9.0`（適用於 SUMO 1.8.0 以後版本）。
+[發行版資料夾](https://sumo.dlr.de/releases/)內有自 SUMO 1.2.0 及更新的版本。你也可以在 [sourceforge download portal](https://sourceforge.net/projects/sumo/files/sumo/) 內 SUMO 1.2.0 以後或更舊的版本。要在虛擬環境內測試這些舊版本，方式[如同上方所述](#python_packages_virtual_environments)，只要在使用 pip 安裝時指定要安裝的版本即可，如`pip install eclipse-sumo=1.9.0`（適用於 SUMO 1.8.0 以後版本）。
 
-If you need a complete zipped snapshot of the repository (including tests) for an older version have a look at the tags in your
-local repository or at [GitHub tags](https://github.com/eclipse/sumo/tags).
+如果你需要壓縮後的較舊版本倉儲快照（包含測試版本），可以在 [GitHub tags](https://github.com/eclipse/sumo/tags) 或本機端倉儲內的 tag 了解。
 
-# Other
+# 其他
 
-## Direct repository access
+## 直接存取倉儲
 
-You can get the very latest sources directly from our Git repository, see
-[the FAQ on repository access](FAQ.md#how_do_i_access_the_code_repository).
-Normally, they should compile and complete our test suite successfully.
-To assess the current state of the build, you may take a look at the
-[nightly test statistics](https://sumo.dlr.de/daily/).
+你可以在 git 倉儲中直接取得最新的資源，請參閱[有關存取倉儲的常見問題](FAQ.md#how_do_i_access_the_code_repository)文章來了解詳情。正常情況下，它們應該都可以被編譯及成功完成我們一連串的測試。
 
-## Packages
+要了解最新的編譯狀態，可以參閱 [nightly 測試版的數據](https://sumo.dlr.de/daily/)。
 
-SUMO is available as different packages. The contents of each package is
-listed in the table below.
+## 套件
 
-|   | bin  | build  | src (source code)  | user docs  |  developer docs (doxygen) | data  | examples  | tutorials  | tests  | tools (except jars)  | jars  |
-|---|------|--------|--------------------|------------|---------------------------|-------|-----------|------------|--------|----------------------|-------|
-| sumo-src-*XXX*.tar.gz<br>sumo-src-*XXX*.zip  |   | &#10004; | &#10004; |   |   | &#10004; | &#10004; | &#10004; |   | &#10004; |   |
-| sumo-win??-*XXX*.zip<br>sumo-win??-*XXX*.msi | &#10004; |   |   | &#10004; |   | &#10004; | &#10004; | &#10004; |   | &#10004; | &#10004; |
-| rpm  | (&#10004;) |   |   | &#10004; |   | &#10004; | &#10004; | &#10004; |   | &#10004; |   |
+SUMO 具備很多套件，這些套件的詳細資料陳列在下方。
 
-## Dependencies for developers
+|                                              | bin        | build    | src (source code) | user docs | developer docs (doxygen) | data     | examples | tutorials | tests | tools (except jars) | jars     |
+| -------------------------------------------- | ---------- | -------- | ----------------- | --------- | ------------------------ | -------- | -------- | --------- | ----- | ------------------- | -------- |
+| sumo-src-*XXX*.tar.gz<br>sumo-src-*XXX*.zip  |            | &#10004; | &#10004;          |           |                          | &#10004; | &#10004; | &#10004;  |       | &#10004;            |          |
+| sumo-win??-*XXX*.zip<br>sumo-win??-*XXX*.msi | &#10004;   |          |                   | &#10004;  |                          | &#10004; | &#10004; | &#10004;  |       | &#10004;            | &#10004; |
+| rpm                                          | (&#10004;) |          |                   | &#10004;  |                          | &#10004; | &#10004; | &#10004;  |       | &#10004;            |          |
 
-For the Windows platform you can retrieve all dependencies by cloning
-this repository: <https://github.com/DLR-TS/SUMOLibraries>, if you want
-to develop with Visual Studio. If you just want to run SUMO, use the
-binary downloads above which already contain the runtime dependencies.
+## SUMO 的依存套件
 
-## Scenarios and other Data
+在 Windows 平台上，如你想要在 Visual Studio 上編譯 SUMO，你可以藉由 clone [GitHub - DLR-TS/SUMOLibraries: A repository with current SUMO Libraries used in Windows compatible with Visual Studio 2019](https://github.com/DLR-TS/SUMOLibraries) 來得所有依存套件。
+
+如果你只是要使用 SUMO 而不是要在電腦上編譯它，只要下載本頁最上方的可執行檔就好囉。
+
+## 情境與其他資料
+
 - [complete scenarios](Data/Scenarios.md)
 - [networks](Data/Networks.md)
 - [traffic data](Data/Traffic_Data.md)
 - [Test cases](Tutorials/index.md#using_examples_from_the_test_suite)
 
-# Note on Licensing
+# 授權
 
-SUMO is licensed under the
-[EPL-2.0](https://eclipse.org/legal/epl-v20.html) with GPL v2 or later as a secondary license option using only [open
-source libraries](Libraries_Licenses.md).
+SUMO 以 [EPL-2.0](https://eclipse.org/legal/epl-v20.html) 授權釋出。在使用某些[開放原始碼資源庫](Libraries_Licenses.md)下，會使用 GPL 第 2 版或更新版釋出。
 
-The standard Windows build only contains code and Windows binaries with Eclipse
-approved licenses (especially no GPL and LGPL code). If you need
-features like shapefile import, GeoTIFF processing, the OpenSceneGraph 3D GUI, or
-video generation, download the "extra" build.
+標準的 Windows 版本只會包含由 Eclipse 允許授權的原始碼和可執行檔，意思就是不包含 GPL 和 LGPL 授權。如果要使用一些特殊功能（包含 shapefile 匯入、GeoTIFF 處理、OpenSceneGraph 3D 使用者介面或影片生成等等），請下載 extra 版本。
 
-The Linux packages do not contain external libraries at all.
+Linux 版本則不包含任何外部資源庫。
+
+
 
 <?php
 function getFileDate($fname, $type){

@@ -170,7 +170,7 @@
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#nightly" class="nav-link">• Nightly 快照</a>
                 </li>
-            <li class="nav-item main"><a href="#older_releases_and_alternative_download">Older releases and alternative download</a></li>
+            <li class="nav-item main"><a href="#_4">較舊的版本及替代下載方式</a></li>
             <li class="nav-item main"><a href="#other">Other</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
                     <a href="#direct_repository_access" class="nav-link">• Direct repository access</a>
@@ -356,29 +356,19 @@ appropriate file for your platform (you may need to sign in to GitHub).</p>
 </ul>
 
 <p>你也可以在 <a href="https://test.pypi.org/project/eclipse-sumo/">Python packaging indgit ex test instance</a> 裡面找到這些 Python 組建。
-To install the latest nightly version (it is strongly encouraged to do this in a virtual environment) use <a href="#python_packages_virtual_environments">the instructions above</a> replacing the install line with:</p>
+要安裝最新的 nightly 版本（強烈建議使用虛擬環境安裝）請使用<a href="#python_packages_virtual_environments">上方的教學</a>，並以下方的安裝命令取代原本指令：</p>
 <div class="codehilite"><pre><span></span><code>pip install -i https://test.pypi.org/simple/ eclipse-sumo
 </code></pre></div>
 
-<p>Although this is a python package, it contains all compiled SUMO binaries and should be fully functional (see the requirements in <a href="#python_packages_virtual_environments">the section above</a>).</p>
-<p>The Linux <a href="#repositories">repositories</a> at the open build service contain a nightly build as well.
-This is unfortunately not the case for the Debian, Ubuntu and Arch versions.</p>
-<p><a href="https://sumo.dlr.de/daily/userdoc">The corresponding documentation</a> is
-also visible live including <a href="https://sumo.dlr.de/daily/doxygen">Doxygen
-docs</a>. Additional artifacts such as
-<a href="https://sumo.dlr.de/daily">tests results</a> and <a href="https://sumo.dlr.de/daily/lcov/html/">code coverage
-analysis</a> are generated every
-night.</p>
+<p>另外，儘管它是一個 Python 套件，但它包含所有 SUMO 的程式且確保完全可使用。你可以在<a href="#python_packages_virtual_environments">這裡</a>找到使用 Python 套件的最低系統需求。</p>
+<p>在 open build 上的 Linux <a href="#repositories">倉儲</a>也有 nightly 組建。但是，這無法使用在 Debian、Ubuntu 和 Arch 版本的 Linux 上面。</p>
+<p><a href="https://sumo.dlr.de/daily/userdoc">The corresponding documentation</a> is also visible live including <a href="https://sumo.dlr.de/daily/doxygen">Doxygen docs</a>. Additional artifacts such as <a href="https://sumo.dlr.de/daily">tests results</a> and <a href="https://sumo.dlr.de/daily/lcov/html/">code coverage analysis</a> are generated every night.</p>
 <div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>The available Windows binary packages may lag behind the <a href="https://github.com/eclipse/sumo/commits/main">latest Git revision</a> due to being compiled only once per day (around midnight, Berlin time).</p>
+<p class="admonition-title">注意</p>
+<p>因為 Windows 版本一天僅編譯一次（在柏林時間的午夜）的關係，適用於 Windows 的 SUMO 套件 nightly 組建可能無法跟隨<a href="https://github.com/eclipse/sumo/commits/main">最新的 git 修正版本</a>。</p>
 </div>
-<h1 id="older_releases_and_alternative_download">Older releases and alternative download<a class="headerlink" href="#older_releases_and_alternative_download" title="Permanent link">#</a></h1>
-<p>The <a href="https://sumo.dlr.de/releases/">release directory</a> contains all release files since 1.2.0.
-Those and older releases can also be obtained via the <a href="https://sourceforge.net/projects/sumo/files/sumo/">sourceforge download portal</a>.
-If you want to try out an older version you can also use the virtual environment approach
-(<a href="#python_packages_virtual_environments">explained above</a>) with a fixed version, e.g.
-<code>pip install eclipse-sumo=1.9.0</code> (works only for 1.8.0 and later).</p>
+<h1 id="_4">較舊的版本及替代下載方式<a class="headerlink" href="#_4" title="Permanent link">#</a></h1>
+<p><a href="https://sumo.dlr.de/releases/">發行版資料夾</a>內有自 SUMO 1.2.0 及更新的版本。你也可以在 <a href="https://sourceforge.net/projects/sumo/files/sumo/">sourceforge download portal</a> 內 SUMO 1.2.0 以後或更舊的版本。你也可以在虛擬環境內測試這些舊版本，方式<a href="#python_packages_virtual_environments">如同上方所述</a>，只要在使用 pip 安裝時指定要安裝的版本即可，如<code>pip install eclipse-sumo=1.9.0</code>（適用於 SUMO 1.8.0 以後版本）。</p>
 <p>If you need a complete zipped snapshot of the repository (including tests) for an older version have a look at the tags in your
 local repository or at <a href="https://github.com/eclipse/sumo/tags">GitHub tags</a>.</p>
 <h1 id="other">Other<a class="headerlink" href="#other" title="Permanent link">#</a></h1>
@@ -516,7 +506,7 @@ $zip->close();
 
         <footer class="col-md-12">
           
-            <br><small><i>本頁面最近更新日期：09 April 2022</i></small>
+            <br><small><i>本頁面最近更新日期：12 April 2022</i></small>
           
           <hr>
             <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>
