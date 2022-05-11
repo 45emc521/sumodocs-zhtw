@@ -51,25 +51,25 @@ title: SUMO 概觀
 
 SUMO 套件包含了以下應用程式：
 
-| 應用程式名稱                                                            | 簡要介紹                                                                                                                                                    |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [sumo](sumo.md)                                                   | The microscopic simulation with no visualization; command line application                                                                              |
-| [sumo-gui](sumo-gui.md)                                           | The microscopic simulation with a graphical user interface                                                                                              |
-| [netconvert](netconvert.md)                                       | Network importer and generator; reads road networks from different formats and converts them into the SUMO-format                                       |
-| [netedit](Netedit/index.md)                                       | A graphical network editor.                                                                                                                             |
-| [netgenerate](netgenerate.md)                                     | Generates abstract networks for the SUMO-simulation                                                                                                     |
-| [duarouter](duarouter.md)                                         | Computes the fastest routes through the network, importing different types of demand description. Performs the DUA                                      |
-| [jtrrouter](jtrrouter.md)                                         | Computes routes using junction turning percentages                                                                                                      |
-| [dfrouter](dfrouter.md)                                           | Computes routes from induction loop measurements                                                                                                        |
-| [marouter](marouter.md)                                           | Performs macroscopic assignment                                                                                                                         |
-| [od2trips](od2trips.md)                                           | Decomposes O/D-matrices into single vehicle trips                                                                                                       |
-| [polyconvert](polyconvert.md)                                     | Imports points of interest and polygons from different formats and translates them into a description that may be visualized by [sumo-gui](sumo-gui.md) |
-| [activitygen](activitygen.md)                                     | Generates a demand based on mobility wishes of a modeled population                                                                                     |
-| [emissionsMap](Tools/Emissions.md#emissionsmap)                   | Generates an emission map                                                                                                                               |
-| [emissionsDrivingCycle](Tools/Emissions.md#emissionsdrivingcycle) | Calculates emission values based on a given driving cycle                                                                                               |
-| [Additional Tools](Tools/index.md)                                | There are some tasks for which writing a large application is not necessary. Several solutions for different problems may be covered by these tools.    |
+| 應用程式名稱                                                 | 簡要介紹                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [sumo](sumo.md)                                              | 微觀車流模擬（非視覺化），使用命令列來操作模擬。             |
+| [sumo-gui](sumo-gui.md)                                      | 視覺化的微觀車流模擬，且有圖形化使用者介面。                 |
+| [netconvert](netconvert.md)                                  | 路網匯入與生成器。亦可由不同格式的檔案中載入路網，並轉換為 SUMO 格式。 |
+| [netedit](Netedit/index.md)                                  | 視覺化的路網編輯器。                                         |
+| [netgenerate](netgenerate.md)                                | 為 SUMO 模擬建立抽象路網。                                   |
+| [duarouter](duarouter.md)                                    | 計算路網中最快的路徑、並可匯入不同的需求。運行 DUA。         |
+| [jtrrouter](jtrrouter.md)                                    | 可利用轉向比計算路徑的程式。                                 |
+| [dfrouter](dfrouter.md)                                      | 可利用感測器計算路徑的程式。                                 |
+| [marouter](marouter.md)                                      | 執行巨觀指派。                                               |
+| [od2trips](od2trips.md)                                      | 分解 OD 矩陣成單趟旅程的程式。                               |
+| [polyconvert](polyconvert.md)                                | 匯入許多不同格式的節點或多邊形，並將他們轉換為可在 [sumo-gui](sumo-gui.md) 中以視覺化形式表示的程式。 |
+| [activitygen](activitygen.md)                                | 基於已模組化的人口，產生移動需求的程式。                     |
+| [emissionsMap](Tools/Emissions.md#emissionsmap)              | 建立（污染）排放地圖。                                       |
+| [emissionsDrivingCycle](Tools/Emissions.md#emissionsdrivingcycle) | 計算給定的駕駛循環中產出的排放值。                           |
+| [Additional Tools](Tools/index.md)                           | 其他用來解決流程或問題的小工具們。                           |
 
-某些有志之士一同貢獻了他們的作品給 SUMO，並讓 SUMO 套件的功能更上層樓。這些由志願者延伸的功能也許未經測試、也有可能已經過時。如要參閱 SUMO 有哪些由志願者延伸的功能，請[按這裡](Contributed/index.md)了解詳細資訊。
+許多有志之士一同貢獻了他們的作品給 SUMO，並讓 SUMO 套件的功能更上層樓。這些由志願者延伸的功能也許未經測試、也有可能已經過時。如要參閱 SUMO 有哪些由志願者延伸的功能，請[按這裡](Contributed/index.md)了解詳細資訊。
 
 ## SUMO 的歷史
 
@@ -81,28 +81,22 @@ SUMO 不需要取得所有需要用在交通模擬的資料，如引入或設定
 
 2. 向來自世界各地的貢獻者中取得協助。
 
-## Software design criteria
+## 軟體設計要件
 
-Two major design goals are approached: the software shall be fast and it
-shall be portable. Due to this, the very first versions were developed
-to be run from the command line only - no graphical interface was
-supplied at first and all parameter had to be inserted by hand. This
-should increase the execution speed by leaving off slow visualization.
-Also, due to these goals, the software was split into several parts.
-Each of them has a certain purpose and must be run individually. This is
-something that makes SUMO different to other simulation packages where,
-for instance, the dynamical user assignment is made within the
-simulation itself, not via an external application like here. This split
-allows an easier extension of each of the applications within the
-package because each is smaller than a monolithic application that does
-everything. Also, it allows the usage of faster data structures, each
-adjusted to the current purpose, instead of using complicated and
-ballast-loaded ones. Still, this makes the usage of SUMO a little bit
-uncomfortable in comparison to other simulation packages. As there are
-still other things to do, we are not thinking of a redesign towards an
-integrated approach by now.
+兩個設計要件是我們的終極目標：
 
-## Contributors and Participants
+**SUMO 應該是一個快速且可攜帶（跨平台）的程式。**
+
+鑑於這兩項要求，第一版發行時只有命令列介面可以使用——意思就是沒有圖形化介面，所有指令或參數都要徒手輸入。藉由犧牲視覺化效果，可以增加模擬的執行速度。
+
+為了要達成我們的目標，這個軟體還被切分成了幾個部分。所有部分都有其功能，且必須能夠單獨運行，這就是讓 SUMO 跟市面上其他模擬套件與眾不同的原因。市面上其他模擬軟體針對動態交通量指派，可能會整合在一個大程式裡，而不會像 SUMO 一樣，以外部獨立的小程式來完成操作。這使得擴充 SUMO 所沒有的功能變得十分輕鬆，因為所有程式都非常輕量化，而不像一塊大石頭一樣笨重。
+
+另外，SUMO 還允許更快的資料結構的使用，每一個元件都被打造成符合使用目的，而不是使用複雜的形式。不過，這樣的方式使得 SUMO 在使用上可能比其他模擬軟體的使用體驗還要不舒服一些，這個我們是知道的。但是為了發展其他功能，我們目前還不打算重新設計一個整合所有功能的 SUMO 版本。
+
+## 貢獻與參與者
+
+!!! note "以下為原文內容"
+    以下內容，目前沒有排入翻譯計畫內。
 
 <table>
 <thead>

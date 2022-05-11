@@ -171,20 +171,20 @@
                     <a href="#nightly" class="nav-link">• Nightly 快照</a>
                 </li>
             <li class="nav-item main"><a href="#_4">較舊的版本及替代下載方式</a></li>
-            <li class="nav-item main"><a href="#other">Other</a></li>
+            <li class="nav-item main"><a href="#_5">其他</a></li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#direct_repository_access" class="nav-link">• Direct repository access</a>
+                    <a href="#_6" class="nav-link">• 直接存取倉儲</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#packages" class="nav-link">• Packages</a>
+                    <a href="#_7" class="nav-link">• 套件</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#dependencies_for_developers" class="nav-link">• Dependencies for developers</a>
+                    <a href="#sumo_1" class="nav-link">• SUMO 的依存套件</a>
                 </li>
                 <li class="nav-item" style="text-indent: 5px;">
-                    <a href="#scenarios_and_other_data" class="nav-link">• Scenarios and other Data</a>
+                    <a href="#_8" class="nav-link">• 情境與其他資料</a>
                 </li>
-            <li class="nav-item main"><a href="#note_on_licensing">Note on Licensing</a></li>
+            <li class="nav-item main"><a href="#_9">授權</a></li>
         </ul>
     </div>
 
@@ -368,19 +368,14 @@ appropriate file for your platform (you may need to sign in to GitHub).</p>
 <p>因為 Windows 版本一天僅編譯一次（在柏林時間的午夜）的關係，適用於 Windows 的 SUMO 套件 nightly 組建可能無法跟隨<a href="https://github.com/eclipse/sumo/commits/main">最新的 git 修正版本</a>。</p>
 </div>
 <h1 id="_4">較舊的版本及替代下載方式<a class="headerlink" href="#_4" title="Permanent link">#</a></h1>
-<p><a href="https://sumo.dlr.de/releases/">發行版資料夾</a>內有自 SUMO 1.2.0 及更新的版本。你也可以在 <a href="https://sourceforge.net/projects/sumo/files/sumo/">sourceforge download portal</a> 內 SUMO 1.2.0 以後或更舊的版本。你也可以在虛擬環境內測試這些舊版本，方式<a href="#python_packages_virtual_environments">如同上方所述</a>，只要在使用 pip 安裝時指定要安裝的版本即可，如<code>pip install eclipse-sumo=1.9.0</code>（適用於 SUMO 1.8.0 以後版本）。</p>
-<p>If you need a complete zipped snapshot of the repository (including tests) for an older version have a look at the tags in your
-local repository or at <a href="https://github.com/eclipse/sumo/tags">GitHub tags</a>.</p>
-<h1 id="other">Other<a class="headerlink" href="#other" title="Permanent link">#</a></h1>
-<h2 id="direct_repository_access">Direct repository access<a class="headerlink" href="#direct_repository_access" title="Permanent link">#</a></h2>
-<p>You can get the very latest sources directly from our Git repository, see
-<a href="FAQ.html#how_do_i_access_the_code_repository">the FAQ on repository access</a>.
-Normally, they should compile and complete our test suite successfully.
-To assess the current state of the build, you may take a look at the
-<a href="https://sumo.dlr.de/daily/">nightly test statistics</a>.</p>
-<h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h2>
-<p>SUMO is available as different packages. The contents of each package is
-listed in the table below.</p>
+<p><a href="https://sumo.dlr.de/releases/">發行版資料夾</a>內有自 SUMO 1.2.0 及更新的版本。你也可以在 <a href="https://sourceforge.net/projects/sumo/files/sumo/">sourceforge download portal</a> 內 SUMO 1.2.0 以後或更舊的版本。要在虛擬環境內測試這些舊版本，方式<a href="#python_packages_virtual_environments">如同上方所述</a>，只要在使用 pip 安裝時指定要安裝的版本即可，如<code>pip install eclipse-sumo=1.9.0</code>（適用於 SUMO 1.8.0 以後版本）。</p>
+<p>如果你需要壓縮後的較舊版本倉儲快照（包含測試版本），可以在 <a href="https://github.com/eclipse/sumo/tags">GitHub tags</a> 或本機端倉儲內的 tag 了解。</p>
+<h1 id="_5">其他<a class="headerlink" href="#_5" title="Permanent link">#</a></h1>
+<h2 id="_6">直接存取倉儲<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>你可以在 git 倉儲中直接取得最新的資源，請參閱<a href="FAQ.html#how_do_i_access_the_code_repository">有關存取倉儲的常見問題</a>文章來了解詳情。正常情況下，它們應該都可以被編譯及成功完成我們一連串的測試。</p>
+<p>要了解最新的編譯狀態，可以參閱 <a href="https://sumo.dlr.de/daily/">nightly 測試版的數據</a>。</p>
+<h2 id="_7">套件<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p>SUMO 具備很多套件，這些套件的詳細資料陳列在下方。</p>
 <table>
 <thead>
 <tr>
@@ -443,27 +438,20 @@ listed in the table below.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="dependencies_for_developers">Dependencies for developers<a class="headerlink" href="#dependencies_for_developers" title="Permanent link">#</a></h2>
-<p>For the Windows platform you can retrieve all dependencies by cloning
-this repository: <a href="https://github.com/DLR-TS/SUMOLibraries">https://github.com/DLR-TS/SUMOLibraries</a>, if you want
-to develop with Visual Studio. If you just want to run SUMO, use the
-binary downloads above which already contain the runtime dependencies.</p>
-<h2 id="scenarios_and_other_data">Scenarios and other Data<a class="headerlink" href="#scenarios_and_other_data" title="Permanent link">#</a></h2>
+<h2 id="sumo_1">SUMO 的依存套件<a class="headerlink" href="#sumo_1" title="Permanent link">#</a></h2>
+<p>在 Windows 平台上，如你想要在 Visual Studio 上編譯 SUMO，你可以藉由 clone <a href="https://github.com/DLR-TS/SUMOLibraries">GitHub - DLR-TS/SUMOLibraries: A repository with current SUMO Libraries used in Windows compatible with Visual Studio 2019</a> 來得所有依存套件。</p>
+<p>如果你只是要使用 SUMO 而不是要在電腦上編譯它，只要下載本頁最上方的可執行檔就好囉。</p>
+<h2 id="_8">情境與其他資料<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="Data/Scenarios.html">complete scenarios</a></li>
 <li><a href="Data/Networks.html">networks</a></li>
 <li><a href="Data/Traffic_Data.html">traffic data</a></li>
 <li><a href="Tutorials/index.html#using_examples_from_the_test_suite">Test cases</a></li>
 </ul>
-<h1 id="note_on_licensing">Note on Licensing<a class="headerlink" href="#note_on_licensing" title="Permanent link">#</a></h1>
-<p>SUMO is licensed under the
-<a href="https://eclipse.org/legal/epl-v20.html">EPL-2.0</a> with GPL v2 or later as a secondary license option using only <a href="Libraries_Licenses.html">open
-source libraries</a>.</p>
-<p>The standard Windows build only contains code and Windows binaries with Eclipse
-approved licenses (especially no GPL and LGPL code). If you need
-features like shapefile import, GeoTIFF processing, the OpenSceneGraph 3D GUI, or
-video generation, download the "extra" build.</p>
-<p>The Linux packages do not contain external libraries at all.</p>
+<h1 id="_9">授權<a class="headerlink" href="#_9" title="Permanent link">#</a></h1>
+<p>SUMO 以 <a href="https://eclipse.org/legal/epl-v20.html">EPL-2.0</a> 授權釋出。在使用某些<a href="Libraries_Licenses.html">開放原始碼資源庫</a>下，會使用 GPL 第 2 版或更新版釋出。</p>
+<p>標準的 Windows 版本只會包含由 Eclipse 允許授權的原始碼和可執行檔，意思就是不包含 GPL 和 LGPL 授權。如果要使用一些特殊功能（包含 shapefile 匯入、GeoTIFF 處理、OpenSceneGraph 3D 使用者介面或影片生成等等），請下載 extra 版本。</p>
+<p>Linux 版本則不包含任何外部資源庫。</p>
 <?php
 function getFileDate($fname, $type){
     switch($type){
@@ -506,7 +494,7 @@ $zip->close();
 
         <footer class="col-md-12">
           
-            <br><small><i>本頁面最近更新日期：12 April 2022</i></small>
+            <br><small><i>本頁面最近更新日期：05 May 2022</i></small>
           
           <hr>
             <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>

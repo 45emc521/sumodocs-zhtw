@@ -186,7 +186,7 @@ pip install -i https://test.pypi.org/simple/ eclipse-sumo
 
 # 較舊的版本及替代下載方式
 
-[發行版資料夾](https://sumo.dlr.de/releases/)內有自 SUMO 1.2.0 及更新的版本。你也可以在 [sourceforge download portal](https://sourceforge.net/projects/sumo/files/sumo/) 內 SUMO 1.2.0 以後或更舊的版本。要在虛擬環境內測試這些舊版本，方式[如同上方所述](#python_packages_virtual_environments)，只要在使用 pip 安裝時指定要安裝的版本即可，如`pip install eclipse-sumo=1.9.0`（適用於 SUMO 1.8.0 以後版本）。
+[發行版資料夾](https://sumo.dlr.de/releases/)內有自 SUMO 1.2.0 及更新的版本。你也可以在 [sourceforge download portal](https://sourceforge.net/projects/sumo/files/sumo/) 內下載 SUMO 1.2.0 以後或更舊的版本。要在虛擬環境內測試這些舊版本，方式[如同上方所述](#python_packages_virtual_environments)，只要在使用 pip 安裝時指定要安裝的版本即可，如`pip install eclipse-sumo=1.9.0`（適用於 SUMO 1.8.0 以後版本）。
 
 如果你需要壓縮後的較舊版本倉儲快照（包含測試版本），可以在 [GitHub tags](https://github.com/eclipse/sumo/tags) 或本機端倉儲內的 tag 了解。
 
@@ -194,13 +194,13 @@ pip install -i https://test.pypi.org/simple/ eclipse-sumo
 
 ## 直接存取倉儲
 
-你可以在 git 倉儲中直接取得最新的資源，請參閱[有關存取倉儲的常見問題](FAQ.md#how_do_i_access_the_code_repository)文章來了解詳情。正常情況下，它們應該都可以被編譯及成功完成我們一連串的測試。
+你可以在 git 倉儲中直接取得最新的 SUMO 套件，請參閱[有關存取倉儲的常見問題](FAQ.md#how_do_i_access_the_code_repository)文章來了解詳情。正常情況下，它們應該都可以被編譯及成功完成我們一連串的測試。
 
 要了解最新的編譯狀態，可以參閱 [nightly 測試版的數據](https://sumo.dlr.de/daily/)。
 
-## 套件
+## 下載形式
 
-SUMO 具備很多套件，這些套件的詳細資料陳列在下方。
+SUMO 具備很多種下載形式，這些形式的詳細資料陳列在下方。
 
 |                                              | bin        | build    | src (source code) | user docs | developer docs (doxygen) | data     | examples | tutorials | tests | tools (except jars) | jars     |
 | -------------------------------------------- | ---------- | -------- | ----------------- | --------- | ------------------------ | -------- | -------- | --------- | ----- | ------------------- | -------- |
@@ -210,7 +210,7 @@ SUMO 具備很多套件，這些套件的詳細資料陳列在下方。
 
 ## SUMO 的依存套件
 
-在 Windows 平台上，如你想要在 Visual Studio 上編譯 SUMO，你可以藉由 clone [GitHub - DLR-TS/SUMOLibraries: A repository with current SUMO Libraries used in Windows compatible with Visual Studio 2019](https://github.com/DLR-TS/SUMOLibraries) 來得所有依存套件。
+在 Windows 平台上，如你想要在 Visual Studio 上編譯 SUMO，你可以藉由 clone [GitHub - DLR-TS/SUMOLibraries: A repository with current SUMO Libraries used in Windows compatible with Visual Studio 2019](https://github.com/DLR-TS/SUMOLibraries) 來取得所有依存套件。
 
 如果你只是要使用 SUMO 而不是要在電腦上編譯它，只要下載本頁最上方的可執行檔就好囉。
 
@@ -228,41 +228,3 @@ SUMO 以 [EPL-2.0](https://eclipse.org/legal/epl-v20.html) 授權釋出。在使
 標準的 Windows 版本只會包含由 Eclipse 允許授權的原始碼和可執行檔，意思就是不包含 GPL 和 LGPL 授權。如果要使用一些特殊功能（包含 shapefile 匯入、GeoTIFF 處理、OpenSceneGraph 3D 使用者介面或影片生成等等），請下載 extra 版本。
 
 Linux 版本則不包含任何外部資源庫。
-
-
-
-<?php
-function getFileDate($fname, $type){
-    switch($type){
-    case "r":
-    $file = "/releases/{{Version}}/" . $fname;
-    break;
-    case "d":
-    $file = "/daily/" . $fname;
-    break;
-}
-$file = $_SERVER['DOCUMENT_ROOT']. $file;
-if(file_exists($file)){
-    echo date ("F d Y H:i:s", filemtime($file)) . " UTC";
-}}
-function getFileSize($fname, $type){
-switch($type){
-    case "r":
-    $file = "/releases/{{Version}}/" . $fname;
-    break;
-    case "d":
-    $file = "/daily/" . $fname;
-    break;
-}
-$file = $_SERVER['DOCUMENT_ROOT']. $file;
-if(file_exists($file)){
-echo round(((filesize($file))/1048576),1) . " MB";
-}}
-function getNightlyFreshness($fname){
-$zip = new ZipArchive;
-$zip->open($_SERVER['DOCUMENT_ROOT']. "/daily/" . $fname);
-$freshnessIs = str_replace("\"","",str_replace("#define VERSION_STRING ","",$zip->getFromName('sumo-git/include/version.h')));
-echo $freshnessIs;
-$zip->close();
-}
-?>
