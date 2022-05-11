@@ -3,24 +3,30 @@ title: Tutorials
 ---
 
 !!! note
-    These tutorials assume minor computer skills. If you run into any questions please read the page [Basics/Basic Computer Skills](../Basics/Basic_Computer_Skills.md).
+    這些教學假設你已經有基礎的電腦技能。如果你有任何關於電腦操作上的疑問，你可以參閱[基礎／基礎電腦技能](../Basics/Basic_Computer_Skills.md)。
 
-# Beginner Tutorials
-* [Hello World](Hello_World.md) - Creating a simple network and demand scenario with [netedit](../Netedit/index.md) and visualizing it using [sumo-gui](../sumo-gui.md)
-* [OSMWebWizard](OSMWebWizard.md) - Setting up a scenario with just a few clicks using osmWebWizard.py; getting a network from OpenStreetMap
-* [Quick Start](quick_start.md) - A more complex tutorial with [netedit](../Netedit/index.md); first steps in SUMO
-* [Driving in Circles](Driving_in_Circles.md) - Work with [netedit](../Netedit/index.md); define a flow; let vehicles drive in circles using rerouters
+# 初心者教學
+* [Hello World](Hello_World.md)－利用 netedit 建立路網及車流需求，並用 [sumo-gui](../sumo-gui.md) 進行模擬。
+* [OSMWebWizard](OSMWebWizard.md)－使用 osmWebWizard.py 以便在短時間內建立一場景，從 OpenStreetMap 取得路網資料。
+* [快速入門](quick_start.md)－更詳細的 [netedit](../Netedit/index.md) 教學；SUMO 套件的第一步。
+* [在圓環駕駛](Driving_in_Circles.md)－使用 [netedit](../Netedit/index.md)；定義車流；利用 rerouters 讓車輛在圓環行駛。
 * [SUMOlympics](SUMOlympics.md) - Create special lanes and simple traffic lights in netedit, more about flows and vehicle types, working with vehicle
 * [Autobahn](Autobahn.md) - Build a highway, create a mixed highway flow, visualize vehicle speed, save view settings
 * [Manhattan](Manhattan.md) - Build a [Manhattan mobility model](https://en.wikipedia.org/wiki/Manhattan_mobility_model)
 * [Public Transport](PublicTransport.md) - Build a public transport scenario from scratch
 * [TaxiService](TaxiService.md) - Build a taxi service from scratch
 
-# SUMO User Conference Tutorials
+# SUMO User Conference 教學
 
-The SUMO User Conference is an anual event organized by the German Aerospace Center (DLR) in Berlin. Since 2015, each conference begins with a SUMO tutorial session. Below you can find the tutorial material (slide deck and input files). Since 2019, the tutorials have also been recorded on video.
+**SUMO User Conference** 是由德國航空太空中心在柏林主辦的年會。
 
-## Files
+自 2015 年開始，每年大會都有 SUMO 的教學。以下你可以找到所有的教材（包含簡報檔案與輸入檔案）；自 2019 年開始，這些教學會錄影存放。
+
+## 檔案
+
+!!! note "注意"
+    以下內容為原文。
+
 * [SUMO 2015](http://sumo.dlr.de/daily/sumo2015_tutorial.zip): network editing with xml patch, persons, 
 * [SUMO 2016](http://sumo.dlr.de/daily/sumo2016_tutorial.zip): network editing, meso, containers, [New Features 2016 (Slides)](http://sumo.dlr.de/daily/SUMO2016_new_features.pdf)
 * [SUMO 2017](http://sumo.dlr.de/daily/sumo2017_tutorial.zip): network editing, randomTrips, calibrators (xml only), public transport (obsolete)
@@ -37,7 +43,7 @@ The SUMO User Conference is an anual event organized by the German Aerospace Cen
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tlshWdzFWpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Advanced Tutorials
+# 進階教學
 * [Hello SUMO](Hello_SUMO.md) - The simplest net and a single car set up "by hand"
 * [ScenarioGuide](ScenarioGuide.md) - High level outline of the steps needed to build a simulation scenario
 * [HighwayDetector](HighwayDetector.md) - How to create a highway scenario based on induction loop data
@@ -46,13 +52,13 @@ The SUMO User Conference is an anual event organized by the German Aerospace Cen
 * [Importing GTFS](GTFS.md) - Importing public transport schedules from public sources using the General Transit Feed Specification
 * [Port](port.md) - Creating a scenario that simulates the port logistics of an arbitrary port from [OpenStreetMap](https://www.openstreetmap.org/)
 
-# TraCI Tutorials
+# TraCI 教學
 These tutorials use the [Python-TraCI Library](../TraCI/Interfacing_TraCI_from_Python.md) for interfacing a python script with a running [sumo](../sumo.md) simulation.
 
 * [TraCI4Traffic Lights](TraCI4Traffic_Lights.md) - An example for how to connect an external application to SUMO via TraCI for traffic lights control
 * [TraCIPedCrossing](TraCIPedCrossing.md) - An example for building a pedestrian-actuated traffic light via TraCI
 
-# Other
+# 其他資源
 
 ## Curso de Simulação em Mobilidade
 [Udemy tutorial](https://www.udemy.com/ferramenta-de-microssimulacao-de-trafego-sumo/learn/v4/overview) in Portuguese courtesy of Ednardo Ferreira.
