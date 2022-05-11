@@ -146,8 +146,8 @@
             <li class="nav-item main"><a href="#_2">使用範例</a></li>
             <li class="nav-item main"><a href="#sumo_1">包含在 SUMO 中的應用程式</a></li>
             <li class="nav-item main"><a href="#sumo_2">SUMO 的歷史</a></li>
-            <li class="nav-item main"><a href="#software_design_criteria">Software design criteria</a></li>
-            <li class="nav-item main"><a href="#contributors_and_participants">Contributors and Participants</a></li>
+            <li class="nav-item main"><a href="#_3">軟體設計要件</a></li>
+            <li class="nav-item main"><a href="#_4">貢獻與參與者</a></li>
         </ul>
     </div>
 
@@ -246,67 +246,67 @@
 <tbody>
 <tr>
 <td><a href="sumo.html">sumo</a></td>
-<td>The microscopic simulation with no visualization; command line application</td>
+<td>微觀車流模擬（非視覺化），使用命令列來操作模擬。</td>
 </tr>
 <tr>
 <td><a href="sumo-gui.html">sumo-gui</a></td>
-<td>The microscopic simulation with a graphical user interface</td>
+<td>視覺化的微觀車流模擬，且有圖形化使用者介面。</td>
 </tr>
 <tr>
 <td><a href="netconvert.html">netconvert</a></td>
-<td>Network importer and generator; reads road networks from different formats and converts them into the SUMO-format</td>
+<td>路網匯入與生成器。亦可由不同格式的檔案中載入路網，並轉換為 SUMO 格式。</td>
 </tr>
 <tr>
 <td><a href="Netedit/index.html">netedit</a></td>
-<td>A graphical network editor.</td>
+<td>視覺化的路網編輯器。</td>
 </tr>
 <tr>
 <td><a href="netgenerate.html">netgenerate</a></td>
-<td>Generates abstract networks for the SUMO-simulation</td>
+<td>為 SUMO 模擬建立抽象路網。</td>
 </tr>
 <tr>
 <td><a href="duarouter.html">duarouter</a></td>
-<td>Computes the fastest routes through the network, importing different types of demand description. Performs the DUA</td>
+<td>計算路網中最快的路徑、並可匯入不同的需求。運行 DUA。</td>
 </tr>
 <tr>
 <td><a href="jtrrouter.html">jtrrouter</a></td>
-<td>Computes routes using junction turning percentages</td>
+<td>可利用轉向比計算路徑的程式。</td>
 </tr>
 <tr>
 <td><a href="dfrouter.html">dfrouter</a></td>
-<td>Computes routes from induction loop measurements</td>
+<td>可利用感測器計算路徑的程式。</td>
 </tr>
 <tr>
 <td><a href="marouter.html">marouter</a></td>
-<td>Performs macroscopic assignment</td>
+<td>執行巨觀指派。</td>
 </tr>
 <tr>
 <td><a href="od2trips.html">od2trips</a></td>
-<td>Decomposes O/D-matrices into single vehicle trips</td>
+<td>分解 OD 矩陣成單趟旅程的程式。</td>
 </tr>
 <tr>
 <td><a href="polyconvert.html">polyconvert</a></td>
-<td>Imports points of interest and polygons from different formats and translates them into a description that may be visualized by <a href="sumo-gui.html">sumo-gui</a></td>
+<td>匯入許多不同格式的節點或多邊形，並將他們轉換為可在 <a href="sumo-gui.html">sumo-gui</a> 中以視覺化形式表示的程式。</td>
 </tr>
 <tr>
 <td><a href="activitygen.html">activitygen</a></td>
-<td>Generates a demand based on mobility wishes of a modeled population</td>
+<td>基於已模組化的人口，產生移動需求的程式。</td>
 </tr>
 <tr>
 <td><a href="Tools/Emissions.html#emissionsmap">emissionsMap</a></td>
-<td>Generates an emission map</td>
+<td>建立（污染）排放地圖。</td>
 </tr>
 <tr>
 <td><a href="Tools/Emissions.html#emissionsdrivingcycle">emissionsDrivingCycle</a></td>
-<td>Calculates emission values based on a given driving cycle</td>
+<td>計算給定的駕駛循環中產出的排放值。</td>
 </tr>
 <tr>
 <td><a href="Tools/index.html">Additional Tools</a></td>
-<td>There are some tasks for which writing a large application is not necessary. Several solutions for different problems may be covered by these tools.</td>
+<td>其他用來解決流程或問題的小工具們。</td>
 </tr>
 </tbody>
 </table>
-<p>某些有志之士一同貢獻了他們的作品給 SUMO，並讓 SUMO 套件的功能更上層樓。這些由志願者延伸的功能也許未經測試、也有可能已經過時。如要參閱 SUMO 有哪些由志願者延伸的功能，請<a href="Contributed/index.html">按這裡</a>了解詳細資訊。</p>
+<p>許多有志之士一同貢獻了他們的作品給 SUMO，並讓 SUMO 套件的功能更上層樓。這些由志願者延伸的功能也許未經測試、也有可能已經過時。如要參閱 SUMO 有哪些由志願者延伸的功能，請<a href="Contributed/index.html">按這裡</a>了解詳細資訊。</p>
 <h2 id="sumo_2">SUMO 的歷史<a class="headerlink" href="#sumo_2" title="Permanent link">#</a></h2>
 <p>在公元 2000 年時，SUMO 誕生並開始發展。SUMO 的發展，主要是為了幫助交通研究社群評估他們自己設計的演算法，而製作一個開放原始碼的微觀車流模擬軟體。</p>
 <p>SUMO 不需要取得所有需要用在交通模擬的資料，如引入或設定處理道路路網、車流需求及交通控制的方法。藉由 SUMO 這個工具，DLR（德國航空太空中心）想要達成以下目標：</p>
@@ -318,26 +318,17 @@
 <p>向來自世界各地的貢獻者中取得協助。</p>
 </li>
 </ol>
-<h2 id="software_design_criteria">Software design criteria<a class="headerlink" href="#software_design_criteria" title="Permanent link">#</a></h2>
-<p>Two major design goals are approached: the software shall be fast and it
-shall be portable. Due to this, the very first versions were developed
-to be run from the command line only - no graphical interface was
-supplied at first and all parameter had to be inserted by hand. This
-should increase the execution speed by leaving off slow visualization.
-Also, due to these goals, the software was split into several parts.
-Each of them has a certain purpose and must be run individually. This is
-something that makes SUMO different to other simulation packages where,
-for instance, the dynamical user assignment is made within the
-simulation itself, not via an external application like here. This split
-allows an easier extension of each of the applications within the
-package because each is smaller than a monolithic application that does
-everything. Also, it allows the usage of faster data structures, each
-adjusted to the current purpose, instead of using complicated and
-ballast-loaded ones. Still, this makes the usage of SUMO a little bit
-uncomfortable in comparison to other simulation packages. As there are
-still other things to do, we are not thinking of a redesign towards an
-integrated approach by now.</p>
-<h2 id="contributors_and_participants">Contributors and Participants<a class="headerlink" href="#contributors_and_participants" title="Permanent link">#</a></h2>
+<h2 id="_3">軟體設計要件<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>兩個設計要件是我們的終極目標：</p>
+<p><strong>SUMO 應該是一個快速且可攜帶（跨平台）的程式。</strong></p>
+<p>鑑於這兩項要求，第一版發行時只有命令列介面可以使用——意思就是沒有圖形化介面，所有指令或參數都要徒手輸入。藉由犧牲視覺化效果，可以增加模擬的執行速度。</p>
+<p>為了要達成我們的目標，這個軟體還被切分成了幾個部分。所有部分都有其功能，且必須能夠單獨運行，這就是讓 SUMO 跟市面上其他模擬套件與眾不同的原因。市面上其他模擬軟體針對動態交通量指派，可能會整合在一個大程式裡，而不會像 SUMO 一樣，以外部獨立的小程式來完成操作。這使得擴充 SUMO 所沒有的功能變得十分輕鬆，因為所有程式都非常輕量化，而不像一塊大石頭一樣笨重。</p>
+<p>另外，SUMO 還允許更快的資料結構的使用，每一個元件都被打造成符合使用目的，而不是使用複雜的形式。不過，這樣的方式使得 SUMO 在使用上可能比其他模擬軟體的使用體驗還要不舒服一些，這個我們是知道的。但是為了發展其他功能，我們目前還不打算重新設計一個整合所有功能的 SUMO 版本。</p>
+<h2 id="_4">貢獻與參與者<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">以下為原文內容</p>
+<p>以下內容，目前沒有排入翻譯計畫內。</p>
+</div>
 <table>
 <thead>
 <tr class="header">
@@ -511,7 +502,7 @@ integrated approach by now.</p>
 
         <footer class="col-md-12">
           
-            <br><small><i>本頁面最近更新日期：07 April 2022</i></small>
+            <br><small><i>本頁面最近更新日期：11 May 2022</i></small>
           
           <hr>
             <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>

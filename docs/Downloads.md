@@ -13,7 +13,7 @@ title: 下載 SUMO
 
 ## Windows
 
-每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 [the notes below](Downloads.md#note_on_licensing)。
+每份 SUMO 的發行版內都有執行檔（64 位元）、所有需要的 dll、範例檔案、工具以及 HTML 格式的說明文件。有關於這些內容的介紹與授權（尤其是那些具備 GPL 代碼以支援 GeoTIFFS、shapefile 和 3D 模型等額外的組建），請參閱 [the notes below](Downloads.md#_9)。
 
 <ul>
 <li>下載 64 位元安裝檔：<a class="no-arrow-link" href="https://sumo.dlr.de/releases/{{Version}}/sumo-win64-{{Version}}.msi">sumo-win64-{{Version}}.msi </a><span class="badge badge-pill badge-secondary"><?php getFileSize("sumo-win64-{{Version}}.msi","r");?></span></li>
