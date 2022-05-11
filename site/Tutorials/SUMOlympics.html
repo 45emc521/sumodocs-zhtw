@@ -322,7 +322,24 @@ script in the <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools folder called <c
 useful if you would like to do more sophisticated things.)</p>
 <p>Here's the simple script (call the file something like
 <code>makeSumolympicWalkers.py</code>):</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/python</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/python</span>
 <span class="c1">#parameters</span>
 <span class="n">outfile</span> <span class="o">=</span> <span class="s2">&quot;sumolympicWalks.rou.xml&quot;</span>
 <span class="n">startEdge</span> <span class="o">=</span> <span class="s2">&quot;beg&quot;</span>
@@ -341,7 +358,7 @@ useful if you would like to do more sophisticated things.)</p>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">xml_string</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 <p>Execute the script by double-clicking (or from the command line with
 <code>python makeSumolympicWalkers.py</code>). If you don't have python on your
 computer, install it before doing anything else!
