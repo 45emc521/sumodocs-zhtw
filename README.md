@@ -1,6 +1,6 @@
 # SUMO 說明文件
 
-SUMO 說明文件是以 [MkDocs](https://www.mkdocs.org/) 撰成，並託管於 GitHub。
+SUMO 說明文件是以 [MkDocs](https://www.mkdocs.org/) 撰成，並託管於 GitHub。本文件採用 EPL-2.0 授權條款。
 
 本倉儲 repository（SUMO 說明文件正體中文版）是非官方維護版本，旨在為你提供高品質的 SUMO 車流模擬軟體中文說明文件。
 
