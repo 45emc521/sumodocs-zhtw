@@ -352,10 +352,10 @@ following things need to be there:</p>
 <li>if you try this on Windows Linux Subsystem you will also need to do <code>sudo update-alternatives --set fakeroot /usr/bin/fakeroot-tcp</code></li>
 </ul>
 </li>
-<li>unzip the special source release <code>sumo_1.12.0+dfsg1.orig.tar.gz</code></li>
+<li>unzip the special source release <code>sumo_1.13.0+dfsg1.orig.tar.gz</code></li>
 <li>copy the debian dir one level up</li>
 <li>modify the changelog, using <code>dch</code> (enter an email address which has write access to the ppa and a valid gpg key)</li>
-<li>run <code>dpkg-buildpackage -S</code> in the sumo dir and <code>dput -f ppa:sumo/stable sumo_1.12.0+dfsg1_source.changes</code> one level up</li>
+<li>run <code>dpkg-buildpackage -S</code> in the sumo dir and <code>dput -f ppa:sumo/stable sumo_1.13.0+dfsg1_source.changes</code> one level up</li>
 </ul>
 </li>
 <li>update the <a href="https://github.com/flathub/org.eclipse.sumo">flatpak</a> (update version number and commit hash)</li>
