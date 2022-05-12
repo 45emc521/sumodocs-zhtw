@@ -18,10 +18,13 @@
       {%- endblock %}
 
       {%- block htmltitle %}
-        <title>{% if page and page.title and not page.is_homepage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+        <title>{% if page and page.title and not page.is_homepage %}{{ page.title }}｜{% endif %}{{ config.site_name }}</title>
       {%- endblock %}
 
       {%- block styles %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Overpass:wght@400;700&display=swap" rel="stylesheet">   
         <link href="{{ 'css/bootstrap.min.css'|url }}" rel="stylesheet">
         <link href="{{ 'css/font-awesome.min.css'|url }}" rel="stylesheet">
         <link href="{{ 'css/base.css'|url }}" rel="stylesheet">

@@ -18,32 +18,32 @@ title: 常見問題
 
   如果路網非常大的話，SUMO 也可以[**中觀 (mesoscopic) **車流模擬](Simulation/Meso.md)的方式運行。
 
-  SUMO also supports **macroscopic** traffic assignment using the [marouter](marouter.md) application.
+  SUMO 亦支援使用 [marouter](marouter.md) 應用程式的**巨觀 (macroscopic)** 交通量指派。
 
-### What is the best way to read the documentation and find out about specific topics
+### 如何閱讀說明文件，並找到特定主題？
 
-  The main page for getting an overview over the various topics is the outline [SUMO User Documentation](index.md). If you do not find the topic of interest listed there use the site search. Alternatively, use a general purpose search engine as this will also include the mailing list archives.
+  想要綜覽整個 SUMO 最好的地方當然是 [SUMO 說明文件首頁](index.md)。 如果你在首頁找不到你感興趣的主題，試試看右上角的搜尋功能吧！（目前會導向到原文版內容） 或者，你也能直接用普通的搜尋引擎，不過這樣也可能會找到一些封存的文章。
 
-### Are there any tutorials or ready to use scenarios?
+### 這裡有教學或範本可以直接使用嗎？
 
-  The main page for [tutorials](Tutorials/index.md) lists several for beginners and advanced topics, there are also some [videos on YouTube](https://www.youtube.com/results?search_query=sumo+simulation+tutorial). For scenarios have a look at our [scenario page](Data/Scenarios.md).
+  我們有準備一個[教學](Tutorials/index.md)頁面，裡面有些給初學者及進階的主題。也有一些很棒的[影片在 YouTube 上](https://www.youtube.com/results?search_query=sumo+simulation+tutorial)。 如果想要一些（場景）範本的話，請至[範本頁面](Data/Scenarios.md)。
 
-### How can I contribute to SUMO?
+### 我如何對 SUMO 做出貢獻？
 
-- Tell us about your extensions on the [developer mailing list](https://accounts.eclipse.org/mailing-list/sumo-dev)
-- Send us patches (bug fixes as well as extensions) either to the same list or as pull requests at <https://github.com/eclipse/sumo> (also see next question).
-- Report bugs (crashes, surprising behavior) or invalid documentation at [sumo-user](https://accounts.eclipse.org/mailing-list/sumo-user) or at <https://github.com/eclipse/sumo/issues>
-- The main development team at the [DLR](http://sumo.dlr.de) is always looking for project partners. [Contact us](Contact.md) to discuss your proposals.
-- Make your SUMO simulation scenarios publicly available
-- [Cite us](Publications.md) in your publications and tell other people about SUMO.
-- Answer questions on the [sumo-user mailing list](Contact.md) whenever you know the answer
-- Contribute to this wiki ([contact us](Contact.md), so we can give you editing rights)
-- Create a video tutorial and tell us about it
-- Join us at the annual [SUMO User Conference](https://eclipse.org/sumo/conference/)
+- 如果你做了給 SUMO 的擴充套件，你可以[寄信給我們](https://accounts.eclipse.org/mailing-list/sumo-dev)讓我們知道。
+- 你也可以把擴充套件（或修補程式等）透過 [GitHub](https://github.com/eclipse/sumo) 的 pull 要求發給我們。
+- 如果要回報錯誤（當機、意外的行為）或是無效的說明文件，請到 [sumo-user](https://accounts.eclipse.org/mailing-list/sumo-user) 或是 <https://github.com/eclipse/sumo/issues>。
+- 在[德國航空太空中心 (DLR)](http://sumo.dlr.de) 的開發團隊們也很盼望 SUMO 的開發夥伴。 有興趣嗎？[跟我們聊聊](Contact.md)你的計劃吧。
+- 公開你的 SUMO 場景範本。
+- 在你的著作或出版品上[標註](Publications.md)我們，也可以跟你的朋友們分享 SUMO 喔！
+- 也可以幫我們回答在 [sumo-user mailing list](Contact.md) 上的問題。
+- 對這個 wiki 做出貢獻。[與我們聯絡](Contact.md)，這樣我們就可以給你編輯權限。
+- 錄教學影片，然後跟我們宣傳你的傑作。
+- 參加 [SUMO 年會](https://eclipse.org/sumo/conference/)！
 
-### How do code contributions work?
+### 如何貢獻原始碼？
 
-  We need to make sure that you have the necessary rights on the code and that you agree that your contribution is put under the Eclipse Public License v2. The easiest way to do achieve this is
+  我們必須確定你對原始碼有足夠的權限，且你同意你的貢獻可基於 Eclipse 公開授權第二版釋出。 這裡有個很簡單的實踐方法：
 
 - Create a GitHub account
 - Configure the git client on your computer to use the email address that you used when registering for your account:
