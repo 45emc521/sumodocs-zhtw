@@ -26,8 +26,6 @@ theme:
     help: 191     # ?
     search: 83    # s
     edit: 69      # e
-  font:
-    text: Overpass
 
 plugins:
   - git-revision-date:
@@ -82,6 +80,3 @@ extra:
     Source: 'https://github.com/eclipse/sumo/blob/main/'
     SUMO: '***&lt;SUMO_HOME&gt;***'
     SUMOUSERConference: '[SUMO User Conference](https://eclipse.org/sumo/conference)'
-
-extra_css:
-  - /docs/stylesheets/extra.css
