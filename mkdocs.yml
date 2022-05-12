@@ -26,6 +26,8 @@ theme:
     help: 191     # ?
     search: 83    # s
     edit: 69      # e
+  font:
+    text: Overpass
 
 plugins:
   - git-revision-date:
