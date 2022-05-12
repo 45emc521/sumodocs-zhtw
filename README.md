@@ -59,7 +59,7 @@ mkdocs build
 
 If you are reading on (https://sumo.dlr.de/docs), you can click on the "Edit on GitHub" button in the top right corner of every page, or just simply press the `e` key on your keyboard.
 
-在編輯中文版或原文版文件前，強烈建議您先閱讀 [編輯文件教學](https://sumo.dlr.de/docs/Editing_Articles.html)，將可讓您快速上手並了解如何編輯說明文件。
+在編輯中文版或原文版文件前，強烈建議您先閱讀[編輯文件教學](https://sumo.dlr.de/docs/Editing_Articles.html)，將可讓您快速上手並了解如何編輯說明文件。
 
 亦歡迎您針對文件的錯誤或錯誤給予建議。如是中文版，請到 [GitHub 的 issue 頁面](https://github.com/45EMC521/sumodocs-zhtw/issues)提出建議。
 
