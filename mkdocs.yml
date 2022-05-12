@@ -82,4 +82,4 @@ extra:
     SUMOUSERConference: '[SUMO User Conference](https://eclipse.org/sumo/conference)'
 
 extra_css:
-  - stylesheets/extra.css
+  - /docs/stylesheets/extra.css

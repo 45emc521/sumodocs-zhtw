@@ -24,7 +24,7 @@
 --hljs-comment-color: #998;
 --hljs-symbol-color:  #990073;
 --hljs-addition-bg: #dfd;
---font-family: "Overpass", Noto Sans TC;
+--md-text-font: "Overpass", Noto Sans TC;
 }
 
 [data-theme="dark"] {
