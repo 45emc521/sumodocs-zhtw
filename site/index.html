@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:image" content="images/image-facebook.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1080">
+        <meta property="og:image:height" content="1080">
+
+        <meta name="description" content="SUMO 說明文件正體中文版">
+        
+        <link rel="canonical" href="https://sumodocs-zhtw.emc521.tw/index.html">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <title>SUMO 說明文件｜SUMO Documentation (Chinese Traditional)</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+
+      <script>
+        // DARK MODE
+        function detectColorScheme(){
+          var theme="light";
+
+          if(localStorage.getItem("sumo-docs-theme")){
+              if(localStorage.getItem("sumo-docs-theme") == "dark"){
+                  var theme = "dark";
+              }
+          } else if(!window.matchMedia) {
+              return false;
+          } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              var theme = "dark";
+          }
+
+          if (theme=="dark") {
+              document.documentElement.setAttribute("data-theme", "dark");
+          }
+        }
+        detectColorScheme();
+      </script>
+
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary text-center">
+            <div class="container-fluid">
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="index.html" class="nav-link">說明文件首頁</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="Tutorials/index.html" class="nav-link">教學</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="FAQ.html" class="nav-link">常見問題</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="Downloads.html" class="nav-link">下載 SUMO</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="Publications.html" class="nav-link">出版品</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="Developer/index.html" class="nav-link">開發人員</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="ChangeLog.html" class="nav-link">版本紀錄</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://eclipse.org/sumo/contact/" class="nav-link">聯絡我們</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i>搜尋原文內容
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/index.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 編輯中文文件</a>
+                            </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            More <i class="fa fa-chevron-circle-down"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item no-arrow-link" href="https://github.com/45EMC521/sumodocs-zhtw/issues">回報文件錯誤／翻譯錯誤／提供意見</a>
+                            <a class="dropdown-item" href="Editing_Articles.html">有興趣編輯文章嗎？</a>
+                            <a class="dropdown-item" href="https://github.com/45EMC521/sumodocs-zhtw/commits/">文件更新紀錄</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
+                            <a class="dropdown-item no-arrow-link" href="https://github.com/45EMC521/sumodocs-zhtw/archive/refs/heads/main.zip">下載整份文件（正體中文）</a>
+                            <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
+                              <input type="checkbox" id="checkbox_theme">
+                          </label></span>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-3">
+                  <div class="text-center"><a href="index.html" style="display: inline-block; margin-top: 5px;"><img src="images/sumo-logo.png" class="sumoLogo" alt="SUMO Logo" width="120px"></a></div>
+                  
+<div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary toc-scroll toc">
+        <ul class="nav flex-column bs-sidenav">
+            <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
+            <li class="nav-item main"><a href="#_1">簡介</a></li>
+            <li class="nav-item main"><a href="#_2">基本使用</a></li>
+            <li class="nav-item main"><a href="#_3">建立路網</a></li>
+            <li class="nav-item main"><a href="#_4">需求模型</a></li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_5" class="nav-link">• 由資料產生需求</a>
+                </li>
+            <li class="nav-item main"><a href="#_6">模擬</a></li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_7" class="nav-link">• 輸出</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#traci" class="nav-link">• TraCI（即時模擬路網互動）</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_8" class="nav-link">• 交通控制設施</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_9" class="nav-link">• 交通模式</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_10" class="nav-link">• 其他功能</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_11" class="nav-link">• 模型細節</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#_12" class="nav-link">• 常見問題</a>
+                </li>
+            <li class="nav-item main"><a href="#_13">其他工具</a></li>
+            <li class="nav-item main"><a href="#_14">理論</a></li>
+            <li class="nav-item main"><a href="#_15">程式操作手冊</a></li>
+            <li class="nav-item main"><a href="#_16">軟體散布</a></li>
+            <li class="nav-item main"><a href="#_17">附錄</a></li>
+        </ul>
+    </div>
+
+    <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
+        <p>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</p>
+        <p><i>SUMO 說明文件正體中文版是基於 SUMO Documentation 原文版於 2022/04/01 快取所翻譯的。如要閱讀最新的文件內容，請至 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 原文版了解詳情。</i></p>
+        </div>
+
+</div>
+                  <!-- <!-- <a href="Downloads.html" style="display: inline-block; margin-top: 20px; margin-bottom:10px;"><img src="images/release-note.png" alt="SUMO 1.5.0 is here!" style="width: 100%; border-radius: 20px; pointer-events: none;"></a>--> -->
+                </div>
+                <div class="col-md-9 main-area" role="main">
+                  
+                  
+
+<p><hTitles >SUMO 說明文件 (SUMO User Documentation)<hr style="border: 0.5px solid #338033;"></hTitles></p>
+<div class="admonition note">
+<p class="admonition-title">請先看這裡！</p>
+<p>本份文件是 SUMO Documentation 於 2022/04/01 版本的快取，旨在將 SUMO Documentation 翻譯成正體中文。如果需要最新的說明文件，歡迎造訪 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 的官方網站。</p>
+</div>
+<p>"<strong>S</strong>imulation of <strong>U</strong>rban <strong>MO</strong>bility (SUMO)" 是一個開放原始碼、微觀車流與持續性的交通模擬套件，旨在支援大型的路網模擬。本軟體可對包括行人或多重情境下進行綜合模擬。</p>
+<p>本軟體主要是由<a href="https://www.dlr.de">德國航空太空中心 (<strong>D</strong>eutsches Zentrum für <strong>L</strong>uft- und <strong>R</strong>aumfahrt e.V.)</a> 內的<a href="https://www.dlr.de/ts">運輸系統研究所</a>開發。SUMO 的授權條款為 <a href="https://eclipse.org/legal/epl-v20.html">EPL 2.0</a>。The source code may also be made available under the following Secondary
+Licenses when the conditions for such availability set forth in the EPL 2.0 are satisfied: <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html">GPL2 or later</a>.</p>
+<p>歡迎使用<a href="Contact.html">聯絡我們頁面</a>來分享你使用 SUMO 的結果及詢問問題；針對某些常見問題的答案，或許你可以在<a href="FAQ.html">常見問題頁面</a>中得到一些幫助。</p>
+<p>如果你使用 SUMO 進行車流模擬，你可以在<a href="Publications.html">出版品</a>這一頁中和我們分享。</p>
+<div class="admonition note">
+<p class="admonition-title">關於引用</p>
+<p>如果你需要引用 SUMO，請參考我們目前的出版格式：<a href="https://elib.dlr.de/127994/">"Microscopic Traffic Simulation using SUMO"</a>; Pablo Alvarez Lopez, Michael Behrisch, Laura Bieker-Walz, Jakob Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes Rummel, Peter Wagner, and Evamarie Wießner. IEEE Intelligent Transportation Systems Conference (ITSC), 2018.</p>
+</div>
+<p>你可以自由修改 SUMO 使用者文件；要修改特定頁面，請點選位在網頁右上角的「在 GitHub 上編輯中文版」按鈕，並在修改完後提出 pull 要求。這裡有份關於<a href="Editing_Articles.html">編輯文章</a>的教學頁面。如有需要，你也可以在自己的電腦上<a href="Developer/Documentation_Build.html">建置 (Build)</a> 這份文件，也可以<a href="https://sumo.dlr.de/sumo_documentation.zip">下載</a>一份副本到你的電腦中。如果你要修改原文版本，請到 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 了解更多資訊。</p>
+<p>SUMO Documentation 會隨著 SUMO 的版本迭代而隨時更新。特定 SUMO 版本的說明文件會隨著你下載的 SUMO 版本一起提供。請到 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/docs/userdoc/index.html 查看該對應該 SUMO 版本的說明文件。</p>
+<h1 id="_1">簡介<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="SUMO_at_a_Glance.html">SUMO 模擬軟體概觀</a></li>
+</ul>
+<h1 id="_2">基本使用<a class="headerlink" href="#_2" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="Basics/Notation.html">這份文件的一些表示方式</a></li>
+<li><a href="Basics/Basic_Computer_Skills.html">必須要會的基礎電腦技能</a></li>
+<li><a href="Installing/index.html">安裝 SUMO</a></li>
+<li><a href="Basics/Using_the_Command_Line_Applications.html">使用 SUMO 命令列程式 (CLI)</a></li>
+<li><a href="Tutorials/index.html">教學</a></li>
+<li><a href="XMLValidation.html">驗證 XML 輸入</a></li>
+</ul>
+<h1 id="_3">建立路網<a class="headerlink" href="#_3" title="Permanent link">#</a></h1>
+<ul>
+<li>關於 <a href="Networks/SUMO_Road_Networks.html">SUMO 路網</a>的簡要介紹</li>
+<li><a href="Networks/Abstract_Network_Generation.html">抽象網路生成</a></li>
+<li>以 <a href="netconvert.html">netconvert</a> 來匯入路網<ul>
+<li><a href="Networks/PlainXML.html">用 XML 自定義路網</a></li>
+<li><a href="Networks/Import.html">匯入非 SUMO 的路網</a><ul>
+<li><a href="Networks/Import/OpenStreetMap.html">從 OpenStreetMap</a><ul>
+<li><a href="Networks/Import/OpenStreetMap.html#3-click_scenario_generation">三步驟路網生成器</a></li>
+</ul>
+</li>
+<li><a href="Networks/Import/VISUM.html">從 VISUM</a></li>
+<li><a href="Networks/Import/Vissim.html">從 Vissim</a></li>
+<li><a href="Networks/Import/OpenDRIVE.html">從 OpenDRIVE</a></li>
+<li><a href="Networks/Import/MATsim.html">從 MATsim</a></li>
+<li><a href="Networks/Import/ArcView.html">從 ArcView (shapefiles)</a></li>
+<li><a href="Networks/Import/DlrNavteq.html">從 DlrNavTeq</a></li>
+<li><a href="Networks/Import/RoboCup.html">從 Robocup Simulation League</a></li>
+</ul>
+</li>
+<li><a href="Networks/Import/SUMO_Road_Networks.html">匯入 SUMO 路網</a></li>
+<li><a href="Simulation/Motorways.html#building_a_network_for_motorway_simulation">建立高速公路模擬路網</a></li>
+<li><a href="Simulation/Pedestrians.html#building_a_network_for_pedestrian_simulation">建立行人模擬路網</a></li>
+<li><a href="Networks/Further_Options.html">更多 netconvert 的設定</a></li>
+<li><a href="Networks/Further_Outputs.html">更多輸出選項</a></li>
+</ul>
+</li>
+<li><a href="Netedit/index.html">以 netedit 建立與修改路網</a></li>
+<li><a href="Networks/Elevation.html">納入高度資料</a></li>
+<li><a href="Geo-Coordinates.html">地理座標資料</a></li>
+</ul>
+<h1 id="_4">需求模型<a class="headerlink" href="#_4" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">SUMO 需求模型的介紹</a></li>
+<li><a href="Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html">車輛、車種及路徑 (routes) 的定義</a></li>
+<li><a href="Netedit/elementsDemand.html">以 netedit 定義需求</a></li>
+<li><a href="Simulation/Public_Transport.html">公共運輸模擬</a></li>
+<li><a href="Specification/Persons.html">個人與旅次鏈模擬</a></li>
+<li><a href="Specification/Logistics.html">物流 (Logistics) 模擬</a></li>
+<li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">最短或最佳化路徑</a></li>
+<li><a href="IntermodalRouting.html">多運具聯運（複合運輸）路徑</a></li>
+<li><a href="Demand/Automatic_Routing.html">模擬中的路徑</a></li>
+<li><a href="Demand/Dynamic_User_Assignment.html">運算多使用者指派</a></li>
+<li><a href="Simulation/Pedestrians.html#generating_pedestrian_demand">建立行人交通需求</a></li>
+<li><a href="Tools/Misc.html#createvehtypedistributionspy">建立車種分佈並對車隊建立模擬</a></li>
+</ul>
+<h3 id="_5">由資料產生需求<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="Demand/Importing_O/D_Matrices.html">匯入 O/D 矩陣</a><ul>
+<li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">匯入 VISUM 需求的其他方式</a></li>
+<li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">匯入 Vissim 需求的其他方式</a></li>
+</ul>
+</li>
+<li><a href="Demand/Routes_from_Observation_Points.html">Routes from Counting Data (road counts, turn counts)</a></li>
+<li><a href="Demand/Routing_by_Turn_Probabilities.html">由轉向比推算路徑</a></li>
+<li><a href="Demand/Activity-based_Demand_Generation.html">以活動為基礎的需求產生</a></li>
+<li><a href="Tools/Trip.html#randomtripspy">隨機旅次</a></li>
+<li><a href="Tools/Import/OSM.html#osmwebwizardpy">Open Street Map 工具</a></li>
+<li><a href="Tools/Import/GTFS.html">GTFS 資料</a></li>
+</ul>
+<h1 id="_6">模擬<a class="headerlink" href="#_6" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="Simulation/Basic_Definition.html">基本定義</a></li>
+<li><a href="Simulation/SaveAndLoad.html">載入或儲存模擬狀態</a></li>
+</ul>
+<h2 id="_7">輸出<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="Simulation/Output/index.html">模擬輸出概觀</a></li>
+</ul>
+<h2 id="traci">TraCI（即時模擬路網互動）<a class="headerlink" href="#traci" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="TraCI.html">TraCI 概觀</a> - The <strong>Tra</strong>ffic <strong>C</strong>ontrol <strong>I</strong>nterface</li>
+<li><a href="Libsumo.html">Libsumo</a> - 將 sumo 作為資源庫使用</li>
+</ul>
+<h2 id="_8">交通控制設施<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="Simulation/Traffic_Lights.html">交通號誌</a></li>
+<li><a href="Simulation/Public_Transport.html">公共運輸</a></li>
+<li><a href="Simulation/Variable_Speed_Signs.html">速限可變標誌</a></li>
+<li><a href="Simulation/Rerouter.html">Rerouter／替代道路標誌</a></li>
+<li><a href="Simulation/Vaporizer.html">Vaporizer</a>（已被棄用，請改用 Calibrator）</li>
+<li><a href="Simulation/Calibrator.html">車流、速度與車種的動態校準</a></li>
+<li><a href="Simulation/ParkingArea.html">停車區域</a></li>
+<li><a href="Simulation/Turnarounds.html">迴轉</a></li>
+</ul>
+<h2 id="_9">交通模式<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="Simulation/Pedestrians.html">行人模擬</a></li>
+<li><a href="Simulation/Bicycles.html">自行車模擬</a></li>
+<li><a href="Simulation/Railways.html">鐵道模擬</a></li>
+<li><a href="Simulation/Waterways.html">水路模擬</a></li>
+</ul>
+<h2 id="_10">其他功能<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="Models/Emissions.html">（污染物）排放</a></li>
+<li><a href="Models/Electric.html">電力車輛</a></li>
+<li><a href="Models/ElectricHybrid.html">混合動力車輛、高架橋及變電站</a></li>
+<li><a href="Specification/Logistics.html">物流</a></li>
+<li><a href="Simulation/GenericParameters.html">基礎參數</a></li>
+<li><a href="Simulation/Shapes.html">型態視覺化</a></li>
+<li><a href="Simulation/Bluetooth.html">無線設備偵測</a></li>
+<li><a href="Simulation/Emergency.html">緊急車輛</a></li>
+<li><a href="Simpla.html">簡易自動駕駛車隊</a></li>
+<li><a href="Simulation/Taxi.html">需求反應式運輸 (DRT)／計程車</a></li>
+<li><a href="Simulation/GLOSA.html">綠燈最佳化速度顧問 (GLOSA)</a></li>
+</ul>
+<h2 id="_11">模型細節<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="Simulation/VehicleSpeed.html">車輛速度</a></li>
+<li><a href="Simulation/VehicleInsertion.html">車輛進入</a></li>
+<li><a href="Simulation/VehiclePermissions.html">車輛權限（進入限制）</a></li>
+<li><a href="Simulation/RoadCapacity.html">道路容量</a></li>
+<li><a href="Simulation/Intersections.html">路口動態</a></li>
+<li><a href="Simulation/Randomness.html">隨機</a></li>
+<li><a href="Simulation/Routing.html">路徑和重構路徑</a></li>
+<li><a href="Simulation/SublaneModel.html">子車道模型</a></li>
+<li><a href="Simulation/OppositeDirectionDriving.html">對向（逆向）行駛</a></li>
+<li><a href="Simulation/Safety.html">安全</a></li>
+<li><a href="Simulation/Meso.html">中觀模型</a></li>
+<li><a href="Simulation/Distances.html">長度與距離</a></li>
+</ul>
+<h2 id="_12">常見問題<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="Simulation/Why_Vehicles_are_teleporting.html">為什麼車輛會瞬間消失或出現？</a></li>
+<li><a href="FAQ.html#the_simulation_has_lots_of_jamsdeadlocks_what_can_i_do">未預期的塞車</a></li>
+<li><a href="Simulation/Turnarounds.html">迴轉太多次</a></li>
+<li><a href="FAQ.html#why_do_the_vehicles_perform_unexpected_lane-changing_maneuvers">未預期的變換車道行為？</a></li>
+<li><a href="FAQ.html#how_do_i_get_high_flowsvehicle_densities">如何提高車流量？</a></li>
+</ul>
+<h1 id="_13">其他工具<a class="headerlink" href="#_13" title="Permanent link">#</a></h1>
+<p>除了 SUMO 套件的<a href="SUMO_at_a_Glance.html#included_applications">主要程式（包括 sumo, sumo-gui, netedit, netconvert 等）</a>外，SUMO 套件尚有 150 多個小應用程式。他們多半與交通路網分析、需求生成、修改需求以輸出分析有關，多數的小程式以 <a href="https://www.python.org/">python</a> 撰寫而成。這些小程式都可以在 <strong><em>&lt;SUMO_HOME&gt;</em></strong>/tools 資料夾裡找到。</p>
+<p>要查看這些小程式的清單，請參見：</p>
+<ul>
+<li><a href="Tools/index.html">工具索引</a></li>
+</ul>
+<p>以下的連結是一些好用（或重要）的小程式：</p>
+<ul>
+<li><a href="Tools/Import/OSM.html#osmwebwizardpy">osmWebWizard</a>：可以使用瀏覽器在極短的時間內，以真實世界的地圖生成路網配置。</li>
+<li><a href="TraCI/Interfacing_TraCI_from_Python.html">Interfacing TraCI from Python</a>：用 Python 存取正在進行的 SUMO 模擬。</li>
+<li><a href="Tools/Sumolib.html">sumolib</a>：用來與 SUMO 路網和 sumo XML 檔案一同運作的 Python 模組。</li>
+<li><a href="Tools/Xml.html">Xml Tools</a>：將 SUMO 模擬結果與 CSV／試算表相互交換的小工具。</li>
+<li><a href="Tools/TraceExporter.html">traceExporter.py</a>：輸出移動軌跡到不同的「軌跡檔案」格式。</li>
+<li><a href="Tools/Net.html#netdiffpy">netdiff.py</a>：比較兩個路網檔案的不同處。</li>
+<li><a href="Tools/Visualization.html">Visualization Tools</a>：將一部分的模擬輸出結果以圖形及友善的形式視覺化。</li>
+</ul>
+<h1 id="_14">理論<a class="headerlink" href="#_14" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="Theory/Traffic_Simulations.html">常規的交通模擬</a></li>
+</ul>
+<h1 id="_15">程式操作手冊<a class="headerlink" href="#_15" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="sumo.html">sumo</a></li>
+<li><a href="sumo-gui.html">sumo-gui</a></li>
+<li><a href="netconvert.html">netconvert</a></li>
+<li><a href="Netedit/index.html">netedit</a></li>
+<li><a href="netgenerate.html">netgenerate</a></li>
+<li><a href="od2trips.html">od2trips</a></li>
+<li><a href="duarouter.html">duarouter</a></li>
+<li><a href="jtrrouter.html">jtrrouter</a></li>
+<li><a href="dfrouter.html">dfrouter</a></li>
+<li><a href="marouter.html">marouter</a></li>
+<li><a href="polyconvert.html">polyconvert</a></li>
+<li><a href="activitygen.html">activitygen</a></li>
+<li><a href="Tools/Emissions.html#emissionsmap">emissionsMap</a></li>
+<li><a href="Tools/Emissions.html#emissionsdrivingcycle">emissionsDrivingCycle</a></li>
+</ul>
+<h1 id="_16">軟體散布<a class="headerlink" href="#_16" title="Permanent link">#</a></h1>
+<p>為了讓 SUMO 變得更好用，許多人延伸了 SUMO 的功能或為 SUMO 增加了許多小工具。儘管他們隨著 SUMO 的發行版本一同散布，但並非所有小工具都是 SUMO 核心的一部分。</p>
+<ul>
+<li><a href="Contributed/index.html#included_in_the_distribution">發行版中的套件</a></li>
+<li><a href="Contributed/index.html#external_extensions">外部套件</a></li>
+</ul>
+<h1 id="_17">附錄<a class="headerlink" href="#_17" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="ChangeLog.html">版本更新歷程</a></li>
+<li><a href="Other/Glossary.html">名詞解釋</a></li>
+<li><a href="FAQ.html">常見問題</a></li>
+<li><a href="Other/File_Extensions.html">已知檔案的副檔名</a></li>
+</ul>
+                </div>
+          </div>
+          <button onclick="goTopFunction()" id="goToTop" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+        </div>
+
+        <footer class="col-md-12">
+          
+            <br><small><i>本頁面最近更新日期：09 April 2022</i></small>
+          
+          <hr>
+            <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>
+          <p>在這些地方追蹤我們：<a class="no-arrow-link" href="https://www.twitter.com/eclipsesumo/"><i class="fa fa-twitter"></i></a> <a class="no-arrow-link" href="https://www.facebook.com/simulationofurbanmobility/"><i class="fa fa-facebook-square"></i></a> <a class="no-arrow-link" href="https://www.instagram.com/eclipse.sumo/"><i class="fa fa-instagram"></i></a>
+          ｜本說明文件由 <a href="https://www.mkdocs.org/">MkDocs</a> 提供支援。</p>
+        </footer>
+
+      <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">搜尋</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">關閉</span></button>
+            </div>
+            <div class="modal-body" style="color: #495057 !important;">
+                <p>Enter your search terms:</p>
+                <script async src="https://cse.google.com/cse.js?cx=004302551366764109984:1kpgtzrm6kv"></script>
+                <div class="gcse-search"></div>
+            </div>
+        </div>
+    </div>
+</div>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("goToTop").style.display = "block";
+          } else {
+            document.getElementById("goToTop").style.display = "none";
+          }
+        }
+    
+        function goTopFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        var base_url = ".",
+            shortcuts = {"edit": 69, "help": 191, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+
+        <script>
+          const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
+  
+          function switchTheme(e) {
+              if (e.target.checked) {
+                  localStorage.setItem('sumo-docs-theme', 'dark');
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                  toggleSwitch.checked = true;
+              } else {
+                  localStorage.setItem('sumo-docs-theme', 'light');
+                  document.documentElement.setAttribute('data-theme', 'light');
+                  toggleSwitch.checked = false;
+              }    
+          }
+  
+          toggleSwitch.addEventListener('change', switchTheme, false);
+  
+          if (document.documentElement.getAttribute("data-theme") == "dark"){
+              toggleSwitch.checked = true;
+          }
+          </script>
+
+      <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Key</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody style="color: #495057 !important;">
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>開啟快速鍵列表</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>搜尋文件</td>
+                  </tr>
+                  <tr>
+                    <td class="edit shortcut"><kbd>e</kbd></td>
+                    <td>在 GitHub 上編輯本頁</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.3.0
+Build Date UTC : 2022-05-11 08:44:54.194552+00:00
+-->
