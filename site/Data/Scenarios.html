@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:image" content="../images/image-facebook.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1080">
+        <meta property="og:image:height" content="1080">
+
+        
+        
+        <link rel="canonical" href="https://sumodocs-zhtw.emc521.tw/Data/Scenarios.html">
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <title>Scenarios｜SUMO 說明文件</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">   
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+
+      <script>
+        // DARK MODE
+        function detectColorScheme(){
+          var theme="light";
+
+          if(localStorage.getItem("sumo-docs-theme")){
+              if(localStorage.getItem("sumo-docs-theme") == "dark"){
+                  var theme = "dark";
+              }
+          } else if(!window.matchMedia) {
+              return false;
+          } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              var theme = "dark";
+          }
+
+          if (theme=="dark") {
+              document.documentElement.setAttribute("data-theme", "dark");
+          }
+        }
+        detectColorScheme();
+      </script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary text-center">
+            <div class="container-fluid">
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../index.html" class="nav-link">說明文件首頁</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tutorials/index.html" class="nav-link">教學</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../FAQ.html" class="nav-link">常見問題</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Downloads.html" class="nav-link">下載 SUMO</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Publications.html" class="nav-link">出版品</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Developer/index.html" class="nav-link">開發人員</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../ChangeLog.html" class="nav-link">版本紀錄</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://eclipse.org/sumo/contact/" class="nav-link">聯絡我們</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i>搜尋原文內容
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/Data/Scenarios.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 編輯中文文件</a>
+                            </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            More <i class="fa fa-chevron-circle-down"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item no-arrow-link" href="https://github.com/45EMC521/sumodocs-zhtw/issues">回報文件錯誤／翻譯錯誤／提供意見</a>
+                            <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
+                            <a class="dropdown-item" href="https://github.com/45EMC521/sumodocs-zhtw/commits/">文件更新紀錄</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
+                            <a class="dropdown-item no-arrow-link" href="https://github.com/45EMC521/sumodocs-zhtw/archive/refs/heads/main.zip">下載整份文件（正體中文）</a>
+                            <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
+                              <input type="checkbox" id="checkbox_theme">
+                          </label></span>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-3">
+                  <div class="text-center"><a href="../index.html" style="display: inline-block; margin-top: 5px;"><img src="../images/sumo-logo.png" class="sumoLogo" alt="SUMO Logo" width="120px"></a></div>
+                  
+<div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary toc-scroll toc">
+        <ul class="nav flex-column bs-sidenav">
+            <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
+            <li class="nav-item main"><a href="#we_need_your_help">We need your Help!</a></li>
+            <li class="nav-item main"><a href="#bologna">Bologna</a></li>
+            <li class="nav-item main"><a href="#brunswick">Brunswick</a></li>
+            <li class="nav-item main"><a href="#dublin_-_irish_motorway_national_road_and_city_centre">Dublin - Irish Motorway, National road and city centre</a></li>
+            <li class="nav-item main"><a href="#ingolstadt_traffic_scenario">Ingolstadt traffic scenario</a></li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#intas" class="nav-link">• InTAS</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#sumo_ingolstadt" class="nav-link">• SUMO Ingolstadt</a>
+                </li>
+            <li class="nav-item main"><a href="#luxembourg_sumo_traffic_lust">Luxembourg SUMO Traffic (LuST)</a></li>
+            <li class="nav-item main"><a href="#monaco_sumo_traffic_most">Monaco SUMO Traffic (MoST)</a></li>
+            <li class="nav-item main"><a href="#stuttgart_open_motorway_project_stomp">Stuttgart Open Motorway Project (STOMP)</a></li>
+            <li class="nav-item main"><a href="#turin_sumo_traffic_tust">Turin SUMO Traffic (TuST)</a></li>
+            <li class="nav-item main"><a href="#tapascologne">TAPASCologne</a></li>
+            <li class="nav-item main"><a href="#tavf-hamburg">TAVF-Hamburg</a></li>
+            <li class="nav-item main"><a href="#further_real-world_scenarios">Further real-world scenarios</a></li>
+            <li class="nav-item main"><a href="#synthetic_scenarios">Synthetic scenarios</a></li>
+            <li class="nav-item main"><a href="#wildau">Wildau</a></li>
+            <li class="nav-item main"><a href="#test_cases">Test cases</a></li>
+        </ul>
+    </div>
+
+    <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
+        <p><strong>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</strong></p>
+        <p>SUMO 說明文件正體中文版是基於 SUMO Documentation 原文版於 2022/04/01 快取所翻譯的。如要閱讀最新的文件內容，請至 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 原文版了解詳情。</p>
+        </div>
+
+</div>
+                  <!--  -->
+                </div>
+                <div class="col-md-9 main-area" role="main">
+                   <!-- page.is_homepage seems to be broken in Mkdocs > 1.1.0 -->
+                  <ul class="breadcrumbs">
+    <script>
+        var pagePath = "/Data/Scenarios.html";
+        var splitUrl = pagePath.split("/");
+        splitUrl.pop();
+        splitUrl.shift();
+        if (splitUrl[0] == 'docs') splitUrl.shift();
+        var homeLink = "../index.html";
+        document.write('<li class="breadcrumb-item"><a href="' + homeLink + '"><i class="fa fa-home"></i></a></li>');
+        var prev = '';
+        
+        var dirLink = splitUrl.map(function (el) {
+        el = prev + el; prev = el + '/'; return el;
+        });
+
+        for (i = 0; i < splitUrl.length; i++) {
+            document.write("<li class=\"breadcrumb-item\"><a class=\"no-arrow-link\" href=\"../" + dirLink[i] + "\">" + splitUrl[i] + "</a></li>");
+        }
+    </script>
+    <li class="breadcrumb-item active">Scenarios</li>
+</ul>
+                  <hTitles>Scenarios<hr style="border: 0.5px solid #338033; margin-top: 5px !important;"></hTitles>
+                  
+                  
+
+<h1 id="we_need_your_help">We need your Help!<a class="headerlink" href="#we_need_your_help" title="Permanent link">#</a></h1>
+<p>Building a scenario is a lot of work. If you have built a SUMO scenario
+you can share (under a sufficiently open license), please
+<a href="../Contact.html">contact us</a>.</p>
+<h1 id="bologna">Bologna<a class="headerlink" href="#bologna" title="Permanent link">#</a></h1>
+<p>A small-scale scenario based on the city of Bologna. The large
+roundabout can be found at 44.494554,11.314393. These scenarios were
+developed as part of the <a href="http://www.ict-itetris.eu">iTETRIS project</a>. A
+<a href="http://elib.dlr.de/89354">publication</a> on these scenarios was presented
+at <a href="https://sumo.dlr.de/docs/Publications.html#SUMO_2014">SUMO
+Conference 2014</a>: L.
+Bieker, D. Krajzewicz, A. Morra, C. Michelacci and F. Cartolano,
+"Traffic simulation for all: a real world traffic scenario from the city
+of Bologna", SUMO2014, p 19-26</p>
+<ul>
+<li><a href="https://github.com/DLR-TS/sumo-scenarios/tree/main/bologna/">Bologna Scenario on GitHub</a></li>
+<li>(Old release) <a href="http://sourceforge.net/projects/sumo/files/traffic_data/scenarios/Bologna_small">Download .zip files from SourceForge</a></li>
+</ul>
+<h1 id="brunswick">Brunswick<a class="headerlink" href="#brunswick" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="https://github.com/DLR-TS/sumo-scenarios/tree/main/brunswick">Brunswick Scenario on GitHub</a></li>
+</ul>
+<h1 id="dublin_-_irish_motorway_national_road_and_city_centre">Dublin - Irish Motorway, National road and city centre<a class="headerlink" href="#dublin_-_irish_motorway_national_road_and_city_centre" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="https://github.com/maxime-gueriau/ITSC2020_CAV_impact">Main Page</a></li>
+<li>Publication: Quantifying the impact of connected and autonomous vehicles on traffic efficiency and safety in mixed traffic" by Maxime Gueriau and Ivana Dusparic, presented at the The 23rd IEEE International Conference on Intelligent Transportation Systems (ITSC 2020)</li>
+</ul>
+<h1 id="ingolstadt_traffic_scenario">Ingolstadt traffic scenario<a class="headerlink" href="#ingolstadt_traffic_scenario" title="Permanent link">#</a></h1>
+<h2 id="intas">InTAS<a class="headerlink" href="#intas" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://github.com/silaslobo/InTAS">Main Page</a></li>
+<li><a href="https://www.youtube.com/watch?v=UgPeBxXzDHc">Presentation video</a></li>
+</ul>
+<h2 id="sumo_ingolstadt">SUMO Ingolstadt<a class="headerlink" href="#sumo_ingolstadt" title="Permanent link">#</a></h2>
+<p>Created in the SAVe:, SAVeNoW and KIVI research projects
+- <a href="https://github.com/TUM-VT/sumo_ingolstadt">Main Page</a></p>
+<h1 id="luxembourg_sumo_traffic_lust">Luxembourg SUMO Traffic (LuST)<a class="headerlink" href="#luxembourg_sumo_traffic_lust" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="https://github.com/lcodeca/LuSTScenario">Main Page</a></li>
+<li><a href="https://github.com/lcodeca/LuSTScenario/releases">Releases</a></li>
+<li><a href="https://github.com/lcodeca/LuSTScenario/blob/master/docs/LuSTDocumentation.md">Documentation</a></li>
+<li>Publication: Lara CODECA, Raphael FRANK, Thomas ENGEL. December 2015. Luxembourg SUMO Traffic (LuST) Scenario: 24 Hours of Mobility
+for Vehicular Networking Research in Proceedings of the 7th IEEE
+Vehicular Networking Conference (VNC15).</li>
+</ul>
+<h1 id="monaco_sumo_traffic_most">Monaco SUMO Traffic (MoST)<a class="headerlink" href="#monaco_sumo_traffic_most" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="https://github.com/lcodeca/MoSTScenario">Main Page</a></li>
+<li><a href="https://github.com/lcodeca/MoSTScenario/releases">Releases</a></li>
+<li>Publication: L. Codeca, J. Härri, "Towards Multimodal Mobility
+Simulation of C-ITS: The Monaco SUMO Traffic Scenario" VNC 2017,
+IEEE Vehicular Networking Conference November 27-29, 2017, Torino,
+Italy.</li>
+</ul>
+<h1 id="stuttgart_open_motorway_project_stomp">Stuttgart Open Motorway Project (STOMP)<a class="headerlink" href="#stuttgart_open_motorway_project_stomp" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="https://github.com/boschresearch/stuttgart-sumo-traffic-scenario">Main Page</a></li>
+<li>Publication: David Förster, Hans Löhr, Anne Grätz, Jonathan Petit, and Frank Kargl, "An Evaluation of Pseudonym Changes for Vehicular Networks in Large-scale, Realistic Traffic Scenarios", IEEE Transactions on Intelligent Transportation Systems 19.10 (2017): 3400-3405, doi: <a href="https://doi.org/10.1109/TITS.2017.2775519">10.1109/TITS.2017.2775519</a>.</li>
+</ul>
+<h1 id="turin_sumo_traffic_tust">Turin SUMO Traffic (TuST)<a class="headerlink" href="#turin_sumo_traffic_tust" title="Permanent link">#</a></h1>
+<p>A large-scale mesoscopic traffic simulation of a 600-sqkm area around the Municipality of Turin.</p>
+<ul>
+<li><a href="https://github.com/marcorapelli/TuSTScenario">Main Page</a></li>
+<li>Publications:<ul>
+<li>M. Rapelli, C. Casetti and G. Gagliardi, “Vehicular Traffic Simulation in the City of Turin from Raw Data” in IEEE Transactions on Mobile Computing, April 2021. DOI: 10.1109/TMC.2021.3075985 <a href="https://ieeexplore.ieee.org/document/9416842">pre-print</a></li>
+<li>M. Rapelli, C. Casetti and G. Gagliardi, "TuST: from Raw Data to Vehicular Traffic Simulation in Turin," 2019 IEEE/ACM 23rd International Symposium on Distributed Simulation and Real Time Applications (DS-RT), Cosenza, Italy, 2019, pp. 1-8, doi: 10.1109/DS-RT47707.2019.8958652. <a href="https://ieeexplore.ieee.org/document/8958652">pre-print</a></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It requires <a href="https://git-lfs.github.com/">git-lfs</a> to download</p>
+</div>
+<p><img alt="TuST.png" src="../images/TuST.gif" title="TuST" /></p>
+<h1 id="tapascologne">TAPASCologne<a class="headerlink" href="#tapascologne" title="Permanent link">#</a></h1>
+<p><img alt="ssnap_TapasCologne_0.1.gif" src="../images/Ssnap_TapasCologne_0.1.gif" title="TAPAS Cologne" /> <br />
+The "TAPAS Cologne" simulation scenario
+describes the traffic within the city of Cologne, Germany for a whole
+day. The original demand data stems from TAPAS, a system which computes
+mobility wishes for an area population generated based on information
+about travelling habits of Germans and on information about the
+infrastructure of the area they live in.</p>
+<p>More information about the system can be found within this <a href="http://elib.dlr.de/45058/02/SRL_81_-_Beitrag_Varschen.pdf">publication
+on TAPAS</a>.
+The original data was using a closed-source road network and was mapped
+onto one stemming from the <a href="http://www.openstreetmap.de/">OpenStreetMap
+project</a>.</p>
+<p>There is further information about
+<a href="Scenarios/TAPASCologne.html">TAPASCologne</a>.</p>
+<h1 id="tavf-hamburg">TAVF-Hamburg<a class="headerlink" href="#tavf-hamburg" title="Permanent link">#</a></h1>
+<p>A scenario from the <a href="https://tavf.hamburg/en/">TAVF</a> test track for automated and
+connected driving in Hamburg.</p>
+<ul>
+<li><a href="https://github.com/DLR-TS/sumo-scenarios/tree/main/TAVF-Hamburg">TAVF-Hamburg Scenario on GitHub</a></li>
+</ul>
+<h1 id="further_real-world_scenarios">Further real-world scenarios<a class="headerlink" href="#further_real-world_scenarios" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="http://academic.lucabedogni.it/the-bologna-ringway-dataset/">Bologna Ringway</a>.
+    Scenario built within the <a href="https://web.archive.org/web/20170716120720/http://www.colombo-fp7.eu/">COLOMBO R&amp;D
+    project</a>.</li>
+</ul>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This scenario is known to have lots of collisions due to unsafe traffic lights and some invalid junction definitions. It is also quite jammed.</p>
+</div>
+<h1 id="synthetic_scenarios">Synthetic scenarios<a class="headerlink" href="#synthetic_scenarios" title="Permanent link">#</a></h1>
+<p>Synthetic - or abstract - scenarios only resemble typical layouts of
+real-world junctions and arterials without mapping a very specific one.
+Some synthetic scenarios of the <a href="https://web.archive.org/web/20170716120720/http://www.colombo-fp7.eu/">COLOMBO R&amp;D
+project</a> are examples of the German guideline
+RiLSA. They are described in <a href="https://web.archive.org/web/20170808122505/http://elib.dlr.de/98046/1/COLOMBO_D1.1_ScenariosExtensions_v2.4.pdf">D1.1 "Scenario Specifications and Required
+Modifications to Simulation
+Tools"</a>(chapter
+4).</p>
+<ul>
+<li>Download: <a href="http://sourceforge.net/projects/sumo/files/traffic_data/scenarios/RiLSA">4 RiLSA *.zip files</a></li>
+</ul>
+<h1 id="wildau">Wildau<a class="headerlink" href="#wildau" title="Permanent link">#</a></h1>
+<p>This scenario can be followed as a tutorial - it showcases how routes can be generated within a network, using counting data.</p>
+<ul>
+<li><a href="https://github.com/DLR-TS/sumo-scenarios/tree/main/Wildau">Wildau Scenario on GitHub</a></li>
+</ul>
+<h1 id="test_cases">Test cases<a class="headerlink" href="#test_cases" title="Permanent link">#</a></h1>
+<p>SUMO comes with a large set of tests which are run at least once per day (and most are run on each repository commit).
+You can <a href="../Tutorials/index.html#using_examples_from_the_test_suite">extract them</a> and use them as basis for your own (small) scenarios.</p>
+                </div>
+          </div>
+          <button onclick="goTopFunction()" id="goToTop" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+        </div>
+
+        <footer class="col-md-12">
+          
+            <br><small><i>本頁面最近更新日期：02 April 2022</i></small>
+          
+          <hr>
+            <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>
+          <p>在這些地方追蹤我們：<a class="no-arrow-link" href="https://www.twitter.com/eclipsesumo/"><i class="fa fa-twitter"></i></a> <a class="no-arrow-link" href="https://www.facebook.com/simulationofurbanmobility/"><i class="fa fa-facebook-square"></i></a> <a class="no-arrow-link" href="https://www.instagram.com/eclipse.sumo/"><i class="fa fa-instagram"></i></a>
+          ｜本說明文件由 <a href="https://www.mkdocs.org/">MkDocs</a> 提供支援。</p>
+        </footer>
+
+      <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">搜尋</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">關閉</span></button>
+            </div>
+            <div class="modal-body" style="color: #495057 !important;">
+                <p>Enter your search terms:</p>
+                <script async src="https://cse.google.com/cse.js?cx=004302551366764109984:1kpgtzrm6kv"></script>
+                <div class="gcse-search"></div>
+            </div>
+        </div>
+    </div>
+</div>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("goToTop").style.display = "block";
+          } else {
+            document.getElementById("goToTop").style.display = "none";
+          }
+        }
+    
+        function goTopFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        var base_url = "..",
+            shortcuts = {"edit": 69, "help": 191, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+
+        <script>
+          const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
+  
+          function switchTheme(e) {
+              if (e.target.checked) {
+                  localStorage.setItem('sumo-docs-theme', 'dark');
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                  toggleSwitch.checked = true;
+              } else {
+                  localStorage.setItem('sumo-docs-theme', 'light');
+                  document.documentElement.setAttribute('data-theme', 'light');
+                  toggleSwitch.checked = false;
+              }    
+          }
+  
+          toggleSwitch.addEventListener('change', switchTheme, false);
+  
+          if (document.documentElement.getAttribute("data-theme") == "dark"){
+              toggleSwitch.checked = true;
+          }
+          </script>
+
+      <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Key</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody style="color: #495057 !important;">
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>開啟快速鍵列表</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>搜尋文件</td>
+                  </tr>
+                  <tr>
+                    <td class="edit shortcut"><kbd>e</kbd></td>
+                    <td>在 GitHub 上編輯本頁</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:image" content="../images/image-facebook.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1080">
+        <meta property="og:image:height" content="1080">
+
+        
+        
+        <link rel="canonical" href="https://sumodocs-zhtw.emc521.tw/Tutorials/TaxiService.html">
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <title>TaxiService｜SUMO 說明文件</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">   
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+
+      <script>
+        // DARK MODE
+        function detectColorScheme(){
+          var theme="light";
+
+          if(localStorage.getItem("sumo-docs-theme")){
+              if(localStorage.getItem("sumo-docs-theme") == "dark"){
+                  var theme = "dark";
+              }
+          } else if(!window.matchMedia) {
+              return false;
+          } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              var theme = "dark";
+          }
+
+          if (theme=="dark") {
+              document.documentElement.setAttribute("data-theme", "dark");
+          }
+        }
+        detectColorScheme();
+      </script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary text-center">
+            <div class="container-fluid">
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../index.html" class="nav-link">說明文件首頁</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="index.html" class="nav-link">教學</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../FAQ.html" class="nav-link">常見問題</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Downloads.html" class="nav-link">下載 SUMO</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Publications.html" class="nav-link">出版品</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Developer/index.html" class="nav-link">開發人員</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../ChangeLog.html" class="nav-link">版本紀錄</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://eclipse.org/sumo/contact/" class="nav-link">聯絡我們</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i>搜尋原文內容
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="edit" href="https://github.com/45EMC521/sumodocs-zhtw/edit/main/docs/Tutorials/TaxiService.md" class="nav-link"><i class="fa fa-github"></i>在 GitHub 編輯中文文件</a>
+                            </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            More <i class="fa fa-chevron-circle-down"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item no-arrow-link" href="https://github.com/45EMC521/sumodocs-zhtw/issues">回報文件錯誤／翻譯錯誤／提供意見</a>
+                            <a class="dropdown-item" href="../Editing_Articles.html">有興趣編輯文章嗎？</a>
+                            <a class="dropdown-item" href="https://github.com/45EMC521/sumodocs-zhtw/commits/">文件更新紀錄</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#mkdocs_keyboard_modal">快速鍵</a>
+                            <a class="dropdown-item no-arrow-link" href="https://sumo.dlr.de/sumo_documentation.zip">下載整份文件（原文版本）</a>
+                            <a class="dropdown-item no-arrow-link" href="https://github.com/45EMC521/sumodocs-zhtw/archive/refs/heads/main.zip">下載整份文件（正體中文）</a>
+                            <span class="dropdown-item" id="dark-mode-div">深色模式<label id="theme-switch" class="theme-switch" for="checkbox_theme">
+                              <input type="checkbox" id="checkbox_theme">
+                          </label></span>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-3">
+                  <div class="text-center"><a href="../index.html" style="display: inline-block; margin-top: 5px;"><img src="../images/sumo-logo.png" class="sumoLogo" alt="SUMO Logo" width="120px"></a></div>
+                  
+<div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary toc-scroll toc">
+        <ul class="nav flex-column bs-sidenav">
+            <p style="margin-top:5px; color:#777777;" class="text-center">Contents</p>
+            <li class="nav-item main"><a href="#introduction">Introduction</a></li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#useful_links" class="nav-link">• Useful links</a>
+                </li>
+            <li class="nav-item main"><a href="#taxiservice">TaxiService</a></li>
+            <li class="nav-item main"><a href="#part_1">Part 1</a></li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#demand_and_creation" class="nav-link">• Demand and creation</a>
+                </li>
+                <li class="nav-item" style="text-indent: 25px;">
+                    <a href="#net_creation" class="nav-link">&rarr; Net creation</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#demand" class="nav-link">• Demand</a>
+                </li>
+                <li class="nav-item" style="text-indent: 25px;">
+                    <a href="#creating_the_taxi_and_person" class="nav-link">&rarr; Creating the taxi and person</a>
+                </li>
+                <li class="nav-item" style="text-indent: 25px;">
+                    <a href="#dispatch_and_pickup" class="nav-link">&rarr; Dispatch and Pickup</a>
+                </li>
+            <li class="nav-item main"><a href="#part_2">Part 2</a></li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#reservations" class="nav-link">• Reservations</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#fleet_and_dispatch" class="nav-link">• Fleet and dispatch</a>
+                </li>
+                <li class="nav-item" style="text-indent: 5px;">
+                    <a href="#sumocfg" class="nav-link">• sumocfg</a>
+                </li>
+        </ul>
+    </div>
+
+    <div class="admonition conference" style="position: sticky; margin-top: 20px; margin-bottom:10px;">
+        <p><strong>歡迎您造訪 <a href="https://eclipse.org/sumo">eclipse.org/sumo</a>。</strong></p>
+        <p>SUMO 說明文件正體中文版是基於 SUMO Documentation 原文版於 2022/04/01 快取所翻譯的。如要閱讀最新的文件內容，請至 <a href="https://sumo.dlr.de/docs/">SUMO Documentation</a> 原文版了解詳情。</p>
+        </div>
+
+</div>
+                  <!--  -->
+                </div>
+                <div class="col-md-9 main-area" role="main">
+                   <!-- page.is_homepage seems to be broken in Mkdocs > 1.1.0 -->
+                  <ul class="breadcrumbs">
+    <script>
+        var pagePath = "/Tutorials/TaxiService.html";
+        var splitUrl = pagePath.split("/");
+        splitUrl.pop();
+        splitUrl.shift();
+        if (splitUrl[0] == 'docs') splitUrl.shift();
+        var homeLink = "../index.html";
+        document.write('<li class="breadcrumb-item"><a href="' + homeLink + '"><i class="fa fa-home"></i></a></li>');
+        var prev = '';
+        
+        var dirLink = splitUrl.map(function (el) {
+        el = prev + el; prev = el + '/'; return el;
+        });
+
+        for (i = 0; i < splitUrl.length; i++) {
+            document.write("<li class=\"breadcrumb-item\"><a class=\"no-arrow-link\" href=\"../" + dirLink[i] + "\">" + splitUrl[i] + "</a></li>");
+        }
+    </script>
+    <li class="breadcrumb-item active">TaxiService</li>
+</ul>
+                  <hTitles>TaxiService<hr style="border: 0.5px solid #338033; margin-top: 5px !important;"></hTitles>
+                  
+                  
+
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>This tutorial is an example on how the taxi-service can be used in SUMO.   </p>
+<ul>
+<li>Main topics are<ul>
+<li>Vehicle-creation</li>
+<li>Bus stops</li>
+<li>Taxi-Reservations and pick up  </li>
+</ul>
+</li>
+</ul>
+<p>The tutorial itself is separated into two parts. <br />
+Part 1:
+Creation of a simple taxi-service, with net-creation and taxi dispatching. <br />
+Part 2:
+An addition of a small code part. Within this code the bus stops are being asked about the people waiting there.
+The tutorial can be used if a bus stop is overflowing with people. An emergency shuttle is dispatched to pick them up.   </p>
+<p>It would be very beneficial if you did take a look at the traci-beginner tutorials. This tutorial is an extension of those, showcasing a few operations with the traci taxi.</p>
+<h3 id="useful_links">Useful links<a class="headerlink" href="#useful_links" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="index.html">Tutorials</a></li>
+</ul>
+<ul>
+<li>Documentation<ul>
+<li><a href="../Simulation/Taxi.html">Taxi</a></li>
+<li><a href="../Specification/Persons.html">Person</a></li>
+<li><a href="../TraCI/Vehicle_Value_Retrieval.html">Vehicle Value Retrieval</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Pydoc<ul>
+<li><a href="https://sumo.dlr.de/pydoc/traci._person.html">traci._person</a></li>
+<li><a href="https://sumo.dlr.de/pydoc/traci._vehicle.html">traci._vehicle</a></li>
+<li><a href="https://sumo.dlr.de/pydoc/traci._busstop.html">traci._busstop</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="taxiservice">TaxiService<a class="headerlink" href="#taxiservice" title="Permanent link">#</a></h2>
+<p>At the start of the simulation five people are created and heading to the nearby bus stop and waiting for a shuttle to pick them up. <br />
+In the same area some taxis are created after some steps. There is no additional bus planned for this area, hence there have to be a emergency pick ups for the people waiting. When the count of people waiting reaches a certain point, the taxis receive the reservations and pick up each customer individually.   </p>
+<p><img alt="" src="../images/TaxiTutorial01.gif" /></p>
+<h2 id="part_1">Part 1<a class="headerlink" href="#part_1" title="Permanent link">#</a></h2>
+<h3 id="demand_and_creation">Demand and creation<a class="headerlink" href="#demand_and_creation" title="Permanent link">#</a></h3>
+<h4 id="net_creation">Net creation<a class="headerlink" href="#net_creation" title="Permanent link">#</a></h4>
+<p>If you'd like to create the same net depicted or you want to revisit netedit you can
+use the following gifs as a guide. Otherwise you can skip this section.</p>
+<p><img alt="" src="../images/TaxiNetCreation01.gif" />
+<em>Creating the basic net.</em></p>
+<p><img alt="" src="../images/TaxiNetCreation02.gif" />
+<em>Adding a sidewalk.</em></p>
+<p><img alt="" src="../images/TaxiNetCreation03.gif" />
+<em>Making the connections. You can go ahead and add the connections to the other connecting streets as well.</em></p>
+<p><img alt="" src="../images/TaxiNetCreation04.gif" />
+<em>Creating routes. You can go ahead and add the other routes for the vehicles.</em>   </p>
+<h3 id="demand">Demand<a class="headerlink" href="#demand" title="Permanent link">#</a></h3>
+<h4 id="creating_the_taxi_and_person">Creating the taxi and person<a class="headerlink" href="#creating_the_taxi_and_person" title="Permanent link">#</a></h4>
+<p>Key participants within the simulation are people waiting and taxis. <br />
+To create a vehicle of type taxi you have to add the key parameter:   </p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- Route --&gt;</span>
+   <span class="nt">&lt;route</span> <span class="na">edges=</span><span class="s">&quot;-gneE2 gneE0 -gneE0 gneE2 -gneE2&quot;</span> <span class="na">color=</span><span class="s">&quot;yellow&quot;</span> <span class="na">id=</span><span class="s">&quot;route_0&quot;</span><span class="nt">/&gt;</span>
+
+<span class="cm">&lt;!-- Taxi-Type --&gt;</span>
+   <span class="nt">&lt;vType</span> <span class="na">id=</span><span class="s">&quot;taxi&quot;</span> <span class="na">vClass=</span><span class="s">&quot;taxi&quot;</span> <span class="na">personCapacity=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;param</span> <span class="na">key=</span><span class="s">&quot;has.taxi.device&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/vType&gt;</span>
+</code></pre></div>
+
+<p>There are other option to define the taxis behavior. You can decide when the taxis are going to disappear or if they start circling the area. In this example the taxis will keep circling the area, even when there are no longer people in the simulation. This is done by choosing a dispatch-algorithm at the start of the simulation, which is discussed later in the tutorial.  </p>
+<p>Next you can create a person, which departs at the start and heads to the designated bus stop.
+Essential here is the third line, declaring the person wants to go by taxi to edge gneE2. Essential is the lines parameter.  </p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;person</span> <span class="na">id=</span><span class="s">&quot;HeadingBusstop1&quot;</span> <span class="na">depart=</span><span class="s">&quot;0.00&quot;</span> <span class="na">color=</span><span class="s">&quot;green&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;walk</span> <span class="na">from=</span><span class="s">&quot;-gneE1&quot;</span> <span class="na">busStop=</span><span class="s">&quot;busStop_gneE0_0_0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;ride</span> <span class="na">from=</span><span class="s">&quot;gneE0&quot;</span> <span class="na">to=</span><span class="s">&quot;gneE2&quot;</span> <span class="na">lines=</span><span class="s">&quot;taxi&quot;</span><span class="nt">/&gt;</span>   
+<span class="nt">&lt;/person&gt;</span>
+</code></pre></div>
+
+<p>It is also possible to define personTrips for intermodal routing or group several people together. <br />
+Like in the beginner traci tutorials shown you can create a runner.py file to manage the taxi creation in your project.
+Within the example method, four taxis are created and dispatched at a given time.  </p>
+<div class="codehilite"><pre><span></span><code># <span class="nv">Creating</span> <span class="mi">4</span> <span class="nv">taxis</span>
+<span class="nv">def</span> <span class="nv">createTaxi</span><span class="ss">(</span><span class="nv">time</span><span class="ss">)</span>:
+    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">0</span>, <span class="mi">20</span>, <span class="mi">5</span><span class="ss">)</span>:
+        # <span class="nv">declaring</span> <span class="nv">the</span> <span class="nv">name</span><span class="ss">(</span><span class="nv">unique</span><span class="ss">)</span>, <span class="nv">route</span><span class="ss">(</span><span class="nv">from</span> <span class="nv">demand</span>.<span class="nv">route</span>.<span class="nv">xml</span><span class="ss">)</span>, <span class="nv">type</span> <span class="nv">of</span> <span class="nv">vehicle</span><span class="ss">(</span><span class="nv">declared</span> <span class="nv">in</span> <span class="nv">demand</span>.<span class="nv">route</span>.<span class="nv">xml</span><span class="ss">)</span>,
+        # <span class="nv">depart</span> <span class="nv">time</span>, <span class="nv">and</span> <span class="nv">line</span>
+        <span class="nv">traci</span>.<span class="nv">vehicle</span>.<span class="nv">add</span><span class="ss">(</span><span class="nv">f</span><span class="s1">&#39;</span><span class="s">taxiV{i}</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">route_0</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">taxi</span><span class="s1">&#39;</span>, <span class="nv">depart</span><span class="o">=</span><span class="nv">f</span><span class="s1">&#39;</span><span class="s">{time}</span><span class="s1">&#39;</span>, <span class="nv">line</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">taxi</span><span class="s1">&#39;</span><span class="ss">)</span>
+</code></pre></div>
+
+<h4 id="dispatch_and_pickup">Dispatch and Pickup<a class="headerlink" href="#dispatch_and_pickup" title="Permanent link">#</a></h4>
+<p>For this example we are using "-device.taxi.dispatch-algorithm traci". Within this algorithm one has to declare which customers should be picked up by which taxi. Meaning you have to pass the existing reservations to the designated taxi you'd like to use for the pick up. There are other algorithms like greedy, greedyClosest etc. that work differently with the reservations. <br />
+Next the taxi fleet, containing all taxis in the map, are saved into "fleet", while all reservations are saved into "reservations". Afterwards the first taxi in the fleet is called and given the first reservation from "reservation_ids".</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">fleet</span> <span class="o">=</span> <span class="nv">traci</span>.<span class="nv">vehicle</span>.<span class="nv">getTaxiFleet</span><span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
+<span class="nv">reservations</span> <span class="o">=</span> <span class="nv">traci</span>.<span class="nv">person</span>.<span class="nv">getTaxiReservations</span><span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
+<span class="nv">reservation_ids</span> <span class="o">=</span> [<span class="nv">r</span>.<span class="nv">id</span> <span class="k">for</span> <span class="nv">r</span> <span class="nv">in</span> <span class="nv">reservations</span>]
+<span class="nv">traci</span>.<span class="nv">vehicle</span>.<span class="nv">dispatchTaxi</span><span class="ss">(</span><span class="nv">fleet</span>[<span class="mi">0</span>], <span class="nv">reservation_ids</span>[<span class="mi">0</span>]<span class="ss">)</span>
+</code></pre></div>
+
+<p>For more output parameters take a look at the documentation and the Pydoc.</p>
+<h2 id="part_2">Part 2<a class="headerlink" href="#part_2" title="Permanent link">#</a></h2>
+<p>In the second part of the tutorial, a bus stop is overflowing with people waiting for their ride. Emergency taxis are deployed to pick up the customers.</p>
+<h3 id="reservations">Reservations<a class="headerlink" href="#reservations" title="Permanent link">#</a></h3>
+<p>For this part of the tutorial you can add another method to monitor the bus stops and start the emergency taxi function if needed.
+In this example we are targeting one bus stop with too many people waiting for a transport. <br />
+As you can see in the code below, for all the bus stops, where the personCount is equal or larger than four, the method emergencyTaxi(i) is called.</p>
+<div class="codehilite"><pre><span></span><code># <span class="nv">checks</span> <span class="k">if</span> <span class="nv">busstop</span> <span class="nv">is</span> <span class="s2">&quot;</span><span class="s">overflowing</span><span class="s2">&quot;</span>
+<span class="nv">def</span> <span class="nv">busstopCheck</span><span class="ss">()</span>:
+    # <span class="nv">getting</span> <span class="nv">all</span> <span class="nv">bus</span> <span class="nv">stops</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">map</span>
+    <span class="nv">busstops</span> <span class="o">=</span> <span class="nv">traci</span>.<span class="nv">busstop</span>.<span class="nv">getIDList</span><span class="ss">()</span>
+    # <span class="nv">checking</span> <span class="nv">the</span> <span class="nv">personcount</span> <span class="nv">of</span> <span class="nv">waiting</span> <span class="nv">people</span>
+    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">busstops</span>:
+        <span class="k">if</span> <span class="nv">traci</span>.<span class="nv">busstop</span>.<span class="nv">getPersonCount</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">&gt;=</span> <span class="mi">4</span>:
+            <span class="nv">emergencyTaxi</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span>
+</code></pre></div>
+
+<h3 id="fleet_and_dispatch">Fleet and dispatch<a class="headerlink" href="#fleet_and_dispatch" title="Permanent link">#</a></h3>
+<p>The fleet consists only out of unoccupied taxis. Getting unoccupied taxis(0).
+If one wants to add further reservations to a assigned taxi, filter for the occupied(2) or those in pickup-modus(1).
+The id of the bus stop in question is given to the emergencyTaxi method, to specifically plan a pick up.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">Dispatching</span><span class="w"> </span><span class="n">taxis</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">cater</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="n">waiting</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bus</span><span class="w"> </span><span class="n">stop</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">emergencyTaxi</span><span class="p">(</span><span class="n">busstopID</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">getting</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Id</span><span class="o">-</span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="n">waiting</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">busstop</span><span class="w"></span>
+<span class="w">    </span><span class="n">peopleWaiting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">traci</span><span class="p">.</span><span class="n">busstop</span><span class="p">.</span><span class="n">getPersonIDs</span><span class="p">(</span><span class="n">busstopID</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">pickup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">creating</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">taxi</span><span class="w"> </span><span class="n">reservations</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">peopleWaiting</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">pickup</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">traci</span><span class="p">.</span><span class="n">person</span><span class="p">.</span><span class="n">getTaxiReservations</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">Taxi</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">pick</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">customers</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">clarify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="k">off</span><span class="w"></span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">hence</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">pickup</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">extended</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="n">offs</span><span class="w"></span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">pickup</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">pickup</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">fleet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">traci</span><span class="p">.</span><span class="n">vehicle</span><span class="p">.</span><span class="n">getTaxiFleet</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="ow">except</span><span class="w"> </span><span class="p">(</span><span class="n">traci</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">FatalTraCIError</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;No unoccupied taxi-fleet!&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">dispatching</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">unoccupied</span><span class="w"> </span><span class="n">taxis</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">pick</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">designated</span><span class="w"> </span><span class="n">customers</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">peopleWaiting</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">traci</span><span class="p">.</span><span class="n">vehicle</span><span class="p">.</span><span class="n">dispatchTaxi</span><span class="p">(</span><span class="n">fleet</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">pickup</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<p>The taxi from the list with listposition i is dispatched to pick up the person from list "pickup" at position i.   </p>
+<p>It is also possible to let one taxi pick up and drop off all the people, if the vehicle capacity is sufficient.</p>
+<div class="codehilite"><pre><span></span><code>pickup.extend(pickup)
+</code></pre></div>
+
+<p>Might look like this:   </p>
+<div class="codehilite"><pre><span></span><code>pickup = [a,b,c,a,b,c]
+</code></pre></div>
+
+<p>The passengers are dropped of in the order of the extension.</p>
+<h3 id="sumocfg">sumocfg<a class="headerlink" href="#sumocfg" title="Permanent link">#</a></h3>
+<p>Additional lines are added to the config files:
+To be able to use traci.taxis one has to add a algorithm to the config files.
+Furthermore, to prevent the taxis to simply vanish after dropping of their person, the line declaring
+randomCircling has been added. After delivering the person to the right position the taxi starts
+driving around in the network after a short break.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
+            <span class="nt">&lt;input&gt;</span>
+                <span class="nt">&lt;net-file</span> <span class="na">value=</span><span class="s">&quot;net.net.xml&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;route-files</span> <span class="na">value=</span><span class="s">&quot;demand.rou.xml&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;additional-files</span> <span class="na">value=</span><span class="s">&quot;add.add.xml&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;no-step-log</span> <span class="na">value=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;time-to-teleport</span> <span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;device.taxi.dispatch-algorithm</span> <span class="na">value=</span><span class="s">&quot;traci&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;device.taxi.idle-algorithm</span> <span class="na">value=</span><span class="s">&quot;randomCircling&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div>
+
+<p>Another way to use the algorithms is to add them to the traci.start in the script:</p>
+<div class="codehilite"><pre><span></span><code>sumoBinary = sumolib.checkBinary(&#39;sumo&#39;)
+traci.start([sumoBinary,
+            &quot;-c&quot;, &quot;sumo.sumocfg&quot;,
+             &quot;--tripinfo-output&quot;, &quot;tripinfos.xml&quot;,
+             &quot;--device.taxi.dispatch-algorithm&quot;, &quot;traci&quot;,
+             ] + sys.argv[1:])
+</code></pre></div>
+                </div>
+          </div>
+          <button onclick="goTopFunction()" id="goToTop" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+        </div>
+
+        <footer class="col-md-12">
+          
+            <br><small><i>本頁面最近更新日期：02 April 2022</i></small>
+          
+          <hr>
+            <p>Copyright &copy; 2001-2022 德國航空太空中心 (DLR) 和其他貢獻者｜中文翻譯由 Yu-Hsuan Liao 及其他貢獻者維護</p>
+          <p>在這些地方追蹤我們：<a class="no-arrow-link" href="https://www.twitter.com/eclipsesumo/"><i class="fa fa-twitter"></i></a> <a class="no-arrow-link" href="https://www.facebook.com/simulationofurbanmobility/"><i class="fa fa-facebook-square"></i></a> <a class="no-arrow-link" href="https://www.instagram.com/eclipse.sumo/"><i class="fa fa-instagram"></i></a>
+          ｜本說明文件由 <a href="https://www.mkdocs.org/">MkDocs</a> 提供支援。</p>
+        </footer>
+
+      <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">搜尋</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">關閉</span></button>
+            </div>
+            <div class="modal-body" style="color: #495057 !important;">
+                <p>Enter your search terms:</p>
+                <script async src="https://cse.google.com/cse.js?cx=004302551366764109984:1kpgtzrm6kv"></script>
+                <div class="gcse-search"></div>
+            </div>
+        </div>
+    </div>
+</div>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("goToTop").style.display = "block";
+          } else {
+            document.getElementById("goToTop").style.display = "none";
+          }
+        }
+    
+        function goTopFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        var base_url = "..",
+            shortcuts = {"edit": 69, "help": 191, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+
+        <script>
+          const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
+  
+          function switchTheme(e) {
+              if (e.target.checked) {
+                  localStorage.setItem('sumo-docs-theme', 'dark');
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                  toggleSwitch.checked = true;
+              } else {
+                  localStorage.setItem('sumo-docs-theme', 'light');
+                  document.documentElement.setAttribute('data-theme', 'light');
+                  toggleSwitch.checked = false;
+              }    
+          }
+  
+          toggleSwitch.addEventListener('change', switchTheme, false);
+  
+          if (document.documentElement.getAttribute("data-theme") == "dark"){
+              toggleSwitch.checked = true;
+          }
+          </script>
+
+      <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Key</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody style="color: #495057 !important;">
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>開啟快速鍵列表</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>搜尋文件</td>
+                  </tr>
+                  <tr>
+                    <td class="edit shortcut"><kbd>e</kbd></td>
+                    <td>在 GitHub 上編輯本頁</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
